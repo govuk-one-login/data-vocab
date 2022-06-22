@@ -1,0 +1,11 @@
+#!/bin/bash
+HERE=`dirname "$0"`
+set -e
+
+rm -f $HERE/../v1/json-schemas/*.json
+poetry run gen-json-schema --no-metadata -t CoreIdentityJWT  $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/CoreIdentityJWT.json
+poetry run gen-json-schema --no-metadata -t IdentityCheckCredentialJWT  $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredentialJWT.json
+poetry run gen-json-schema --no-metadata -t IdentityCheckCredential  $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredential.json
+
+rm -rf $HERE/../_site
+npx @11ty/eleventy

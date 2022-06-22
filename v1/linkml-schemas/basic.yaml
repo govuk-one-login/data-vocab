@@ -1,0 +1,12 @@
+id: https://example.com/test
+name: test-schema
+prefixes:
+  linkml: https://w3id.org/linkml/
+  some-prefix: https://example.com/test1-prefix-name
+imports:
+  - linkml:types
+default_prefix: some-prefix
+classes:
+  TestClass:
+    attributes:
+      testProperty:

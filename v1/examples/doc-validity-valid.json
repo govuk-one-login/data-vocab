@@ -1,0 +1,56 @@
+{
+    "type": [
+      "VerifiableCredential",
+      "IdentityCheckCredential"
+    ],
+    "credentialSubject": {
+      "name": [
+        {
+          "nameParts": [
+            {
+              "value": "Alice",
+              "type": "GivenName"
+            },
+            {
+              "value": "Jane",
+              "type": "GivenName"
+            },
+            {
+              "value": "Laura",
+              "type": "GivenName"
+            },
+            {
+              "value": "Doe",
+              "type": "FamilyName"
+            }
+          ]
+        }
+      ],
+      "birthDate": [
+        {
+          "value": "1970-01-01"
+        }
+      ],
+      "passport": [
+        {
+          "documentNumber": "1223456",
+          "expiryDate": "2022-02-02"
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "type": "IdentityCheck",
+        "txn": "abc1234",
+        "strengthScore": 4,
+        "validityScore": 2,
+        "checkDetails": [
+          {
+            "checkMethod": "data",
+            "identityCheckLevel": 1
+          }
+        ]
+      }
+    ]
+  }
+  

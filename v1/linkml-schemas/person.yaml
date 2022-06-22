@@ -1,0 +1,51 @@
+id: https://vocab.account.gov.uk/linkml/person-schema
+name: person-schema
+title: Name
+description: >-
+  A real name for a user, composed of an ordered list of given names and family names (etc)
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./name
+  - ./address
+  - ./document
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  Person:
+    class_uri: schema:Person
+    attributes:
+      name:
+        range: Name
+        multivalued: true
+        inlined_as_list: true
+      birthDate:
+        range: BirthDate
+        slot_uri: schema:birthDate
+        multivalued: true
+        inlined_as_list: true
+      address:
+        range: PostalAddress
+        multivalued: true
+        inlined_as_list: true
+      passport:
+        range: PassportDetails
+        multivalued: true
+      drivingPermit:
+        range: DrivingPermitDetails
+        multivalued: true
+        inlined_as_list: true
+  BirthDate:
+    mixins:
+      - Validity
+    attributes:
+      value:
+        range: date
+        slot_uri: schema:value
+  

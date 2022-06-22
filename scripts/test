@@ -1,0 +1,6 @@
+#!/bin/bash
+HERE=`dirname "$0"`
+set -e
+
+ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/CoreIdentityJWT.json -d $HERE/../v1/examples/identity-jwt.json
+ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/IdentityCheckCredential.json -d $HERE/../v1/examples/doc-validity-valid.json

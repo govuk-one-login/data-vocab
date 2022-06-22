@@ -1,0 +1,141 @@
+id: https://vocab.account.gov.uk/linkml/evidence-schema
+name: evidence-schema
+description: >-
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IdentityCheck:
+    attributes:
+      type:
+        equals_string: IdentityCheck
+      txn:
+      strengthScore:
+        range: integer
+        minimum_value: 1
+        maximum_value: 4
+      validityScore:
+        range: integer
+        minimum_value: 0
+        maximum_value: 3
+      verificationScore:
+        range: integer
+        minimum_value: 0
+        maximum_value: 4
+      activityHistoryScore:
+        range: integer
+        minimum_value: 0
+        maximum_value: 4
+      identityFraudScore:
+        range: integer
+        minimum_value: 0
+        maximum_value: 3
+      checkDetails:
+        range: CheckDetails
+        multivalued: true
+        inlined_as_list: true
+      failedCheckDetails:
+        range: CheckDetails
+        multivalued: true
+        inlined_as_list: true
+      ci:
+        range: string
+        multivalued: true
+        inlined_as_list: true
+  CheckDetails:
+    attributes:
+      checkMethod:
+        range: CheckMethodType
+        description: An identifier from the OpenID Check Methods list
+      txn:
+        description: A unique transaction identifier for this part of the check, if any.
+      kbvQuality:
+        range: integer
+        minimum_value: 0
+        maximum_value: 3
+        description: The quality of a knowledge-based verification (KBV) question.
+      kbvResponseMode:
+        range: KBVResponseModeType
+        description: Describes the way a KBV question was presented to the user.
+      photoVerificationProcessLevel:
+        range: integer
+        minimum_value: 2
+        maximum_value: 3
+        description: For a photo-based verification process, the level corresponding to the GPG 45 verification score requirement.
+      biometricVerificationProcessLevel:
+        range: integer
+        minimum_value: 2
+        maximum_value: 3
+        description: For a biometric verification process, the level corresponding to the GPG 45 verification score requirement.
+      fraudCheck:
+        range: FraudCheckType
+        description: Specifies the kind of fraud check performed per GPG 45
+      activityFrom:
+        range: datetime
+        description: The date of the earliest activity found for the user.
+      identityCheckLevel:
+        range: integer
+        minimum_value: 0
+        maximum_value: 3
+        description: A measure of the level of identity confidence held by the issuer.
+enums:
+  CheckMethodType:
+    permissible_values:
+      vpip:
+        meaning: https://openid.net/validation_method/vpip
+        description: Validation that physical evidence is genuine through inspection of its physical properties in person.
+      vpiruv:
+        meaning: https://openid.net/validation_method/vpiruv
+        description: Validation that physical evidence is genuine through inspection of its physical properties in person including its optical characteristics under non-visible light.
+      vri:
+        meaning: https://openid.net/validation_method/vri
+        description: Validation that physical evidence is genuine through the inspection of an image taken remotely under visible light.
+      vdig:
+        meaning: https://openid.net/validation_method/vdig
+        description: Validation that digital/electronic evidence is genuine by the inspection of its properties and content.
+      vcrypt:
+        meaning: https://openid.net/validation_method/vcrypt
+        description: Validation the cryptographic security features of the evidence are intact and correct.
+      data:
+        meaning: https://openid.net/validation_method/data
+        description: Found an existing electronic_record that matches the claims made by the user.
+      auth:
+        meaning: https://openid.net/verification_method/auth
+        description: Verifying the user is the owner of the claims by use of an electronic authentication process that is linked to the owner of the claims.
+      token:
+        meaning: https://openid.net/verification_method/token
+        description: Verifying the user is the owner of the claims by use of an electronic authentication token such as hardware token or smartcard that is linked and issued to the owner of the claims.
+      kbv:
+        meaning: https://openid.net/verification_method/kbv
+        description: Verifying the user is the owner of the claims by knowledge based challenges/questions that only the owner of the claims should know how to answer.
+      pvp:
+        meaning: ttps://openid.net/verification_method/pvp
+        description: Physical verification in person by a qualified/authorised person, the comparison of a physical characteristic (such as face) of the user with a known image/template of the owner of the claims.
+      pvr:
+        meaning: https://openid.net/verification_method/pvr
+        description: Physical verification by a qualified/authorised person when the user is remote, the comparison of a physical characteristic (such as face) from an image or video of the user with a known image/template of the owner of the claims.
+      bvp:
+        meaning: https://openid.net/verification_method/bvp
+        description: Biometric verification by an automated system with the user physically present to the system and the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims.
+      bvr:
+        meaning: https://openid.net/verification_method/bvr
+        description: Biometric verification by an automated system where the user and capture device is remote to the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims.
+  KBVResponseModeType:
+    permissible_values:
+      free_text:
+      multiple_choice:
+  FraudCheckType:
+      permissible_values:
+        mortality_check:
+        dentity_theft_check:
+        synthetic_identity_check:
+        impersonation_risk_check:
