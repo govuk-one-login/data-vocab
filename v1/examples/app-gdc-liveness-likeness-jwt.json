@@ -1,0 +1,63 @@
+{
+  "iat": 1656332516,
+  "iss": "https://www.review-b.build.account.gov.uk",
+  "nbf": 1656332516,
+  "sub": "urn:uuid:A9652141-A73D-42B5-8E78-7D05ED3BCA03",
+  "vc": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://vocab.account.gov.uk/contexts/identity-v1.jsonld"
+    ],
+    "credentialSubject": {
+      "birthDate": [
+        {
+          "value": "1985-02-08"
+        }
+      ],
+      "drivingPermit": [
+        {
+          "documentNumber": "DOE99802085J99FG",
+          "expiryDate": "2023-01-18",
+          "issueDate": "2022-01-01",
+          "issueNumber": "01",
+          "issuedBy": "DVLA"
+        }
+      ],
+      "name": [
+        {
+          "nameParts": [
+            {
+              "type": "GivenName",
+              "value": "Joe Shmoe"
+            },
+            {
+              "type": "FamilyName",
+              "value": "Doe The Ball"
+            }
+          ]
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "checkDetails": [
+          {
+            "checkMethod": "vri"
+          },
+          {
+            "biometricVerificationProcessLevel": 2,
+            "checkMethod": "bvr"
+          }
+        ],
+        "strengthScore": 3,
+        "validityScore": 2,
+        "txn": "555",
+        "type": "IdentityCheck"
+      }
+    ],
+    "type": [
+      "VerifiableCredential",
+      "IdentityCheckCredential"
+    ]
+  }
+}

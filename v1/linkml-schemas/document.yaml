@@ -23,6 +23,12 @@ classes:
       documentNumber:
       expiryDate:
         range: date
+      issueDate:
+        range: date
+      issuedBy:
+        range: StringOrURI
+      issueNumber:
+        range: string
   PassportDetails:
     is_a: DocumentDetails
   DrivingPermitDetails:

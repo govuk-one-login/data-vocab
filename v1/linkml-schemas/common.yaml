@@ -21,3 +21,11 @@ classes:
       validUntil:
         range: date
         slot_uri: schema:validUntil
+
+types:
+  JWS:
+    uri: "https://www.iana.org/assignments/media-types/application/jose"
+    base: str
+  StringOrURI:
+    uri: xsd:string
+    base: str
