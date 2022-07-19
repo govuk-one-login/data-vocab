@@ -20,32 +20,37 @@ default_range: string
 classes:
   Person:
     class_uri: schema:Person
-    attributes:
-      name:
-        range: Name
-        multivalued: true
-        inlined_as_list: true
-      birthDate:
-        range: BirthDate
-        slot_uri: schema:birthDate
-        multivalued: true
-        inlined_as_list: true
-      address:
-        range: PostalAddress
-        multivalued: true
-        inlined_as_list: true
-      passport:
-        range: PassportDetails
-        multivalued: true
-      drivingPermit:
-        range: DrivingPermitDetails
-        multivalued: true
-        inlined_as_list: true
+    slots:
+      - name
+      - birthDate
+      - address
+      - passport
+      - drivingPermit
   BirthDate:
     mixins:
       - Validity
-    attributes:
+    slot_usage:
       value:
         range: date
-        slot_uri: schema:value
-  
+
+slots:
+  name:
+    range: Name
+    multivalued: true
+    inlined_as_list: true
+  birthDate:
+    range: BirthDate
+    slot_uri: schema:birthDate
+    multivalued: true
+    inlined_as_list: true
+  address:
+    range: PostalAddress
+    multivalued: true
+    inlined_as_list: true
+  passport:
+    range: PassportDetails
+    multivalued: true
+  drivingPermit:
+    range: DrivingPermitDetails
+    multivalued: true
+    inlined_as_list: true

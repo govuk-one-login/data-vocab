@@ -18,75 +18,28 @@ classes:
     attributes:
       type:
         equals_string: IdentityCheck
-      txn:
-      strengthScore:
-        range: integer
-        minimum_value: 1
-        maximum_value: 4
-      validityScore:
-        range: integer
-        minimum_value: 0
-        maximum_value: 3
-      verificationScore:
-        range: integer
-        minimum_value: 0
-        maximum_value: 4
-      activityHistoryScore:
-        range: integer
-        minimum_value: 0
-        maximum_value: 4
-      identityFraudScore:
-        range: integer
-        minimum_value: 0
-        maximum_value: 3
-      checkDetails:
-        range: CheckDetails
-        multivalued: true
-        inlined_as_list: true
-      failedCheckDetails:
-        range: CheckDetails
-        multivalued: true
-        inlined_as_list: true
-      ci:
-        range: string
-        multivalued: true
-        inlined_as_list: true
+    slots:
+      - txn
+      - strengthScore
+      - validityScore
+      - verificationScore
+      - activityHistoryScore
+      - identityFraudScore
+      - checkDetails
+      - failedCheckDetails
+      - ci
   CheckDetails:
-    attributes:
-      checkMethod:
-        range: CheckMethodType
-        description: An identifier from the OpenID Check Methods list
-      txn:
-        description: A unique transaction identifier for this part of the check, if any.
-      kbvQuality:
-        range: integer
-        minimum_value: 0
-        maximum_value: 3
-        description: The quality of a knowledge-based verification (KBV) question.
-      kbvResponseMode:
-        range: KBVResponseModeType
-        description: Describes the way a KBV question was presented to the user.
-      photoVerificationProcessLevel:
-        range: integer
-        minimum_value: 2
-        maximum_value: 3
-        description: For a photo-based verification process, the level corresponding to the GPG 45 verification score requirement.
-      biometricVerificationProcessLevel:
-        range: integer
-        minimum_value: 2
-        maximum_value: 3
-        description: For a biometric verification process, the level corresponding to the GPG 45 verification score requirement.
-      fraudCheck:
-        range: FraudCheckType
-        description: Specifies the kind of fraud check performed per GPG 45
-      activityFrom:
-        range: datetime
-        description: The date of the earliest activity found for the user.
-      identityCheckLevel:
-        range: integer
-        minimum_value: 0
-        maximum_value: 3
-        description: A measure of the level of identity confidence held by the issuer.
+    slots:
+      - checkMethod
+      - txn
+      - kbvQuality
+      - kbvResponseMode
+      - photoVerificationProcessLevel
+      - biometricVerificationProcessLevel
+      - fraudCheck
+      - activityFrom
+      - identityCheckLevel
+
 enums:
   CheckMethodType:
     permissible_values:
@@ -139,3 +92,71 @@ enums:
         dentity_theft_check:
         synthetic_identity_check:
         impersonation_risk_check:
+
+slots:
+  txn:
+    description: A unique transaction identifier for this check, or part of a check, if any.
+  strengthScore:
+    range: integer
+    minimum_value: 1
+    maximum_value: 4
+  validityScore:
+    range: integer
+    minimum_value: 0
+    maximum_value: 3
+  verificationScore:
+    range: integer
+    minimum_value: 0
+    maximum_value: 4
+  activityHistoryScore:
+    range: integer
+    minimum_value: 0
+    maximum_value: 4
+  identityFraudScore:
+    range: integer
+    minimum_value: 0
+    maximum_value: 3
+  checkDetails:
+    range: CheckDetails
+    multivalued: true
+    inlined_as_list: true
+  failedCheckDetails:
+    range: CheckDetails
+    multivalued: true
+    inlined_as_list: true
+  ci:
+    range: string
+    multivalued: true
+    inlined_as_list: true
+  checkMethod:
+    range: CheckMethodType
+    description: An identifier from the OpenID Check Methods list
+  kbvQuality:
+    range: integer
+    minimum_value: 0
+    maximum_value: 3
+    description: The quality of a knowledge-based verification (KBV) question.
+  kbvResponseMode:
+    range: KBVResponseModeType
+    description: Describes the way a KBV question was presented to the user.
+  photoVerificationProcessLevel:
+    range: integer
+    minimum_value: 2
+    maximum_value: 3
+    description: For a photo-based verification process, the level corresponding to the GPG 45 verification score requirement.
+  biometricVerificationProcessLevel:
+    range: integer
+    minimum_value: 2
+    maximum_value: 3
+    description: For a biometric verification process, the level corresponding to the GPG 45 verification score requirement.
+  fraudCheck:
+    range: FraudCheckType
+    description: Specifies the kind of fraud check performed per GPG 45
+  activityFrom:
+    range: datetime
+    description: The date of the earliest activity found for the user.
+  identityCheckLevel:
+    range: integer
+    minimum_value: 0
+    maximum_value: 3
+    description: A measure of the level of identity confidence held by the issuer or previously performed in respect of the data being checked.

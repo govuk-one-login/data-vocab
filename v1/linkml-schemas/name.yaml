@@ -28,11 +28,12 @@ classes:
     abstract: false  # has to be false otherwise JSON-Schema doesn't include it, and validation fails :(
     mixins:
       - Validity
+    slots:
+      - value
     attributes:
       type:
         range: NamePartType
-      value:
-        slot_uri: schema:value
+        multivalued: false
   GivenName:
     is_a: NamePart
     attributes:

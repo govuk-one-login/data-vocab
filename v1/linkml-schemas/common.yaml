@@ -14,13 +14,9 @@ default_range: string
 classes:
   Validity:
     abstract: true
-    attributes:
-      validFrom:
-        range: date
-        slot_uri: schema:validFrom
-      validUntil:
-        range: date
-        slot_uri: schema:validUntil
+    slots:
+      - validFrom
+      - validUntil
 
 types:
   JWS:
@@ -29,3 +25,25 @@ types:
   StringOrURI:
     uri: xsd:string
     base: str
+
+slots:
+  # TODO it doesn't seem to be possible to have type as sometimes scalar, sometimes multivalued, so in practice we have to define type on each item separately
+  # type:
+    # multivalued: true
+    # any_of:
+    #   - range: string
+    #   - range: string
+    #     inlined_as_list: true
+  value:
+    required: true
+    slot_uri: schema:value
+  "@context":
+    range: string
+    multivalued: true
+    inlined_as_list: true
+  validFrom:
+    range: date
+    slot_uri: schema:validFrom
+  validUntil:
+    range: date
+    slot_uri: schema:validUntil

@@ -19,17 +19,25 @@ classes:
   DocumentDetails:
     mixins:
       - Validity
-    attributes:
-      documentNumber:
-      expiryDate:
-        range: date
-      issueDate:
-        range: date
-      issuedBy:
-        range: StringOrURI
-      issueNumber:
-        range: string
+    slots:
+      - documentNumber
+      - expiryDate
+      - issueDate
+      - issuedBy
+      - issueNumber
+
   PassportDetails:
     is_a: DocumentDetails
   DrivingPermitDetails:
     is_a: DocumentDetails
+
+slots:
+  documentNumber:
+  expiryDate:
+    range: date
+  issueDate:
+    range: date
+  issuedBy:
+    range: StringOrURI
+  issueNumber:
+    range: string

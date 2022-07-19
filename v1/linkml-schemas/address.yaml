@@ -19,18 +19,32 @@ classes:
     class_uri: schema:PostalAddress
     mixins:
       - Validity
-    attributes:
-      uprn:
-      organisationName:
-      departmentName:
-      subBuildingName:
-      buildingNumber:
-      buildingName:
-      dependentStreetName:
-      streetName:
-      doubleDependentAddressLocality:
-      dependentAddressLocality:
-      addressLocality:
-      postalCode:
-      addressCountry:
+    slots:
+      - uprn
+      - organisationName
+      - departmentName
+      - subBuildingName
+      - buildingNumber
+      - buildingName
+      - dependentStreetName
+      - streetName
+      - doubleDependentAddressLocality
+      - dependentAddressLocality
+      - addressLocality
+      - postalCode
+      - addressCountry
 
+slots:
+  uprn:
+  organisationName:
+  departmentName:
+  subBuildingName:
+  buildingNumber:
+  buildingName:
+  dependentStreetName:
+  streetName:
+  doubleDependentAddressLocality:
+  dependentAddressLocality:
+  addressLocality:
+  postalCode:
+  addressCountry:
