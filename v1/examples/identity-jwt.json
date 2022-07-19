@@ -2,7 +2,6 @@
     "sub": "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
     "iss": "https://oidc.account.gov.uk/identity/v1",
     "nbf": 1541493724,
-    "iat": 1541493724,
     "exp": 1573029723,
     "vot": "P2",
     "vtm": "https://oidc.account.gov.uk/trustmark",

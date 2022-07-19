@@ -26,3 +26,5 @@ enums:
 slots:
   vot:
     range: IdentityVectorOfTrust
+  vtm:
+    range: uri
