@@ -1,0 +1,16 @@
+{
+  "sub": "urn:fdc:gov.uk:2022:56P4CMsGh_02YOlWpd8PAOI-2sVlB2nsNU7mcLZYhYw=",
+  "nbf": 1647017990,
+  "iss": "https://example.integration.account.gov.uk",
+  "exp": 1647019990,
+  "vc": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://vocab.account.gov.uk/contexts/identity-v1.jsonld"
+    ],
+    "credentialSubject": {
+    },
+    "evidence": [
+    ]
+  }
+}
