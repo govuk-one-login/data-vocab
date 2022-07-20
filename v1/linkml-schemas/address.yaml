@@ -15,10 +15,10 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  PostalAddress:
+  PostalAddressClass:
     class_uri: schema:PostalAddress
     mixins:
-      - Validity
+      - ValidityClass
     slots:
       - uprn
       - organisationName

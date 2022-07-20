@@ -16,32 +16,32 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  Name:
+  NameClass:
     mixins:
-      - Validity
+      - ValidityClass
     attributes:
       nameParts:
-        range: NamePart
+        range: NamePartClass
         multivalued: true
         inlined_as_list: true
-  NamePart:
+  NamePartClass:
     abstract: false  # has to be false otherwise JSON-Schema doesn't include it, and validation fails :(
     mixins:
-      - Validity
+      - ValidityClass
     slots:
       - value
     attributes:
       type:
         range: NamePartType
         multivalued: false
-  GivenName:
-    is_a: NamePart
+  GivenNameClass:
+    is_a: NamePartClass
     attributes:
       type:
         equals_string: GivenName
 
-  FamilyName:
-    is_a: NamePart
+  FamilyNameClass:
+    is_a: NamePartClass
     attributes:
       type:
         equals_string: FamilyName

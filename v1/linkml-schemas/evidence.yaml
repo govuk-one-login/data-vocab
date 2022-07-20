@@ -14,7 +14,7 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  IdentityCheck:
+  IdentityCheckClass:
     attributes:
       type:
         equals_string: IdentityCheck
@@ -28,7 +28,7 @@ classes:
       - checkDetails
       - failedCheckDetails
       - ci
-  CheckDetails:
+  CheckDetailsClass:
     slots:
       - checkMethod
       - txn
@@ -117,11 +117,11 @@ slots:
     minimum_value: 0
     maximum_value: 3
   checkDetails:
-    range: CheckDetails
+    range: CheckDetailsClass
     multivalued: true
     inlined_as_list: true
   failedCheckDetails:
-    range: CheckDetails
+    range: CheckDetailsClass
     multivalued: true
     inlined_as_list: true
   ci:

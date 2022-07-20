@@ -12,7 +12,7 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  Validity:
+  ValidityClass:
     abstract: true
     slots:
       - validFrom

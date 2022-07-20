@@ -16,9 +16,9 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  DocumentDetails:
+  DocumentDetailsClass:
     mixins:
-      - Validity
+      - ValidityClass
     slots:
       - documentNumber
       - expiryDate
@@ -26,10 +26,10 @@ classes:
       - issuedBy
       - issueNumber
 
-  PassportDetails:
-    is_a: DocumentDetails
-  DrivingPermitDetails:
-    is_a: DocumentDetails
+  PassportDetailsClass:
+    is_a: DocumentDetailsClass
+  DrivingPermitDetailsClass:
+    is_a: DocumentDetailsClass
 
 slots:
   documentNumber:

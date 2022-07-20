@@ -18,7 +18,7 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  Person:
+  PersonClass:
     class_uri: schema:Person
     slots:
       - name
@@ -26,31 +26,31 @@ classes:
       - address
       - passport
       - drivingPermit
-  BirthDate:
+  BirthDateClass:
     mixins:
-      - Validity
+      - ValidityClass
     slot_usage:
       value:
         range: date
 
 slots:
   name:
-    range: Name
+    range: NameClass
     multivalued: true
     inlined_as_list: true
   birthDate:
-    range: BirthDate
+    range: BirthDateClass
     slot_uri: schema:birthDate
     multivalued: true
     inlined_as_list: true
   address:
-    range: PostalAddress
+    range: PostalAddressClass
     multivalued: true
     inlined_as_list: true
   passport:
-    range: PassportDetails
+    range: PassportDetailsClass
     multivalued: true
   drivingPermit:
-    range: DrivingPermitDetails
+    range: DrivingPermitDetailsClass
     multivalued: true
     inlined_as_list: true
