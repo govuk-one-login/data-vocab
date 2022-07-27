@@ -1,7 +1,7 @@
 ---
 homepage: true
 layout: page
-title: GOV.UK Vocabulary 1.0
+title: GOV.UK Vocabulary
 ---
 
 Human-readable documentation will follow.

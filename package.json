@@ -9,15 +9,7 @@
     "eslint-plugin-jest": "^24.7.0"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "ajv-formats": "^2.1.1",
-    "govuk-eleventy-plugin": "^2.4.0",
-    "markdown-it-replace-link": "^1.1.0"
-  },
-  "main": ".eleventy.js",
-  "directories": {
-    "doc": "docs",
-    "example": "examples"
+    "ajv-formats": "^2.1.1"
   },
   "repository": {
     "type": "git",

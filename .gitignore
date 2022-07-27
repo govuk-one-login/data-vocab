@@ -2,7 +2,8 @@ node_modules
 .DS_Store
 .vscode
 .idea
-_site
+docs/v1
+site
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 #

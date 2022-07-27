@@ -3,5 +3,5 @@ applications:
 - name: vocab
   memory: 64M
   instances: 1
-  path: ./_site
+  path: ./site
   buildpack: staticfile_buildpack
