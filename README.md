@@ -48,7 +48,7 @@ Test the example files against the JSON schemas using an independent JSON-Schema
 # Run a local server
 
 ```
-npx @11ty/eleventy --serve
+poetry run mkdocs serve
 ```
 
 ## Deploy
