@@ -11,3 +11,4 @@ The following JSON Schemas are provided:
 * [IdentityCheckCredential](v1/json-schemas/IdentityCheckCredential.json)
 * [IdentityCheckCredentialJWT](v1/json-schemas/IdentityCheckCredentialJWT.json)
 * [CoreIdentityJWT](v1/json-schemas/CoreIdentityJWT.json)
+* [AuthorizationRequest](v1/json-schemas/AuthorizationRequest.json)

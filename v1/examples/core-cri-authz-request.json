@@ -1,0 +1,96 @@
+{
+  "aud": "http:\/\/www.example.com\/audience",
+  "sub": "test-user-id",
+  "nbf": 1659007190,
+  "shared_claims": {
+    "address": [
+      {
+        "departmentName": "someDept",
+        "addressCountry": "GB",
+        "uprn": "example-uprn-1234",
+        "postalCode": "SW2A 3BB",
+        "validFrom": "2018-06-23",
+        "subBuildingName": "someSubBuildingName",
+        "buildingName": "someBuildingName",
+        "organisationName": "someOrgName",
+        "streetName": "NotDowningStreet",
+        "dependentStreetName": "someDependentStreetName",
+        "buildingNumber": "11",
+        "validUntil": "2023-01-01",
+        "dependentAddressLocality": "Eastminster",
+        "addressLocality": "Nodnol",
+        "doubleDependentAddressLocality": "someDoubleDependentAddressLocality"
+      },
+      {
+        "departmentName": "otherDept",
+        "addressCountry": "GB",
+        "uprn": "example-uprn-5678",
+        "postalCode": "SW1A2AA",
+        "validFrom": "2019-07-24",
+        "subBuildingName": "otherSubBuildingName",
+        "buildingName": "otherBuildingName",
+        "organisationName": "otherOrgName",
+        "streetName": "DowningStreet",
+        "dependentStreetName": "otherDependentStreetName",
+        "buildingNumber": "10",
+        "validUntil": "2020-01-01",
+        "dependentAddressLocality": "Westminster",
+        "addressLocality": "London",
+        "doubleDependentAddressLocality": "otherDoubleDependentAddressLocality"
+      }
+    ],
+    "name": [
+      {
+        "nameParts": [
+          {
+            "type": "GivenName",
+            "value": "Alice"
+          },
+          {
+            "type": "FamilyName",
+            "value": "Doe"
+          }
+        ]
+      },
+      {
+        "nameParts": [
+          {
+            "type": "GivenName",
+            "value": "Alice"
+          },
+          {
+            "type": "GivenName",
+            "value": "Jane"
+          },
+          {
+            "type": "GivenName",
+            "value": "Laura"
+          },
+          {
+            "type": "FamilyName",
+            "value": "Doe"
+          },
+          {
+            "type": "FamilyName",
+            "value": "Musk"
+          }
+        ]
+      }
+    ],
+    "birthDate": [
+      {
+        "value": "2020-01-03"
+      },
+      {
+        "value": "2021-01-03"
+      }
+    ]
+  },
+  "iss": "http:\/\/www.example.com\/issuer",
+  "response_type": "code",
+  "redirect_uri": "callbackUrl?id=PassportIssuer",
+  "state": "S-mX7O17YDxkCTGxxTg68nWW1Of6KhnkVrK1uZlG76s",
+  "exp": 1659008090,
+  "iat": 1659007190,
+  "client_id": "ipv-core"
+}
