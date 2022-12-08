@@ -48,6 +48,9 @@ classes:
 
 enums:
   NamePartType:
+    description: The enumerated accepted values for NamePart 
     permissible_values:
       GivenName:
+        description: Denotes a Given Name of a subject
       FamilyName:
+        description: Denotes the Family Name of a subject

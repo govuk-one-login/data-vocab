@@ -127,7 +127,6 @@ slots:
   ci:
     range: string
     multivalued: true
-    inlined_as_list: true
   checkMethod:
     range: CheckMethodType
     description: An identifier from the OpenID Check Methods list

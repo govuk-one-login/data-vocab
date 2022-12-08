@@ -4,7 +4,7 @@ description: >-
   A real name for a user, composed of an ordered list of given names and family names (etc)
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
+  geoplace_address: http://www.geoplace.co.uk/addressbase/schema/2.1/address.xsd
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
   - linkml:types
@@ -16,7 +16,7 @@ default_range: string
 
 classes:
   PostalAddressClass:
-    class_uri: schema:PostalAddress
+    class_uri: geoplace_address
     mixins:
       - ValidityClass
     slots:

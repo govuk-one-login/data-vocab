@@ -16,28 +16,42 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  DocumentDetailsClass:
+  EvidenceDocumentClass:
+    abstract: true
     mixins:
       - ValidityClass
     slots:
       - documentNumber
       - expiryDate
-      - issueDate
-      - issuedBy
-      - issueNumber
 
   PassportDetailsClass:
-    is_a: DocumentDetailsClass
+    is_a: EvidenceDocumentClass
+    slots:
+      - icaoIssuerCode
+
   DrivingPermitDetailsClass:
-    is_a: DocumentDetailsClass
+    is_a: EvidenceDocumentClass
+    slots:
+      - issuedBy
+      - issueNumber
+      - fullAddress
+      - issueDate
 
 slots:
   documentNumber:
+    range: string
+    required: true
   expiryDate:
     range: date
+    required: true
   issueDate:
     range: date
   issuedBy:
     range: StringOrURI
   issueNumber:
+    range: string
+  icaoIssuerCode:
+    range: string
+    required: true
+  fullAddress:
     range: string

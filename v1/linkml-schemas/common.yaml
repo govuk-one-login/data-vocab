@@ -42,8 +42,10 @@ slots:
     multivalued: true
     inlined_as_list: true
   validFrom:
+    required: false
     range: date
     slot_uri: schema:validFrom
   validUntil:
+    required: false
     range: date
     slot_uri: schema:validUntil

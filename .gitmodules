@@ -1,4 +1,4 @@
 [submodule "mkdocs-govuk"]
 	path = mkdocs-govuk
-	url = git@github.com:alphagov/mkdocs-govuk.git
+	url = https://github.com/alphagov/mkdocs-govuk.git
 	branch = match-techdocs-template

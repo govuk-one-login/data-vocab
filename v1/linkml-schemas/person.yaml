@@ -29,9 +29,8 @@ classes:
   BirthDateClass:
     mixins:
       - ValidityClass
-    slot_usage:
-      value:
-        range: date
+    slots:
+      - value
 
 slots:
   name:
