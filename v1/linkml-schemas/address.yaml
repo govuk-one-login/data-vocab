@@ -1,0 +1,50 @@
+id: https://vocab.account.gov.uk/linkml/address-schema
+name: address-schema
+description: >-
+  A real name for a user, composed of an ordered list of given names and family names (etc)
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  PostalAddressClass:
+    class_uri: schema:PostalAddress
+    mixins:
+      - ValidityClass
+    slots:
+      - uprn
+      - organisationName
+      - departmentName
+      - subBuildingName
+      - buildingNumber
+      - buildingName
+      - dependentStreetName
+      - streetName
+      - doubleDependentAddressLocality
+      - dependentAddressLocality
+      - addressLocality
+      - postalCode
+      - addressCountry
+
+slots:
+  uprn:
+  organisationName:
+  departmentName:
+  subBuildingName:
+  buildingNumber:
+  buildingName:
+  dependentStreetName:
+  streetName:
+  doubleDependentAddressLocality:
+  dependentAddressLocality:
+  addressLocality:
+  postalCode:
+  addressCountry:

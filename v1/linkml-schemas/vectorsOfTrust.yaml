@@ -1,0 +1,30 @@
+id: https://vocab.account.gov.uk/linkml/vectorsOfTrust-schema
+name: name-schema
+title: Name
+description: >-
+  A real name for a user, composed of an ordered list of given names and family names (etc)
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+enums:
+  IdentityVectorOfTrust:
+    permissible_values:
+      P1:
+      P2:
+      P3:
+      P4:
+
+slots:
+  vot:
+    range: IdentityVectorOfTrust
+  vtm:
+    range: uri

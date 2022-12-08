@@ -1,0 +1,26 @@
+{
+  "nameParts": [
+    {
+      "value": "Alice",
+      "type": "GivenName"
+    },
+    {
+      "value": "Jane",
+      "type": "GivenName"
+    },
+    {
+      "value": "Laura",
+      "type": "GivenName"
+    },
+    {
+      "value": "Doe",
+      "validFrom": "2020-03-01",
+      "type": "FamilyName"
+    },
+    {
+      "value": "Musk",
+      "validUntil": "2020-03-01",
+      "@type": "FamilyName"
+    }
+  ]
+}

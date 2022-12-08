@@ -1,0 +1,26 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "1.3.0",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^24.7.0"
+  },
+  "dependencies": {
+    "ajv-formats": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphagov/di-identity-vocab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphagov/di-identity-vocab/issues"
+  },
+  "homepage": "https://github.com/alphagov/di-identity-vocab#readme",
+  "description": ""
+}

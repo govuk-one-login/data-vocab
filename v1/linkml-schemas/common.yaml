@@ -1,0 +1,49 @@
+id: https://vocab.account.gov.uk/linkml/common-schema
+name: common-schema
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  ValidityClass:
+    abstract: true
+    slots:
+      - validFrom
+      - validUntil
+
+types:
+  JWS:
+    uri: "https://www.iana.org/assignments/media-types/application/jose"
+    base: str
+  StringOrURI:
+    uri: xsd:string
+    base: str
+
+slots:
+  # TODO it doesn't seem to be possible to have type as sometimes scalar, sometimes multivalued, so in practice we have to define type on each item separately
+  # type:
+    # multivalued: true
+    # any_of:
+    #   - range: string
+    #   - range: string
+    #     inlined_as_list: true
+  value:
+    required: true
+    slot_uri: schema:value
+  "@context":
+    range: string
+    multivalued: true
+    inlined_as_list: true
+  validFrom:
+    range: date
+    slot_uri: schema:validFrom
+  validUntil:
+    range: date
+    slot_uri: schema:validUntil

@@ -1,0 +1,53 @@
+id: https://vocab.account.gov.uk/linkml/name-schema
+name: name_schema
+title: Name
+description: >-
+  A real name for a user, composed of an ordered list of given names and family names (etc)
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  NameClass:
+    mixins:
+      - ValidityClass
+    attributes:
+      nameParts:
+        range: NamePartClass
+        multivalued: true
+        inlined_as_list: true
+  NamePartClass:
+    abstract: false  # has to be false otherwise JSON-Schema doesn't include it, and validation fails :(
+    mixins:
+      - ValidityClass
+    slots:
+      - value
+    attributes:
+      type:
+        range: NamePartType
+        multivalued: false
+  GivenNameClass:
+    is_a: NamePartClass
+    attributes:
+      type:
+        equals_string: GivenName
+
+  FamilyNameClass:
+    is_a: NamePartClass
+    attributes:
+      type:
+        equals_string: FamilyName
+
+enums:
+  NamePartType:
+    permissible_values:
+      GivenName:
+      FamilyName:

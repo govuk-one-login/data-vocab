@@ -1,0 +1,43 @@
+id: https://vocab.account.gov.uk/linkml/document-schema
+name: document-schema
+description: >-
+  A schema for documents the user may hold, that might help prove their identity.
+  They may or may not have been issued as identity documents per se.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DocumentDetailsClass:
+    mixins:
+      - ValidityClass
+    slots:
+      - documentNumber
+      - expiryDate
+      - issueDate
+      - issuedBy
+      - issueNumber
+
+  PassportDetailsClass:
+    is_a: DocumentDetailsClass
+  DrivingPermitDetailsClass:
+    is_a: DocumentDetailsClass
+
+slots:
+  documentNumber:
+  expiryDate:
+    range: date
+  issueDate:
+    range: date
+  issuedBy:
+    range: StringOrURI
+  issueNumber:
+    range: string

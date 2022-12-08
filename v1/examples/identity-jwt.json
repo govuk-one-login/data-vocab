@@ -1,0 +1,69 @@
+{
+    "sub": "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
+    "iss": "https://oidc.account.gov.uk/identity/v1",
+    "nbf": 1541493724,
+    "exp": 1573029723,
+    "vot": "P2",
+    "vtm": "https://oidc.account.gov.uk/trustmark",
+    "vc": {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://vocab.london.cloudapps.digital/contexts/identity-v1.jsonld"
+      ],
+      "type": [
+        "VerifiableCredential",
+        "VerifiableIdentityCredential"
+      ],
+      "credentialSubject": {
+        "name": [
+          {
+            "validFrom": "2020-03-01",
+            "nameParts": [
+              {
+                "value": "Alice",
+                "type": "GivenName"
+              },
+              {
+                "value": "Jane",
+                "type": "GivenName"
+              },
+              {
+                "value": "Laura",
+                "type": "GivenName"
+              },
+              {
+                "value": "Doe",
+                "type": "FamilyName"
+              }
+            ]
+          },
+          {
+            "validUntil": "2020-03-01",
+            "nameParts": [
+              {
+                "value": "Alice",
+                "type": "GivenName"
+              },
+              {
+                "value": "Jane",
+                "type": "GivenName"
+              },
+              {
+                "value": "Laura",
+                "type": "GivenName"
+              },
+              {
+                "value": "Musk",
+                "type": "FamilyName"
+              }
+            ]
+          }
+        ],
+        "birthDate": [
+          {
+            "value": "1970-01-01"
+          }
+        ]
+      }
+    }
+  }
