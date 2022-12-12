@@ -2,3 +2,6 @@
 	path = mkdocs-govuk
 	url = https://github.com/alphagov/mkdocs-govuk.git
 	branch = match-techdocs-template
+[submodule "linkml"]
+	path = linkml
+	url = https://github.com/alphagov/linkml.git
