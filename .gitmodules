@@ -5,3 +5,4 @@
 [submodule "linkml"]
 	path = linkml
 	url = https://github.com/alphagov/linkml.git
+	branch = allow-no-metadata-in-json-schema

@@ -5,6 +5,7 @@ node_modules
 docs/v1
 site
 mkdocs-govuk
+linkml
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 #
