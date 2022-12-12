@@ -21,6 +21,10 @@ Further development could include:
 ```
 poetry install
 npm install
+
+npm install -g ajv-cli@5.0.0
+npm install -g ajv-formats@2.1.1
+
 ```
 
 # Modifying the source LinkML
