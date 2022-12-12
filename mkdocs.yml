@@ -3,7 +3,7 @@ repo_url: https://github.com/alphagov/di-identity-vocab
 theme:
     name: null
     custom_dir: 'mkdocs-govuk/govuk_theme'
-tech_docs:
+
     show_govuk_logo: true
     service_link: https://www.sign-in.service.gov.uk/
     service_name: Sign In
