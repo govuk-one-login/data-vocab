@@ -33,6 +33,7 @@
     ],
     "passport": [
       {
+        "icaoIssuerCode": "GBR",
         "documentNumber": "1223456",
         "expiryDate": "2022-02-02"
       }
