@@ -1,10 +1,10 @@
 id: https://vocab.account.gov.uk/linkml/address-schema
 name: address-schema
 description: >-
-  A real name for a user, composed of an ordered list of given names and family names (etc)
+  A representation of an address based on the addressbase schema, with optional validity dates
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
+  addressbase: http://namespaces.geoplace.co.uk/addressbase/2.1
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
   - linkml:types
@@ -16,7 +16,7 @@ default_range: string
 
 classes:
   PostalAddressClass:
-    class_uri: schema:PostalAddress
+    class_uri: addressbase
     mixins:
       - ValidityClass
     slots:
@@ -47,4 +47,5 @@ slots:
   dependentAddressLocality:
   addressLocality:
   postalCode:
+    required: true
   addressCountry:
