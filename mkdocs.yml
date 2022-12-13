@@ -1,4 +1,4 @@
-site_name: GOV.UK Sign In Vocabulary
+site_name: GOV.UK One Login Vocabulary
 repo_url: https://github.com/alphagov/di-identity-vocab
 theme:
     name: null
@@ -6,7 +6,7 @@ theme:
 
     show_govuk_logo: true
     service_link: https://www.sign-in.service.gov.uk/
-    service_name: Sign In
+    service_name: One Login
     phase: beta
     collapsible_nav: true
     header_links:
