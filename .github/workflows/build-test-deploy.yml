@@ -1,4 +1,4 @@
-name: 'Build and test'
+name: 'Build, test, deploy'
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check-examples-against-schemas:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -57,3 +57,10 @@ jobs:
 
       - name: Run all tests
         run: scripts/test
+
+      - name: Upload HTML
+        uses: actions/upload-pages-artifact@v1.0.6
+        with:
+          path: site
+
+
