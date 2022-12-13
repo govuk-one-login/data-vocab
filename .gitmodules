@@ -1,8 +1,8 @@
 [submodule "mkdocs-govuk"]
 	path = mkdocs-govuk
-	url = git@github.com:alphagov/mkdocs-govuk.git
+	url = ../mkdocs-govuk.git
 	branch = match-techdocs-template
 [submodule "linkml"]
 	path = linkml
-	url = git@github.com:alphagov/linkml.git
+	url = ../linkml.git
 	branch = allow-no-metadata-in-json-schema
