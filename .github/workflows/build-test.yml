@@ -10,8 +10,6 @@ on:
 
 permissions:
   contents: read
-  # Needed for the 'trilom/file-changes-action' action
-  pull-requests: read
 
 # This allows a subsequently queued workflow run to interrupt previous runs
 concurrency:
@@ -45,16 +43,6 @@ jobs:
 
       - name: Build
         run: scripts/build
-
-      # Creates file "$/files.json", among others
-      - name: Gather files changed
-        uses: trilom/file-changes-action@a6ca26c14274c33b15e6499323aac178af06ad4b
-        with:
-          fileOutput: 'json'
-
-      # For verification
-      - name: Show files changed
-        run: cat $HOME/files.json
 
       - name: Run all tests
         run: scripts/test
