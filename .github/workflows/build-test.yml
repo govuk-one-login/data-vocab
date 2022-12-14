@@ -1,6 +1,7 @@
-name: 'Build, test, deploy'
+name: 'Build and test'
 
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches:
@@ -62,5 +63,3 @@ jobs:
         uses: actions/upload-pages-artifact@v1.0.6
         with:
           path: site
-
-
