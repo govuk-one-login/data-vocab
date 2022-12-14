@@ -2,7 +2,7 @@ name: Deploy MkDocs site to Pages
 
 on:
   push:
-    branches: [$default-branch, deploy-to-gh-pages]
+    branches: [$default-branch]
 
   # Allows you to run this workflow manually from the Actions tab (but only on the default branch :shrug:)
   workflow_dispatch:
