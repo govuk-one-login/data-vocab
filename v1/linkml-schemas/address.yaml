@@ -6,6 +6,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
+  gml: http://www.opengis.net/gml
 imports:
   - linkml:types
   - ./common
@@ -36,15 +37,28 @@ classes:
 
 slots:
   uprn:
+    slot_uri: gml:uprn
   organisationName:
+    slot_uri: gml:organisationName
   departmentName:
+    slot_uri: gml:departmentName
   subBuildingName:
+    slot_uri: gml:subBuildingName
   buildingNumber:
+    slot_uri: gml:buildingNumber
   buildingName:
+    slot_uri: gml:buildingName
   dependentStreetName:
+    slot_uri: gml:dependentThoroughfare
   streetName:
+    slot_uri: gml:thoroughfare
   doubleDependentAddressLocality:
+    slot_uri: gml:doubleDependentLocality
   dependentAddressLocality:
+    slot_uri: gml:dependentLocality
   addressLocality:
+    slot_uri: gml:postTown
   postalCode:
+    slot_uri: gml:postcode
   addressCountry:
+    slot_uri: schema:addressCountry
