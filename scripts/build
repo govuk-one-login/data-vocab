@@ -13,7 +13,7 @@ poetry run gen-markdown $HERE/../v1/linkml-schemas/credentials.yaml -d $HERE/../
 ln -s ../../v1/linkml-schemas $HERE/../docs/v1/linkml-schemas
 ln -s ../../v1/json-schemas $HERE/../docs/v1/json-schemas
 
-sass --quiet-deps --load-path $HERE/../mkdocs-govuk/tech-docs-assets/lib/assets/stylesheets --load-path $HERE/../node_modules/govuk-frontend $HERE/../mkdocs-govuk/src/css/:$HERE/../docs/css
+sass --quiet-deps --load-path $HERE/../node_modules/tech-docs-assets/stylesheets --load-path $HERE/../node_modules/govuk-frontend $HERE/../mkdocs-govuk/src/css/:$HERE/../docs/css
 npx webpack build --config $HERE/../webpack.config.js
 mkdir -p $HERE/../docs/assets/govuk/assets
 cp -R $HERE/../node_modules/govuk-frontend/govuk/assets/* $HERE/../docs/assets/govuk/assets

@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/alphagov/di-identity-vocab#readme",
   "description": "",
-  "dependencies": {
-    "tech-docs-assets": "file:mkdocs-govuk/tech-docs-assets"
-  },
   "browser": {
     "assert": false
+  },
+  "dependencies": {
+    "mkdocs-govuk": "file:mkdocs-govuk"
   }
 }
