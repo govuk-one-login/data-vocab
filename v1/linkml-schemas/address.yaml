@@ -1,7 +1,7 @@
 id: https://vocab.account.gov.uk/linkml/address-schema
 name: address-schema
 description: >-
-  A postal address associated with a user returned by Ordnance Survey API or input by the user.
+  A postal address associated with a user, returned by Ordnance Survey API or by manual data input by the user.
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: https://schema.org/
