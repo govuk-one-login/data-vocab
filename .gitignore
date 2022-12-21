@@ -3,6 +3,9 @@ node_modules
 .vscode
 .idea
 docs/v1
+docs/css
+docs/js
+docs/assets/govuk
 site
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
