@@ -37,6 +37,7 @@ classes:
 
 slots:
   uprn:
+    range: integer
     slot_uri: adb:uprn
   organisationName:
     slot_uri: adb:organisationName
