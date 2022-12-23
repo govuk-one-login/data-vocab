@@ -2,7 +2,7 @@
   "aud": "http:\/\/www.example.com\/audience",
   "sub": "test-user-id",
   "nbf": 1659007190,
-  "shared_claims": {
+  "claims": {
     "address": [
       {
         "departmentName": "someDept",
@@ -92,5 +92,7 @@
   "state": "S-mX7O17YDxkCTGxxTg68nWW1Of6KhnkVrK1uZlG76s",
   "exp": 1659008090,
   "iat": 1659007190,
-  "client_id": "ipv-core"
+  "client_id": "ipv-core",
+  "scope": "openid",
+  "nonce": "1233123213"
 }
