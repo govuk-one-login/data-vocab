@@ -60,6 +60,6 @@ slots:
   addressLocality:
     slot_uri: adb:postTown
   postalCode:
-    slot_uri: adb:postcode
+    slot_uri: schema:postalCode
   addressCountry:
     slot_uri: schema:addressCountry
