@@ -2,7 +2,7 @@
   "aud": "http:\/\/www.example.com\/audience",
   "sub": "test-user-id",
   "nbf": 1659007190,
-  "claims": {
+  "shared_claims": {
     "address": [
       {
         "departmentName": "someDept",

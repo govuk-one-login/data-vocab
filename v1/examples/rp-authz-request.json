@@ -1,0 +1,10 @@
+{
+  "claims": "%7B%22userinfo%22%3A%7B%22https%3A%2F%2Fvocab.account.gov.uk%2Fv1%2FcoreIdentityJWT%22%3A%7B%22essential%22%3Atrue%7D%7D%7D",
+  "response_type": "code",
+  "redirect_uri": "http://localhost:3001/oauth/callback",
+  "state": "tRNlWtowYYcSBUzFfkjXbn8GX0V4RansaA2USbjZmlQ",
+  "client_id": "IcVM2g9s10dXL0Jpd4_rVfQ_G0Y",
+  "scope": "openid email phone offline_access",
+  "nonce": "1233123213",
+  "vtr": ["P2.Cl.Cm"]
+}
