@@ -21,23 +21,39 @@ classes:
       - ValidityClass
     slots:
       - documentNumber
-      - expiryDate
       - issueDate
-      - issuedBy
-      - issueNumber
+      - expiryDate
 
   PassportDetailsClass:
     is_a: DocumentDetailsClass
+    slots:
+      - icaoIssuerCode
   DrivingPermitDetailsClass:
     is_a: DocumentDetailsClass
+    slots:
+      - fullAddress
+      - issuedBy
+      - issueNumber
+  ResidencePermitDetailsClass:
+    is_a: DocumentDetailsClass
+    slots:
+      - icaoIssuerCode
 
 slots:
   documentNumber:
+    description: The number that identifies the document.  This number can be combined with an issue number to provide details about a specific issue of a document. 
   expiryDate:
     range: date
+    description: The expiry date of the document.  The date the document ceases to be active.
   issueDate:
     range: date
+    description: The issue date of the document.  The date the document was issued by the relevant issuing authority.
   issuedBy:
     range: StringOrURI
+    description: The issuer of the document.  The issuing authority that produced the document.  For example DVLA.
   issueNumber:
-    range: string
+    description: The issue number of the document.  Used where documents may have the same document number, but be issued again with the same number on expiry. 
+  fullAddress:
+    description: The full address as it appears on a Driving Permit.
+  icaoIssuerCode:
+    description: The ICAO issuer code of the document.  The state or organisation that issued the document.  Found in characters 3-5 of the MRZ of a biometric enabled passport.  For example, GBR.
