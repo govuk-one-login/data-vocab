@@ -6,7 +6,8 @@ rm -f $HERE/../v1/json-schemas/*.json
 poetry run gen-json-schema --closed --no-metadata -t CoreIdentityJWTClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/CoreIdentityJWT.json
 poetry run gen-json-schema --closed --no-metadata -t IdentityCheckCredentialJWTClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredentialJWT.json
 poetry run gen-json-schema --closed --no-metadata -t IdentityCheckCredentialClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredential.json
-poetry run gen-json-schema --closed --no-metadata -t AuthorizationRequestClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/AuthorizationRequest.json
+poetry run gen-json-schema --closed --no-metadata -t CRIAuthorizationRequestClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/CRIAuthorizationRequest.json
+poetry run gen-json-schema --closed --no-metadata -t RPAuthorizationRequestClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/RPAuthorizationRequest.json
 
 rm -rf $HERE/../docs/v1
 poetry run gen-markdown $HERE/../v1/linkml-schemas/credentials.yaml -d $HERE/../docs/v1/ --index-file index.md
