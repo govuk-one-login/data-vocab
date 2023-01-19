@@ -1,11 +1,12 @@
 id: https://vocab.account.gov.uk/linkml/address-schema
 name: address-schema
 description: >-
-  A real name for a user, composed of an ordered list of given names and family names (etc)
+  A postal address associated with a user, returned by an Address Lookup API or by manual data input by the user.
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
+  adb: http://namespaces.geoplace.co.uk/addressbase/2.1
 imports:
   - linkml:types
   - ./common
@@ -16,7 +17,13 @@ default_range: string
 
 classes:
   PostalAddressClass:
-    class_uri: schema:PostalAddress
+    description: >-
+      A postal address associated with a user, returned by an Address Lookup API or by manual data input.  
+      <br />
+      <br />
+      Close mapping - [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
+      <br />
+      Close mapping - [schema:PostalAddress](https://schema.org/PostalAddress)
     mixins:
       - ValidityClass
     slots:
@@ -33,18 +40,109 @@ classes:
       - addressLocality
       - postalCode
       - addressCountry
+    close_mappings:
+      - schema:PostalAddress
+      - adb:Address
 
 slots:
   uprn:
+    range: integer
+    exact_mappings: adb:uprn
+    description: The Unique Property Reference Number (UK and Northern Ireland Addresses Only)
+                  <br />
+                  <br />
+                  Exact mapping - [adb:uprn](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   organisationName:
+    close_mappings: adb:organisationName
+    description: The organisation name is the business name given to a delivery point within a building or small group of buildings. E.g. TOURIST INFORMATION CENTRE This field could also include entries for churches, public houses and libraries.
+                  <br />
+                  <br />
+                  Close mapping - [adb:organisationName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   departmentName:
+    close_mappings: adb:departmentName
+    description: For some organisations, department name is indicated because mail is received by subdivisions of the main organisation at distinct delivery points. E.g. Organisation Name - ABC COMMUNICATIONS Department Name - MARKETING DEPARTMENT
+                  <br />
+                  <br />
+                  Close mapping - [adb:departmentName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)  
   subBuildingName:
+    close_mappings: adb:subBuildingName
+    description: The sub-building name and/or number are identifiers for subdivisions of properties. 
+                 E.g. Sub-building Name - FLAT 3 Building Name - POPLAR COURT Thoroughfare - LONDON ROAD NOTE - If the address is styled as 3 POPLAR COURT, all the text will be shown in the Building Name attribute and the Sub-building Name will be empty. The building number will be shown in this field when it contains a range, decimal or non-numeric character (see Building Number).
+                  <br />
+                  <br />
+                  Close mapping - [adb:subBuildingName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   buildingNumber:
+    close_mappings: adb:buildingNumber
+    description: The building number is a number given to a single building or a small
+                group of buildings, thus identifying it from its neighbours, for example, 44.
+                Building numbers that contain a range, decimals or non-numeric characters do not
+                appear in this field but will be found in the buildingName or the sub-BuildingName
+                fields.  <b>NOTE - This is a string representation of the building number.</b>
+                  <br />
+                  <br />
+                  Close mapping - [adb:buildingNumber](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   buildingName:
+    close_mappings: adb:buildingName
+    description: The building name is a description applied to a single building or a 
+                small group of buildings, such as Highfield House. This also includes those building
+                numbers that contain non-numeric characters, such as 44A. Some descriptive names,
+                when included with the rest of the address, are sufficient to identify the property
+                uniquely and unambiguously, for example, MAGISTRATES COURT. Sometimes the building
+                name will be a blend of distinctive and descriptive naming, for example, RAILWAY
+                TAVERN (PUBLIC HOUSE) or THE COURT ROYAL (HOTEL).
+                  <br />
+                  <br />
+                  Close mapping - [adb:buildingName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   dependentStreetName:
+    close_mappings: adb:dependentThoroughfare
+    description: In certain places, for example, town centres, there are named
+                thoroughfares/streets within other named thoroughfares/streets, for example, parades of shops on a
+                high street where different parades have their own identity. For example, KINGS
+                PARADE, HIGH STREET and QUEENS PARADE, HIGH STREET.
+                  <br />
+                  <br />
+                  Close mapping - [adb:dependentThoroughfare](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   streetName:
+    close_mappings: adb:thoroughfare
+    description: A thoroughfare/street is fundamentally a road, track or named access route, for example, HIGH STREET.
+                  <br />
+                  <br />
+                  Close mapping - [adb:thoroughfare](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   doubleDependentAddressLocality:
+    close_mappings: adb:doubleDependentLocality
+    description: This is used to distinguish between similar thoroughfares/streets or the same
+                thoroughfare/street within a dependent locality. For example, Millbrook Industrial Estate
+                and Cranford Estate in this situation - BRUNEL WAY, MILLBROOK INDUSTRIAL ESTATE,
+                MILLBROOK, SOUTHAMPTON and BRUNEL WAY, CRANFORD ESTATE, MILLBROOK, SOUTHAMPTON.
+                  <br />
+                  <br />
+                  Close mapping - [adb:doubleDependentLocality](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   dependentAddressLocality:
+    close_mappings: adb:dependentLocality
+    description: Dependent locality areas define an area within a town. These are
+                only necessary to aid differentiation where there
+                are thoroughfares/streets of the same name in the same locality. For example, HIGH STREET in
+                SHIRLEY and SWAYTHLING in this situation - HIGH STREET, SHIRLEY, SOUTHAMPTON and HIGH
+                STREET, SWAYTHLING, SOUTHAMPTON.
+                  <br />
+                  <br />
+                  Close mapping - [adb:dependentLocality](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   addressLocality:
+    close_mappings: adb:postTown
+    description: The town or city in which the address resides.
+                  <br />
+                  <br />
+                  Close mapping - [adb:postTown](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
   postalCode:
+    exact_mappings: schema:postalCode
+    description: A UK postcode is an abbreviated form of address made up of combinations of
+                between five and seven alphanumeric characters.  International postal codes have different formats.
+                  <br />
+                  <br />
+                  Exact mapping - [schema:postalCode](https://schema.org/postalCode)
   addressCountry:
+    close_mappings: schema:addressCountry
+    description: The country. Provided as the two-letter ISO 3166-1 alpha-2 country code.
+                  <br />
+                  <br />
+                  Close mapping - [schema:addressCountry](https://schema.org/addressCountry)
