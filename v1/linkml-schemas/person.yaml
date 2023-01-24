@@ -51,6 +51,7 @@ slots:
   passport:
     range: PassportDetailsClass
     multivalued: true
+    inlined_as_list: true
   drivingPermit:
     range: DrivingPermitDetailsClass
     multivalued: true
