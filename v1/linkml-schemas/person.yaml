@@ -26,6 +26,7 @@ classes:
       - address
       - passport
       - drivingPermit
+      - residencePermit
   BirthDateClass:
     mixins:
       - ValidityClass
@@ -52,5 +53,9 @@ slots:
     multivalued: true
   drivingPermit:
     range: DrivingPermitDetailsClass
+    multivalued: true
+    inlined_as_list: true
+  residencePermit:
+    range: ResidencePermitDetailsClass
     multivalued: true
     inlined_as_list: true
