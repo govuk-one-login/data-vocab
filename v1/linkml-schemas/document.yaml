@@ -20,40 +20,50 @@ classes:
     mixins:
       - ValidityClass
     slots:
-      - documentNumber
       - issueDate
       - expiryDate
 
   PassportDetailsClass:
     is_a: DocumentDetailsClass
     slots:
+      - documentNumber
       - icaoIssuerCode
   DrivingPermitDetailsClass:
     is_a: DocumentDetailsClass
     slots:
+      - personalNumber
       - fullAddress
       - issuedBy
       - issueNumber
+      - issuingCountry
   ResidencePermitDetailsClass:
     is_a: DocumentDetailsClass
     slots:
+      - documentNumber
       - icaoIssuerCode
 
 slots:
   documentNumber:
-    description: The number that identifies the document.  This number can be combined with an issue number to provide details about a specific issue of a document. 
+    description: An identifier generated for the specific document when it was issued, for example the passport number.
+    required: true
+  personalNumber:
+    description: An identifier that is common across documents issued to the same individual, such as driver number.
   expiryDate:
     range: date
-    description: The expiry date of the document.  The date the document ceases to be active.
+    description: The date the document expires.
+    required: true
   issueDate:
     range: date
-    description: The issue date of the document.  The date the document was issued by the relevant issuing authority.
+    description: The date the document was issued by the issuing authority.
   issuedBy:
     range: StringOrURI
-    description: The issuer of the document.  The issuing authority that produced the document.  For example DVLA.
+    description: An identifier for the issuing authority, for example, DVLA.
   issueNumber:
-    description: The issue number of the document.  Used where documents may have the same document number, but be issued again with the same number on expiry. 
+    description: An identifier that changes with each issue of the document - unique only within documents issued under the same `personalNumber`.
   fullAddress:
-    description: The full address as it appears on a Driving Permit.
+    description: Unparsed address string as retrieved from optical character recognition read of a document.
   icaoIssuerCode:
-    description: The ICAO issuer code of the document.  The state or organisation that issued the document.  Found in characters 3-5 of the MRZ of a biometric enabled passport.  For example, GBR.
+    description: An identifier for the issuing State or Organisation of a passport as defined by the [International Civil Aviation Organization (ICAO) Standard for Machine Readable Travel Documents](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf). Usually three characters.
+    required: true
+  issuingCountry:
+    description: Issuing country for documents represented as an [ISO 3166 two character country code](https://www.iso.org/iso-3166-country-codes.html#2012_iso3166-2). Not used for passports see `icaoIssuerCode`.
