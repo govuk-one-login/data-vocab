@@ -17,34 +17,37 @@ default_range: string
 
 classes:
   NameClass:
+    description: Name object that represnts a user's claimed identity.  This will have a list of name parts.  Usually this will contain one or more [GivenNameClass](../GivenNameClass) name parts and one [FamilyNameClass](../FamilyNameClass) name part for a specific period of validity.
     mixins:
       - ValidityClass
-    attributes:
-      nameParts:
-        range: NamePartClass
-        multivalued: true
-        inlined_as_list: true
+    slots:
+      - nameParts
+      
   NamePartClass:
+    description: Abstract class to define a name part value and name part type for an optional validity period.
     abstract: false  # has to be false otherwise JSON-Schema doesn't include it, and validation fails :(
     mixins:
       - ValidityClass
     slots:
       - value
-    attributes:
-      type:
-        range: NamePartType
-        multivalued: false
-  GivenNameClass:
-    is_a: NamePartClass
-    attributes:
-      type:
-        equals_string: GivenName
+      - type
 
-  FamilyNameClass:
+  GivenNameClass:
+    description: Name part object that represents a Given Name.  There may be multiple [NamePart](../NamePartClass) objects with a [NamePartType](../NamePartType) of `GivenName` within the representation of a [Name](../NameClass) for a specific period of validity.  These will appear in the order in which the user specified or the order in which they were read from official documentation.
     is_a: NamePartClass
-    attributes:
-      type:
-        equals_string: FamilyName
+
+  FamilyNameClass: 
+    description: Name part object that represents a Family Name.  There will only ever be a single [NamePart](../NamePartClass) object with a [NamePartType](../NamePartType) of `FamilyName` within the representation of a [Name](../NameClass) for a specific period of validity.  This property will contain the user specified family name or the family name that was read from official documentation.
+    is_a: NamePartClass
+
+slots:
+  type:
+    range: NamePartType
+    required: true
+  nameParts:
+    range: NamePartClass
+    multivalued: true
+    inlined_as_list: true
 
 enums:
   NamePartType:
