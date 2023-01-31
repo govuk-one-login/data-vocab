@@ -17,7 +17,7 @@ default_range: string
 
 classes:
   NameClass:
-    description: Name object that represnts a user's claimed identity.  This will have a list of name parts.  Usually this will contain one or more [GivenNameClass](../GivenNameClass) name parts and one [FamilyNameClass](../FamilyNameClass) name part for a specific period of validity.
+    description: Name object that represents a user's claimed identity. This will have a list of [`nameParts`](../nameParts). Usually this will contain one or more [`GivenName`](../GivenNameClass) name parts and one (or occasionally more) [`FamilyName`](../FamilyNameClass) name part(s) for a specific period of validity.
     mixins:
       - ValidityClass
     slots:
