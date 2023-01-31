@@ -33,11 +33,11 @@ classes:
       - type
 
   GivenNameClass:
-    description: Name part object that represents a Given Name.  There may be multiple [NamePart](../NamePartClass) objects with a [NamePartType](../NamePartType) of `GivenName` within the representation of a [Name](../NameClass) for a specific period of validity.  These will appear in the order in which the user specified or the order in which they were read from official documentation.
+    description: Name part object that represents a Given Name. There may be multiple [NamePart](../NamePartClass) objects with a [NamePartType](../NamePartType) of `GivenName` within the representation of a [Name](../NameClass) for a specific period of validity. These will appear in the order in which the user specified or the order in which they were read from official documentation.
     is_a: NamePartClass
 
   FamilyNameClass: 
-    description: Name part object that represents a Family Name.  There currently will be a single [NamePart](../NamePartClass) object with a [NamePartType](../NamePartType) of `FamilyName` within the representation of a [Name](../NameClass) for a specific period of validity.  This property will contain the user specified family name or the family name that was read from official documentation and may contain space characters.
+    description: Name part object that represents a Family Name. There currently will be a single [NamePart](../NamePartClass) object with a [NamePartType](../NamePartType) of `FamilyName` within the representation of a [Name](../NameClass) for a specific period of validity. This property will contain the user specified family name or the family name that was read from official documentation and may contain space characters.
                  <br/><br/>**NOTE** Considering names in a global context across multiple cultures, comsumers of this format should understand that multiple `FamilyName` name parts may be used in future.
     is_a: NamePartClass
 
