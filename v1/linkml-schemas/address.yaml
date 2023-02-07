@@ -4,7 +4,6 @@ description: >-
   A postal address associated with a user, returned by an Address Lookup API or by manual data input by the user.
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
   adb: http://namespaces.geoplace.co.uk/addressbase/2.1
 imports:
@@ -18,7 +17,12 @@ default_range: string
 classes:
   PostalAddressClass:
     description: >-
-      A postal address associated with a user, returned by an Address Lookup API or by manual data input.  
+      A postal address associated with a user, returned by an Address Lookup API or by manual data input.
+      <br />
+      <br />
+      JSON schema - [di_vocab:PostalAddress](json-schemas/PostalAddress.json) 
+      <br />
+      Examples - [Example Postal Address Files](/#postal-address-examples) 
       <br />
       <br />
       Close mapping - [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
