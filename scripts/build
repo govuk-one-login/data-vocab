@@ -7,11 +7,14 @@ poetry run gen-json-schema --closed --no-metadata -t CoreIdentityJWTClass $HERE/
 poetry run gen-json-schema --closed --no-metadata -t IdentityCheckCredentialJWTClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredentialJWT.json
 poetry run gen-json-schema --closed --no-metadata -t IdentityCheckCredentialClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredential.json
 poetry run gen-json-schema --closed --no-metadata -t AuthorizationRequestClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/AuthorizationRequest.json
+poetry run gen-json-schema --closed --no-metadata -t PostalAddressClass $HERE/../v1/linkml-schemas/address.yaml > $HERE/../v1/json-schemas/PostalAddress.json
 
 rm -rf $HERE/../docs/v1
 poetry run gen-markdown $HERE/../v1/linkml-schemas/credentials.yaml -d $HERE/../docs/v1/ --index-file index.md
+mkdir $HERE/../docs/v1/examples
 ln -s ../../v1/linkml-schemas $HERE/../docs/v1/linkml-schemas
 ln -s ../../v1/json-schemas $HERE/../docs/v1/json-schemas
+cp -R $HERE/../v1/examples/PostalAddressClass $HERE/../docs/v1/examples/PostalAddressClass
 
 sass --quiet-deps --load-path $HERE/../node_modules/tech-docs-assets/stylesheets --load-path $HERE/../node_modules/govuk-frontend $HERE/../mkdocs-govuk/src/css/:$HERE/../docs/css
 npx webpack build --config $HERE/../webpack.config.js

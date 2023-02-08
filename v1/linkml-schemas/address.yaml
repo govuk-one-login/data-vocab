@@ -4,7 +4,6 @@ description: >-
   A postal address associated with a user, returned by an Address Lookup API or by manual data input by the user.
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
   adb: http://namespaces.geoplace.co.uk/addressbase/2.1
 imports:
@@ -18,8 +17,36 @@ default_range: string
 classes:
   PostalAddressClass:
     description: >-
-      A postal address associated with a user, returned by an Address Lookup API or by manual data input.  
+      A postal address associated with a user, returned by an Address Lookup API or by manual data input.
       <br />
+      <br />
+      JSON schema - [di_vocab:PostalAddress](json-schemas/PostalAddress.json) 
+      <br />
+      <br />
+      Examples
+      <ul>
+      <li>
+      [Building Number](examples/PostalAddressClass/BuildingNumber.json)
+      </li>
+      <li>
+      [Building Name with UPRN](examples/PostalAddressClass/BuildingNameUPRN.json)
+      </li>
+      <li>
+      [Building Name without UPRN](examples/PostalAddressClass/BuildingNameNoUPRN.json)
+      </li>
+      <li>
+      [Building Number with Building Name](examples/PostalAddressClass/BuildingNumberName.json)
+      </li>
+      <li>
+      [Building Number with Dependent Address Locality](examples/PostalAddressClass/BuildingNumberWithDependentAddressLocality.json)
+      </li>
+      <li>
+      [Sub Building Name with Building Name](examples/PostalAddressClass/SubBuildingNameWithBuildingName.json)
+      </li>
+      <li>
+      [Sub Building Name with Building Number](examples/PostalAddressClass/SubBuildingNameWithBuildingNumber.json)
+      </li>
+      </ul>
       <br />
       Close mapping - [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)
       <br />

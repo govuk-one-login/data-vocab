@@ -2,7 +2,6 @@ id: https://vocab.account.gov.uk/linkml/common-schema
 name: common-schema
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
   - linkml:types
