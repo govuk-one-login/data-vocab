@@ -16,12 +16,6 @@ The following JSON Schemas are provided:
 
 The following JSON examples are provided:
 
-### Postal Address Examples
+### Examples
 
-* [Building Number](v1/examples/PostalAddressClass/BuildingNumber.json)
-* [Building Name with UPRN](v1/examples/PostalAddressClass/BuildingNameUPRN.json)
-* [Building Name without UPRN](v1/examples/PostalAddressClass/BuildingNameNoUPRN.json)
-* [Building Number with Building Name](v1/examples/PostalAddressClass/BuildingNumberName.json)
-* [Building Number with Dependent Address Locality](v1/examples/PostalAddressClass/BuildingNumberWithDependentAddressLocality.json)
-* [Sub Building Name with Building Name](v1/examples/PostalAddressClass/SubBuildingNameWithBuildingName.json)
-* [Sub Building Name with Building Number](v1/examples/PostalAddressClass/SubBuildingNameWithBuildingNumber.json)
+* [Postal Address Examples](v1/PostalAddressClass)
