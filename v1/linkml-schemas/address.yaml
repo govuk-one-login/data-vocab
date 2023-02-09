@@ -17,13 +17,9 @@ default_range: string
 classes:
   PostalAddressClass:
     description: >-
-      A postal address associated with a user, returned by an Address Lookup API or by manual data input.  
-        
-
-      JSON schema - [di_vocab:PostalAddress](json-schemas/PostalAddress.json)  
-        
-
-      Examples
+      A postal address associated with a user, returned by an Address Lookup API or by manual data input. 
+      <p>JSON schema&#58; [di_vocab:PostalAddress](json-schemas/PostalAddress.json)</p>  
+      <p>Examples</p>
       <ul>
       <li>
       [Building Number](examples/PostalAddressClass/BuildingNumber.json)
@@ -47,8 +43,8 @@ classes:
       [Sub Building Name with Building Number](examples/PostalAddressClass/SubBuildingNameWithBuildingNumber.json)
       </li>
       </ul>
-      <p>Close mapping - [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
-      <p>Close mapping - [schema:PostalAddress](https://schema.org/PostalAddress)</p>
+      <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
+      <p>Close mapping&#58; [schema:PostalAddress](https://schema.org/PostalAddress)</p>
     mixins:
       - ValidityClass
     slots:
