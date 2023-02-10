@@ -19,24 +19,50 @@ classes:
     mixins:
       - ValidityClass
     slots:
-      - documentNumber
-      - expiryDate
       - issueDate
-      - issuedBy
-      - issueNumber
+      - expiryDate
 
   PassportDetailsClass:
     is_a: DocumentDetailsClass
+    slots:
+      - documentNumber
+      - icaoIssuerCode
   DrivingPermitDetailsClass:
     is_a: DocumentDetailsClass
+    slots:
+      - personalNumber
+      - fullAddress
+      - issuedBy
+      - issueNumber
+      - issuingCountry
+  ResidencePermitDetailsClass:
+    is_a: DocumentDetailsClass
+    slots:
+      - documentNumber
+      - icaoIssuerCode
 
 slots:
   documentNumber:
+    description: An identifier generated for the specific document when it was issued, for example the passport number.
+    required: true
+  personalNumber:
+    description: An identifier that is common across documents issued to the same individual, such as driver number.
   expiryDate:
     range: date
+    description: The date the document expires.
+    required: true
   issueDate:
     range: date
+    description: The date the document was issued by the issuing authority.
   issuedBy:
     range: StringOrURI
+    description: An identifier for the issuing authority, for example, DVLA.
   issueNumber:
-    range: string
+    description: An identifier that changes with each issue of the document - unique only within documents issued under the same `personalNumber`.
+  fullAddress:
+    description: Unparsed address string as retrieved from optical character recognition read of a document.
+  icaoIssuerCode:
+    description: An identifier for the issuing State or Organisation of a passport as defined by the [International Civil Aviation Organization (ICAO) Standard for Machine Readable Travel Documents](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf). Usually three characters.
+    required: true
+  issuingCountry:
+    description: Issuing country for documents represented as an [ISO 3166 two character country code](https://www.iso.org/iso-3166-country-codes.html#2012_iso3166-2). Not used for passports see `icaoIssuerCode`.
