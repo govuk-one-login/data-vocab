@@ -19,3 +19,6 @@ The following JSON examples are provided:
 ### Examples
 
 * [Postal Address Examples](v1/PostalAddressClass)
+* [Passport Details Examples](v1/PassportDetailsClass)
+* [Driving Permit Details Examples](v1/DrivingPermitDetailsClass)
+* [Residence Permit Details Examples](v1/ResidencePermitDetailsClass)
