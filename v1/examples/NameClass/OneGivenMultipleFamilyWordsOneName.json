@@ -1,0 +1,12 @@
+{
+    "nameParts": [
+    {
+        "value": "Jeroen",
+        "type": "GivenName"
+    },
+    {
+        "value": "Van Der Hoek",
+        "type": "FamilyName"
+    }
+    ]  
+}

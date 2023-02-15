@@ -17,6 +17,31 @@ default_range: string
 classes:
   NameClass:
     description: Name object that represents a user's claimed identity. This will have a list of [`nameParts`](../nameParts). Usually this will contain one or more [`GivenName`](../GivenNameClass) name parts and one (or occasionally more) [`FamilyName`](../FamilyNameClass) name part(s) for a specific period of validity.
+      <p>JSON schema&#58; [di_vocab:Name](json-schemas/Name.json)</p>  
+      <p>Examples</p>
+      <ul>
+      <li>
+      [One Given Name and One Family Name - No Validity Specified](examples/NameClass/OneGivenOneFamily.json)
+      </li>
+      <li>
+      [Multiple Given Names and One Family Name - No Validity Specified](examples/NameClass/MultipleGivenOneFamily.json)
+      </li>
+      <li>
+      [One Given Name and Multiple Name Words in One Family Name - No Validity Specified](examples/NameClass/OneGivenMultipleFamilyWordsOneName.json)
+      </li>
+      <li>
+      [One Given Name and Multiple Family Names - No Validity Specified](examples/NameClass/OneGivenMultipleFamily.json)
+      </li>
+      <li>
+      [Multiple Given Names and Multiple Family Names - No Validity Specified](examples/NameClass/MultipleGivenMultipleFamily.json)
+      </li>
+      <li>
+      [Multiple Given Names and Two Family Names - Validity Specified for each Family Name](examples/NameClass/MultipleGivenTwoFamilyWithValidity.json)
+      </li>
+      <li>
+      [Multiple Given Names and Multiple Family Names - Validity Specified for each Family Name](examples/NameClass/MultipleGivenMultipleFamilyWithValidity.json)
+      </li>
+      </ul>
     mixins:
       - ValidityClass
     slots:
