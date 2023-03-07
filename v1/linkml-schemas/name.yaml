@@ -62,20 +62,26 @@ classes:
 
   FamilyNameClass: 
     description: Name part object that represents a Family Name. There currently will be a single [NamePart](../NamePartClass) object with a [NamePartType](../NamePartType) of `FamilyName` within the representation of a [Name](../NameClass) for a specific period of validity. This property will contain the user specified family name or the family name that was read from official documentation and may contain space characters.
-                 <br/><br/>**NOTE** Considering names in a global context across multiple cultures, comsumers of this format should understand that multiple `FamilyName` name parts may be used in future.
+                 <br/><br/>**NOTE** Considering names in a global context across multiple cultures, consumers of this format should understand that multiple `FamilyName` name parts may be used in future.
     is_a: NamePartClass
 
 slots:
   type:
     range: NamePartType
+    description: The type of name represented by the [NamePart](../NamePartClass).
     required: true
   nameParts:
+    description: The list of name parts that make up a [Name](../NameClass) object.
+    required: true
     range: NamePartClass
     multivalued: true
     inlined_as_list: true
 
 enums:
   NamePartType:
+    description: Reference data enumeration applied to the `type` property for a specific [NamePart](../NamePartClass)
     permissible_values:
       GivenName:
+        description: Part of a personal name that identifies a person, for UK citizens this type is commonly used for first names/forenames and middle names.
       FamilyName:
+        description: Part of a personal name that identifies a person, for UK citizens this type is commonly used for last names/surnames. 
