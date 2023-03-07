@@ -11,6 +11,7 @@ poetry run gen-json-schema --closed --no-metadata -t PostalAddressClass $HERE/..
 poetry run gen-json-schema --closed --no-metadata -t PassportDetailsClass $HERE/../v1/linkml-schemas/document.yaml > $HERE/../v1/json-schemas/PassportDetails.json
 poetry run gen-json-schema --closed --no-metadata -t DrivingPermitDetailsClass $HERE/../v1/linkml-schemas/document.yaml > $HERE/../v1/json-schemas/DrivingPermit.json
 poetry run gen-json-schema --closed --no-metadata -t ResidencePermitDetailsClass $HERE/../v1/linkml-schemas/document.yaml > $HERE/../v1/json-schemas/ResidencePermit.json
+poetry run gen-json-schema --closed --no-metadata -t NameClass $HERE/../v1/linkml-schemas/name.yaml > $HERE/../v1/json-schemas/Name.json
 
 rm -rf $HERE/../docs/v1
 poetry run gen-markdown $HERE/../v1/linkml-schemas/credentials.yaml -d $HERE/../docs/v1/ --index-file index.md
@@ -21,6 +22,7 @@ cp -R $HERE/../v1/examples/PostalAddressClass $HERE/../docs/v1/examples/PostalAd
 cp -R $HERE/../v1/examples/PassportDetailsClass $HERE/../docs/v1/examples/PassportDetailsClass
 cp -R $HERE/../v1/examples/DrivingPermitDetailsClass $HERE/../docs/v1/examples/DrivingPermitDetailsClass
 cp -R $HERE/../v1/examples/ResidencePermitDetailsClass $HERE/../docs/v1/examples/ResidencePermitDetailsClass
+cp -R $HERE/../v1/examples/NameClass $HERE/../docs/v1/examples/NameClass
 
 sass --quiet-deps --load-path $HERE/../node_modules/tech-docs-assets/stylesheets --load-path $HERE/../node_modules/govuk-frontend $HERE/../mkdocs-govuk/src/css/:$HERE/../docs/css
 npx webpack build --config $HERE/../webpack.config.js

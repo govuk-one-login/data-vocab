@@ -18,6 +18,7 @@ The following JSON examples are provided:
 
 ### Examples
 
+* [Name Examples](v1/NameClass)
 * [Postal Address Examples](v1/PostalAddressClass)
 * [Passport Details Examples](v1/PassportDetailsClass)
 * [Driving Permit Details Examples](v1/DrivingPermitDetailsClass)

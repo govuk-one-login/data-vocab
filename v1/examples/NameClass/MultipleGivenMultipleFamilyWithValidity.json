@@ -1,0 +1,32 @@
+{
+  "nameParts": [
+    {
+      "value": "Alice",
+      "type": "GivenName"
+    },
+    {
+      "value": "Jane",
+      "type": "GivenName"
+    },
+    {
+      "value": "Laura",
+      "type": "GivenName"
+    },
+    {
+      "value": "Doe",
+      "type": "FamilyName",
+      "validUntil": "2020-11-10"
+    },
+    {
+      "value": "Smith",
+      "type": "FamilyName",
+      "validFrom": "2020-11-10",
+      "validUntil": "2022-01-01"
+    },
+    {
+      "value": "Peacock",
+      "type": "FamilyName",
+      "validFrom": "2022-01-01"
+    }
+  ]  
+}
