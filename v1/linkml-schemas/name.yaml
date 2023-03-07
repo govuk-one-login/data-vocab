@@ -60,4 +60,4 @@ enums:
       GivenName:
         description: Part of a personal name that identifies a person, for UK citizens this type is commonly used for first names/forenames and middle names.
       FamilyName:
-        description: Part of a personal name that identifies a person, this type is used for last names/surnames. 
+        description: Part of a personal name that identifies a person, for UK citizens this type is commonly used for last names/surnames. 
