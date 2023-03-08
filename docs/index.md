@@ -4,17 +4,17 @@ layout: page
 title: GOV.UK Vocabulary
 ---
 
-Human-readable documentation will follow.
-
-The following JSON Schemas are provided:
+### Schemas
 
 * [IdentityCheckCredential](v1/json-schemas/IdentityCheckCredential.json)
 * [IdentityCheckCredentialJWT](v1/json-schemas/IdentityCheckCredentialJWT.json)
 * [CoreIdentityJWT](v1/json-schemas/CoreIdentityJWT.json)
 * [AuthorizationRequest](v1/json-schemas/AuthorizationRequest.json)
+* [Name](v1/json-schemas/Name.json)
 * [PostalAddress](v1/json-schemas/PostalAddress.json)
-
-The following JSON examples are provided:
+* [DrivingPermit](v1/json-schemas/DrivingPermit.json)
+* [Passport](v1/json-schemas/PassportDetails.json)
+* [ResidencePermit](v1/json-schemas/ResidencePermit.json)
 
 ### Examples
 
