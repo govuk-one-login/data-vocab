@@ -1,0 +1,27 @@
+{
+    "type": [
+      "VerifiableCredential",
+      "AddressCredential"
+    ],
+    "credentialSubject": {
+      "address": [
+        {
+          "departmentName": "someDept",
+          "addressCountry": "GB",
+          "uprn": 123456789012,
+          "postalCode": "SW2A 3BB",
+          "validFrom": "2018-06-23",
+          "subBuildingName": "someSubBuildingName",
+          "buildingName": "someBuildingName",
+          "organisationName": "someOrgName",
+          "streetName": "NotDowningStreet",
+          "dependentStreetName": "someDependentStreetName",
+          "buildingNumber": "11",
+          "validUntil": "2023-01-01",
+          "dependentAddressLocality": "Eastminster",
+          "addressLocality": "Nodnol",
+          "doubleDependentAddressLocality": "someDoubleDependentAddressLocality"
+        } 
+      ]
+    }
+}
