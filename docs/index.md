@@ -29,7 +29,7 @@ In future it may be extended to cover OpenID Connect authentication requests and
 * [Passport](v1/json-schemas/PassportDetails.json)
 * [ResidencePermit](v1/json-schemas/ResidencePermit.json)
 
-### Examples
+## Examples
 
 * [Name Examples](v1/NameClass)
 * [Postal Address Examples](v1/PostalAddressClass)
