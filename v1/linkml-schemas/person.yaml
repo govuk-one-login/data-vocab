@@ -20,7 +20,9 @@ classes:
   CredentialSubjectClass:
 
   PersonClass:
-    is_a: PersonIdentityClass
+    mixins: 
+      - PersonIdentityClass
+    is_a: CredentialSubjectClass
     class_uri: schema:Person
     slots:
       - address
@@ -37,7 +39,7 @@ classes:
   BirthDateClass:
     mixins:
       - ValidityClass
-    slot_usage:
+    attributes:
       value:
         range: date
   
