@@ -5,7 +5,6 @@ description: >-
   A real name for a user, composed of an ordered list of given names and family names (etc)
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
   - linkml:types
@@ -26,6 +25,7 @@ classes:
       - address
       - passport
       - drivingPermit
+      - residencePermit
   BirthDateClass:
     mixins:
       - ValidityClass
@@ -50,7 +50,12 @@ slots:
   passport:
     range: PassportDetailsClass
     multivalued: true
+    inlined_as_list: true
   drivingPermit:
     range: DrivingPermitDetailsClass
+    multivalued: true
+    inlined_as_list: true
+  residencePermit:
+    range: ResidencePermitDetailsClass
     multivalued: true
     inlined_as_list: true

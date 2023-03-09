@@ -7,7 +7,7 @@
       {
         "departmentName": "someDept",
         "addressCountry": "GB",
-        "uprn": "example-uprn-1234",
+        "uprn": 123456789012,
         "postalCode": "SW2A 3BB",
         "validFrom": "2018-06-23",
         "subBuildingName": "someSubBuildingName",
@@ -24,7 +24,7 @@
       {
         "departmentName": "otherDept",
         "addressCountry": "GB",
-        "uprn": "example-uprn-5678",
+        "uprn": 987654321098,
         "postalCode": "SW1A2AA",
         "validFrom": "2019-07-24",
         "subBuildingName": "otherSubBuildingName",

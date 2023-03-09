@@ -5,7 +5,6 @@ description: >-
   They may or may not have been issued as identity documents per se.
 prefixes:
   linkml: https://w3id.org/linkml/
-  schema: https://schema.org/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
   - linkml:types
@@ -20,24 +19,92 @@ classes:
     mixins:
       - ValidityClass
     slots:
-      - documentNumber
-      - expiryDate
       - issueDate
-      - issuedBy
-      - issueNumber
+      - expiryDate
 
   PassportDetailsClass:
+    description: The details of a passport as presented by the biometric chip data using near-field communication (NFC), reading the Machine Readable Zone (MRZ) or manually input by a user. 
+      <p>JSON schema&#58; [di_vocab:PassportDetails](json-schemas/PassportDetails.json)</p>  
+      <p>Examples</p>
+      <ul>
+      <li>
+      [UK Passport](examples/PassportDetailsClass/UKPassport.json)
+      </li>
+      <li>
+      [Non-UK Passport](examples/PassportDetailsClass/NonUKPassport.json)
+      </li>
+      <li>
+      [German Passport - ICAO Issuer Code "D"](examples/PassportDetailsClass/GermanPassport.json)
+      </li>
+      </ul>
     is_a: DocumentDetailsClass
+    slots:
+      - documentNumber
+      - icaoIssuerCode
   DrivingPermitDetailsClass:
+    description: The details of a driving license/permit as presented by Optical Character Recognition of the physical document or manually input by a user. 
+      <p>JSON schema&#58; [di_vocab:DrivingPermit](json-schemas/DrivingPermit.json)</p>  
+      <p>DVLA Examples</p>
+      <ul>
+      <li>
+      [DVLA Issued Driving License Scanned](examples/DrivingPermitDetailsClass/DVLALicenseOCR.json)
+      </li>
+      <li>
+      [DVLA Issued Driving License Manual Input](examples/DrivingPermitDetailsClass/DVLALicenseKeyed.json)
+      </li>
+      </ul>
+      <p>DVA Examples</p>
+      <ul>
+      <li>
+      [DVA Issued Driving License Scanned](examples/DrivingPermitDetailsClass/DVALicenseOCR.json)
+      </li>
+      <li>
+      [DVA Issued Driving License Manual Input](examples/DrivingPermitDetailsClass/DVALicenseKeyed.json)
+      </li>
+      </ul>
     is_a: DocumentDetailsClass
+    slots:
+      - personalNumber
+      - fullAddress
+      - issuedBy
+      - issueNumber
+      - issuingCountry
+  ResidencePermitDetailsClass:
+    description: The details of a biometric residency permit as presented by reading the biometric chip data using near-field communication (NFC), reading the Machine Readable Zone (MRZ) or manually input by a user. 
+      <p>JSON schema&#58; [di_vocab:ResidencePermit](json-schemas/ResidencePermit.json)</p>  
+      <p>Examples</p>
+      <ul>
+      <li>
+      [UK Biometric Residence Permit](examples/ResidencePermitDetailsClass/UKBRP.json)
+      </li>
+      </ul>
+    is_a: DocumentDetailsClass
+    slots:
+      - documentNumber
+      - icaoIssuerCode
 
 slots:
   documentNumber:
+    description: An identifier generated for the specific document when it was issued, for example the passport number.
+    required: true
+  personalNumber:
+    description: An identifier that is common across documents issued to the same individual, such as driver number.
   expiryDate:
     range: date
+    description: The date the document expires.
+    required: true
   issueDate:
     range: date
+    description: The date the document was issued by the issuing authority.
   issuedBy:
     range: StringOrURI
+    description: An identifier for the issuing authority, for example, DVLA.
   issueNumber:
-    range: string
+    description: An identifier that changes with each issue of the document - unique only within documents issued under the same `personalNumber`.
+  fullAddress:
+    description: Unparsed address string as retrieved from optical character recognition read of a document.
+  icaoIssuerCode:
+    description: An identifier for the issuing State or Organisation of a passport as defined by the [International Civil Aviation Organization (ICAO) Standard for Machine Readable Travel Documents](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf). Usually three characters.
+    required: true
+  issuingCountry:
+    description: Issuing country for documents represented as an [ISO 3166 two character country code](https://www.iso.org/iso-3166-country-codes.html#2012_iso3166-2). Not used for passports see `icaoIssuerCode`.
