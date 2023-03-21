@@ -13,6 +13,7 @@ default_range: string
 classes:
   ValidityClass:
     abstract: true
+    mixin: true
     slots:
       - validFrom
       - validUntil
