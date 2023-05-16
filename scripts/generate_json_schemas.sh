@@ -20,6 +20,8 @@ LINKML_ITEMS=(
   "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
   "name.yaml,NameClass,Name.json"
+  "credentials.yaml,IssuerAuthorizationRequestClass,IssuerAuthorizationRequest.json"
+  "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
 )
 
 ROOT_DIR="$( git rev-parse --show-toplevel )"
