@@ -1,33 +1,30 @@
-#!/bin/bash
-HERE=`dirname "$0"`
+#!/usr/bin/env bash
+ROOT_DIR="$( git rev-parse --show-toplevel )"
 set -e
 
-rm -f $HERE/../v1/json-schemas/*.json
-poetry run gen-json-schema --closed --no-metadata -t CoreIdentityJWTClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/CoreIdentityJWT.json
-poetry run gen-json-schema --closed --no-metadata -t IdentityCheckCredentialJWTClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredentialJWT.json
-poetry run gen-json-schema --closed --no-metadata -t IdentityCheckCredentialClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IdentityCheckCredential.json
-poetry run gen-json-schema --closed --no-metadata -t IssuerAuthorizationRequestClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/IssuerAuthorizationRequest.json
-poetry run gen-json-schema --closed --no-metadata -t OpenIDConnectAuthenticationRequestClass $HERE/../v1/linkml-schemas/credentials.yaml > $HERE/../v1/json-schemas/OpenIDConnectAuthenticationRequest.json
-poetry run gen-json-schema --closed --no-metadata -t PostalAddressClass $HERE/../v1/linkml-schemas/address.yaml > $HERE/../v1/json-schemas/PostalAddress.json
-poetry run gen-json-schema --closed --no-metadata -t PassportDetailsClass $HERE/../v1/linkml-schemas/document.yaml > $HERE/../v1/json-schemas/PassportDetails.json
-poetry run gen-json-schema --closed --no-metadata -t DrivingPermitDetailsClass $HERE/../v1/linkml-schemas/document.yaml > $HERE/../v1/json-schemas/DrivingPermit.json
-poetry run gen-json-schema --closed --no-metadata -t ResidencePermitDetailsClass $HERE/../v1/linkml-schemas/document.yaml > $HERE/../v1/json-schemas/ResidencePermit.json
-poetry run gen-json-schema --closed --no-metadata -t NameClass $HERE/../v1/linkml-schemas/name.yaml > $HERE/../v1/json-schemas/Name.json
+EXAMPLES=(
+  "PostalAddressClass"
+  "PassportDetailsClass"
+  "DrivingPermitDetailsClass"
+  "ResidencePermitDetailsClass"
+  "NameClass"
+)
 
-rm -rf $HERE/../docs/v1
-poetry run gen-markdown $HERE/../v1/linkml-schemas/credentials.yaml -d $HERE/../docs/v1/ --index-file index.md
-mkdir $HERE/../docs/v1/examples
-ln -s ../../v1/linkml-schemas $HERE/../docs/v1/linkml-schemas
-ln -s ../../v1/json-schemas $HERE/../docs/v1/json-schemas
-cp -R $HERE/../v1/examples/PostalAddressClass $HERE/../docs/v1/examples/PostalAddressClass
-cp -R $HERE/../v1/examples/PassportDetailsClass $HERE/../docs/v1/examples/PassportDetailsClass
-cp -R $HERE/../v1/examples/DrivingPermitDetailsClass $HERE/../docs/v1/examples/DrivingPermitDetailsClass
-cp -R $HERE/../v1/examples/ResidencePermitDetailsClass $HERE/../docs/v1/examples/ResidencePermitDetailsClass
-cp -R $HERE/../v1/examples/NameClass $HERE/../docs/v1/examples/NameClass
+bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
 
-sass --quiet-deps --load-path $HERE/../node_modules/tech-docs-assets/stylesheets --load-path $HERE/../node_modules/govuk-frontend $HERE/../mkdocs-govuk/src/css/:$HERE/../docs/css
-npx webpack build --config $HERE/../webpack.config.js
-mkdir -p $HERE/../docs/assets/govuk/assets
-cp -R $HERE/../node_modules/govuk-frontend/govuk/assets/* $HERE/../docs/assets/govuk/assets
+rm -rf "${ROOT_DIR}/docs/v1"
+poetry run gen-markdown "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${ROOT_DIR}/docs/v1/" --index-file index.md
+ln -s "${ROOT_DIR}/v1/linkml-schemas" "${ROOT_DIR}/docs/v1/linkml-schemas"
+ln -s "${ROOT_DIR}/v1/json-schemas" "${ROOT_DIR}/docs/v1/json-schemas"
+
+mkdir "${ROOT_DIR}/docs/v1/examples"
+for EXAMPLE in "${EXAMPLES[@]}"; do
+  cp -R "${ROOT_DIR}/v1/examples/${EXAMPLE}" "${ROOT_DIR}/docs/v1/examples/${EXAMPLE}"
+done
+
+sass --quiet-deps --load-path ${ROOT_DIR}/node_modules/tech-docs-assets/stylesheets --load-path ${ROOT_DIR}/node_modules/govuk-frontend ${ROOT_DIR}/mkdocs-govuk/src/css/:${ROOT_DIR}/docs/css
+npx webpack build --config "${ROOT_DIR}/webpack.config.js"
+mkdir -p "${ROOT_DIR}/docs/assets/govuk/assets"
+cp -R ${ROOT_DIR}/node_modules/govuk-frontend/govuk/assets/* ${ROOT_DIR}/docs/assets/govuk/assets
 
 poetry run mkdocs build -c

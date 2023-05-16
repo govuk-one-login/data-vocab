@@ -51,7 +51,14 @@ jobs:
       - name: Run all tests
         run: scripts/test
 
-      - name: Upload HTML
-        uses: actions/upload-pages-artifact@v1.0.6
+      - name: Upload site
+        uses: actions/upload-artifact@v3
         with:
+          name: site
           path: site
+
+      - name: Upload JSON Schemas
+        uses: actions/upload-artifact@v3
+        with:
+          name: json-schemas
+          path: v1/json-schemas
