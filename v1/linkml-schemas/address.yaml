@@ -18,29 +18,29 @@ classes:
   PostalAddressClass:
     description: >-
       A postal address associated with a user, returned by an Address Lookup API or by manual data input. 
-      <p>JSON schema&#58; [di_vocab:PostalAddress](json-schemas/PostalAddress.json)</p>  
+      <p>JSON schema&#58; [di_vocab:PostalAddress](../json-schemas/PostalAddress.json)</p>  
       <p>Examples</p>
       <ul>
       <li>
-      [Building Number](examples/PostalAddressClass/BuildingNumber.json)
+      [Building Number](../examples/PostalAddressClass/BuildingNumber.json)
       </li>
       <li>
-      [Building Name with UPRN](examples/PostalAddressClass/BuildingNameUPRN.json)
+      [Building Name with UPRN](../examples/PostalAddressClass/BuildingNameUPRN.json)
       </li>
       <li>
-      [Building Name without UPRN](examples/PostalAddressClass/BuildingNameNoUPRN.json)
+      [Building Name without UPRN](../examples/PostalAddressClass/BuildingNameNoUPRN.json)
       </li>
       <li>
-      [Building Number with Building Name](examples/PostalAddressClass/BuildingNumberName.json)
+      [Building Number with Building Name](../examples/PostalAddressClass/BuildingNumberName.json)
       </li>
       <li>
-      [Building Number with Dependent Address Locality](examples/PostalAddressClass/BuildingNumberWithDependentAddressLocality.json)
+      [Building Number with Dependent Address Locality](../examples/PostalAddressClass/BuildingNumberWithDependentAddressLocality.json)
       </li>
       <li>
-      [Sub Building Name with Building Name](examples/PostalAddressClass/SubBuildingNameWithBuildingName.json)
+      [Sub Building Name with Building Name](../examples/PostalAddressClass/SubBuildingNameWithBuildingName.json)
       </li>
       <li>
-      [Sub Building Name with Building Number](examples/PostalAddressClass/SubBuildingNameWithBuildingNumber.json)
+      [Sub Building Name with Building Number](../examples/PostalAddressClass/SubBuildingNameWithBuildingNumber.json)
       </li>
       </ul>
       <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
