@@ -1,8 +1,8 @@
 [submodule "mkdocs-govuk"]
 	path = mkdocs-govuk
 	url = ../mkdocs-govuk.git
-	branch = match-techdocs-template
+	branch = nav_menu_no_root_links
 [submodule "linkml"]
 	path = linkml
 	url = ../linkml.git
-	branch = allow-no-metadata-in-json-schema
+	branch = generate-site-to-dirs
