@@ -88,6 +88,9 @@ classes:
     slots:
       - documentNumber
       - icaoIssuerCode
+    slot_usage:
+      expiryDate: 
+        required: true
   SocialSecurityRecordDetailsClass:
     description: The details of a social security record as input by a user. 
       <p>JSON schema&#58; [di_vocab:SocialSecurityRecord](../json-schemas/SocialSecurityRecord.json)</p> 
