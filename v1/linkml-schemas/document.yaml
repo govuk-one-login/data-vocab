@@ -41,6 +41,9 @@ classes:
     slots:
       - documentNumber
       - icaoIssuerCode
+    slot_usage:
+      expiryDate: 
+        required: true
   DrivingPermitDetailsClass:
     description: The details of a driving license/permit as presented by Optical Character Recognition of the physical document or manually input by a user. 
       <p>JSON schema&#58; [di_vocab:DrivingPermit](../json-schemas/DrivingPermit.json)</p>  
@@ -104,7 +107,6 @@ slots:
   expiryDate:
     range: date
     description: The date the document expires.
-    required: true
   issueDate:
     range: date
     description: The date the document was issued by the issuing authority.
