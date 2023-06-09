@@ -41,6 +41,9 @@ classes:
     slots:
       - documentNumber
       - icaoIssuerCode
+    slot_usage:
+      expiryDate: 
+        required: true
   DrivingPermitDetailsClass:
     description: The details of a driving license/permit as presented by Optical Character Recognition of the physical document or manually input by a user. 
       <p>JSON schema&#58; [di_vocab:DrivingPermit](../json-schemas/DrivingPermit.json)</p>  
@@ -69,6 +72,9 @@ classes:
       - issuedBy
       - issueNumber
       - issuingCountry
+    slot_usage:
+      expiryDate: 
+        required: true
   ResidencePermitDetailsClass:
     description: The details of a biometric residency permit as presented by reading the biometric chip data using near-field communication (NFC), reading the Machine Readable Zone (MRZ) or manually input by a user. 
       <p>JSON schema&#58; [di_vocab:ResidencePermit](../json-schemas/ResidencePermit.json)</p>  
@@ -82,6 +88,21 @@ classes:
     slots:
       - documentNumber
       - icaoIssuerCode
+    slot_usage:
+      expiryDate: 
+        required: true
+  SocialSecurityRecordDetailsClass:
+    description: The details of a social security record as input by a user. 
+      <p>JSON schema&#58; [di_vocab:SocialSecurityRecord](../json-schemas/SocialSecurityRecord.json)</p> 
+      <p>Examples</p>
+      <ul>
+      <li>
+      [Social Security Record](../examples/SocialSecurityRecordDetailsClass/socialSecurityRecord.json)
+      </li>
+      </ul>
+    is_a: DocumentDetailsClass
+    slots:
+      - personalNumber   
 
 slots:
   documentNumber:
@@ -92,7 +113,6 @@ slots:
   expiryDate:
     range: date
     description: The date the document expires.
-    required: true
   issueDate:
     range: date
     description: The date the document was issued by the issuing authority.
