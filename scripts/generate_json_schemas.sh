@@ -20,6 +20,7 @@ LINKML_ITEMS=(
   "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
+  "document.yaml,IdCardDetailsClass,SocialSecurityRecord.json"
   "name.yaml,NameClass,Name.json"
   "credentials.yaml,IssuerAuthorizationRequestClass,IssuerAuthorizationRequest.json"
   "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
