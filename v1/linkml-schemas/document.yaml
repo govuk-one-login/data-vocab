@@ -114,7 +114,8 @@ classes:
       </ul>
     is_a: DocumentDetailsClass
     slots:
-      - personalNumber     
+      - documentNumber
+      - icaoIssuerCode    
 slots:
   documentNumber:
     description: An identifier generated for the specific document when it was issued, for example the passport number.

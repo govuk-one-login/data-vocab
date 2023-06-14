@@ -80,7 +80,7 @@ slots:
     range: SocialSecurityRecordDetailsClass
     multivalued: true
     inlined_as_list: true   
-  iDCard:
+  idCard:
     range: IdCardDetailsClass
     multivalued: true
     inlined_as_list: true
