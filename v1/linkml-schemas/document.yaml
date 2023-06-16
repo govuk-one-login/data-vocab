@@ -104,7 +104,7 @@ classes:
     slots:
       - personalNumber 
   IdCardDetailsClass:
-    description: The details of a id card as input by a user. 
+    description: The details of a National Identification Card as presented by a user for identity verification. 
       <p>JSON schema&#58; [di_vocab:IdCard](../json-schemas/IdCard.json)</p> 
       <p>Examples</p>
       <ul>
