@@ -109,7 +109,7 @@ classes:
       <p>Examples</p>
       <ul>
       <li>
-      [Id Card](../examples/IdCardDetailsClass/idCard.json)
+      [ID Card](../examples/IdCardDetailsClass/idCard.json)
       </li>
       </ul>
     is_a: DocumentDetailsClass
