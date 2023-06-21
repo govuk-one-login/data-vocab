@@ -102,8 +102,20 @@ classes:
       </ul>
     is_a: DocumentDetailsClass
     slots:
-      - personalNumber   
-
+      - personalNumber 
+  IdCardDetailsClass:
+    description: The details of a National Identification Card as presented by a user for identity verification. 
+      <p>JSON schema&#58; [di_vocab:IdCard](../json-schemas/IdCard.json)</p> 
+      <p>Examples</p>
+      <ul>
+      <li>
+      [ID Card](../examples/IdCardDetailsClass/idCard.json)
+      </li>
+      </ul>
+    is_a: DocumentDetailsClass
+    slots:
+      - documentNumber
+      - icaoIssuerCode    
 slots:
   documentNumber:
     description: An identifier generated for the specific document when it was issued, for example the passport number.

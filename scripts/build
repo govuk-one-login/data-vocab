@@ -8,6 +8,7 @@ EXAMPLES=(
   "DrivingPermitDetailsClass"
   "ResidencePermitDetailsClass"
   "SocialSecurityRecordDetailsClass"
+  "IdCardDetailsClass"
   "NameClass"
 )
 

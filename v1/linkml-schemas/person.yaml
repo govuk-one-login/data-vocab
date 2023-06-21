@@ -30,6 +30,7 @@ classes:
       - drivingPermit
       - residencePermit
       - socialSecurityRecord
+      - idCard
   
   PersonIdentityClass:
     is_a: CredentialSubjectClass
@@ -79,3 +80,7 @@ slots:
     range: SocialSecurityRecordDetailsClass
     multivalued: true
     inlined_as_list: true   
+  idCard:
+    range: IdCardDetailsClass
+    multivalued: true
+    inlined_as_list: true
