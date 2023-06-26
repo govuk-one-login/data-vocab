@@ -33,8 +33,8 @@ In future it may be extended to cover security events.
 
 ## Examples
 
-* [Name Examples](v1/NameClass)
-* [Postal Address Examples](v1/PostalAddressClass)
-* [Passport Details Examples](v1/PassportDetailsClass)
-* [Driving Permit Details Examples](v1/DrivingPermitDetailsClass)
-* [Residence Permit Details Examples](v1/ResidencePermitDetailsClass)
+* [Name Examples](v1/classes/NameClass)
+* [Postal Address Examples](v1/classes/PostalAddressClass)
+* [Passport Details Examples](v1/classes/PassportDetailsClass)
+* [Driving Permit Details Examples](v1/classes/DrivingPermitDetailsClass)
+* [Residence Permit Details Examples](v1/classes/ResidencePermitDetailsClass)
