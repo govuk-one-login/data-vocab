@@ -179,7 +179,7 @@ slots:
     range: integer
     minimum_value: 2
     maximum_value: 3
-    description: For a biometric verification process, the level corresponding to the [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual) verification score requirement.
+    description: For a biometric verification process, the level corresponding to the verification score as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#verification)
   fraudCheck:
     range: FraudCheckType
     description: Specifies the kind of fraud check performed as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud)
