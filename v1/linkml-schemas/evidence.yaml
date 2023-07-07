@@ -38,6 +38,7 @@ classes:
       - fraudCheck
       - activityFrom
       - identityCheckLevel
+      - identityCheckPolicy
 
 enums:
   CheckMethodType:
@@ -142,20 +143,23 @@ slots:
     range: integer
     minimum_value: 2
     maximum_value: 3
-    description: For a photo-based verification process, the level corresponding to the GPG 45 verification score requirement.
+    description: For a photo-based verification process, the level corresponding to the [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual) verification score requirement.
   biometricVerificationProcessLevel:
     range: integer
     minimum_value: 2
     maximum_value: 3
-    description: For a biometric verification process, the level corresponding to the GPG 45 verification score requirement.
+    description: For a biometric verification process, the level corresponding to the [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual) verification score requirement.
   fraudCheck:
     range: FraudCheckType
-    description: Specifies the kind of fraud check performed per GPG 45
+    description: Specifies the kind of fraud check performed as described in [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual).
   activityFrom:
-    range: datetime
+    range: date
     description: The date of the earliest activity found for the user.
   identityCheckLevel:
     range: integer
     minimum_value: 0
     maximum_value: 3
     description: A measure of the level of identity confidence held by the issuer or previously performed in respect of the data being checked.
+  identityCheckPolicy:
+    range: string
+    description: Details of the type of policy that was checked as part of the identity check.
