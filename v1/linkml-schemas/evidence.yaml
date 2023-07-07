@@ -39,6 +39,32 @@ classes:
       - activityFrom
       - identityCheckLevel
       - identityCheckPolicy
+  SecurityCheckClass:
+    attributes:
+      type:
+        equals_string: SecurityCheck
+    slots:
+      - contraIndicator
+  ContraIndicatorClass:
+    slots:
+      - code
+      - issuanceDate
+      - document
+      - mitigation
+      - incompleteMitigation
+    slot_usage:
+      txn:
+        multivalued: true
+  MitigationClass:
+    slots:
+      - code
+      - mitigatingCredential
+  MitigatingCredentialClass:
+    slots:
+      - issuer
+      - validFrom
+      - txn
+      - id 
 
 enums:
   CheckMethodType:
@@ -89,7 +115,7 @@ enums:
   FraudCheckType:
       permissible_values:
         mortality_check:
-        dentity_theft_check:
+        identity_theft_check:
         synthetic_identity_check:
         impersonation_risk_check:
 
@@ -97,22 +123,27 @@ slots:
   txn:
     description: A unique transaction identifier for this check, or part of a check, if any.
   strengthScore:
+    description: The strength score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#strength) 
     range: integer
     minimum_value: 1
     maximum_value: 4
   validityScore:
+    description: The validity score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#validity) 
     range: integer
     minimum_value: 0
-    maximum_value: 3
+    maximum_value: 4
   verificationScore:
+    description: The verification score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#verification) 
     range: integer
     minimum_value: 0
     maximum_value: 4
   activityHistoryScore:
+    description: The activity history score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#activity-history) 
     range: integer
     minimum_value: 0
     maximum_value: 4
   identityFraudScore:
+    description: The identity fraud score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud) 
     range: integer
     minimum_value: 0
     maximum_value: 3
@@ -143,7 +174,7 @@ slots:
     range: integer
     minimum_value: 2
     maximum_value: 3
-    description: For a photo-based verification process, the level corresponding to the [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual) verification score requirement.
+    description: For a photo-based verification process, the level corresponding to the verification score as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#verification)
   biometricVerificationProcessLevel:
     range: integer
     minimum_value: 2
@@ -151,7 +182,7 @@ slots:
     description: For a biometric verification process, the level corresponding to the [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual) verification score requirement.
   fraudCheck:
     range: FraudCheckType
-    description: Specifies the kind of fraud check performed as described in [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual).
+    description: Specifies the kind of fraud check performed as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud)
   activityFrom:
     range: date
     description: The date of the earliest activity found for the user.
@@ -163,3 +194,28 @@ slots:
   identityCheckPolicy:
     range: string
     description: Details of the type of policy that was checked as part of the identity check.
+  contraIndicator:
+    range: ContraIndicatorClass
+  code:
+    description: A system level code to indentify a contra-indicator.
+  issuanceDate:
+    description: The date a contra-indicator was generated.
+    range: date
+  document:
+    description: The single string representation of a document that a contra-indicator was raised against.
+  mitigation:
+    description: A completed mitigation that has taken place against a particular contra-indicator.
+    range: MitigationClass
+  incompleteMitigation:
+    description: A partial or uncompleted mitigation that has taken place against a particular contra-indicator.
+    range: MitigationClass
+  mitigatingCredential:
+    description: Details of the credential that was generated as part of the mitigation journey for a particular contra-indicator.
+    range: MitigatingCredentialClass
+  issuer:
+    description: The issuer of a verifiable credential.
+    range: uri
+  id:
+    description: The identifier of a verifiable credential.
+    range: uri
+  
