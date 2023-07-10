@@ -38,6 +38,7 @@ classes:
       - fraudCheck
       - activityFrom
       - identityCheckLevel
+      - identityCheckPolicy
   SecurityCheckClass:
     attributes:
       type:
@@ -183,13 +184,16 @@ slots:
     range: FraudCheckType
     description: Specifies the kind of fraud check performed as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud)
   activityFrom:
-    range: datetime
+    range: date
     description: The date of the earliest activity found for the user.
   identityCheckLevel:
     range: integer
     minimum_value: 0
     maximum_value: 3
     description: A measure of the level of identity confidence held by the issuer or previously performed in respect of the data being checked.
+  identityCheckPolicy:
+    range: string
+    description: Details of the type of policy that was checked as part of the identity check.
   contraIndicator:
     range: ContraIndicatorClass
   code:
