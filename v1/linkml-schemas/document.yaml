@@ -89,6 +89,7 @@ classes:
       </ul>
     is_a: DocumentDetailsClass
     slots:
+      - documentType
       - documentNumber
       - icaoIssuerCode
     slot_usage:
