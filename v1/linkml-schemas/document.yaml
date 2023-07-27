@@ -81,11 +81,15 @@ classes:
       <p>Examples</p>
       <ul>
       <li>
+      [UK Biometric Residence Card](../examples/ResidencePermitDetailsClass/UKBRC.json)
+      </li>
+      </ul>
       [UK Biometric Residence Permit](../examples/ResidencePermitDetailsClass/UKBRP.json)
       </li>
       </ul>
     is_a: DocumentDetailsClass
     slots:
+      - documentType
       - documentNumber
       - icaoIssuerCode
     slot_usage:
@@ -140,3 +144,5 @@ slots:
     required: true
   issuingCountry:
     description: Issuing country for documents represented as an [ISO 3166 two character country code](https://www.iso.org/iso-3166-country-codes.html#2012_iso3166-2). Not used for passports see `icaoIssuerCode`.
+  documentType:
+    description: An identifier of the type of document, for example IR for Biometric Residence Permit, CR for Biometric Residence Card.
