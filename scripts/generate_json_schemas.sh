@@ -15,6 +15,7 @@ LINKML_ITEMS=(
   "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
   "credentials.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
+  "credentials.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "address.yaml,PostalAddressClass,PostalAddress.json"
   "document.yaml,PassportDetailsClass,PassportDetails.json"
   "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
