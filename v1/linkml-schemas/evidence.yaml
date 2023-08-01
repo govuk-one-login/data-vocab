@@ -196,6 +196,7 @@ slots:
     description: Details of the type of policy that was checked as part of the identity check.
   contraIndicator:
     range: ContraIndicatorClass
+    multivalued: true
   code:
     description: A system level code to indentify a contra-indicator.
   issuanceDate:
@@ -206,9 +207,11 @@ slots:
   mitigation:
     description: A completed mitigation that has taken place against a particular contra-indicator.
     range: MitigationClass
+    multivalued: true
   incompleteMitigation:
     description: A partial or uncompleted mitigation that has taken place against a particular contra-indicator.
     range: MitigationClass
+    multivalued: true
   mitigatingCredential:
     description: Details of the credential that was generated as part of the mitigation journey for a particular contra-indicator.
     range: MitigatingCredentialClass

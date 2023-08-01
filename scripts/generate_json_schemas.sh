@@ -15,6 +15,7 @@ LINKML_ITEMS=(
   "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
   "credentials.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
+  "credentials.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "address.yaml,PostalAddressClass,PostalAddress.json"
   "document.yaml,PassportDetailsClass,PassportDetails.json"
   "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
@@ -24,6 +25,7 @@ LINKML_ITEMS=(
   "name.yaml,NameClass,Name.json"
   "credentials.yaml,IssuerAuthorizationRequestClass,IssuerAuthorizationRequest.json"
   "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
+  "audit.yaml,AuditClass,Audit.json"
 )
 
 ROOT_DIR="$( git rev-parse --show-toplevel )"
