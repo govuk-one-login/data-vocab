@@ -12,7 +12,7 @@ imports:
   - ./address
   - ./document
 default_curi_maps:
-  - semweb_context  
+  - semweb_context
 default_prefix: di_vocab
 default_range: string
 
@@ -20,7 +20,7 @@ classes:
   CredentialSubjectClass:
 
   PersonClass:
-    mixins: 
+    mixins:
       - PersonIdentityClass
     is_a: CredentialSubjectClass
     class_uri: schema:Person
@@ -31,7 +31,8 @@ classes:
       - residencePermit
       - socialSecurityRecord
       - idCard
-  
+      - sex
+
   PersonIdentityClass:
     is_a: CredentialSubjectClass
     slots:
@@ -44,7 +45,13 @@ classes:
     attributes:
       value:
         range: date
-  
+    slots:
+      - description
+
+  SexClass:
+    slots:
+      - value
+
   AddressClass:
     is_a: CredentialSubjectClass
     slots:
@@ -79,8 +86,13 @@ slots:
   socialSecurityRecord:
     range: SocialSecurityRecordDetailsClass
     multivalued: true
-    inlined_as_list: true   
+    inlined_as_list: true
   idCard:
     range: IdCardDetailsClass
     multivalued: true
     inlined_as_list: true
+  sex:
+    range: SexClass
+    multivalued: true
+    inlined_as_list: true
+    description: A person's legal sex. Only used for matching in certain life events. Multivalued only for consistency with other personal attributes.

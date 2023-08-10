@@ -1,0 +1,74 @@
+id: https://vocab.account.gov.uk/linkml/life-events-schema
+name: lifeEvents
+version: 1.0
+description: >-
+  Vocabulary for life events
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  vc: https://www.w3.org/2018/credentials/v1/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./events
+  - ./person
+default_curi_maps:
+  - semweb_context
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DeathRegistrationSETClass:
+    is_a: SETClass
+    attributes:
+      events:
+        range: DeathRegistrationEventMappingClass
+        required: true
+  DeathRegistrationEventMappingClass:
+    attributes:
+      "deathRegistrationUpdate":
+        range: DeathRegistrationEventClass
+        required: true
+        alias: "https://ssf.account.gov.uk/v1/deathRegistration"
+  DeathRegistrationUpdateSETClass:
+    is_a: SETClass
+    attributes:
+      events:
+        range: DeathRegistrationUpdateEventMappingClass
+        required: true
+  DeathRegistrationUpdateEventMappingClass:
+    attributes:
+      "deathRegistrationUpdate":
+        range: DeathRegistrationEventClass
+        required: true
+        alias: "https://ssf.account.gov.uk/v1/deathRegistrationUpdate"
+  DeathRegistrationEventClass:
+    slots:
+      - deathRegistrationID
+      - subject
+      - deathDate
+      - freeFormatDeathDate
+  DeathDateClass:
+    mixins:
+      - ValidityClass
+    attributes:
+      value:
+        range: date
+    slots:
+      - description
+      - verificationLevel
+
+slots:
+  subject:
+    range: PersonClass
+  deathDate:
+    range: DeathDateClass
+    slot_uri: schema:deathDate
+  freeFormatDeathDate:
+    description: Free format date of death of deceased person.
+  deathRegistrationID:
+    description: Registration ID on the RON system
+    range: integer
+  verificationLevel:
+    range: integer
+    description: TBC what this really means

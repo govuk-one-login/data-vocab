@@ -6,11 +6,20 @@ prefixes:
 imports:
   - linkml:types
 default_curi_maps:
-  - semweb_context  
+  - semweb_context
 default_prefix: di_vocab
 default_range: string
 
 classes:
+  JWTClass:
+    slots:
+      - iss
+      - sub
+      - nbf
+      - exp
+      - aud
+      - iat
+      - jti
   ValidityClass:
     abstract: true
     mixin: true
@@ -37,6 +46,8 @@ slots:
   value:
     required: true
     slot_uri: schema:value
+  description:
+    slot_uri: schema:description
   "@context":
     range: string
     multivalued: true
@@ -47,3 +58,24 @@ slots:
   validUntil:
     range: date
     slot_uri: schema:validUntil
+  iss:
+    range: uri
+    description: The `iss` (issuer) claim identifies the principal that issued the JWT.
+  sub:
+    range: uri
+    description: The `sub` (subject) claim identifies the principal that is the subject of the JWT.
+  nbf:
+    range: integer
+    description: The `nbf` (not before) claim identifies the time the JWT is valid from.
+  exp:
+    range: integer
+    description: The `exp` (expiration time) claim identifies the time the JWT expires.
+  iat:
+    range: integer
+    description: The `iat` (issued at) claim identifies the time at which the JWT was issued.
+  aud:
+    range: uri
+    description: The `aud` (audience) claim identifies the recipients that the JWT is intended for.
+  jti:
+    range: uri
+    description: The `jti` (JWT ID) claim identifies the unique identifier of the JWT.
