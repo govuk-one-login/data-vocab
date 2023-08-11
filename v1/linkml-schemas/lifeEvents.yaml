@@ -17,6 +17,12 @@ default_curi_maps:
 default_prefix: di_vocab
 default_range: string
 
+types:
+  isoDate:
+    base: string
+    uri: xsd:string
+    pattern: "\\d{4}(?:-\\d{2}(?:-\\d{2})?)?"
+
 classes:
   DeathRegistrationSETClass:
     is_a: SETClass
@@ -53,7 +59,7 @@ classes:
       - ValidityClass
     attributes:
       value:
-        range: date
+        range: isoDate
     slots:
       - description
 
