@@ -56,7 +56,6 @@ classes:
         range: date
     slots:
       - description
-      - verificationLevel
 
 slots:
   subject:
@@ -69,6 +68,3 @@ slots:
   deathRegistrationID:
     description: Registration ID on the RON system
     range: integer
-  verificationLevel:
-    range: integer
-    description: TBC what this really means
