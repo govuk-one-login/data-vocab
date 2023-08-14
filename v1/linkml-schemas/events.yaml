@@ -21,8 +21,11 @@ classes:
     is_a: JWTClass
     slots:
       - toe
+      - txn
 
 slots:
   toe:
     range: integer
     description: A value that represents the date and time at which the event occurred. This value is a NumericDate (see Section 2 of RFC7519).
+  txn:
+    description: An optional string value that represents a unique transaction identifier.
