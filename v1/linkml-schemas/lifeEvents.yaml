@@ -54,6 +54,7 @@ classes:
       - subject
       - deathDate
       - freeFormatDeathDate
+      - deathRegistrationDate
   DeathDateClass:
     mixins:
       - ValidityClass
@@ -62,7 +63,13 @@ classes:
         range: isoDate
     slots:
       - description
-
+  DeathRegistrationDateClass:
+    mixins:
+      - ValidityClass
+    attributes:
+      value:
+        range: date
+ 
 slots:
   subject:
     range: PersonClass
@@ -74,3 +81,7 @@ slots:
   deathRegistrationID:
     description: Registration ID on the RON system
     range: integer
+  deathRegistrationDate:
+    description: Date the death was registered, may be the same as the date part of the `toe` JWT claim
+    range: DeathRegistrationDateClass
+
