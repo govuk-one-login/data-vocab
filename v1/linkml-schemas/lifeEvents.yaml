@@ -56,16 +56,12 @@ classes:
       - freeFormatDeathDate
       - deathRegistrationDate
   DeathDateClass:
-    mixins:
-      - ValidityClass
     attributes:
       value:
         range: isoDate
     slots:
       - description
   DeathRegistrationDateClass:
-    mixins:
-      - ValidityClass
     attributes:
       value:
         range: date
