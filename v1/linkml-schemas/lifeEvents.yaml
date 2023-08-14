@@ -24,7 +24,7 @@ types:
     pattern: "\\d{4}(?:-\\d{2}(?:-\\d{2})?)?"
 
 classes:
-  DeathRegistrationSETClass:
+  DeathRegistrationJWTClass:
     is_a: SETClass
     attributes:
       events:
@@ -36,7 +36,7 @@ classes:
         range: DeathRegistrationEventClass
         required: true
         alias: "https://ssf.account.gov.uk/v1/deathRegistration"
-  DeathRegistrationUpdateSETClass:
+  DeathRegistrationUpdateJWTClass:
     is_a: SETClass
     attributes:
       events:
