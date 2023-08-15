@@ -49,9 +49,11 @@ classes:
         required: true
         alias: "https://ssf.account.gov.uk/v1/deathRegistrationUpdate"
   DeathRegistrationEventClass:
+    attributes:
+      subject:
+        range: PersonExtendedMatchingClass
     slots:
       - deathRegistrationID
-      - subject
       - deathDate
       - freeFormatDeathDate
       - deathRegistrationDate
@@ -67,8 +69,6 @@ classes:
         range: date
  
 slots:
-  subject:
-    range: PersonClass
   deathDate:
     range: DeathDateClass
     slot_uri: schema:deathDate

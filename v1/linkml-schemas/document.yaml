@@ -9,12 +9,22 @@ prefixes:
 imports:
   - linkml:types
   - ./common
+  - ./person
 default_curi_maps:
   - semweb_context  
 default_prefix: di_vocab
 default_range: string
 
 classes:
+  PersonWithDocumentsClass:
+    is_a: PersonWithIdentityClass
+    slots:
+      - passport
+      - drivingPermit
+      - residencePermit
+      - socialSecurityRecord
+      - idCard
+
   DocumentDetailsClass:
     mixins:
       - ValidityClass
@@ -121,6 +131,26 @@ classes:
       - documentNumber
       - icaoIssuerCode    
 slots:
+  passport:
+    range: PassportDetailsClass
+    multivalued: true
+    inlined_as_list: true
+  drivingPermit:
+    range: DrivingPermitDetailsClass
+    multivalued: true
+    inlined_as_list: true
+  residencePermit:
+    range: ResidencePermitDetailsClass
+    multivalued: true
+    inlined_as_list: true
+  socialSecurityRecord:
+    range: SocialSecurityRecordDetailsClass
+    multivalued: true
+    inlined_as_list: true
+  idCard:
+    range: IdCardDetailsClass
+    multivalued: true
+    inlined_as_list: true
   documentNumber:
     description: An identifier generated for the specific document when it was issued, for example the passport number.
     required: true
