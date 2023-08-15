@@ -10,3 +10,4 @@ ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/IdentityCheckCredentialJ
 ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/IssuerAuthorizationRequest.json -d $HERE/../v1/examples/core-cri-authz-request.json
 ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/OpenIDConnectAuthenticationRequest.json -d $HERE/../v1/examples/rp-authz-request.json
 ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/DeathRegistrationJWT.json -d $HERE/../v1/examples/life-events/death-registration.json
+ajv validate -c ajv-formats -s $HERE/../v1/json-schemas/DeathRegistrationUpdateJWT.json -d $HERE/../v1/examples/life-events/death-registration-update.json

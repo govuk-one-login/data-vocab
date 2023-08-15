@@ -1,0 +1,82 @@
+{
+  "iss": "https://scim.example.com",
+  "iat": 1691637001,
+  "jti": "4d3559ec67504aaba65d40b0363faad8",
+  "toe": 618772150,
+  "events": {
+    "https://ssf.account.gov.uk/v1/deathRegistrationUpdate": {
+      "subject": {
+        "name": [
+          {
+            "nameParts": [
+              {
+                "value": "Velma",
+                "type": "GivenName"
+              },
+              {
+                "value": "Rogers",
+                "type": "FamilyName"
+              }
+            ]
+          },
+          {
+            "nameParts": [
+              {
+                "value": "Velma",
+                "type": "GivenName"
+              },
+              {
+                "value": "Smith",
+                "type": "FamilyName"
+              }
+            ],
+            "description": "Otherwise or formerly known as"
+          },
+          {
+            "nameParts": [
+              {
+                "value": "Velma",
+                "type": "GivenName"
+              },
+              {
+                "value": "Molone",
+                "type": "FamilyName"
+              }
+            ],
+            "description": "Name before marriage"
+          }
+        ],
+        "sex": [
+          {
+            "value": "Female"
+          }
+        ],
+        "birthDate": [
+          {
+            "value": "1989-07-06",
+            "description": "May be incorrect"
+          }
+        ],
+        "address": [
+          {
+            "subBuildingName": "Flat 4",
+            "buildingNumber": "5",
+            "streetName": "Mystery Street",
+            "addressLocality": "Coolsville",
+            "postalCode": "M15 7",
+            "addressCountry": "US"
+          }
+        ]
+      },
+      "deathRegistrationID": 123456,
+      "deathDate": {
+        "value": "1989-07",
+        "description": "Deceased found on 3 August 1989"
+      },
+      "freeFormatDeathDate": "Unknown due to mortuary error but some time in July 1989",
+      "recordUpdateTime": {
+        "value": "1989-08-10T18:09:10"
+      }
+    }
+  }
+}

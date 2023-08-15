@@ -45,7 +45,7 @@ classes:
   DeathRegistrationUpdateEventMappingClass:
     attributes:
       "deathRegistrationUpdate":
-        range: DeathRegistrationEventClass
+        range: DeathRegistrationUpdateEventClass
         required: true
         alias: "https://ssf.account.gov.uk/v1/deathRegistrationUpdate"
   DeathRegistrationEventClass:
@@ -57,6 +57,15 @@ classes:
       - deathDate
       - freeFormatDeathDate
       - deathRegistrationTime
+  DeathRegistrationUpdateEventClass:
+    attributes:
+      subject:
+        range: PersonExtendedMatchingClass
+    slots:
+      - deathRegistrationID
+      - deathDate
+      - freeFormatDeathDate
+      - recordUpdateTime
   DeathDateClass:
     attributes:
       value:
@@ -75,4 +84,7 @@ slots:
     range: integer
   deathRegistrationTime:
     description: Date/time the death was registered, may be the same as the `toe` JWT claim
+    range: StructuredDateTimeClass
+  recordUpdateTime:
+    description: Date/time the record was amended, may be the same as the `toe` JWT claim
     range: StructuredDateTimeClass
