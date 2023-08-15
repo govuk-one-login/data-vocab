@@ -27,6 +27,17 @@ classes:
       - validFrom
       - validUntil
 
+  StructuredAttributeClass:
+    slots:
+      - value
+
+  StructuredDateTimeClass:
+    is_a: StructuredAttributeClass
+    description: A complete datetime in ISO format with a structure to allow future addition of metadata if required
+    slot_usage:
+      value:
+        range: datetime
+
 types:
   JWS:
     uri: "https://www.iana.org/assignments/media-types/application/jose"

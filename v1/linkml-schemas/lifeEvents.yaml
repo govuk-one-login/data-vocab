@@ -56,17 +56,13 @@ classes:
       - deathRegistrationID
       - deathDate
       - freeFormatDeathDate
-      - deathRegistrationDate
+      - deathRegistrationTime
   DeathDateClass:
     attributes:
       value:
         range: isoDate
     slots:
       - description
-  DeathRegistrationDateClass:
-    attributes:
-      value:
-        range: date
  
 slots:
   deathDate:
@@ -77,7 +73,6 @@ slots:
   deathRegistrationID:
     description: Registration ID on the RON system
     range: integer
-  deathRegistrationDate:
-    description: Date the death was registered, may be the same as the date part of the `toe` JWT claim
-    range: DeathRegistrationDateClass
-
+  deathRegistrationTime:
+    description: Date/time the death was registered, may be the same as the `toe` JWT claim
+    range: StructuredDateTimeClass
