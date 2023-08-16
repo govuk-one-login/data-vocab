@@ -60,7 +60,7 @@ classes:
       - deathDate
       - freeFormatDeathDate
       - recordUpdateTime
-      - deathRecordUpdateReason
+      - deathRegistrationUpdateReason
 
   DeathRegistrationSubject:
     is_a: PersonExtendedMatchingClass
@@ -86,12 +86,12 @@ slots:
   recordUpdateTime:
     description: Date/time the record was amended, may be the same as the `toe` JWT claim
     range: StructuredDateTimeClass
-  deathRecordUpdateReason:
+  deathRegistrationUpdateReason:
     description: A code noting the reason for the update to the death record
-    range: DeathRecordUpdateReasonType
+    range: DeathRegistrationUpdateReasonType
 
 enums:
-  DeathRecordUpdateReasonType:
+  DeathRegistrationUpdateReasonType:
     permissible_values:
       formal_correction:
       quality_assurance:
