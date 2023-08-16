@@ -45,7 +45,7 @@ classes:
   DeathRegistrationEventClass:
     attributes:
       subject:
-        range: PersonExtendedMatchingClass
+        range: DeathRegistrationSubject
     slots:
       - deathRegistrationID
       - deathDate
@@ -54,12 +54,22 @@ classes:
   DeathRegistrationUpdateEventClass:
     attributes:
       subject:
-        range: PersonExtendedMatchingClass
+        range: DeathRegistrationSubject
     slots:
       - deathRegistrationID
       - deathDate
       - freeFormatDeathDate
       - recordUpdateTime
+
+  DeathRegistrationSubject:
+    is_a: PersonExtendedMatchingClass
+    slot_usage:
+      birthDate:
+        range: ISODateClass
+        slot_uri: schema:birthDate
+        multivalued: true
+        inlined_as_list: true
+
 slots:
   deathDate:
     range: ISODateClass
