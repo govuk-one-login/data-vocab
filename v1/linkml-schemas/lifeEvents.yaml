@@ -60,16 +60,9 @@ classes:
       - deathDate
       - freeFormatDeathDate
       - recordUpdateTime
-  DeathDateClass:
-    attributes:
-      value:
-        pattern: "\\d{4}(?:-\\d{2}(?:-\\d{2})?)?"
-    slots:
-      - description
- 
 slots:
   deathDate:
-    range: DeathDateClass
+    range: ISODateClass
     slot_uri: schema:deathDate
   freeFormatDeathDate:
     description: Free format date of death of deceased person.

@@ -38,6 +38,15 @@ classes:
       value:
         range: datetime
 
+  ISODateClass:
+    is_a: StructuredAttributeClass
+    slots:
+      - description
+    attributes:
+      value:
+        pattern: "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+        range: string
+
 types:
   JWS:
     uri: "https://www.iana.org/assignments/media-types/application/jose"
