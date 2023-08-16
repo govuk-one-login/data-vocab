@@ -76,7 +76,8 @@
       "freeFormatDeathDate": "Unknown due to mortuary error but some time in July 1989",
       "recordUpdateTime": {
         "value": "1989-08-10T18:09:10"
-      }
+      },
+      "deathRecordUpdateReason": "formal_correction"
     }
   }
 }
