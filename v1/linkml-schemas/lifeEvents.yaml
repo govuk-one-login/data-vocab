@@ -26,7 +26,7 @@ classes:
         required: true
   DeathRegistrationEventMappingClass:
     attributes:
-      "deathRegistrationUpdate":
+      "deathRegistration":
         range: DeathRegistrationEventClass
         required: true
         alias: "https://ssf.account.gov.uk/v1/deathRegistration"
