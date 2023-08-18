@@ -46,6 +46,7 @@ classes:
       - ValidityClass
     slots:
       - nameParts
+      - description
       
   NamePartClass:
     description: Abstract class to define a name part value and name part type for an optional validity period.

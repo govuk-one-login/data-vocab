@@ -1,0 +1,31 @@
+id: https://vocab.account.gov.uk/linkml/events-schema
+name: events
+version: 1.0
+description: >-
+  Vocabulary and schemas for events in One Login and the Life Events Platform.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  vc: https://www.w3.org/2018/credentials/v1/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+default_curi_maps:
+  - semweb_context
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  SETClass:
+    is_a: JWTClass
+    slots:
+      - toe
+      - txn
+
+slots:
+  toe:
+    range: integer
+    description: A value that represents the date and time at which the event occurred. This value is a NumericDate (see Section 2 of RFC7519).
+  txn:
+    description: An optional string value that represents a unique transaction identifier.

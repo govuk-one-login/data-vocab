@@ -1,0 +1,99 @@
+id: https://vocab.account.gov.uk/linkml/life-events-schema
+name: lifeEvents
+version: 1.0
+description: >-
+  Vocabulary for life events
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  vc: https://www.w3.org/2018/credentials/v1/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./events
+  - ./person
+default_curi_maps:
+  - semweb_context
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DeathRegistrationJWTClass:
+    is_a: SETClass
+    attributes:
+      events:
+        range: DeathRegistrationEventMappingClass
+        required: true
+  DeathRegistrationEventMappingClass:
+    attributes:
+      "deathRegistration":
+        range: DeathRegistrationEventClass
+        required: true
+        alias: "https://ssf.account.gov.uk/v1/deathRegistration"
+  DeathRegistrationUpdateJWTClass:
+    is_a: SETClass
+    attributes:
+      events:
+        range: DeathRegistrationUpdateEventMappingClass
+        required: true
+  DeathRegistrationUpdateEventMappingClass:
+    attributes:
+      "deathRegistrationUpdate":
+        range: DeathRegistrationUpdateEventClass
+        required: true
+        alias: "https://ssf.account.gov.uk/v1/deathRegistrationUpdate"
+  DeathRegistrationEventClass:
+    attributes:
+      subject:
+        range: DeathRegistrationSubjectClass
+    slots:
+      - deathRegistrationID
+      - deathDate
+      - freeFormatDeathDate
+      - deathRegistrationTime
+  DeathRegistrationUpdateEventClass:
+    attributes:
+      subject:
+        range: DeathRegistrationSubjectClass
+    slots:
+      - deathRegistrationID
+      - deathDate
+      - freeFormatDeathDate
+      - recordUpdateTime
+      - deathRegistrationUpdateReason
+  DeathRegistrationSubjectClass:
+    is_a: PersonExtendedMatchingClass
+    slot_usage:
+      birthDate:
+        range: ISODateClass
+        slot_uri: schema:birthDate
+        multivalued: true
+        inlined_as_list: true
+
+slots:
+  deathDate:
+    range: ISODateClass
+    slot_uri: schema:deathDate
+  freeFormatDeathDate:
+    description: Free format date of death of deceased person.
+  deathRegistrationID:
+    description: Registration ID on the RON system
+    range: integer
+  deathRegistrationTime:
+    description: Date/time the death was registered, may be the same as the `toe` JWT claim
+    range: StructuredDateTimeClass
+  recordUpdateTime:
+    description: Date/time the record was amended, may be the same as the `toe` JWT claim
+    range: StructuredDateTimeClass
+  deathRegistrationUpdateReason:
+    description: A code noting the reason for the update to the death record
+    range: DeathRegistrationUpdateReasonType
+
+enums:
+  DeathRegistrationUpdateReasonType:
+    permissible_values:
+      formal_correction:
+      quality_assurance:
+      typographical:
+      cancelled:
+      cancellation_removed:

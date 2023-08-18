@@ -1,42 +1,40 @@
 id: https://vocab.account.gov.uk/linkml/person-schema
 name: person-schema
-title: Name
-description: >-
-  A real name for a user, composed of an ordered list of given names and family names (etc)
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
   - linkml:types
+  - ./common
   - ./name
   - ./address
-  - ./document
 default_curi_maps:
-  - semweb_context  
+  - semweb_context
 default_prefix: di_vocab
 default_range: string
 
 classes:
-  CredentialSubjectClass:
-
   PersonClass:
-    mixins: 
-      - PersonIdentityClass
-    is_a: CredentialSubjectClass
     class_uri: schema:Person
-    slots:
-      - address
-      - passport
-      - drivingPermit
-      - residencePermit
-      - socialSecurityRecord
-      - idCard
-  
-  PersonIdentityClass:
-    is_a: CredentialSubjectClass
+
+  PersonWithIdentityClass:
+    description: A credential subject representing a person only by core identity attributes
+    is_a: PersonClass
     slots:
       - name
       - birthDate
+
+  PersonExtendedMatchingClass:
+    description: An extended version of the PersonIdentity class for situations like Life Events where additional data may be required for matching, but where the full range of documents is not required
+    is_a: PersonWithIdentityClass
+    slots:
+      - sex
+      - address
+
+  AddressAssertionClass:
+    is_a: PersonClass
+    slots:
+      - address
 
   BirthDateClass:
     mixins:
@@ -44,11 +42,12 @@ classes:
     attributes:
       value:
         range: date
-  
-  AddressClass:
-    is_a: CredentialSubjectClass
     slots:
-      - address
+      - description
+
+  SexClass:
+    slots:
+      - value
 
 slots:
   name:
@@ -64,23 +63,8 @@ slots:
     range: PostalAddressClass
     multivalued: true
     inlined_as_list: true
-  passport:
-    range: PassportDetailsClass
+  sex:
+    range: SexClass
     multivalued: true
     inlined_as_list: true
-  drivingPermit:
-    range: DrivingPermitDetailsClass
-    multivalued: true
-    inlined_as_list: true
-  residencePermit:
-    range: ResidencePermitDetailsClass
-    multivalued: true
-    inlined_as_list: true
-  socialSecurityRecord:
-    range: SocialSecurityRecordDetailsClass
-    multivalued: true
-    inlined_as_list: true   
-  idCard:
-    range: IdCardDetailsClass
-    multivalued: true
-    inlined_as_list: true
+    description: A person's legal sex. Only used for matching in certain life events. Multivalued only for consistency with other personal attributes.
