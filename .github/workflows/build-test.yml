@@ -51,14 +51,27 @@ jobs:
       - name: Run all tests
         run: scripts/test
 
+      - name: Generate types
+        working-directory: scripts
+        run: ./generate_types.sh
+
       - name: Upload site
         uses: actions/upload-artifact@v3
         with:
           name: site
           path: site
+          retention-days: 1
 
       - name: Upload JSON Schemas
         uses: actions/upload-artifact@v3
         with:
           name: json-schemas
           path: v1/json-schemas
+          retention-days: 1
+
+      - name: Upload TypeScript types
+        uses: actions/upload-artifact@v3
+        with:
+          name: types
+          path: v1/typescript-types.zip
+          retention-days: 1

@@ -28,3 +28,7 @@ site
 .DS_Store
 
 Staticfile.auth
+
+# Generated TypeScript types
+v1/types/
+v1/typescript-types.zip
