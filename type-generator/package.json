@@ -1,0 +1,15 @@
+{
+  "name": "type-generator",
+  "version": "0.1.0",
+  "description": "Generates TypeScript types from DI Vocab JSON Schema.",
+  "main": "index.mjs",
+  "scripts": {
+    "generate": "node index.mjs ../v1/json-schemas ../v1/types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "json-schema-to-typescript": "^13.1.1"
+  }
+}
