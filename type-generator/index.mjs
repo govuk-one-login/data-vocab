@@ -1,6 +1,6 @@
 import {compileFromFile} from 'json-schema-to-typescript'
 import * as fs from "fs";
-import {mkdir, readdir} from "fs/promises";
+import {mkdir, readdir, writeFile} from "fs/promises";
 import * as path from "path";
 
 const args = process.argv.slice(2);
@@ -16,11 +16,14 @@ async function generate(schemaDir, genDir) {
 
     for (const file of files) {
         const schemaFile = path.join(schemaDir, file);
-        console.log(`Generating from ${schemaFile}`);
+        console.log(`Generating types from ${schemaFile}`);
 
-        const typesFile = path.join(genDir, path.basename(schemaFile) + ".d.ts");
-        await compileFromFile(schemaFile)
-            .then(ts => fs.writeFileSync(typesFile, ts))
+        const schemaFilename = path.basename(schemaFile);
+        const typesFilename = schemaFilename.substring(0, schemaFilename.length - 5) + ".d.ts";
+        const typesFile = path.join(genDir, typesFilename);
+
+        const types = await compileFromFile(schemaFile);
+        await writeFile(typesFile, types);
     }
 
     console.log(`Wrote types files to: ${genDir}`);
