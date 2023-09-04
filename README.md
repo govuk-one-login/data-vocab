@@ -4,9 +4,14 @@
 
 This specification intends to describe a Linked Data vocabulary for asserting Verifiable Credentials related to identity proofing and verification.
 
+This repository produces the following artifacts:
+
+* [Vocabulary documentation](https://alphagov.github.io/di-identity-vocab/)
+* [JSON Schemas](https://github.com/alphagov/di-identity-vocab/releases)
+* [TypeScript types (npm module)](https://github.com/alphagov/di-identity-vocab/pkgs/npm/di-identity-vocab)
+
 Further development could include:
 
-* JSON Schemas
 * Automated tests
 * Documentation
 * JSON-LD
