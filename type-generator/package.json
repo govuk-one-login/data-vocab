@@ -4,10 +4,11 @@
   "description": "Generates TypeScript types from DI Vocab JSON Schema.",
   "main": "index.mjs",
   "scripts": {
-    "generate": "node index.mjs ../v1/json-schemas ../v1/types",
+    "copy-pkg-misc": "cp src/package.json ../v1/types && cp ../README.md ../v1/types",
+    "generate": "npm run generate-types && npm run copy-pkg-misc",
+    "generate-types": "node index.mjs ../v1/json-schemas ../v1/types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "Apache-2.0",
   "dependencies": {
     "json-schema-to-typescript": "^13.1.1"

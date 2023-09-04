@@ -1,0 +1,12 @@
+{
+  "name": "@alphagov/di-identity-vocab",
+  "description": "GOV.UK One Login - Digital Identity Vocabulary",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alphagov/di-identity-vocab"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
