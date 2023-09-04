@@ -1,4 +1,4 @@
-name: Deploy site and create release
+name: Deploy site
 
 on:
   push:
@@ -46,32 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-      - name: Download JSON Schemas
-        uses: actions/download-artifact@v3
-        with:
-          name: json-schemas
-          path: v1/json-schemas
-
-      - name: Download TypeScript types
-        uses: actions/download-artifact@v3
-        with:
-          name: types
-          path: v1
-
-      # Ideally, we'd use the git tag as the release name
-      - name: Calculate release name
-        id: release-name
-        run: |
-          FULL_SHA="${{ github.sha }}"
-          echo "short_sha=${FULL_SHA:0:7}" >> $GITHUB_OUTPUT
-
-      - name: Release JSON Schemas and types
-        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 #v0.1.15
-        with:
-          files: |
-            v1/json-schemas/*
-            v1/typescript-types.zip
-          tag_name: ${{ steps.release-name.outputs.short_sha }}
-          draft: false
-          prerelease: false

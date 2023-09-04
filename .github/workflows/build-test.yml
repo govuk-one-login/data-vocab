@@ -73,5 +73,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: types
-          path: v1/typescript-types.zip
+          path: v1/types
           retention-days: 1
