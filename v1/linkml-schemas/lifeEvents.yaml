@@ -47,7 +47,7 @@ classes:
       subject:
         range: DeathRegistrationSubjectClass
     slots:
-      - deathRegistrationID
+      - deathRegistration
       - deathDate
       - freeFormatDeathDate
       - deathRegistrationTime
@@ -56,7 +56,7 @@ classes:
       subject:
         range: DeathRegistrationSubjectClass
     slots:
-      - deathRegistrationID
+      - deathRegistration
       - deathDate
       - freeFormatDeathDate
       - recordUpdateTime
@@ -76,9 +76,10 @@ slots:
     slot_uri: schema:deathDate
   freeFormatDeathDate:
     description: Free format date of death of deceased person.
-  deathRegistrationID:
-    description: Registration ID on the RON system
-    range: integer
+  deathRegistration:
+    description: URI for the death notification, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier
+    range: uri
+    required: true
   deathRegistrationTime:
     description: Date/time the death was registered, may be the same as the `toe` JWT claim
     range: StructuredDateTimeClass
