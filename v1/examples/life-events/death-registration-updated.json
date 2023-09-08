@@ -4,7 +4,7 @@
   "jti": "4d3559ec67504aaba65d40b0363faad8",
   "toe": 618772150,
   "events": {
-    "https://ssf.account.gov.uk/v1/deathRegistrationUpdate": {
+    "https://vocab.account.gov.uk/v1/deathRegistrationUpdated": {
       "subject": {
         "name": [
           {
