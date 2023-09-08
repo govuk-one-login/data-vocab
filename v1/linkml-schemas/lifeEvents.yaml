@@ -77,7 +77,7 @@ slots:
   freeFormatDeathDate:
     description: Free format date of death of deceased person.
   deathRegistration:
-    description: URI for the death notification, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier
+    description: URI for the relevant entry in the register of deaths, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier
     range: uri
     required: true
   deathRegistrationTime:
