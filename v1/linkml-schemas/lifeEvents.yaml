@@ -69,15 +69,19 @@ classes:
         slot_uri: schema:birthDate
         multivalued: true
         inlined_as_list: true
+    slots:
+      - freeFormatBirthDate
 
 slots:
   deathDate:
     range: ISODateClass
     slot_uri: schema:deathDate
+  freeFormatBirthDate:
+    description: Free format date of birth, used where the birth date could not be expressed as a partial or complete ISO date.
   freeFormatDeathDate:
-    description: Free format date of death of deceased person.
+    description: Free format date of death, used where the death date could not be expressed as a partial or complete ISO date.
   deathRegistration:
-    description: URI for the relevant entry in the register of deaths, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier
+    description: URI for the relevant entry in the register of deaths, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier.
     range: uri
     required: true
   deathRegistrationTime:
