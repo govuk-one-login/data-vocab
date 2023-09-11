@@ -82,10 +82,10 @@ slots:
     required: true
   deathRegistrationTime:
     description: Date/time the death was registered, may be the same as the `toe` JWT claim
-    range: StructuredDateTimeClass
+    range: datetime
   recordUpdateTime:
     description: Date/time the record was amended, may be the same as the `toe` JWT claim
-    range: StructuredDateTimeClass
+    range: datetime
   deathRegistrationUpdateReason:
     description: A code noting the reason for the update to the death record
     range: DeathRegistrationUpdateReasonType
