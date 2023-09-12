@@ -73,7 +73,7 @@
         "description": "Deceased found on 3 August 1989"
       },
       "freeFormatDeathDate": "Unknown due to mortuary error but some time in July 1989",
-      "recordUpdateTime": "1989-08-10T18:09:10",
+      "recordUpdateTime": "1989-08-10T18:09:10Z",
       "deathRegistrationUpdateReason": "formal_correction"
     }
   }
