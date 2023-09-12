@@ -56,6 +56,7 @@
             "value": "1989-07-06"
           }
         ],
+        "freeFormatBirthDate": "Some time between July 1989 and February 1990",
         "address": [
           {
             "subBuildingName": "Flat 4",
