@@ -14,12 +14,19 @@ Further development could include:
 
 ## Getting started
 
+When checking out, ensure you update/initialise submodules recursively, these are used for certain dependencies, e.g.
+```bash
+git submodule update --init --recursive
+```
+
+### Manually
+
 * Install Python for example by [installing pyenv](https://briansunter.com/blog/python-setup-pyenv-poetry/#initial-setup);
 * Install [poetry](https://python-poetry.org/docs/) so that you can install and run this project's Python depdenencies;
 * Install Node (and NPM) for example by [installing NVM](https://github.com/nvm-sh/nvm#installing-and-updating);
 * Install some build and test command line tools we require globally (or into your environment, somehow)
 
-```
+```bash
 poetry install
 npm install
 
@@ -27,7 +34,13 @@ npm install -g ajv-cli@5.0.0 ajv-formats@2.1.1
 
 npm install -g sass  # or your local equivalent per https://sass-lang.com/install
 
+If the above dependencies/versions need to change, please update the [devcontainer configuration](.devcontainer/devcontainer.json) also.
+
 ```
+
+### Dev Container
+
+Open the repo in a development container in vscode, and the pre-requisites will be pre-installed
 
 # Modifying the source LinkML
 
@@ -51,11 +64,13 @@ Test the example files against the JSON schemas using an independent JSON-Schema
 ./scripts/test
 ```
 
-# Run a local server
+## Run a local server
 
 ```
 poetry run mkdocs serve
 ```
+
+If the styling appears off, you may need to run the build script first
 
 ## Deploy
 
