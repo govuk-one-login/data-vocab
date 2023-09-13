@@ -1,5 +1,6 @@
 {
   "name": "root",
+  "description": "Builds the vocab site based on the identity vocab. Also generates JSON Schemas and TypeScript types from DI Vocab JSON Schema.",
   "private": true,
   "version": "1.3.0",
   "devDependencies": {
@@ -20,11 +21,16 @@
     "url": "https://github.com/alphagov/di-identity-vocab/issues"
   },
   "homepage": "https://github.com/alphagov/di-identity-vocab#readme",
-  "description": "",
   "browser": {
     "assert": false
   },
   "dependencies": {
+    "json-schema-to-typescript": "^13.1.1",
     "mkdocs-govuk": "file:mkdocs-govuk"
+  },
+  "scripts": {
+    "copy-pkg-misc": "cp src/package-template.json v1/types/package.json && cp README.md v1/types",
+    "generate": "npm run generate-types && npm run copy-pkg-misc",
+    "generate-types": "node src/index.mjs v1/json-schemas v1/types"
   }
 }
