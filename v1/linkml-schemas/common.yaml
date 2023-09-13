@@ -31,13 +31,6 @@ classes:
     slots:
       - value
 
-  StructuredDateTimeClass:
-    is_a: StructuredAttributeClass
-    description: A complete datetime in ISO format with a structure to allow future addition of metadata if required
-    slot_usage:
-      value:
-        range: datetime
-
   ISODateClass:
     is_a: StructuredAttributeClass
     slots:
