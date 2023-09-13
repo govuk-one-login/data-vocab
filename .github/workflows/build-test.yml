@@ -52,8 +52,7 @@ jobs:
         run: scripts/test
 
       - name: Generate types
-        working-directory: scripts
-        run: ./generate_types.sh
+        run: npm run generate
 
       - name: Upload site
         uses: actions/upload-artifact@v3

@@ -30,5 +30,6 @@ site
 Staticfile.auth
 
 # Generated TypeScript types
+gen/
 v1/types/
 v1/typescript-types.zip
