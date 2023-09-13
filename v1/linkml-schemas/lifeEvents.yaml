@@ -81,9 +81,11 @@ slots:
   freeFormatDeathDate:
     description: A string containing free format death date information, used where the death date could not be expressed as a partial or complete ISO date. This property is expected to be present if `deathDate` is not present, but could be used alongside `deathDate` in some cases.
   deathRegistration:
-    description: URI for the relevant entry in the register of deaths, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier.
+    description: URI for the relevant entry in the register of deaths, likely to be a <a href="https://www.rfc-editor.org/rfc/rfc4198.html">federated content URN</a> based on an originator's identifier. The regular expression validation pattern provided applies only for the Life Events Platform proof of concept and will be removed in future.
     range: uri
     required: true
+    pattern: "urn:fdc:gro.gov.uk:2023:death:[0-9]+"
+
   deathRegistrationTime:
     description: Date/time the death was registered, may be the same as the `toe` JWT claim
     range: datetime
