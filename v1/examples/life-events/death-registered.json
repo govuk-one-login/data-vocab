@@ -68,7 +68,7 @@
           }
         ]
       },
-      "deathRegistration": "urn:fdc:gro.gov.uk:2023:123456",
+      "deathRegistration": "urn:fdc:gro.gov.uk:2023:death:123456",
       "deathDate": {
         "value": "1989-07",
         "description": "Deceased found on 3 August 1989"
