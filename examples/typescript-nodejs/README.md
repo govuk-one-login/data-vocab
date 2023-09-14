@@ -24,6 +24,11 @@ Ensure you have authenticated to the `@alphagov` npm scope in GitHub Packages:
 npm login --scope=@alphagov --auth-type=legacy --registry=https://npm.pkg.github.com
 ```
 
+> See [Authenticating to GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) documentation.
+
+> **Note**
+> For instructions on using the package from GitHub Actions, see the [main README](https://github.com/alphagov/di-identity-vocab#setting-permissions).
+
 ##### Steps
 
 Build the project using:
