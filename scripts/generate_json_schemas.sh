@@ -27,6 +27,7 @@ LINKML_ITEMS=(
   "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
   "lifeEvents.yaml,DeathRegisteredJWTClass,DeathRegisteredJWT.json",
   "lifeEvents.yaml,DeathRegistrationUpdatedJWTClass,DeathRegistrationUpdatedJWT.json"
+  "audit.yaml,AuditClass,AuditClass.json"
 )
 
 ROOT_DIR="$( git rev-parse --show-toplevel )"
