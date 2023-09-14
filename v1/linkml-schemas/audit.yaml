@@ -1,0 +1,199 @@
+id: https://vocab.account.gov.uk/linkml/audit-schema
+name: audit-schema
+description: >-
+  A schema to define the audit events schema structure for events being passed to teh Transaction Monitoring and Audit Platform
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - linkml:types
+  - ./common
+  - ./name
+  - ./person
+  - ./identityCheckCredential
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuditClass:
+    description: >-
+      The audit object that is defined for submitting audit information into the Transaction Monitoring and Audit (TxMA) Platform
+    slots:
+      - event_id
+      - timestamp
+      - timestamp_formatted
+      - event_name
+      - component_id
+      - user
+      - restricted
+      - extensions
+    slot_usage:
+      client_id:
+      platform:
+        multivalued: true
+        inlined_as_list: true
+
+  UserAuditClass:
+    description: >-
+      The audit object that is defined for submitting specific user related audit data into the Transaction Monitoring and Audit (TxMA) Platform
+    slots:
+      - user_id
+      - transaction_id
+      - email
+      - phone
+      - ip_address
+      - session_id
+      - persistent_session_id
+    slot_usage:
+      - govuk_signin_journey_id
+
+  PlatformAuditClass:
+    description: >-
+      The audit object that is defined for submitting platform related audit data that should be obfuscated into the Transaction Monitoring and Audit (TxMA) Platform
+    slots:
+      - deviceInfo
+
+  DeviceInfoClass:
+    description: >-
+      The audit object that is defined for submitting device related audit data into the Transaction Monitoring and Audit (TxMA) Platform
+    slots:
+      - OSVersion
+      - brand
+      - manufacturer
+      - model
+    slot_usage:
+      platform:
+        range: string
+        multivalued: false
+        inlined_as_list: false
+      
+  RestrictedAuditClass:
+    description: >-
+      The audit object that is defined for submitting specific user related audit data that should be obfuscated into the Transaction Monitoring and Audit (TxMA) Platform
+    slots:
+      - deviceId
+      - flaggedRecord
+    slot_usage:
+      - name
+      - birthDate
+      - address
+      - passport
+      - drivingPermit
+      - residencePermit
+
+
+  ExtensionsAuditClass:
+    description: >-
+      The audit object that is defined for submitting extended audit data into the Transaction Monitoring and Audit (TxMA) Platform
+    slot_usage:
+      - iss
+      - evidence
+
+  FlaggedRecordClass:
+    description: >-
+      The records captured in the mobile platform that conform to business rules where assumptions have been made about values due to data representations.
+    slots:
+      - dateOfIssue
+
+  DateOfIssueClass:
+    description: >-
+      The records captured in the mobile platform that conform to business rules where assumptions have been made about values due to data representations.
+    slot_usage:
+      value:
+        range: date
+      type:
+        range: string
+
+  DeviceIdClass:
+    description: >-
+      The device id details
+    slot_usage:
+      - value
+
+
+slots:
+  event_id:
+    description: The event id of the audit event, may be a generated uuid value.
+  timestamp:
+    range: integer
+    description: Record the time and date of when the event occurred.  This should be recoreded to the nearest second.
+    required: true  
+  timestamp_formatted:
+    description: Human readable format of the timestamp, which records the time and date of when the event occurred. This must be UTC based. Despite being in the payload, it will be introduced by TxMA only before analysis. 
+  event_name:
+    range: AuditEventType
+    description: The Audit Event type that is being submitted.
+    required: true
+  component_id:
+    description: The system component that generated the event.
+    required: true
+  user:
+    range: UserAuditClass
+    description: The data relating to the user.
+  user_id:
+    description: The pairwise identifier from the component of the system that submitted the event.
+  transaction_id:
+    description: The transaction id from the transaction that generated the audit event.
+  email:
+    description: The user account email address.
+  phone:
+    description: The user account phone number.
+  ip_address:
+    description: The user ip address.
+  session_id:
+    description: The user session id.
+  persistent_session_id:
+    description: The persistent session id.
+  platform:
+    range: PlatformAuditClass
+    description: The data relating to the user.
+  restricted:
+    range: RestrictedAuditClass
+    description: The restricted audit data relating to the event.
+  extensions:
+    range: ExtensionsAuditClass
+    description: The extended audit data relating to the event.
+  OSVersion:
+    description: The operating system of the device.
+  brand:
+    description: The brand of the device.
+  manufacturer:
+    description: The manufacturer of the device.
+  model:
+    description: The model of the device.
+  deviceInfo:
+    range: DeviceInfoClass
+    description: The device information.
+  flaggedRecord:
+    range: FlaggedRecordClass
+    multivalued: true
+    inlined_as_list: true
+    description: Flagged records for potential assumptions made from the data read.
+  dateOfIssue:
+    range: DateOfIssueClass
+    multivalued: true
+  deviceId:
+    range: DeviceIdClass
+    multivalued: true
+
+enums:
+  AuditEventType:
+    permissible_values:
+      AUTH_IPV_CAPACITY_REQUESTED:
+      AUTH_IPV_AUTHORISATION_REQUESTED:
+      IPV_JOURNEY_START:
+      IPV_REDIRECT_TO_CRI:
+      IPV_PASSPORT_CRI_START:
+      IPV_PASSPORT_CRI_REQUEST_SENT:
+      IPV_PASSPORT_CRI_RESPONSE_RECEIVED:
+      IPV_PASSPORT_CRI_END:
+      IPV_PASSPORT_CRI_VC_ISSUED:
+      IPV_ADDRESS_CRI_START:
+      IPV_ADDRESS_CRI_REQUEST_SENT:
+      IPV_ADDRESS_CRI_VC_ISSUED:
+      IPV_ADDRESS_CRI_END:
+      IPV_FRAUD_CRI_START:
+      IPV_FRAUD_CRI_REQUEST_SENT:
+      DCMAW_CRI_VC_ISSUED:

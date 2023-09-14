@@ -1,0 +1,92 @@
+{
+  "event_name": "DCMAW_CRI_VC_ISSUED",
+  "user": {
+    "user_id": "f750fe5e-ad90-46d3-9f3b-3dee873e4f19",
+    "transaction_id": "f516347d-2ec8-4e42-8788-46d48e19387b",
+    "session_id": "1f7389f1-b062-4010-81c6-983667b78ecd",
+    "govuk_signin_journey_id": "123321"
+  },
+  "client_id": "5C584572-9A61-4601-9E78-676713292ADC",
+  "timestamp": 1675356040,
+  "component_id": "https://www.review-b.build.account.gov.uk",
+  "restricted": {
+    "name": [
+      {
+        "nameParts": [
+          {
+            "type": "GivenName",
+            "value": "ANNA NICHOLA"
+          },
+          {
+            "type": "FamilyName",
+            "value": "OTHER FORTYFOUR"
+          }
+        ]
+      }
+    ],
+    "birthDate": [
+      {
+        "value": "1960-01-01"
+      }
+    ],
+    "deviceId": [
+      {
+        "value": "a3017511-b639-46ff-ab73-66e5ab0193c9"
+      }
+    ],
+    "residencePermit": [
+      {
+        "icaoIssuerCode": "GBR",
+        "documentNumber": "ZR8016200",
+        "expiryDate": "2024-02-02"
+      }
+    ],
+    "flaggedRecord": [
+      {
+        "dateOfIssue": [
+          {
+            "type": "InterpretedDateOfIssue",
+            "value": "2030-01-01"
+          },
+          {
+            "type": "DcmawDateOfIssue",
+            "value": "2030-01-01"
+          }
+        ]
+      }
+    ]
+  },
+  "extensions": {
+    "evidence": [
+      {
+        "type": "IdentityCheck",
+        "txn": "ea2feefe-45a3-4a29-923f-604cd4017ec0",
+        "strengthScore": 3,
+        "validityScore": 2,
+        "activityHistoryScore": 1,
+        "checkDetails": [
+          {
+            "checkMethod": "vri",
+            "identityCheckPolicy": "published",
+            "activityFrom": "2022-05-29"
+          },
+          {
+            "checkMethod": "bvr",
+            "biometricVerificationProcessLevel": 3
+          }
+        ]
+      }
+    ]
+  },
+  "platform": [
+    {
+      "deviceInfo": {
+        "brand": "Apple",
+        "manufacturer": "Apple",
+        "model": "iPhone12,8",
+        "OSVersion": "15.5",
+        "platform": "iOS"
+      }
+    }
+  ]
+}
