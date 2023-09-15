@@ -2,7 +2,7 @@
   "iss": "https://life-events-platform.gov.uk.example",
   "iat": 1691637001,
   "jti": "4d3559ec67504aaba65d40b0363faad8",
-  "toe": 618772150,
+  "toe": 618775750,
   "events": {
     "https://vocab.account.gov.uk/v1/deathRegistrationUpdated": {
       "subject": {
