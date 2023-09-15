@@ -2,7 +2,8 @@ name: Deploy site
 
 on:
   push:
-    branches: [$default-branch]
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab (but only on the default branch :shrug:)
   workflow_dispatch:
