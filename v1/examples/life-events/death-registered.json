@@ -2,7 +2,7 @@
   "iss": "https://life-events-platform.gov.uk.example",
   "iat": 1691637001,
   "jti": "4d3559ec67504aaba65d40b0363faad8",
-  "toe": 618744124,
+  "toe": 618747724,
   "events": {
     "https://vocab.account.gov.uk/v1/deathRegistered": {
       "subject": {
@@ -73,7 +73,7 @@
         "description": "Deceased found on 3 August 1989"
       },
       "freeFormatDeathDate": "Unknown due to mortuary error but some time in July 1989",
-      "deathRegistrationTime": "1989-08-10T10:22:04"
+      "deathRegistrationTime": "1989-08-10T10:22:04Z"
     }
   }
 }
