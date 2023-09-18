@@ -87,10 +87,10 @@ slots:
     pattern: "urn:fdc:gro.gov.uk:2023:death:[0-9]+"
 
   deathRegistrationTime:
-    description: Date/time the death was registered, may be the same as the `toe` JWT claim
+    description: Date/time the death was registered, must include a time zone specifier which should be UTC. For deathRegistered events, the `toe` JWT claim must correspond to this value.
     range: datetime
   recordUpdateTime:
-    description: Date/time the record was amended, may be the same as the `toe` JWT claim
+    description: Date/time the record was amended, must include a time zone specifier which should be UTC. For deathRegistrationUpdated events, the `toe` JWT claim must correspond to this value.
     range: datetime
   deathRegistrationUpdateReason:
     description: A code noting the reason for the update to the death record
