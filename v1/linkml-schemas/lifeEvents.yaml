@@ -59,6 +59,7 @@ classes:
       - deathRegistration
       - deathDate
       - freeFormatDeathDate
+      - deathRegistrationTime
       - recordUpdateTime
       - deathRegistrationUpdateReason
   DeathRegistrationSubjectClass:
@@ -85,7 +86,6 @@ slots:
     range: uri
     required: true
     pattern: "urn:fdc:gro.gov.uk:2023:death:[0-9]+"
-
   deathRegistrationTime:
     description: Date/time the death was registered, must include a time zone specifier which should be UTC. For deathRegistered events, the `toe` JWT claim must correspond to this value.
     range: datetime
