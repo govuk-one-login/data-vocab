@@ -32,6 +32,7 @@ classes:
       - value
 
   ISODateClass:
+    description: Contains a complete or partial ISO date, with no time part and in which the day and month parts are optional.
     is_a: StructuredAttributeClass
     slots:
       - description
@@ -39,6 +40,7 @@ classes:
       value:
         pattern: "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
         range: string
+        description: The date in the form CCYY[-MM[-DD]]
 
 types:
   JWS:
