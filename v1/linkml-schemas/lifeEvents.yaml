@@ -77,6 +77,7 @@ slots:
   deathDate:
     range: ISODateClass
     slot_uri: schema:deathDate
+    description: An object containing details of a person's death date.
   freeFormatBirthDate:
     description: A string containing free format birth date information, used where the birth date could not be expressed as a partial or complete ISO date. This property is expected to be present if `birthDate` is not present, but could be used alongside `birthDate` in some cases.
   freeFormatDeathDate:
