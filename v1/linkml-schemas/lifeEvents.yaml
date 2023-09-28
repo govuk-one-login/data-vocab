@@ -46,20 +46,16 @@ classes:
     attributes:
       subject:
         range: DeathRegistrationSubjectClass
+        required: true
+        description: An object containing details of a person that has died for matching against existing records.
     slots:
       - deathRegistration
       - deathDate
       - freeFormatDeathDate
       - deathRegistrationTime
   DeathRegistrationUpdatedEventClass:
-    attributes:
-      subject:
-        range: DeathRegistrationSubjectClass
+    is_a: DeathRegisteredEventClass
     slots:
-      - deathRegistration
-      - deathDate
-      - freeFormatDeathDate
-      - deathRegistrationTime
       - recordUpdateTime
       - deathRegistrationUpdateReason
   DeathRegistrationSubjectClass:
