@@ -46,19 +46,16 @@ classes:
     attributes:
       subject:
         range: DeathRegistrationSubjectClass
+        required: true
+        description: An object containing details of a person that has died for matching against existing records.
     slots:
       - deathRegistration
       - deathDate
       - freeFormatDeathDate
       - deathRegistrationTime
   DeathRegistrationUpdatedEventClass:
-    attributes:
-      subject:
-        range: DeathRegistrationSubjectClass
+    is_a: DeathRegisteredEventClass
     slots:
-      - deathRegistration
-      - deathDate
-      - freeFormatDeathDate
       - recordUpdateTime
       - deathRegistrationUpdateReason
   DeathRegistrationSubjectClass:
@@ -76,6 +73,7 @@ slots:
   deathDate:
     range: ISODateClass
     slot_uri: schema:deathDate
+    description: An object containing details of a person's death date.
   freeFormatBirthDate:
     description: A string containing free format birth date information, used where the birth date could not be expressed as a partial or complete ISO date. This property is expected to be present if `birthDate` is not present, but could be used alongside `birthDate` in some cases.
   freeFormatDeathDate:
@@ -85,12 +83,11 @@ slots:
     range: uri
     required: true
     pattern: "urn:fdc:gro.gov.uk:2023:death:[0-9]+"
-
   deathRegistrationTime:
-    description: Date/time the death was registered, must include a time zone specifier which should be UTC. For deathRegistered events, the `toe` JWT claim must correspond to this value.
+    description: Date/time the death was registered, must include a time zone specifier which should be UTC. For deathRegistered events, we expect this property to be present, and the `toe` JWT claim must correspond to this value.
     range: datetime
   recordUpdateTime:
-    description: Date/time the record was amended, must include a time zone specifier which should be UTC. For deathRegistrationUpdated events, the `toe` JWT claim must correspond to this value.
+    description: Date/time the record was amended, must include a time zone specifier which should be UTC. For deathRegistrationUpdated events, we expect this property to be present, and the `toe` JWT claim must correspond to this value.
     range: datetime
   deathRegistrationUpdateReason:
     description: A code noting the reason for the update to the death record
