@@ -2,6 +2,10 @@
 ROOT_DIR="$( git rev-parse --show-toplevel )"
 set -e
 
+
+#
+# Examples
+#
 EXAMPLES=(
   "PostalAddressClass"
   "PassportDetailsClass"
@@ -14,16 +18,44 @@ EXAMPLES=(
 
 bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
 
-rm -rf "${ROOT_DIR}/docs/v1"
-poetry run gen-markdown "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${ROOT_DIR}/docs/v1/" --index-file index.md
-ln -s "${ROOT_DIR}/v1/linkml-schemas" "${ROOT_DIR}/docs/v1/linkml-schemas"
-ln -s "${ROOT_DIR}/v1/json-schemas" "${ROOT_DIR}/docs/v1/json-schemas"
-
 mkdir "${ROOT_DIR}/docs/v1/examples"
 for EXAMPLE in "${EXAMPLES[@]}"; do
   cp -R "${ROOT_DIR}/v1/examples/${EXAMPLE}" "${ROOT_DIR}/docs/v1/examples/${EXAMPLE}"
 done
 
+#
+# Generate Markdown
+#
+
+# Audit events
+rm -rf "${ROOT_DIR}/docs/audit-events"
+
+AUDIT_EVENTS_DIR="${ROOT_DIR}/v1/audit-events/linkml-schemas"
+DEST_DIR="${ROOT_DIR}/docs/audit-events/"
+for file in ${AUDIT_EVENTS_DIR}/*AuditEvent.yaml; do 
+  echo $file
+  echo "----"
+  poetry run gen-markdown "$file" -d "${DEST_DIR}/" --index-file index.md
+done
+
+#ln -s "${ROOT_DIR}/v1/audit-events/linkml-schemas" "${ROOT_DIR}/docs/audit-events/linkml-schemas"
+#ln -s "${ROOT_DIR}/v1/audit-events/json-schemas" "${ROOT_DIR}/docs/audit-events/json-schemas"
+
+
+# Physical Data Model
+rm -rf "${ROOT_DIR}/docs/physical-data-model"
+
+PDM_DIR="${ROOT_DIR}/v1/di-pdm/linkml-schemas"
+DEST_DIR="${ROOT_DIR}/docs/physical-data-model"
+poetry run gen-markdown "${PDM_DIR}/credentials.yaml" -d "${DEST_DIR}/" --index-file index.md
+
+#ln -s "${ROOT_DIR}/v1/di-pdm/linkml-schemas" "${ROOT_DIR}/docs/physical-data-model/linkml-schemas"
+#ln -s "${ROOT_DIR}/v1/di-pdm/json-schemas" "${ROOT_DIR}/docs/physical-data-model/json-schemas"
+
+
+#
+# MK Docs 
+#
 sass --quiet-deps --load-path ${ROOT_DIR}/node_modules/tech-docs-assets/stylesheets --load-path ${ROOT_DIR}/node_modules/govuk-frontend ${ROOT_DIR}/mkdocs-govuk/src/css/:${ROOT_DIR}/docs/css
 npx webpack build --config "${ROOT_DIR}/webpack.config.js"
 mkdir -p "${ROOT_DIR}/docs/assets/govuk/assets"
