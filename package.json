@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alphagov/di-identity-vocab.git"
+    "url": "git+https://github.com/govuk-one-login/data-vocab.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alphagov/di-identity-vocab/issues"
+    "url": "https://github.com/govuk-one-login/data-vocab/issues"
   },
-  "homepage": "https://github.com/alphagov/di-identity-vocab#readme",
+  "homepage": "https://github.com/govuk-one-login/data-vocab#readme",
   "browser": {
     "assert": false
   },

@@ -1,5 +1,5 @@
 site_name: GOV.UK One Login Vocabulary
-repo_url: https://github.com/alphagov/di-identity-vocab
+repo_url: https://github.com/govuk-one-login/data-vocab
 theme:
     name: null
     custom_dir: 'mkdocs-govuk/govuk_theme'
