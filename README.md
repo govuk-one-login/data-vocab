@@ -8,7 +8,7 @@ This repository produces the following artifacts:
 
 * [Vocabulary documentation](https://govuk-one-login.github.io/data-vocab/)
 * [JSON Schemas](https://github.com/govuk-one-login/data-vocab/releases)
-* [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/di-identity-vocab)
+* [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab)
 
 Further development could include:
 
