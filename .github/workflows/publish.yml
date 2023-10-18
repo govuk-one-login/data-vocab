@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@alphagov'
+          scope: '@govuk-one-login'
 
       - name: Download JSON Schemas
         uses: actions/download-artifact@v3

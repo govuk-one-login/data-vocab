@@ -6,9 +6,9 @@ This specification intends to describe a Linked Data vocabulary for asserting Ve
 
 This repository produces the following artifacts:
 
-* [Vocabulary documentation](https://alphagov.github.io/di-identity-vocab/)
-* [JSON Schemas](https://github.com/alphagov/di-identity-vocab/releases)
-* [TypeScript types (npm module)](https://github.com/alphagov/di-identity-vocab/pkgs/npm/di-identity-vocab)
+* [Vocabulary documentation](https://govuk-one-login.github.io/data-vocab/)
+* [JSON Schemas](https://github.com/govuk-one-login/data-vocab/releases)
+* [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/di-identity-vocab)
 
 Further development could include:
 
