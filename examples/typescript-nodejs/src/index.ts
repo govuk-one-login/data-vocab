@@ -1,4 +1,4 @@
-import {Credentials} from "@alphagov/di-identity-vocab/IdentityCheckCredentialJWT";
+import {Credentials} from "@govuk-one-login/data-vocab/IdentityCheckCredentialJWT";
 
 const credentials: Credentials = {
     sub: "urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce",

@@ -86,7 +86,7 @@ If the styling appears off, you may need to run the build script first
 
 Type definition files (`.d.ts`) are published with each tagged version of this repository. You can add these as a dependency in your TypeScript/Node.js project.
 
-These are published as [an npm module](https://github.com/alphagov/di-identity-vocab/pkgs/npm/di-identity-vocab) to GitHub Packages.
+These are published as [an npm module](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab) to GitHub Packages.
 
 > **Note**
 > Check out the [sample project](./examples/typescript-nodejs) for an example.
@@ -96,33 +96,33 @@ These are published as [an npm module](https://github.com/alphagov/di-identity-v
 You can add it as a dependency using npm:
 
 ```shell
-npm install @alphagov/di-identity-vocab@1.3.0
+npm install @govuk-one-login/data-vocab@1.4.2
 ```
 
 Or in your `package.json` dependencies:
 
 ```json
-"@alphagov/di-identity-vocab": "1.3.0"
+"@govuk-one-login/data-vocab": "1.4.2"
 ```
 
 > **Note**
-> See [releases](https://github.com/alphagov/di-identity-vocab/releases) for the latest version.
+> See [releases](https://github.com/govuk-one-login/data-vocab/releases) for the latest version.
 
 ## Setting permissions
 
 ### Working locally
 
-If you are working locally, ensure you have authenticated to the `@alphagov` npm scope in GitHub Packages:
+If you are working locally, ensure you have authenticated to the `@govuk-one-login` npm scope in GitHub Packages:
 
 ```shell
-npm login --scope=@alphagov --auth-type=legacy --registry=https://npm.pkg.github.com
+npm login --scope=@govuk-one-login --auth-type=legacy --registry=https://npm.pkg.github.com
 ```
 
 > See [Authenticating to GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) documentation.
 
 ### Using the package in GitHub Actions 
 
-If you are building your project in a GitHub Actions workflow, grant access to your repository from the [package settings](https://github.com/orgs/alphagov/packages/npm/di-identity-vocab/settings) page.
+If you are building your project in a GitHub Actions workflow, grant access to your repository from the [package settings](https://github.com/orgs/govuk-one-login/packages/npm/data-vocab/settings) page.
 
 In your workflow file, set the following permission for the GitHub token:
 
