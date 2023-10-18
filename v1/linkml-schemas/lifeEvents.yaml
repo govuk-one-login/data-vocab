@@ -20,6 +20,11 @@ default_range: string
 classes:
   DeathRegisteredJWTClass:
     is_a: SETClass
+    description: |
+      This event token is a signal generated when an official death registration entry is created.
+      It must contain a ['death registered' event object](../DeathRegisteredEventClass).
+
+      Note that when a registration entry is updated, a [different signal](../DeathRegistrationUpdatedJWTClass) is generated.
     attributes:
       events:
         range: DeathRegisteredEventMappingClass
@@ -31,6 +36,11 @@ classes:
         required: true
         alias: "https://vocab.account.gov.uk/v1/deathRegistered"
   DeathRegistrationUpdatedJWTClass:
+    description: |
+      This event token is a signal generated when an official death registration entry is updated.
+      It must contain a ['death registration updated' event object](../DeathRegistrationUpdatedEventClass).
+
+      Note that when a death is first registered, a [different signal](../DeathRegisteredJWTClass) is generated.
     is_a: SETClass
     attributes:
       events:
