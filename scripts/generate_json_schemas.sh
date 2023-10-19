@@ -11,22 +11,22 @@ set -e
 
 # format: <linkml schema file>,<linkml class>,<json schema file>
 LINKML_ITEMS=(
-  "credentials.yaml,CoreIdentityJWTClass,CoreIdentityJWT.json"
-  "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
-  "identityCheckCredential.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
-  "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
-  "address.yaml,PostalAddressClass,PostalAddress.json"
-  "document.yaml,PassportDetailsClass,PassportDetails.json"
-  "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
-  "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
-  "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
-  "document.yaml,IdCardDetailsClass,IdCard.json"
-  "name.yaml,NameClass,Name.json"
-  "credentials.yaml,IssuerAuthorizationRequestClass,IssuerAuthorizationRequest.json"
-  "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
+  "credentials.yaml,CoreIdentityJWTClass,CoreIdentityJWT.json"
   "lifeEvents.yaml,DeathRegisteredJWTClass,DeathRegisteredJWT.json",
   "lifeEvents.yaml,DeathRegistrationUpdatedJWTClass,DeathRegistrationUpdatedJWT.json"
+  "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
+  "document.yaml,IdCardDetailsClass,IdCard.json"
+  "identityCheckCredential.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
+  "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
+  "credentials.yaml,IssuerAuthorizationRequestClass,IssuerAuthorizationRequest.json"
+  "name.yaml,NameClass,Name.json"
+  "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
+  "document.yaml,PassportDetailsClass,PassportDetails.json"
+  "address.yaml,PostalAddressClass,PostalAddress.json"
+  "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
+  "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
+  "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
 )
 
 ROOT_DIR="$( git rev-parse --show-toplevel )"
