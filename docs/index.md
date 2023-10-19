@@ -8,13 +8,13 @@ title: GOV.UK Vocabulary
 
 ## Introduction
 
-This vocabulary covers a number of use cases in the One Login domain, including:
+This vocabulary covers a number of use cases in the GOV.UK One Login domain, including:
 
-* identity proofing and verification to UK government standards such as [Good Practice Guide (GPG) 45](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual)
-* verifiable credential issuance, in particular of [identity check credentials](v1/IdentityCheckCredentialClass)
-* [identity presentation](v1/CoreIdentityJWTClass)
-* OAuth 2.0 [authorization requests](v1/IssuerAuthorizationRequestClass) to credential issuing and credential collecting services
-* OpenID Connect [authentication requests](v1/OpenIDConnectAuthenticationRequestClass) from relying party services
+* OpenID Connect [authentication requests](v1/classes/OpenIDConnectAuthenticationRequestClass) from relying party services
+* [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/) (VCs) for [identity presentation](v1/classes/VerifiableIdentityCredentialClass) to relying parties
+* OAuth 2.0 [authorization requests](v1/classes/IssuerAuthorizationRequestClass) to credential issuing and credential collecting services
+* VCs for [identity proofing and verification](v1/classes/IdentityCheckCredentialClass)
+* VCs for [other security checks](v1/classes/SecurityCheckCredentialClass)
 
 In future it may be extended to cover security events.
 
