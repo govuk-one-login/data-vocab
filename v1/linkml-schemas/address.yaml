@@ -45,6 +45,8 @@ classes:
       </ul>
       <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
       <p>Close mapping&#58; [schema:PostalAddress](https://schema.org/PostalAddress)</p>
+    see_also:
+      - ../json-schemas/PostalAddress.json
     mixins:
       - ValidityClass
     slots:

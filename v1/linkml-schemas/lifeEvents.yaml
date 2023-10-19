@@ -25,10 +25,14 @@ classes:
       It must contain a ['death registered' event object](../DeathRegisteredEventClass).
 
       Note that when a registration entry is updated, a [different signal](../DeathRegistrationUpdatedJWTClass) is generated.
+
+      JSON Schema: [DeathRegisteredJWT](../json-schemas/DeathRegisteredJWT.json)
     attributes:
       events:
         range: DeathRegisteredEventMappingClass
         required: true
+    see_also:
+      - ../json-schemas/DeathRegisteredJWT.json
   DeathRegisteredEventMappingClass:
     attributes:
       "deathRegistered":
@@ -41,11 +45,15 @@ classes:
       It must contain a ['death registration updated' event object](../DeathRegistrationUpdatedEventClass).
 
       Note that when a death is first registered, a [different signal](../DeathRegisteredJWTClass) is generated.
+
+      JSON Schema: [DeathRegisteredJWT](../json-schemas/DeathRegistrationUpdatedJWT.json)
     is_a: SETClass
     attributes:
       events:
         range: DeathRegistrationUpdatedEventMappingClass
         required: true
+    see_also:
+      - ../json-schemas/DeathRegistrationUpdatedJWT.json
   DeathRegistrationUpdatedEventMappingClass:
     attributes:
       "deathRegistrationUpdate":
