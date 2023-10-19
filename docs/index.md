@@ -18,18 +18,7 @@ This vocabulary covers a number of use cases in the GOV.UK One Login domain, inc
 
 In future it may be extended to cover security events.
 
-## Schemas
-
-* [IdentityCheckCredential](v1/json-schemas/IdentityCheckCredential.json)
-* [IdentityCheckCredentialJWT](v1/json-schemas/IdentityCheckCredentialJWT.json)
-* [CoreIdentityJWT](v1/json-schemas/CoreIdentityJWT.json)
-* [OpenIDConnectAuthenticationRequest](v1/json-schemas/OpenIDConnectAuthenticationRequest.json)
-* [IssuerAuthorizationRequest](v1/json-schemas/IssuerAuthorizationRequest.json)
-* [Name](v1/json-schemas/Name.json)
-* [PostalAddress](v1/json-schemas/PostalAddress.json)
-* [DrivingPermit](v1/json-schemas/DrivingPermit.json)
-* [Passport](v1/json-schemas/PassportDetails.json)
-* [ResidencePermit](v1/json-schemas/ResidencePermit.json)
+We provide [JSON Schemas](./v1/json-schemas/) for many of the important classes in the vocabulary.
 
 ## Examples
 

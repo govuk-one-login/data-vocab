@@ -47,7 +47,9 @@ classes:
     slots:
       - nameParts
       - description
-      
+    see_also:
+      - ../json-schemas/Name.json
+
   NamePartClass:
     description: Abstract class to define a name part value and name part type for an optional validity period.
     abstract: false  # has to be false otherwise JSON-Schema doesn't include it, and validation fails :(

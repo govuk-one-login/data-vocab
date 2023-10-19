@@ -54,6 +54,8 @@ classes:
     slot_usage:
       expiryDate: 
         required: true
+    see_also:
+      - ../json-schemas/PassportDetails.json
   DrivingPermitDetailsClass:
     description: The details of a driving license/permit as presented by Optical Character Recognition of the physical document or manually input by a user. 
       <p>JSON schema&#58; [di_vocab:DrivingPermit](../json-schemas/DrivingPermit.json)</p>  
@@ -85,6 +87,8 @@ classes:
     slot_usage:
       expiryDate: 
         required: true
+    see_also:
+      - ../json-schemas/DrivingPermit.json
   ResidencePermitDetailsClass:
     description: The details of a biometric residency permit as presented by reading the biometric chip data using near-field communication (NFC), reading the Machine Readable Zone (MRZ) or manually input by a user. 
       <p>JSON schema&#58; [di_vocab:ResidencePermit](../json-schemas/ResidencePermit.json)</p>  
@@ -105,6 +109,8 @@ classes:
     slot_usage:
       expiryDate: 
         required: true
+    see_also:
+      - ../json-schemas/ResidencePermit.json
   SocialSecurityRecordDetailsClass:
     description: The details of a social security record as input by a user. 
       <p>JSON schema&#58; [di_vocab:SocialSecurityRecord](../json-schemas/SocialSecurityRecord.json)</p> 
@@ -116,7 +122,9 @@ classes:
       </ul>
     is_a: DocumentDetailsClass
     slots:
-      - personalNumber 
+      - personalNumber
+    see_also:
+      - ../json-schemas/SocialSecurityRecord.json
   IdCardDetailsClass:
     description: The details of a National Identification Card as presented by a user for identity verification. 
       <p>JSON schema&#58; [di_vocab:IdCard](../json-schemas/IdCard.json)</p> 
@@ -129,7 +137,9 @@ classes:
     is_a: DocumentDetailsClass
     slots:
       - documentNumber
-      - icaoIssuerCode    
+      - icaoIssuerCode
+    see_also:
+      - ../json-schemas/IdCard.json
 slots:
   passport:
     range: PassportDetailsClass

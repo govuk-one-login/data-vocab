@@ -13,9 +13,9 @@ set -e
 LINKML_ITEMS=(
   "credentials.yaml,CoreIdentityJWTClass,CoreIdentityJWT.json"
   "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
-  "credentials.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
+  "identityCheckCredential.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
-  "credentials.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
+  "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "address.yaml,PostalAddressClass,PostalAddress.json"
   "document.yaml,PassportDetailsClass,PassportDetails.json"
   "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
@@ -35,6 +35,8 @@ LINKML_SCHEMA_DIR="${ROOT_DIR}/v1/linkml-schemas"
 
 rm -f "${JSON_SCHEMA_DIR}/*.json"
 
+cp $JSON_SCHEMA_DIR/index.md.template $JSON_SCHEMA_DIR/index.md
+
 for LINKML_ITEM in "${LINKML_ITEMS[@]}"; do
   ITEM_DETAILS=(${LINKML_ITEM//,/ })
   LINKML_SCHEMA="${ITEM_DETAILS[0]}"
@@ -44,4 +46,6 @@ for LINKML_ITEM in "${LINKML_ITEMS[@]}"; do
 
   poetry run gen-json-schema --closed --no-metadata -t "${LINKML_CLASS}" \
     "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" > "${JSON_SCHEMA_DIR}/${JSON_SCHEMA}"
+  echo "| [$JSON_SCHEMA]($JSON_SCHEMA) | [$LINKML_CLASS](../classes/$LINKML_CLASS) |" >> $JSON_SCHEMA_DIR/index.md
+  poetry run python ./scripts/check_schema_see_also.py  "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" $LINKML_CLASS ../json-schemas/$JSON_SCHEMA
 done
