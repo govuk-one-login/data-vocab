@@ -1,17 +1,209 @@
----
 site_name: GOV.UK One Login Vocabulary
 theme:
     # Theme documentation
     # https://ministryofjustice.github.io/mkdocs-tech-docs-template/
     # https://github.com/ministryofjustice/mkdocs-tech-docs-template
-    name: tech_docs_template
-    features:
-      - content.tabs.link
-    favicon: 'assets/images/favicon.ico'
-    logo: 'assets/govuk/assets/images/govuk-logotype-crown.png'
+  name: tech_docs_template
+  features:
+    - content.tabs.link
+  favicon: assets/images/favicon.ico
+  logo: assets/govuk/assets/images/govuk-logotype-crown.png
 plugins:
-    - material/search
-    - mermaid2
+  - material/search
+  - mermaid2
 markdown_extensions:
-    - admonition
+  - admonition
 repo_url: https://github.com/govuk-one-login/data-vocab
+nav:
+  - index: index.md
+  - v1:
+      - -Home:
+          - credentials: v1/_Home/index.md
+      - Classes:
+          - AddressAssertionClass: v1/classes/AddressAssertionClass.md
+          - AddressCredentialClass: v1/classes/AddressCredentialClass.md
+          - AuthorizationRequestClass: v1/classes/AuthorizationRequestClass.md
+          - BirthDateClass: v1/classes/BirthDateClass.md
+          - CheckDetailsClass: v1/classes/CheckDetailsClass.md
+          - ContraIndicatorClass: v1/classes/ContraIndicatorClass.md
+          - CoreIdentityJWTClass: v1/classes/CoreIdentityJWTClass.md
+          - CredentialSubjectClass: v1/classes/CredentialSubjectClass.md
+          - DocumentDetailsClass: v1/classes/DocumentDetailsClass.md
+          - DrivingPermitDetailsClass: v1/classes/DrivingPermitDetailsClass.md
+          - FamilyNameClass: v1/classes/FamilyNameClass.md
+          - GivenNameClass: v1/classes/GivenNameClass.md
+          - IdCardDetailsClass: v1/classes/IdCardDetailsClass.md
+          - IdentityAssertionCredentialClass: v1/classes/IdentityAssertionCredentialClass.md
+          - IdentityAssertionCredentialJWTClass: v1/classes/IdentityAssertionCredentialJWTClass.md
+          - IdentityCheckClass: v1/classes/IdentityCheckClass.md
+          - IdentityCheckCredentialClass: v1/classes/IdentityCheckCredentialClass.md
+          - IdentityCheckCredentialJWTClass: v1/classes/IdentityCheckCredentialJWTClass.md
+          - IdentityCheckSubjectClass: v1/classes/IdentityCheckSubjectClass.md
+          - ISODateClass: v1/classes/ISODateClass.md
+          - IssuerAuthorizationRequestClass: v1/classes/IssuerAuthorizationRequestClass.md
+          - JWTClass: v1/classes/JWTClass.md
+          - MitigatingCredentialClass: v1/classes/MitigatingCredentialClass.md
+          - MitigationClass: v1/classes/MitigationClass.md
+          - NameClass: v1/classes/NameClass.md
+          - NamePartClass: v1/classes/NamePartClass.md
+          - OpenIDConnectAuthenticationRequestClass: v1/classes/OpenIDConnectAuthenticationRequestClass.md
+          - PassportDetailsClass: v1/classes/PassportDetailsClass.md
+          - PersonClass: v1/classes/PersonClass.md
+          - PersonExtendedMatchingClass: v1/classes/PersonExtendedMatchingClass.md
+          - PersonWithDocumentsClass: v1/classes/PersonWithDocumentsClass.md
+          - PersonWithIdentityClass: v1/classes/PersonWithIdentityClass.md
+          - PostalAddressClass: v1/classes/PostalAddressClass.md
+          - ResidencePermitDetailsClass: v1/classes/ResidencePermitDetailsClass.md
+          - SecurityCheckClass: v1/classes/SecurityCheckClass.md
+          - SecurityCheckCredentialClass: v1/classes/SecurityCheckCredentialClass.md
+          - SecurityCheckCredentialJWTClass: v1/classes/SecurityCheckCredentialJWTClass.md
+          - SexClass: v1/classes/SexClass.md
+          - SocialSecurityRecordDetailsClass: v1/classes/SocialSecurityRecordDetailsClass.md
+          - StructuredAttributeClass: v1/classes/StructuredAttributeClass.md
+          - ValidityClass: v1/classes/ValidityClass.md
+          - VerifiableCredentialClass: v1/classes/VerifiableCredentialClass.md
+          - VerifiableIdentityCredentialClass: v1/classes/VerifiableIdentityCredentialClass.md
+      - Enums:
+          - CheckMethodType: v1/enums/CheckMethodType.md
+          - FraudCheckType: v1/enums/FraudCheckType.md
+          - IdentityVectorOfTrust: v1/enums/IdentityVectorOfTrust.md
+          - KBVResponseModeType: v1/enums/KBVResponseModeType.md
+          - NamePartType: v1/enums/NamePartType.md
+          - VerifiableCredentialType: v1/enums/VerifiableCredentialType.md
+      - JSON Schemas:
+          - JSON Schema files: v1/json-schemas/index.md
+      - Slots:
+          - '@context': v1/slots/@context.md
+          - activityFrom: v1/slots/activityFrom.md
+          - activityHistoryScore: v1/slots/activityHistoryScore.md
+          - address: v1/slots/address.md
+          - addressCountry: v1/slots/addressCountry.md
+          - addressCredentialClass__type: v1/slots/addressCredentialClass__type.md
+          - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
+          - addressLocality: v1/slots/addressLocality.md
+          - aud: v1/slots/aud.md
+          - biometricVerificationProcessLevel: v1/slots/biometricVerificationProcessLevel.md
+          - birthDate: v1/slots/birthDate.md
+          - birthDateClass__value: v1/slots/birthDateClass__value.md
+          - buildingName: v1/slots/buildingName.md
+          - buildingNumber: v1/slots/buildingNumber.md
+          - checkDetails: v1/slots/checkDetails.md
+          - checkMethod: v1/slots/checkMethod.md
+          - ci: v1/slots/ci.md
+          - claims: v1/slots/claims.md
+          - client_id: v1/slots/client_id.md
+          - code: v1/slots/code.md
+          - contraIndicator: v1/slots/contraIndicator.md
+          - ContraIndicatorClass_txn: v1/slots/ContraIndicatorClass_txn.md
+          - coreIdentityJWTClass__vc: v1/slots/coreIdentityJWTClass__vc.md
+          - credentialJWT: v1/slots/credentialJWT.md
+          - credentialSubject: v1/slots/credentialSubject.md
+          - departmentName: v1/slots/departmentName.md
+          - dependentAddressLocality: v1/slots/dependentAddressLocality.md
+          - dependentStreetName: v1/slots/dependentStreetName.md
+          - description: v1/slots/description.md
+          - document: v1/slots/document.md
+          - documentNumber: v1/slots/documentNumber.md
+          - documentType: v1/slots/documentType.md
+          - doubleDependentAddressLocality: v1/slots/doubleDependentAddressLocality.md
+          - drivingPermit: v1/slots/drivingPermit.md
+          - DrivingPermitDetailsClass_expiryDate: v1/slots/DrivingPermitDetailsClass_expiryDate.md
+          - evidence: v1/slots/evidence.md
+          - exp: v1/slots/exp.md
+          - expiryDate: v1/slots/expiryDate.md
+          - failedCheckDetails: v1/slots/failedCheckDetails.md
+          - fraudCheck: v1/slots/fraudCheck.md
+          - fullAddress: v1/slots/fullAddress.md
+          - govuk_signin_journey_id: v1/slots/govuk_signin_journey_id.md
+          - iat: v1/slots/iat.md
+          - icaoIssuerCode: v1/slots/icaoIssuerCode.md
+          - id: v1/slots/id.md
+          - idCard: v1/slots/idCard.md
+          - identityAssertionCredentialClass__type: v1/slots/identityAssertionCredentialClass__type.md
+          - IdentityAssertionCredentialClass_credentialSubject: v1/slots/IdentityAssertionCredentialClass_credentialSubject.md
+          - identityAssertionCredentialJWTClass__vc: v1/slots/identityAssertionCredentialJWTClass__vc.md
+          - identityCheckClass__type: v1/slots/identityCheckClass__type.md
+          - identityCheckCredentialClass__type: v1/slots/identityCheckCredentialClass__type.md
+          - IdentityCheckCredentialClass_credentialSubject: v1/slots/IdentityCheckCredentialClass_credentialSubject.md
+          - identityCheckCredentialJWTClass__vc: v1/slots/identityCheckCredentialJWTClass__vc.md
+          - identityCheckLevel: v1/slots/identityCheckLevel.md
+          - identityCheckPolicy: v1/slots/identityCheckPolicy.md
+          - identityFraudScore: v1/slots/identityFraudScore.md
+          - incompleteMitigation: v1/slots/incompleteMitigation.md
+          - iSODateClass__value: v1/slots/iSODateClass__value.md
+          - iss: v1/slots/iss.md
+          - issuanceDate: v1/slots/issuanceDate.md
+          - issueDate: v1/slots/issueDate.md
+          - issuedBy: v1/slots/issuedBy.md
+          - issueNumber: v1/slots/issueNumber.md
+          - issuer: v1/slots/issuer.md
+          - issuingCountry: v1/slots/issuingCountry.md
+          - jti: v1/slots/jti.md
+          - kbvQuality: v1/slots/kbvQuality.md
+          - kbvResponseMode: v1/slots/kbvResponseMode.md
+          - mitigatingCredential: v1/slots/mitigatingCredential.md
+          - mitigation: v1/slots/mitigation.md
+          - name: v1/slots/name.md
+          - nameParts: v1/slots/nameParts.md
+          - nbf: v1/slots/nbf.md
+          - nonce: v1/slots/nonce.md
+          - organisationName: v1/slots/organisationName.md
+          - passport: v1/slots/passport.md
+          - PassportDetailsClass_expiryDate: v1/slots/PassportDetailsClass_expiryDate.md
+          - personalNumber: v1/slots/personalNumber.md
+          - photoVerificationProcessLevel: v1/slots/photoVerificationProcessLevel.md
+          - postalCode: v1/slots/postalCode.md
+          - prompt: v1/slots/prompt.md
+          - redirect_uri: v1/slots/redirect_uri.md
+          - residencePermit: v1/slots/residencePermit.md
+          - ResidencePermitDetailsClass_expiryDate: v1/slots/ResidencePermitDetailsClass_expiryDate.md
+          - response_type: v1/slots/response_type.md
+          - scope: v1/slots/scope.md
+          - securityCheckClass__type: v1/slots/securityCheckClass__type.md
+          - securityCheckCredentialClass__evidence: v1/slots/securityCheckCredentialClass__evidence.md
+          - securityCheckCredentialClass__type: v1/slots/securityCheckCredentialClass__type.md
+          - securityCheckCredentialJWTClass__vc: v1/slots/securityCheckCredentialJWTClass__vc.md
+          - sex: v1/slots/sex.md
+          - shared_claims: v1/slots/shared_claims.md
+          - socialSecurityRecord: v1/slots/socialSecurityRecord.md
+          - state: v1/slots/state.md
+          - streetName: v1/slots/streetName.md
+          - strengthScore: v1/slots/strengthScore.md
+          - sub: v1/slots/sub.md
+          - subBuildingName: v1/slots/subBuildingName.md
+          - txn: v1/slots/txn.md
+          - type: v1/slots/type.md
+          - uprn: v1/slots/uprn.md
+          - validFrom: v1/slots/validFrom.md
+          - validityScore: v1/slots/validityScore.md
+          - validUntil: v1/slots/validUntil.md
+          - value: v1/slots/value.md
+          - vc: v1/slots/vc.md
+          - verifiableIdentityCredentialClass__type: v1/slots/verifiableIdentityCredentialClass__type.md
+          - VerifiableIdentityCredentialClass_credentialSubject: v1/slots/VerifiableIdentityCredentialClass_credentialSubject.md
+          - verificationScore: v1/slots/verificationScore.md
+          - vot: v1/slots/vot.md
+          - vtm: v1/slots/vtm.md
+          - vtr: v1/slots/vtr.md
+      - Types:
+          - Boolean: v1/types/Boolean.md
+          - Curie: v1/types/Curie.md
+          - Date: v1/types/Date.md
+          - DateOrDatetime: v1/types/DateOrDatetime.md
+          - Datetime: v1/types/Datetime.md
+          - Decimal: v1/types/Decimal.md
+          - Double: v1/types/Double.md
+          - Float: v1/types/Float.md
+          - Integer: v1/types/Integer.md
+          - Jsonpath: v1/types/Jsonpath.md
+          - Jsonpointer: v1/types/Jsonpointer.md
+          - JWS: v1/types/JWS.md
+          - Ncname: v1/types/Ncname.md
+          - Nodeidentifier: v1/types/Nodeidentifier.md
+          - Objectidentifier: v1/types/Objectidentifier.md
+          - Sparqlpath: v1/types/Sparqlpath.md
+          - String: v1/types/String.md
+          - StringOrURI: v1/types/StringOrURI.md
+          - Time: v1/types/Time.md
+          - Uri: v1/types/Uri.md
+          - Uriorcurie: v1/types/Uriorcurie.md
