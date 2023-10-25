@@ -1,6 +1,9 @@
 ---
 site_name: GOV.UK One Login Vocabulary
 theme:
+    # Theme documentation
+    # https://ministryofjustice.github.io/mkdocs-tech-docs-template/
+    # https://github.com/ministryofjustice/mkdocs-tech-docs-template
     name: tech_docs_template
     features:
       - content.tabs.link
