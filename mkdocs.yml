@@ -1,14 +1,14 @@
+---
 site_name: GOV.UK One Login Vocabulary
-repo_url: https://github.com/govuk-one-login/data-vocab
 theme:
-    name: null
-    custom_dir: 'mkdocs-govuk/govuk_theme'
-
-    show_govuk_logo: true
-    service_link: https://www.sign-in.service.gov.uk/
-    service_name: One Login
-    phase: beta
-    collapsible_nav: true
-    header_links:
-        - title: Vocabulary
-          path: /
+    name: tech_docs_template
+    features:
+      - content.tabs.link
+    favicon: 'assets/images/favicon.ico'
+    logo: 'assets/govuk/assets/images/govuk-logotype-crown.png'
+plugins:
+    - material/search
+    - mermaid2
+markdown_extensions:
+    - admonition
+repo_url: https://github.com/govuk-one-login/data-vocab
