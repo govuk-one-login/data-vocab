@@ -27,6 +27,6 @@ done
 
 
 echo "Building Nav Bar"
-python3 "${ROOT_DIR}/scripts/build_nav.py"
+poetry run python "${ROOT_DIR}/scripts/build_nav.py"
 
 poetry run mkdocs build -c
