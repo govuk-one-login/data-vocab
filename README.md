@@ -34,6 +34,9 @@ git submodule update --init --recursive
 ```bash
 poetry install
 
+npm install
+npm install -g ajv-cli@5.0.0 ajv-formats@2.1.1
+
 If the above dependencies/versions need to change, please update the [devcontainer configuration](.devcontainer/devcontainer.json) also.
 ```
 
