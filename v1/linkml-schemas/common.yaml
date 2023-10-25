@@ -64,7 +64,6 @@ slots:
   description:
     slot_uri: schema:description
   "@context":
-    required: true
     range: string
     multivalued: true
     inlined_as_list: true
