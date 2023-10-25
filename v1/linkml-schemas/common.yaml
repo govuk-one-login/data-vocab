@@ -96,6 +96,5 @@ slots:
     range: uri
     description: The `aud` (audience) claim identifies the recipients that the JWT is intended for.
   jti:
-    required: true
     range: uri
     description: The `jti` (JWT ID) claim identifies the unique identifier of the JWT.
