@@ -1,7 +1,3 @@
-[submodule "mkdocs-govuk"]
-	path = mkdocs-govuk
-	url = ../../alphagov/mkdocs-govuk.git
-	branch = nav_menu_no_root_links
 [submodule "linkml"]
 	path = linkml
 	url = ../../alphagov/linkml.git

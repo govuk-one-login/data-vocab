@@ -24,9 +24,4 @@ for EXAMPLE in "${EXAMPLES[@]}"; do
   cp -R "${ROOT_DIR}/v1/examples/${EXAMPLE}" "${ROOT_DIR}/docs/v1/examples/${EXAMPLE}"
 done
 
-sass --quiet-deps --load-path ${ROOT_DIR}/node_modules/tech-docs-assets/stylesheets --load-path ${ROOT_DIR}/node_modules/govuk-frontend ${ROOT_DIR}/mkdocs-govuk/src/css/:${ROOT_DIR}/docs/css
-npx webpack build --config "${ROOT_DIR}/webpack.config.js"
-mkdir -p "${ROOT_DIR}/docs/assets/govuk/assets"
-cp -R ${ROOT_DIR}/node_modules/govuk-frontend/govuk/assets/* ${ROOT_DIR}/docs/assets/govuk/assets
-
 poetry run mkdocs build -c
