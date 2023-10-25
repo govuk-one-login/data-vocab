@@ -64,6 +64,7 @@ slots:
   description:
     slot_uri: schema:description
   "@context":
+    required: true
     range: string
     multivalued: true
     inlined_as_list: true
@@ -74,12 +75,15 @@ slots:
     range: date
     slot_uri: schema:validUntil
   iss:
+    required: true
     range: uri
     description: The `iss` (issuer) claim identifies the principal that issued the JWT.
   sub:
+    required: true
     range: uri
     description: The `sub` (subject) claim identifies the principal that is the subject of the JWT.
   nbf:
+    required: true
     range: integer
     description: The `nbf` (not before) claim identifies the time the JWT is valid from.
   exp:
@@ -92,5 +96,6 @@ slots:
     range: uri
     description: The `aud` (audience) claim identifies the recipients that the JWT is intended for.
   jti:
+    required: true
     range: uri
     description: The `jti` (JWT ID) claim identifies the unique identifier of the JWT.

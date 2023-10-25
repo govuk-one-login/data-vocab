@@ -26,4 +26,5 @@ slots:
   vot:
     range: IdentityVectorOfTrust
   vtm:
+    required: true
     range: uri

@@ -59,6 +59,7 @@ slots:
     slot_uri: schema:birthDate
     multivalued: true
     inlined_as_list: true
+    required: true
   address:
     range: PostalAddressClass
     multivalued: true
