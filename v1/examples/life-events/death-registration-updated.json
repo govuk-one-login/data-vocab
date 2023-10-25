@@ -2,6 +2,8 @@
   "iss": "https://life-events-platform.gov.uk.example",
   "iat": 1691637001,
   "jti": "4d3559ec67504aaba65d40b0363faad8",
+  "sub": "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
+  "nbf": 1541493724,
   "toe": 618775750,
   "events": {
     "https://vocab.account.gov.uk/v1/deathRegistrationUpdated": {
