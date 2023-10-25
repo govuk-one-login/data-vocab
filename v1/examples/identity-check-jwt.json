@@ -9,6 +9,55 @@
       "https://vocab.account.gov.uk/contexts/identity-v1.jsonld"
     ],
     "credentialSubject": {
+      "birthDate": [
+        {
+          "value": "1970-01-01"
+        }
+      ],
+      "name": [
+        {
+          "nameParts": [
+            {
+              "type": "GivenName",
+              "value": "Alice"
+            },
+            {
+              "type": "GivenName",
+              "value": "Jane"
+            },
+            {
+              "type": "GivenName",
+              "value": "Laura"
+            },
+            {
+              "type": "FamilyName",
+              "value": "Doe"
+            }
+          ],
+          "validFrom": "2020-03-01"
+        },
+        {
+          "nameParts": [
+            {
+              "type": "GivenName",
+              "value": "Alice"
+            },
+            {
+              "type": "GivenName",
+              "value": "Jane"
+            },
+            {
+              "type": "GivenName",
+              "value": "Laura"
+            },
+            {
+              "type": "FamilyName",
+              "value": "Musk"
+            }
+          ],
+          "validUntil": "2020-03-01"
+        }
+      ]
     },
     "evidence": [
     ]
