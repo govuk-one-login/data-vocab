@@ -1,0 +1,42 @@
+id: https://vocab.account.gov.uk/linkml/txma-audit-query-data-request
+name: txma-audit-query-data-request
+description: >-
+  Description for audit event TXMA_AUDIT_QUERY_DATA_REQUEST
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  TxmaAuditQueryDataRequestAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - restricted
+      - extensions
+
+  TxmaAuditQueryDataRequestRestrictedClass:
+    slots:
+      - requesterEmail
+      - requesterName
+      - recipientEmail
+      - recipientName
+
+  TxmaAuditQueryDataRequestExtensionsClass:
+    slots:
+      - ticket_details
+
+slots:
+  restricted:
+    range: TxmaAuditQueryDataRequestRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: TxmaAuditQueryDataRequestExtensionsClass
+    description: Description for extensions

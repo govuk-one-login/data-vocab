@@ -1,0 +1,34 @@
+id: https://vocab.account.gov.uk/linkml/ipv-passport-cri-start
+name: ipv-passport-cri-start
+description: >-
+  Description for audit event IPV_PASSPORT_CRI_START
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvPassportCriStartAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  IpvPassportCriStartUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: IpvPassportCriStartUserClass
+    description: Description for user

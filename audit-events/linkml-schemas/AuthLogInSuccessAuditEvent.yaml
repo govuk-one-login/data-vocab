@@ -1,0 +1,46 @@
+id: https://vocab.account.gov.uk/linkml/auth-log-in-success
+name: auth-log-in-success
+description: >-
+  Description for audit event AUTH_LOG_IN_SUCCESS
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthLogInSuccessAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  AuthLogInSuccessUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - user_id
+
+  AuthLogInSuccessExtensionsClass:
+    slots:
+      - internalSubjectId
+
+slots:
+  user:
+    range: AuthLogInSuccessUserClass
+    description: Description for user
+  extensions:
+    range: AuthLogInSuccessExtensionsClass
+    description: Description for extensions

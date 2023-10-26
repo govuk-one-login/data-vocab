@@ -1,0 +1,61 @@
+id: https://vocab.account.gov.uk/linkml/f2f-yoti-start
+name: f2f-yoti-start
+description: >-
+  Description for audit event F2F_YOTI_START
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  F2FYotiStartAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+
+  F2FYotiStartUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  F2FYotiStartRestrictedClass:
+    slots:
+      - documentType
+      - issuingCountry
+
+  F2FYotiStartExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - post_office_details
+
+  F2FYotiStartExtensionsEvidenceClass:
+    slots:
+      - txn
+
+slots:
+  user:
+    range: F2FYotiStartUserClass
+    description: Description for user
+  restricted:
+    range: F2FYotiStartRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: F2FYotiStartExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: F2FYotiStartExtensionsEvidenceClass
+    description: Description for evidence

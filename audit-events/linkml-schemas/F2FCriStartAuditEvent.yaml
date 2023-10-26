@@ -1,0 +1,36 @@
+id: https://vocab.account.gov.uk/linkml/f2f-cri-start
+name: f2f-cri-start
+description: >-
+  Description for audit event F2F_CRI_START
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  F2FCriStartAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  F2FCriStartUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - transaction_id
+      - user_id
+
+slots:
+  user:
+    range: F2FCriStartUserClass
+    description: Description for user

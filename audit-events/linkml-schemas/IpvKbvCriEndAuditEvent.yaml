@@ -1,0 +1,35 @@
+id: https://vocab.account.gov.uk/linkml/ipv-kbv-cri-end
+name: ipv-kbv-cri-end
+description: >-
+  Description for audit event IPV_KBV_CRI_END
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvKbvCriEndAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  IpvKbvCriEndUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: IpvKbvCriEndUserClass
+    description: Description for user

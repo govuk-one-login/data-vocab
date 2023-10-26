@@ -1,0 +1,33 @@
+id: https://vocab.account.gov.uk/linkml/auth-authorisation-request-received
+name: auth-authorisation-request-received
+description: >-
+  Description for audit event AUTH_AUTHORISATION_REQUEST_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthAuthorisationRequestReceivedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  AuthAuthorisationRequestReceivedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+
+slots:
+  user:
+    range: AuthAuthorisationRequestReceivedUserClass
+    description: Description for user

@@ -1,0 +1,38 @@
+id: https://vocab.account.gov.uk/linkml/auth-update-profile-terms-conds-acceptance
+name: auth-update-profile-terms-conds-acceptance
+description: >-
+  Description for audit event AUTH_UPDATE_PROFILE_TERMS_CONDS_ACCEPTANCE
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthUpdateProfileTermsCondsAcceptanceAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  AuthUpdateProfileTermsCondsAcceptanceUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: AuthUpdateProfileTermsCondsAcceptanceUserClass
+    description: Description for user

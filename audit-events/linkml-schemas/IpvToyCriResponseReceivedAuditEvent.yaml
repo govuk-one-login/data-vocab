@@ -1,0 +1,135 @@
+id: https://vocab.account.gov.uk/linkml/ipv-toy-cri-response-received
+name: ipv-toy-cri-response-received
+description: >-
+  Description for audit event IPV_TOY_CRI_RESPONSE_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvToyCriResponseReceivedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+      - extenstions
+      - platform
+
+  IpvToyCriResponseReceivedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - transaction_id
+      - user_id
+
+  IpvToyCriResponseReceivedRestrictedClass:
+    slots:
+      - address
+      - birthDate
+      - drivingPermit
+      - name
+      - passport
+      - residencePermit
+      - deviceId
+      - requesterEmail
+      - requesterName
+      - recipientEmail
+      - recipientName
+      - mismatched_pii
+      - spot_request
+      - documentType
+      - issuingCountry
+      - user
+
+  IpvToyCriResponseReceivedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+      - notification-type
+      - mfa-type
+      - test-user
+      - internalSubjectId
+      - isNewAccount
+      - client-name
+      - description
+      - experianIiqResponse
+      - experianIiqResponse_value
+      - successful
+      - levelOfConfidence
+      - ticket_details
+      - error
+      - rejectionReason
+      - addressesEntered
+      - experianCrossCoreResponse
+      - previous_govuk_signin_journey_id
+      - ci_count
+      - toy
+      - toyResponse
+      - post_office_details
+
+  IpvToyCriResponseReceivedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - failedCheckDetails
+      - verificationScore
+      - decisionScore
+      - strengthScore
+      - validityScore
+      - activityScore
+      - type
+
+  IpvToyCriResponseReceivedExtensionsExperianiiqresponseClass:
+    slots:
+      - outcome
+      - totalQuestionsAsked
+      - totalQuestionsAnsweredCorrect
+      - totalQuestionsAnsweredIncorrect
+
+  IpvToyCriResponseReceivedExtenstionsClass:
+    slots:
+      - source_topic_arn
+
+  IpvToyCriResponseReceivedPlatformClass:
+    slots:
+      - device_info
+
+slots:
+  user:
+    range: IpvToyCriResponseReceivedUserClass
+    description: Description for user
+  restricted:
+    range: IpvToyCriResponseReceivedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: IpvToyCriResponseReceivedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: IpvToyCriResponseReceivedExtensionsEvidenceClass
+    description: Description for evidence
+  experianIiqResponse:
+    range: IpvToyCriResponseReceivedExtensionsExperianiiqresponseClass
+    description: Description for experianiiqresponse
+  extenstions:
+    range: IpvToyCriResponseReceivedExtenstionsClass
+    description: Description for extenstions
+  platform:
+    range: IpvToyCriResponseReceivedPlatformClass
+    description: Description for platform

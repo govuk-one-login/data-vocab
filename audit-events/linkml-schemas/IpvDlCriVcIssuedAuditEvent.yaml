@@ -1,0 +1,73 @@
+id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-vc-issued
+name: ipv-dl-cri-vc-issued
+description: >-
+  Description for audit event IPV_DL_CRI_VC_ISSUED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvDlCriVcIssuedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+      - restricted
+      - extensions
+
+  IpvDlCriVcIssuedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+  IpvDlCriVcIssuedRestrictedClass:
+    slots:
+      - address
+      - birthDate
+      - drivingPermit
+      - name
+      - documentType
+      - issuingCountry
+      - user
+
+  IpvDlCriVcIssuedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+
+  IpvDlCriVcIssuedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - failedCheckDetails
+      - strengthScore
+      - validityScore
+      - activityScore
+      - type
+
+slots:
+  user:
+    range: IpvDlCriVcIssuedUserClass
+    description: Description for user
+  restricted:
+    range: IpvDlCriVcIssuedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: IpvDlCriVcIssuedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: IpvDlCriVcIssuedExtensionsEvidenceClass
+    description: Description for evidence

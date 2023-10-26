@@ -1,0 +1,31 @@
+id: https://vocab.account.gov.uk/linkml/auth-synthetics-user-not-found-for-deletion
+name: auth-synthetics-user-not-found-for-deletion
+description: >-
+  Description for audit event AUTH_SYNTHETICS_USER_NOT_FOUND_FOR_DELETION
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthSyntheticsUserNotFoundForDeletionAuditEventClass:
+    slots:
+      - event_name
+      - user
+
+  AuthSyntheticsUserNotFoundForDeletionUserClass:
+    slots:
+      - email
+      - ip_address
+
+slots:
+  user:
+    range: AuthSyntheticsUserNotFoundForDeletionUserClass
+    description: Description for user

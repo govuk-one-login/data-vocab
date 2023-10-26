@@ -12,7 +12,7 @@ import ruamel.yaml
 DOCS_DIR = "./docs"
 
 CUSTOM_NAMES = {
-    "index.md": "GOV.UK One Login Vocabulary",
+    "index.md": "1. GOV.UK One Login Vocabulary",
     "v1/_Home/index.md": "credentials",
     "v1/json-schemas/index.md": "JSON Schema files"
 }
@@ -23,7 +23,9 @@ CUSTOM_CATEGORY_NAMES = {
     "types": "Types",
     "classes": "Classes",
     "enums": "Enums",
-    "json-schemas": "JSON Schemas"
+    "json-schemas": "JSON Schemas", 
+    "audit-events": "3. Audit Events",
+    "v1": "2. Physical Data Model",
 }
 
 def is_redirect(file_path):

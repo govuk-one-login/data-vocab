@@ -1,0 +1,37 @@
+id: https://vocab.account.gov.uk/linkml/auth-ipv-authorisation-response-received
+name: auth-ipv-authorisation-response-received
+description: >-
+  Description for audit event AUTH_IPV_AUTHORISATION_RESPONSE_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthIpvAuthorisationResponseReceivedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  AuthIpvAuthorisationResponseReceivedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - persistent_session_id
+      - phone
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: AuthIpvAuthorisationResponseReceivedUserClass
+    description: Description for user

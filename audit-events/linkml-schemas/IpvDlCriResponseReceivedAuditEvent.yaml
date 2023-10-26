@@ -1,0 +1,35 @@
+id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-response-received
+name: ipv-dl-cri-response-received
+description: >-
+  Description for audit event IPV_DL_CRI_RESPONSE_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvDlCriResponseReceivedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  IpvDlCriResponseReceivedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: IpvDlCriResponseReceivedUserClass
+    description: Description for user

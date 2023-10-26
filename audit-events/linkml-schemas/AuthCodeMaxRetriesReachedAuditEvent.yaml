@@ -1,0 +1,46 @@
+id: https://vocab.account.gov.uk/linkml/auth-code-max-retries-reached
+name: auth-code-max-retries-reached
+description: >-
+  Description for audit event AUTH_CODE_MAX_RETRIES_REACHED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthCodeMaxRetriesReachedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  AuthCodeMaxRetriesReachedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+  AuthCodeMaxRetriesReachedExtensionsClass:
+    slots:
+      - notification-type
+      - mfa-type
+
+slots:
+  user:
+    range: AuthCodeMaxRetriesReachedUserClass
+    description: Description for user
+  extensions:
+    range: AuthCodeMaxRetriesReachedExtensionsClass
+    description: Description for extensions

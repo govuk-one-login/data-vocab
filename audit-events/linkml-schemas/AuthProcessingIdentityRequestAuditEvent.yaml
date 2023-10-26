@@ -1,0 +1,36 @@
+id: https://vocab.account.gov.uk/linkml/auth-processing-identity-request
+name: auth-processing-identity-request
+description: >-
+  Description for audit event AUTH_PROCESSING_IDENTITY_REQUEST
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthProcessingIdentityRequestAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  AuthProcessingIdentityRequestUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+
+slots:
+  user:
+    range: AuthProcessingIdentityRequestUserClass
+    description: Description for user

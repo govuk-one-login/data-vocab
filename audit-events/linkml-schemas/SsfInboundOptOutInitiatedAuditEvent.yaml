@@ -1,0 +1,135 @@
+id: https://vocab.account.gov.uk/linkml/ssf-inbound-opt-out-initiated
+name: ssf-inbound-opt-out-initiated
+description: >-
+  Description for audit event SSF_INBOUND_OPT_OUT_INITIATED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  SsfInboundOptOutInitiatedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+      - extenstions
+      - platform
+
+  SsfInboundOptOutInitiatedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - transaction_id
+      - user_id
+
+  SsfInboundOptOutInitiatedRestrictedClass:
+    slots:
+      - address
+      - birthDate
+      - drivingPermit
+      - name
+      - passport
+      - residencePermit
+      - deviceId
+      - requesterEmail
+      - requesterName
+      - recipientEmail
+      - recipientName
+      - mismatched_pii
+      - spot_request
+      - documentType
+      - issuingCountry
+      - user
+
+  SsfInboundOptOutInitiatedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+      - notification-type
+      - mfa-type
+      - test-user
+      - internalSubjectId
+      - isNewAccount
+      - client-name
+      - description
+      - experianIiqResponse
+      - experianIiqResponse_value
+      - successful
+      - levelOfConfidence
+      - ticket_details
+      - error
+      - rejectionReason
+      - addressesEntered
+      - experianCrossCoreResponse
+      - previous_govuk_signin_journey_id
+      - ci_count
+      - toy
+      - toyResponse
+      - post_office_details
+
+  SsfInboundOptOutInitiatedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - failedCheckDetails
+      - verificationScore
+      - decisionScore
+      - strengthScore
+      - validityScore
+      - activityScore
+      - type
+
+  SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass:
+    slots:
+      - outcome
+      - totalQuestionsAsked
+      - totalQuestionsAnsweredCorrect
+      - totalQuestionsAnsweredIncorrect
+
+  SsfInboundOptOutInitiatedExtenstionsClass:
+    slots:
+      - source_topic_arn
+
+  SsfInboundOptOutInitiatedPlatformClass:
+    slots:
+      - device_info
+
+slots:
+  user:
+    range: SsfInboundOptOutInitiatedUserClass
+    description: Description for user
+  restricted:
+    range: SsfInboundOptOutInitiatedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: SsfInboundOptOutInitiatedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: SsfInboundOptOutInitiatedExtensionsEvidenceClass
+    description: Description for evidence
+  experianIiqResponse:
+    range: SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass
+    description: Description for experianiiqresponse
+  extenstions:
+    range: SsfInboundOptOutInitiatedExtenstionsClass
+    description: Description for extenstions
+  platform:
+    range: SsfInboundOptOutInitiatedPlatformClass
+    description: Description for platform

@@ -1,0 +1,46 @@
+id: https://vocab.account.gov.uk/linkml/auth-invalid-code-sent
+name: auth-invalid-code-sent
+description: >-
+  Description for audit event AUTH_INVALID_CODE_SENT
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthInvalidCodeSentAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  AuthInvalidCodeSentUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+  AuthInvalidCodeSentExtensionsClass:
+    slots:
+      - notification-type
+      - mfa-type
+
+slots:
+  user:
+    range: AuthInvalidCodeSentUserClass
+    description: Description for user
+  extensions:
+    range: AuthInvalidCodeSentExtensionsClass
+    description: Description for extensions

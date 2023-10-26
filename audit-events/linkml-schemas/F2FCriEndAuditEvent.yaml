@@ -1,0 +1,50 @@
+id: https://vocab.account.gov.uk/linkml/f2f-cri-end
+name: f2f-cri-end
+description: >-
+  Description for audit event F2F_CRI_END
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  F2FCriEndAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  F2FCriEndUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  F2FCriEndExtensionsClass:
+    slots:
+      - evidence
+
+  F2FCriEndExtensionsEvidenceClass:
+    slots:
+      - txn
+
+slots:
+  user:
+    range: F2FCriEndUserClass
+    description: Description for user
+  extensions:
+    range: F2FCriEndExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: F2FCriEndExtensionsEvidenceClass
+    description: Description for evidence

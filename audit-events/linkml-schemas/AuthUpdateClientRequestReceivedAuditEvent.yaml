@@ -1,0 +1,30 @@
+id: https://vocab.account.gov.uk/linkml/auth-update-client-request-received
+name: auth-update-client-request-received
+description: >-
+  Description for audit event AUTH_UPDATE_CLIENT_REQUEST_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthUpdateClientRequestReceivedAuditEventClass:
+    slots:
+      - event_name
+      - user
+
+  AuthUpdateClientRequestReceivedUserClass:
+    slots:
+      - ip_address
+
+slots:
+  user:
+    range: AuthUpdateClientRequestReceivedUserClass
+    description: Description for user

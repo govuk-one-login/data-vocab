@@ -1,0 +1,135 @@
+id: https://vocab.account.gov.uk/linkml/ipr-user-redirected
+name: ipr-user-redirected
+description: >-
+  Description for audit event IPR_USER_REDIRECTED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IprUserRedirectedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+      - extenstions
+      - platform
+
+  IprUserRedirectedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - transaction_id
+      - user_id
+
+  IprUserRedirectedRestrictedClass:
+    slots:
+      - address
+      - birthDate
+      - drivingPermit
+      - name
+      - passport
+      - residencePermit
+      - deviceId
+      - requesterEmail
+      - requesterName
+      - recipientEmail
+      - recipientName
+      - mismatched_pii
+      - spot_request
+      - documentType
+      - issuingCountry
+      - user
+
+  IprUserRedirectedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+      - notification-type
+      - mfa-type
+      - test-user
+      - internalSubjectId
+      - isNewAccount
+      - client-name
+      - description
+      - experianIiqResponse
+      - experianIiqResponse_value
+      - successful
+      - levelOfConfidence
+      - ticket_details
+      - error
+      - rejectionReason
+      - addressesEntered
+      - experianCrossCoreResponse
+      - previous_govuk_signin_journey_id
+      - ci_count
+      - toy
+      - toyResponse
+      - post_office_details
+
+  IprUserRedirectedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - failedCheckDetails
+      - verificationScore
+      - decisionScore
+      - strengthScore
+      - validityScore
+      - activityScore
+      - type
+
+  IprUserRedirectedExtensionsExperianiiqresponseClass:
+    slots:
+      - outcome
+      - totalQuestionsAsked
+      - totalQuestionsAnsweredCorrect
+      - totalQuestionsAnsweredIncorrect
+
+  IprUserRedirectedExtenstionsClass:
+    slots:
+      - source_topic_arn
+
+  IprUserRedirectedPlatformClass:
+    slots:
+      - device_info
+
+slots:
+  user:
+    range: IprUserRedirectedUserClass
+    description: Description for user
+  restricted:
+    range: IprUserRedirectedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: IprUserRedirectedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: IprUserRedirectedExtensionsEvidenceClass
+    description: Description for evidence
+  experianIiqResponse:
+    range: IprUserRedirectedExtensionsExperianiiqresponseClass
+    description: Description for experianiiqresponse
+  extenstions:
+    range: IprUserRedirectedExtenstionsClass
+    description: Description for extenstions
+  platform:
+    range: IprUserRedirectedPlatformClass
+    description: Description for platform

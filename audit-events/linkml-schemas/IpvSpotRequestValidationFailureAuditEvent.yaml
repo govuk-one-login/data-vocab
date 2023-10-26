@@ -1,0 +1,51 @@
+id: https://vocab.account.gov.uk/linkml/ipv-spot-request-validation-failure
+name: ipv-spot-request-validation-failure
+description: >-
+  Description for audit event IPV_SPOT_REQUEST_VALIDATION_FAILURE
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvSpotRequestValidationFailureAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+
+  IpvSpotRequestValidationFailureUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - persistent_session_id
+      - session_id
+
+  IpvSpotRequestValidationFailureRestrictedClass:
+    slots:
+      - mismatched_pii
+      - spot_request
+
+  IpvSpotRequestValidationFailureExtensionsClass:
+    slots:
+      - rejectionReason
+
+slots:
+  user:
+    range: IpvSpotRequestValidationFailureUserClass
+    description: Description for user
+  restricted:
+    range: IpvSpotRequestValidationFailureRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: IpvSpotRequestValidationFailureExtensionsClass
+    description: Description for extensions

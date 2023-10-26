@@ -2,6 +2,10 @@
 ROOT_DIR="$( git rev-parse --show-toplevel )"
 set -e
 
+
+#
+# Generate JSON Schemas
+#
 EXAMPLES=(
   "PostalAddressClass"
   "PassportDetailsClass"
@@ -14,11 +18,30 @@ EXAMPLES=(
 
 bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
 
+#
+# Generate Markdown
+#
+
+# Audit Events
+rm -rf "${ROOT_DIR}/docs/audit-events"
+
+AUDIT_EVENTS_DIR="${ROOT_DIR}/audit-events/linkml-schemas"
+DEST_DIR="${ROOT_DIR}/docs/audit-events/"
+for file in ${AUDIT_EVENTS_DIR}/*AuditEvent.yaml; do 
+  echo $file
+  echo "----"
+  poetry run gen-markdown "$file" -d "${DEST_DIR}/" --index-file index.md
+done
+
+# Physical Data Model
 rm -rf "${ROOT_DIR}/docs/v1"
 poetry run gen-markdown "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${ROOT_DIR}/docs/v1/" --index-file index.md
 ln -s "${ROOT_DIR}/v1/linkml-schemas" "${ROOT_DIR}/docs/v1/linkml-schemas"
 ln -s "${ROOT_DIR}/v1/json-schemas" "${ROOT_DIR}/docs/v1/json-schemas"
 
+#
+# Build Examples
+#
 echo "Building examples"
 mkdir "${ROOT_DIR}/docs/v1/examples"
 for EXAMPLE in "${EXAMPLES[@]}"; do

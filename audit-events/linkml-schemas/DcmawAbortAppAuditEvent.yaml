@@ -1,0 +1,36 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-abort-app
+name: dcmaw-abort-app
+description: >-
+  Description for audit event DCMAW_ABORT_APP
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DcmawAbortAppAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  DcmawAbortAppUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - transaction_id
+      - user_id
+
+slots:
+  user:
+    range: DcmawAbortAppUserClass
+    description: Description for user

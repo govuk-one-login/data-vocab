@@ -1,0 +1,46 @@
+id: https://vocab.account.gov.uk/linkml/auth-account-temporarily-locked
+name: auth-account-temporarily-locked
+description: >-
+  Description for audit event AUTH_ACCOUNT_TEMPORARILY_LOCKED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthAccountTemporarilyLockedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  AuthAccountTemporarilyLockedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - user_id
+
+  AuthAccountTemporarilyLockedExtensionsClass:
+    slots:
+      - internalSubjectId
+
+slots:
+  user:
+    range: AuthAccountTemporarilyLockedUserClass
+    description: Description for user
+  extensions:
+    range: AuthAccountTemporarilyLockedExtensionsClass
+    description: Description for extensions

@@ -1,0 +1,43 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-session-recovered
+name: dcmaw-session-recovered
+description: >-
+  Description for audit event DCMAW_SESSION_RECOVERED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DcmawSessionRecoveredAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  DcmawSessionRecoveredUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  DcmawSessionRecoveredExtensionsClass:
+    slots:
+      - previous_govuk_signin_journey_id
+
+slots:
+  user:
+    range: DcmawSessionRecoveredUserClass
+    description: Description for user
+  extensions:
+    range: DcmawSessionRecoveredExtensionsClass
+    description: Description for extensions

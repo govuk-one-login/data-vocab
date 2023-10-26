@@ -1,0 +1,84 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-cri-vc-issued
+name: dcmaw-cri-vc-issued
+description: >-
+  Description for audit event DCMAW_CRI_VC_ISSUED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DcmawCriVcIssuedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+      - platform
+
+  DcmawCriVcIssuedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - session_id
+      - transaction_id
+      - user_id
+
+  DcmawCriVcIssuedRestrictedClass:
+    slots:
+      - address
+      - birthDate
+      - drivingPermit
+      - name
+      - passport
+      - residencePermit
+      - deviceId
+      - documentType
+      - issuingCountry
+      - user
+
+  DcmawCriVcIssuedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - toy
+      - toyResponse
+      - post_office_details
+
+  DcmawCriVcIssuedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - failedCheckDetails
+      - strengthScore
+      - validityScore
+
+  DcmawCriVcIssuedPlatformClass:
+    slots:
+      - device_info
+
+slots:
+  user:
+    range: DcmawCriVcIssuedUserClass
+    description: Description for user
+  restricted:
+    range: DcmawCriVcIssuedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: DcmawCriVcIssuedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: DcmawCriVcIssuedExtensionsEvidenceClass
+    description: Description for evidence
+  platform:
+    range: DcmawCriVcIssuedPlatformClass
+    description: Description for platform

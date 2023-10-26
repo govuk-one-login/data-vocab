@@ -1,0 +1,34 @@
+id: https://vocab.account.gov.uk/linkml/ipv-address-cri-start
+name: ipv-address-cri-start
+description: >-
+  Description for audit event IPV_ADDRESS_CRI_START
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvAddressCriStartAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  IpvAddressCriStartUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: IpvAddressCriStartUserClass
+    description: Description for user

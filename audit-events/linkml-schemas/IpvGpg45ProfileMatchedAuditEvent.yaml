@@ -1,0 +1,49 @@
+id: https://vocab.account.gov.uk/linkml/ipv-gpg45-profile-matched
+name: ipv-gpg45-profile-matched
+description: >-
+  Description for audit event IPV_GPG45_PROFILE_MATCHED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvGpg45ProfileMatchedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+      - extensions
+
+  IpvGpg45ProfileMatchedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  IpvGpg45ProfileMatchedExtensionsClass:
+    slots:
+      - evidence
+
+  IpvGpg45ProfileMatchedExtensionsEvidenceClass:
+    slots:
+      - txn
+
+slots:
+  user:
+    range: IpvGpg45ProfileMatchedUserClass
+    description: Description for user
+  extensions:
+    range: IpvGpg45ProfileMatchedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: IpvGpg45ProfileMatchedExtensionsEvidenceClass
+    description: Description for evidence

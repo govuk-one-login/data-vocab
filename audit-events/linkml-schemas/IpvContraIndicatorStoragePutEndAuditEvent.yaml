@@ -1,0 +1,32 @@
+id: https://vocab.account.gov.uk/linkml/ipv-contra-indicator-storage-put-end
+name: ipv-contra-indicator-storage-put-end
+description: >-
+  Description for audit event IPV_CONTRA_INDICATOR_STORAGE_PUT_END
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvContraIndicatorStoragePutEndAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  IpvContraIndicatorStoragePutEndUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+
+slots:
+  user:
+    range: IpvContraIndicatorStoragePutEndUserClass
+    description: Description for user

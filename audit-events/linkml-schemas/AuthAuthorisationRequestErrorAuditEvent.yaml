@@ -1,0 +1,42 @@
+id: https://vocab.account.gov.uk/linkml/auth-authorisation-request-error
+name: auth-authorisation-request-error
+description: >-
+  Description for audit event AUTH_AUTHORISATION_REQUEST_ERROR
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthAuthorisationRequestErrorAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - extensions
+
+  AuthAuthorisationRequestErrorUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+
+  AuthAuthorisationRequestErrorExtensionsClass:
+    slots:
+      - description
+
+slots:
+  user:
+    range: AuthAuthorisationRequestErrorUserClass
+    description: Description for user
+  extensions:
+    range: AuthAuthorisationRequestErrorExtensionsClass
+    description: Description for extensions

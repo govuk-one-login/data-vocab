@@ -1,0 +1,43 @@
+id: https://vocab.account.gov.uk/linkml/ipv-address-cri-vc-issued
+name: ipv-address-cri-vc-issued
+description: >-
+  Description for audit event IPV_ADDRESS_CRI_VC_ISSUED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvAddressCriVcIssuedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+      - extensions
+
+  IpvAddressCriVcIssuedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+  IpvAddressCriVcIssuedExtensionsClass:
+    slots:
+      - addressesEntered
+
+slots:
+  user:
+    range: IpvAddressCriVcIssuedUserClass
+    description: Description for user
+  extensions:
+    range: IpvAddressCriVcIssuedExtensionsClass
+    description: Description for extensions

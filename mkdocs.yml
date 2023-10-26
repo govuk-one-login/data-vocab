@@ -15,8 +15,8 @@ markdown_extensions:
   - admonition
 repo_url: https://github.com/govuk-one-login/data-vocab
 nav:
-  - GOV.UK One Login Vocabulary: index.md
-  - v1:
+  - 1. GOV.UK One Login Vocabulary: index.md
+  - 2. Physical Data Model:
       - Home:
           - credentials: v1/_Home/index.md
       - Classes:
@@ -207,3 +207,664 @@ nav:
           - Time: v1/types/Time.md
           - Uri: v1/types/Uri.md
           - Uriorcurie: v1/types/Uriorcurie.md
+  - 3. Audit Events:
+      - Home:
+          - index: audit-events/_Home/index.md
+      - Classes:
+          - AuthAccountManagementAuthenticateAuditEventClass: audit-events/classes/AuthAccountManagementAuthenticateAuditEventClass.md
+          - AuthAccountManagementAuthenticateUserClass: audit-events/classes/AuthAccountManagementAuthenticateUserClass.md
+          - AuthAccountRecoveryBlockAddedAuditEventClass: audit-events/classes/AuthAccountRecoveryBlockAddedAuditEventClass.md
+          - AuthAccountRecoveryBlockAddedUserClass: audit-events/classes/AuthAccountRecoveryBlockAddedUserClass.md
+          - AuthAccountRecoveryBlockRemovedAuditEventClass: audit-events/classes/AuthAccountRecoveryBlockRemovedAuditEventClass.md
+          - AuthAccountRecoveryBlockRemovedUserClass: audit-events/classes/AuthAccountRecoveryBlockRemovedUserClass.md
+          - AuthAccountRecoveryEmailCodeSentAuditEventClass: audit-events/classes/AuthAccountRecoveryEmailCodeSentAuditEventClass.md
+          - AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass: 
+              audit-events/classes/AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass.md
+          - AuthAccountRecoveryEmailCodeSentForTestClientUserClass: audit-events/classes/AuthAccountRecoveryEmailCodeSentForTestClientUserClass.md
+          - AuthAccountRecoveryEmailCodeSentUserClass: audit-events/classes/AuthAccountRecoveryEmailCodeSentUserClass.md
+          - AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass: 
+              audit-events/classes/AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass.md
+          - AuthAccountRecoveryEmailInvalidCodeRequestUserClass: audit-events/classes/AuthAccountRecoveryEmailInvalidCodeRequestUserClass.md
+          - AuthAccountRecoveryNotPermittedAuditEventClass: audit-events/classes/AuthAccountRecoveryNotPermittedAuditEventClass.md
+          - AuthAccountRecoveryNotPermittedUserClass: audit-events/classes/AuthAccountRecoveryNotPermittedUserClass.md
+          - AuthAccountRecoveryPermittedAuditEventClass: audit-events/classes/AuthAccountRecoveryPermittedAuditEventClass.md
+          - AuthAccountRecoveryPermittedUserClass: audit-events/classes/AuthAccountRecoveryPermittedUserClass.md
+          - AuthAccountTemporarilyLockedAuditEventClass: audit-events/classes/AuthAccountTemporarilyLockedAuditEventClass.md
+          - AuthAccountTemporarilyLockedExtensionsClass: audit-events/classes/AuthAccountTemporarilyLockedExtensionsClass.md
+          - AuthAccountTemporarilyLockedUserClass: audit-events/classes/AuthAccountTemporarilyLockedUserClass.md
+          - AuthAuthCodeIssuedAuditEventClass: audit-events/classes/AuthAuthCodeIssuedAuditEventClass.md
+          - AuthAuthCodeIssuedExtensionsClass: audit-events/classes/AuthAuthCodeIssuedExtensionsClass.md
+          - AuthAuthCodeIssuedUserClass: audit-events/classes/AuthAuthCodeIssuedUserClass.md
+          - AuthAuthorisationInitiatedAuditEventClass: audit-events/classes/AuthAuthorisationInitiatedAuditEventClass.md
+          - AuthAuthorisationInitiatedExtensionsClass: audit-events/classes/AuthAuthorisationInitiatedExtensionsClass.md
+          - AuthAuthorisationInitiatedUserClass: audit-events/classes/AuthAuthorisationInitiatedUserClass.md
+          - AuthAuthorisationRequestErrorAuditEventClass: audit-events/classes/AuthAuthorisationRequestErrorAuditEventClass.md
+          - AuthAuthorisationRequestErrorExtensionsClass: audit-events/classes/AuthAuthorisationRequestErrorExtensionsClass.md
+          - AuthAuthorisationRequestErrorUserClass: audit-events/classes/AuthAuthorisationRequestErrorUserClass.md
+          - AuthAuthorisationRequestReceivedAuditEventClass: audit-events/classes/AuthAuthorisationRequestReceivedAuditEventClass.md
+          - AuthAuthorisationRequestReceivedUserClass: audit-events/classes/AuthAuthorisationRequestReceivedUserClass.md
+          - AuthCheckUserInvalidEmailAuditEventClass: audit-events/classes/AuthCheckUserInvalidEmailAuditEventClass.md
+          - AuthCheckUserInvalidEmailUserClass: audit-events/classes/AuthCheckUserInvalidEmailUserClass.md
+          - AuthCheckUserKnownEmailAuditEventClass: audit-events/classes/AuthCheckUserKnownEmailAuditEventClass.md
+          - AuthCheckUserKnownEmailUserClass: audit-events/classes/AuthCheckUserKnownEmailUserClass.md
+          - AuthCheckUserNoAccountWithEmailAuditEventClass: audit-events/classes/AuthCheckUserNoAccountWithEmailAuditEventClass.md
+          - AuthCheckUserNoAccountWithEmailUserClass: audit-events/classes/AuthCheckUserNoAccountWithEmailUserClass.md
+          - AuthCodeMaxRetriesReachedAuditEventClass: audit-events/classes/AuthCodeMaxRetriesReachedAuditEventClass.md
+          - AuthCodeMaxRetriesReachedExtensionsClass: audit-events/classes/AuthCodeMaxRetriesReachedExtensionsClass.md
+          - AuthCodeMaxRetriesReachedUserClass: audit-events/classes/AuthCodeMaxRetriesReachedUserClass.md
+          - AuthCodeVerifiedAuditEventClass: audit-events/classes/AuthCodeVerifiedAuditEventClass.md
+          - AuthCodeVerifiedUserClass: audit-events/classes/AuthCodeVerifiedUserClass.md
+          - AuthCreateAccountAuditEventClass: audit-events/classes/AuthCreateAccountAuditEventClass.md
+          - AuthCreateAccountEmailAlreadyExistsAuditEventClass: audit-events/classes/AuthCreateAccountEmailAlreadyExistsAuditEventClass.md
+          - AuthCreateAccountEmailAlreadyExistsUserClass: audit-events/classes/AuthCreateAccountEmailAlreadyExistsUserClass.md
+          - AuthCreateAccountExtensionsClass: audit-events/classes/AuthCreateAccountExtensionsClass.md
+          - AuthCreateAccountUserClass: audit-events/classes/AuthCreateAccountUserClass.md
+          - AuthDeleteAccountAuditEventClass: audit-events/classes/AuthDeleteAccountAuditEventClass.md
+          - AuthDeleteAccountUserClass: audit-events/classes/AuthDeleteAccountUserClass.md
+          - AuthDocAppAuthorisationRequestedAuditEventClass: audit-events/classes/AuthDocAppAuthorisationRequestedAuditEventClass.md
+          - AuthDocAppAuthorisationRequestedUserClass: audit-events/classes/AuthDocAppAuthorisationRequestedUserClass.md
+          - AuthDocAppAuthorisationResponseReceivedAuditEventClass: audit-events/classes/AuthDocAppAuthorisationResponseReceivedAuditEventClass.md
+          - AuthDocAppAuthorisationResponseReceivedUserClass: audit-events/classes/AuthDocAppAuthorisationResponseReceivedUserClass.md
+          - AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass: 
+              audit-events/classes/AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass.md
+          - AuthDocAppSuccessfulCredentialResponseReceivedUserClass: audit-events/classes/AuthDocAppSuccessfulCredentialResponseReceivedUserClass.md
+          - AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass: audit-events/classes/AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass.md
+          - AuthDocAppSuccessfulTokenResponseReceivedUserClass: audit-events/classes/AuthDocAppSuccessfulTokenResponseReceivedUserClass.md
+          - AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass: 
+              audit-events/classes/AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass.md
+          - AuthDocAppUnsuccessfulAuthorisationResponseReceivedUserClass: 
+              audit-events/classes/AuthDocAppUnsuccessfulAuthorisationResponseReceivedUserClass.md
+          - AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass: 
+              audit-events/classes/AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass.md
+          - AuthDocAppUnsuccessfulCredentialResponseReceivedUserClass: 
+              audit-events/classes/AuthDocAppUnsuccessfulCredentialResponseReceivedUserClass.md
+          - AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass: 
+              audit-events/classes/AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass.md
+          - AuthDocAppUnsuccessfulTokenResponseReceivedUserClass: audit-events/classes/AuthDocAppUnsuccessfulTokenResponseReceivedUserClass.md
+          - AuthEmailCodeSentAuditEventClass: audit-events/classes/AuthEmailCodeSentAuditEventClass.md
+          - AuthEmailCodeSentForTestClientAuditEventClass: audit-events/classes/AuthEmailCodeSentForTestClientAuditEventClass.md
+          - AuthEmailCodeSentForTestClientUserClass: audit-events/classes/AuthEmailCodeSentForTestClientUserClass.md
+          - AuthEmailCodeSentUserClass: audit-events/classes/AuthEmailCodeSentUserClass.md
+          - AuthEmailInvalidCodeRequestAuditEventClass: audit-events/classes/AuthEmailInvalidCodeRequestAuditEventClass.md
+          - AuthEmailInvalidCodeRequestUserClass: audit-events/classes/AuthEmailInvalidCodeRequestUserClass.md
+          - AuthInvalidCodeSentAuditEventClass: audit-events/classes/AuthInvalidCodeSentAuditEventClass.md
+          - AuthInvalidCodeSentExtensionsClass: audit-events/classes/AuthInvalidCodeSentExtensionsClass.md
+          - AuthInvalidCodeSentUserClass: audit-events/classes/AuthInvalidCodeSentUserClass.md
+          - AuthInvalidCredentialsAuditEventClass: audit-events/classes/AuthInvalidCredentialsAuditEventClass.md
+          - AuthInvalidCredentialsExtensionsClass: audit-events/classes/AuthInvalidCredentialsExtensionsClass.md
+          - AuthInvalidCredentialsUserClass: audit-events/classes/AuthInvalidCredentialsUserClass.md
+          - AuthIpvAuthorisationRequestedAuditEventClass: audit-events/classes/AuthIpvAuthorisationRequestedAuditEventClass.md
+          - AuthIpvAuthorisationRequestedUserClass: audit-events/classes/AuthIpvAuthorisationRequestedUserClass.md
+          - AuthIpvAuthorisationResponseReceivedAuditEventClass: audit-events/classes/AuthIpvAuthorisationResponseReceivedAuditEventClass.md
+          - AuthIpvAuthorisationResponseReceivedUserClass: audit-events/classes/AuthIpvAuthorisationResponseReceivedUserClass.md
+          - AuthIpvCapacityRequestedAuditEventClass: audit-events/classes/AuthIpvCapacityRequestedAuditEventClass.md
+          - AuthIpvSpotRequestedAuditEventClass: audit-events/classes/AuthIpvSpotRequestedAuditEventClass.md
+          - AuthIpvSpotRequestedUserClass: audit-events/classes/AuthIpvSpotRequestedUserClass.md
+          - AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass: audit-events/classes/AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass.md
+          - AuthIpvSuccessfulIdentityResponseReceivedUserClass: audit-events/classes/AuthIpvSuccessfulIdentityResponseReceivedUserClass.md
+          - AuthIpvSuccessfulSpotResponseReceivedAuditEventClass: audit-events/classes/AuthIpvSuccessfulSpotResponseReceivedAuditEventClass.md
+          - AuthIpvSuccessfulSpotResponseReceivedUserClass: audit-events/classes/AuthIpvSuccessfulSpotResponseReceivedUserClass.md
+          - AuthIpvSuccessfulTokenResponseReceivedAuditEventClass: audit-events/classes/AuthIpvSuccessfulTokenResponseReceivedAuditEventClass.md
+          - AuthIpvSuccessfulTokenResponseReceivedUserClass: audit-events/classes/AuthIpvSuccessfulTokenResponseReceivedUserClass.md
+          - AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass: 
+              audit-events/classes/AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass.md
+          - AuthIpvUnsuccessfulAuthorisationResponseReceivedUserClass: 
+              audit-events/classes/AuthIpvUnsuccessfulAuthorisationResponseReceivedUserClass.md
+          - AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass: audit-events/classes/AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass.md
+          - AuthIpvUnsuccessfulSpotResponseReceivedUserClass: audit-events/classes/AuthIpvUnsuccessfulSpotResponseReceivedUserClass.md
+          - AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass: audit-events/classes/AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass.md
+          - AuthIpvUnsuccessfulTokenResponseReceivedUserClass: audit-events/classes/AuthIpvUnsuccessfulTokenResponseReceivedUserClass.md
+          - AuthLogInSuccessAuditEventClass: audit-events/classes/AuthLogInSuccessAuditEventClass.md
+          - AuthLogInSuccessExtensionsClass: audit-events/classes/AuthLogInSuccessExtensionsClass.md
+          - AuthLogInSuccessUserClass: audit-events/classes/AuthLogInSuccessUserClass.md
+          - AuthLogOutSuccessAuditEventClass: audit-events/classes/AuthLogOutSuccessAuditEventClass.md
+          - AuthLogOutSuccessUserClass: audit-events/classes/AuthLogOutSuccessUserClass.md
+          - AuthMfaCodeSentAuditEventClass: audit-events/classes/AuthMfaCodeSentAuditEventClass.md
+          - AuthMfaCodeSentForTestClientAuditEventClass: audit-events/classes/AuthMfaCodeSentForTestClientAuditEventClass.md
+          - AuthMfaCodeSentForTestClientUserClass: audit-events/classes/AuthMfaCodeSentForTestClientUserClass.md
+          - AuthMfaCodeSentUserClass: audit-events/classes/AuthMfaCodeSentUserClass.md
+          - AuthMfaInvalidCodeRequestAuditEventClass: audit-events/classes/AuthMfaInvalidCodeRequestAuditEventClass.md
+          - AuthMfaInvalidCodeRequestUserClass: audit-events/classes/AuthMfaInvalidCodeRequestUserClass.md
+          - AuthMfaMismatchedEmailAuditEventClass: audit-events/classes/AuthMfaMismatchedEmailAuditEventClass.md
+          - AuthMfaMismatchedEmailUserClass: audit-events/classes/AuthMfaMismatchedEmailUserClass.md
+          - AuthMfaMissingPhoneNumberAuditEventClass: audit-events/classes/AuthMfaMissingPhoneNumberAuditEventClass.md
+          - AuthMfaMissingPhoneNumberUserClass: audit-events/classes/AuthMfaMissingPhoneNumberUserClass.md
+          - AuthNoAccountWithEmailAuditEventClass: audit-events/classes/AuthNoAccountWithEmailAuditEventClass.md
+          - AuthNoAccountWithEmailExtensionsClass: audit-events/classes/AuthNoAccountWithEmailExtensionsClass.md
+          - AuthNoAccountWithEmailUserClass: audit-events/classes/AuthNoAccountWithEmailUserClass.md
+          - AuthPasswordResetRequestedAuditEventClass: audit-events/classes/AuthPasswordResetRequestedAuditEventClass.md
+          - AuthPasswordResetRequestedForTestClientAuditEventClass: audit-events/classes/AuthPasswordResetRequestedForTestClientAuditEventClass.md
+          - AuthPasswordResetRequestedForTestClientUserClass: audit-events/classes/AuthPasswordResetRequestedForTestClientUserClass.md
+          - AuthPasswordResetRequestedUserClass: audit-events/classes/AuthPasswordResetRequestedUserClass.md
+          - AuthPasswordResetSuccessfulAuditEventClass: audit-events/classes/AuthPasswordResetSuccessfulAuditEventClass.md
+          - AuthPasswordResetSuccessfulForTestClientAuditEventClass: audit-events/classes/AuthPasswordResetSuccessfulForTestClientAuditEventClass.md
+          - AuthPasswordResetSuccessfulForTestClientUserClass: audit-events/classes/AuthPasswordResetSuccessfulForTestClientUserClass.md
+          - AuthPasswordResetSuccessfulUserClass: audit-events/classes/AuthPasswordResetSuccessfulUserClass.md
+          - AuthPhoneCodeSentAuditEventClass: audit-events/classes/AuthPhoneCodeSentAuditEventClass.md
+          - AuthPhoneCodeSentForTestClientAuditEventClass: audit-events/classes/AuthPhoneCodeSentForTestClientAuditEventClass.md
+          - AuthPhoneCodeSentForTestClientUserClass: audit-events/classes/AuthPhoneCodeSentForTestClientUserClass.md
+          - AuthPhoneCodeSentUserClass: audit-events/classes/AuthPhoneCodeSentUserClass.md
+          - AuthPhoneInvalidCodeRequestAuditEventClass: audit-events/classes/AuthPhoneInvalidCodeRequestAuditEventClass.md
+          - AuthPhoneInvalidCodeRequestUserClass: audit-events/classes/AuthPhoneInvalidCodeRequestUserClass.md
+          - AuthProcessingIdentityRequestAuditEventClass: audit-events/classes/AuthProcessingIdentityRequestAuditEventClass.md
+          - AuthProcessingIdentityRequestUserClass: audit-events/classes/AuthProcessingIdentityRequestUserClass.md
+          - AuthRegisterClientRequestErrorAuditEventClass: audit-events/classes/AuthRegisterClientRequestErrorAuditEventClass.md
+          - AuthRegisterClientRequestErrorUserClass: audit-events/classes/AuthRegisterClientRequestErrorUserClass.md
+          - AuthRegisterClientRequestReceivedAuditEventClass: audit-events/classes/AuthRegisterClientRequestReceivedAuditEventClass.md
+          - AuthRegisterClientRequestReceivedUserClass: audit-events/classes/AuthRegisterClientRequestReceivedUserClass.md
+          - AuthSendOtpAuditEventClass: audit-events/classes/AuthSendOtpAuditEventClass.md
+          - AuthSendOtpExtensionsClass: audit-events/classes/AuthSendOtpExtensionsClass.md
+          - AuthSendOtpUserClass: audit-events/classes/AuthSendOtpUserClass.md
+          - AuthStartInfoFoundAuditEventClass: audit-events/classes/AuthStartInfoFoundAuditEventClass.md
+          - AuthStartInfoFoundExtensionsClass: audit-events/classes/AuthStartInfoFoundExtensionsClass.md
+          - AuthStartInfoFoundUserClass: audit-events/classes/AuthStartInfoFoundUserClass.md
+          - AuthSyntheticsUserDeletedAuditEventClass: audit-events/classes/AuthSyntheticsUserDeletedAuditEventClass.md
+          - AuthSyntheticsUserDeletedUserClass: audit-events/classes/AuthSyntheticsUserDeletedUserClass.md
+          - AuthSyntheticsUserNotFoundForDeletionAuditEventClass: audit-events/classes/AuthSyntheticsUserNotFoundForDeletionAuditEventClass.md
+          - AuthSyntheticsUserNotFoundForDeletionUserClass: audit-events/classes/AuthSyntheticsUserNotFoundForDeletionUserClass.md
+          - AuthUpdateClientRequestErrorAuditEventClass: audit-events/classes/AuthUpdateClientRequestErrorAuditEventClass.md
+          - AuthUpdateClientRequestErrorUserClass: audit-events/classes/AuthUpdateClientRequestErrorUserClass.md
+          - AuthUpdateClientRequestReceivedAuditEventClass: audit-events/classes/AuthUpdateClientRequestReceivedAuditEventClass.md
+          - AuthUpdateClientRequestReceivedUserClass: audit-events/classes/AuthUpdateClientRequestReceivedUserClass.md
+          - AuthUpdateEmailAuditEventClass: audit-events/classes/AuthUpdateEmailAuditEventClass.md
+          - AuthUpdateEmailUserClass: audit-events/classes/AuthUpdateEmailUserClass.md
+          - AuthUpdatePasswordAuditEventClass: audit-events/classes/AuthUpdatePasswordAuditEventClass.md
+          - AuthUpdatePasswordUserClass: audit-events/classes/AuthUpdatePasswordUserClass.md
+          - AuthUpdatePhoneNumberAuditEventClass: audit-events/classes/AuthUpdatePhoneNumberAuditEventClass.md
+          - AuthUpdatePhoneNumberUserClass: audit-events/classes/AuthUpdatePhoneNumberUserClass.md
+          - AuthUpdateProfileAuthAppAuditEventClass: audit-events/classes/AuthUpdateProfileAuthAppAuditEventClass.md
+          - AuthUpdateProfileAuthAppUserClass: audit-events/classes/AuthUpdateProfileAuthAppUserClass.md
+          - AuthUpdateProfileConsentUpdatedAuditEventClass: audit-events/classes/AuthUpdateProfileConsentUpdatedAuditEventClass.md
+          - AuthUpdateProfileConsentUpdatedUserClass: audit-events/classes/AuthUpdateProfileConsentUpdatedUserClass.md
+          - AuthUpdateProfilePhoneNumberAuditEventClass: audit-events/classes/AuthUpdateProfilePhoneNumberAuditEventClass.md
+          - AuthUpdateProfilePhoneNumberUserClass: audit-events/classes/AuthUpdateProfilePhoneNumberUserClass.md
+          - AuthUpdateProfileRequestErrorAuditEventClass: audit-events/classes/AuthUpdateProfileRequestErrorAuditEventClass.md
+          - AuthUpdateProfileRequestErrorUserClass: audit-events/classes/AuthUpdateProfileRequestErrorUserClass.md
+          - AuthUpdateProfileRequestReceivedAuditEventClass: audit-events/classes/AuthUpdateProfileRequestReceivedAuditEventClass.md
+          - AuthUpdateProfileRequestReceivedUserClass: audit-events/classes/AuthUpdateProfileRequestReceivedUserClass.md
+          - AuthUpdateProfileTermsCondsAcceptanceAuditEventClass: audit-events/classes/AuthUpdateProfileTermsCondsAcceptanceAuditEventClass.md
+          - AuthUpdateProfileTermsCondsAcceptanceUserClass: audit-events/classes/AuthUpdateProfileTermsCondsAcceptanceUserClass.md
+          - AuthUserInfoReturnedAuditEventClass: audit-events/classes/AuthUserInfoReturnedAuditEventClass.md
+          - AuthUserInfoReturnedUserClass: audit-events/classes/AuthUserInfoReturnedUserClass.md
+          - CicCriAuthCodeIssuedAuditEventClass: audit-events/classes/CicCriAuthCodeIssuedAuditEventClass.md
+          - CicCriAuthCodeIssuedUserClass: audit-events/classes/CicCriAuthCodeIssuedUserClass.md
+          - CicCriEndAuditEventClass: audit-events/classes/CicCriEndAuditEventClass.md
+          - CicCriEndUserClass: audit-events/classes/CicCriEndUserClass.md
+          - CicCriStartAuditEventClass: audit-events/classes/CicCriStartAuditEventClass.md
+          - CicCriStartUserClass: audit-events/classes/CicCriStartUserClass.md
+          - CicCriVcIssuedAuditEventClass: audit-events/classes/CicCriVcIssuedAuditEventClass.md
+          - CicCriVcIssuedRestrictedClass: audit-events/classes/CicCriVcIssuedRestrictedClass.md
+          - CicCriVcIssuedUserClass: audit-events/classes/CicCriVcIssuedUserClass.md
+          - DcmawAbortAppAuditEventClass: audit-events/classes/DcmawAbortAppAuditEventClass.md
+          - DcmawAbortAppUserClass: audit-events/classes/DcmawAbortAppUserClass.md
+          - DcmawAbortWebAuditEventClass: audit-events/classes/DcmawAbortWebAuditEventClass.md
+          - DcmawAbortWebUserClass: audit-events/classes/DcmawAbortWebUserClass.md
+          - DcmawAppEndAuditEventClass: audit-events/classes/DcmawAppEndAuditEventClass.md
+          - DcmawAppEndUserClass: audit-events/classes/DcmawAppEndUserClass.md
+          - DcmawAppHandoffFailureAuditEventClass: audit-events/classes/DcmawAppHandoffFailureAuditEventClass.md
+          - DcmawAppHandoffFailureUserClass: audit-events/classes/DcmawAppHandoffFailureUserClass.md
+          - DcmawAppHandoffStartAuditEventClass: audit-events/classes/DcmawAppHandoffStartAuditEventClass.md
+          - DcmawAppHandoffStartUserClass: audit-events/classes/DcmawAppHandoffStartUserClass.md
+          - DcmawAppStartAuditEventClass: audit-events/classes/DcmawAppStartAuditEventClass.md
+          - DcmawAppStartUserClass: audit-events/classes/DcmawAppStartUserClass.md
+          - DcmawBrpSelectedAuditEventClass: audit-events/classes/DcmawBrpSelectedAuditEventClass.md
+          - DcmawBrpSelectedUserClass: audit-events/classes/DcmawBrpSelectedUserClass.md
+          - DcmawCri4XxerrorAuditEventClass: audit-events/classes/DcmawCri4XxerrorAuditEventClass.md
+          - DcmawCri4XxerrorUserClass: audit-events/classes/DcmawCri4XxerrorUserClass.md
+          - DcmawCri5XxerrorAuditEventClass: audit-events/classes/DcmawCri5XxerrorAuditEventClass.md
+          - DcmawCri5XxerrorUserClass: audit-events/classes/DcmawCri5XxerrorUserClass.md
+          - DcmawCriAbortAuditEventClass: audit-events/classes/DcmawCriAbortAuditEventClass.md
+          - DcmawCriAbortUserClass: audit-events/classes/DcmawCriAbortUserClass.md
+          - DcmawCriEndAuditEventClass: audit-events/classes/DcmawCriEndAuditEventClass.md
+          - DcmawCriEndUserClass: audit-events/classes/DcmawCriEndUserClass.md
+          - DcmawCriStartAuditEventClass: audit-events/classes/DcmawCriStartAuditEventClass.md
+          - DcmawCriStartUserClass: audit-events/classes/DcmawCriStartUserClass.md
+          - DcmawCriVcIssuedAuditEventClass: audit-events/classes/DcmawCriVcIssuedAuditEventClass.md
+          - DcmawCriVcIssuedExtensionsClass: audit-events/classes/DcmawCriVcIssuedExtensionsClass.md
+          - DcmawCriVcIssuedExtensionsEvidenceClass: audit-events/classes/DcmawCriVcIssuedExtensionsEvidenceClass.md
+          - DcmawCriVcIssuedPlatformClass: audit-events/classes/DcmawCriVcIssuedPlatformClass.md
+          - DcmawCriVcIssuedRestrictedClass: audit-events/classes/DcmawCriVcIssuedRestrictedClass.md
+          - DcmawCriVcIssuedUserClass: audit-events/classes/DcmawCriVcIssuedUserClass.md
+          - DcmawDrivingLicenceSelectedAuditEventClass: audit-events/classes/DcmawDrivingLicenceSelectedAuditEventClass.md
+          - DcmawDrivingLicenceSelectedUserClass: audit-events/classes/DcmawDrivingLicenceSelectedUserClass.md
+          - DcmawHybridBillingStartedAuditEventClass: audit-events/classes/DcmawHybridBillingStartedAuditEventClass.md
+          - DcmawHybridBillingStartedUserClass: audit-events/classes/DcmawHybridBillingStartedUserClass.md
+          - DcmawIproovBillingStartedAuditEventClass: audit-events/classes/DcmawIproovBillingStartedAuditEventClass.md
+          - DcmawIproovBillingStartedUserClass: audit-events/classes/DcmawIproovBillingStartedUserClass.md
+          - DcmawMissingContextAfterAbortAuditEventClass: audit-events/classes/DcmawMissingContextAfterAbortAuditEventClass.md
+          - DcmawMissingContextAfterAbortUserClass: audit-events/classes/DcmawMissingContextAfterAbortUserClass.md
+          - DcmawMissingContextAfterCompletionAuditEventClass: audit-events/classes/DcmawMissingContextAfterCompletionAuditEventClass.md
+          - DcmawMissingContextAfterCompletionUserClass: audit-events/classes/DcmawMissingContextAfterCompletionUserClass.md
+          - DcmawPassportSelectedAuditEventClass: audit-events/classes/DcmawPassportSelectedAuditEventClass.md
+          - DcmawPassportSelectedUserClass: audit-events/classes/DcmawPassportSelectedUserClass.md
+          - DcmawReadidNfcBillingStartedAuditEventClass: audit-events/classes/DcmawReadidNfcBillingStartedAuditEventClass.md
+          - DcmawReadidNfcBillingStartedUserClass: audit-events/classes/DcmawReadidNfcBillingStartedUserClass.md
+          - DcmawRedirectAbortAuditEventClass: audit-events/classes/DcmawRedirectAbortAuditEventClass.md
+          - DcmawRedirectAbortUserClass: audit-events/classes/DcmawRedirectAbortUserClass.md
+          - DcmawRedirectSuccessAuditEventClass: audit-events/classes/DcmawRedirectSuccessAuditEventClass.md
+          - DcmawRedirectSuccessUserClass: audit-events/classes/DcmawRedirectSuccessUserClass.md
+          - DcmawSessionRecoveredAuditEventClass: audit-events/classes/DcmawSessionRecoveredAuditEventClass.md
+          - DcmawSessionRecoveredExtensionsClass: audit-events/classes/DcmawSessionRecoveredExtensionsClass.md
+          - DcmawSessionRecoveredUserClass: audit-events/classes/DcmawSessionRecoveredUserClass.md
+          - DcmawWebEndAuditEventClass: audit-events/classes/DcmawWebEndAuditEventClass.md
+          - DcmawWebEndUserClass: audit-events/classes/DcmawWebEndUserClass.md
+          - F2FCriAccessTokenIssuedAuditEventClass: audit-events/classes/F2FCriAccessTokenIssuedAuditEventClass.md
+          - F2FCriAccessTokenIssuedUserClass: audit-events/classes/F2FCriAccessTokenIssuedUserClass.md
+          - F2FCriAuthCodeIssuedAuditEventClass: audit-events/classes/F2FCriAuthCodeIssuedAuditEventClass.md
+          - F2FCriAuthCodeIssuedUserClass: audit-events/classes/F2FCriAuthCodeIssuedUserClass.md
+          - F2FCriEndAuditEventClass: audit-events/classes/F2FCriEndAuditEventClass.md
+          - F2FCriEndExtensionsClass: audit-events/classes/F2FCriEndExtensionsClass.md
+          - F2FCriEndExtensionsEvidenceClass: audit-events/classes/F2FCriEndExtensionsEvidenceClass.md
+          - F2FCriEndUserClass: audit-events/classes/F2FCriEndUserClass.md
+          - F2FCriStartAuditEventClass: audit-events/classes/F2FCriStartAuditEventClass.md
+          - F2FCriStartUserClass: audit-events/classes/F2FCriStartUserClass.md
+          - F2FCriVcIssuedAuditEventClass: audit-events/classes/F2FCriVcIssuedAuditEventClass.md
+          - F2FCriVcIssuedExtensionsClass: audit-events/classes/F2FCriVcIssuedExtensionsClass.md
+          - F2FCriVcIssuedExtensionsEvidenceClass: audit-events/classes/F2FCriVcIssuedExtensionsEvidenceClass.md
+          - F2FCriVcIssuedRestrictedClass: audit-events/classes/F2FCriVcIssuedRestrictedClass.md
+          - F2FCriVcIssuedUserClass: audit-events/classes/F2FCriVcIssuedUserClass.md
+          - F2FSessionAbortedAuditEventClass: audit-events/classes/F2FSessionAbortedAuditEventClass.md
+          - F2FSessionAbortedUserClass: audit-events/classes/F2FSessionAbortedUserClass.md
+          - F2FYotiPdfEmailedAuditEventClass: audit-events/classes/F2FYotiPdfEmailedAuditEventClass.md
+          - F2FYotiPdfEmailedExtensionsClass: audit-events/classes/F2FYotiPdfEmailedExtensionsClass.md
+          - F2FYotiPdfEmailedExtensionsEvidenceClass: audit-events/classes/F2FYotiPdfEmailedExtensionsEvidenceClass.md
+          - F2FYotiPdfEmailedUserClass: audit-events/classes/F2FYotiPdfEmailedUserClass.md
+          - F2FYotiResponseReceivedAuditEventClass: audit-events/classes/F2FYotiResponseReceivedAuditEventClass.md
+          - F2FYotiResponseReceivedExtensionsClass: audit-events/classes/F2FYotiResponseReceivedExtensionsClass.md
+          - F2FYotiResponseReceivedExtensionsEvidenceClass: audit-events/classes/F2FYotiResponseReceivedExtensionsEvidenceClass.md
+          - F2FYotiResponseReceivedUserClass: audit-events/classes/F2FYotiResponseReceivedUserClass.md
+          - F2FYotiStartAuditEventClass: audit-events/classes/F2FYotiStartAuditEventClass.md
+          - F2FYotiStartExtensionsClass: audit-events/classes/F2FYotiStartExtensionsClass.md
+          - F2FYotiStartExtensionsEvidenceClass: audit-events/classes/F2FYotiStartExtensionsEvidenceClass.md
+          - F2FYotiStartRestrictedClass: audit-events/classes/F2FYotiStartRestrictedClass.md
+          - F2FYotiStartUserClass: audit-events/classes/F2FYotiStartUserClass.md
+          - IprResultNotificationEmailedAuditEventClass: audit-events/classes/IprResultNotificationEmailedAuditEventClass.md
+          - IprResultNotificationEmailedExtensionsClass: audit-events/classes/IprResultNotificationEmailedExtensionsClass.md
+          - IprResultNotificationEmailedExtensionsEvidenceClass: audit-events/classes/IprResultNotificationEmailedExtensionsEvidenceClass.md
+          - IprResultNotificationEmailedExtensionsExperianiiqresponseClass: 
+              audit-events/classes/IprResultNotificationEmailedExtensionsExperianiiqresponseClass.md
+          - IprResultNotificationEmailedExtenstionsClass: audit-events/classes/IprResultNotificationEmailedExtenstionsClass.md
+          - IprResultNotificationEmailedPlatformClass: audit-events/classes/IprResultNotificationEmailedPlatformClass.md
+          - IprResultNotificationEmailedRestrictedClass: audit-events/classes/IprResultNotificationEmailedRestrictedClass.md
+          - IprResultNotificationEmailedUserClass: audit-events/classes/IprResultNotificationEmailedUserClass.md
+          - IprUserRedirectedAuditEventClass: audit-events/classes/IprUserRedirectedAuditEventClass.md
+          - IprUserRedirectedExtensionsClass: audit-events/classes/IprUserRedirectedExtensionsClass.md
+          - IprUserRedirectedExtensionsEvidenceClass: audit-events/classes/IprUserRedirectedExtensionsEvidenceClass.md
+          - IprUserRedirectedExtensionsExperianiiqresponseClass: audit-events/classes/IprUserRedirectedExtensionsExperianiiqresponseClass.md
+          - IprUserRedirectedExtenstionsClass: audit-events/classes/IprUserRedirectedExtenstionsClass.md
+          - IprUserRedirectedPlatformClass: audit-events/classes/IprUserRedirectedPlatformClass.md
+          - IprUserRedirectedRestrictedClass: audit-events/classes/IprUserRedirectedRestrictedClass.md
+          - IprUserRedirectedUserClass: audit-events/classes/IprUserRedirectedUserClass.md
+          - IpvAddressCriEndAuditEventClass: audit-events/classes/IpvAddressCriEndAuditEventClass.md
+          - IpvAddressCriEndUserClass: audit-events/classes/IpvAddressCriEndUserClass.md
+          - IpvAddressCriRequestSentAuditEventClass: audit-events/classes/IpvAddressCriRequestSentAuditEventClass.md
+          - IpvAddressCriRequestSentRestrictedClass: audit-events/classes/IpvAddressCriRequestSentRestrictedClass.md
+          - IpvAddressCriRequestSentUserClass: audit-events/classes/IpvAddressCriRequestSentUserClass.md
+          - IpvAddressCriResponseReceivedAuditEventClass: audit-events/classes/IpvAddressCriResponseReceivedAuditEventClass.md
+          - IpvAddressCriResponseReceivedUserClass: audit-events/classes/IpvAddressCriResponseReceivedUserClass.md
+          - IpvAddressCriStartAuditEventClass: audit-events/classes/IpvAddressCriStartAuditEventClass.md
+          - IpvAddressCriStartUserClass: audit-events/classes/IpvAddressCriStartUserClass.md
+          - IpvAddressCriVcIssuedAuditEventClass: audit-events/classes/IpvAddressCriVcIssuedAuditEventClass.md
+          - IpvAddressCriVcIssuedExtensionsClass: audit-events/classes/IpvAddressCriVcIssuedExtensionsClass.md
+          - IpvAddressCriVcIssuedUserClass: audit-events/classes/IpvAddressCriVcIssuedUserClass.md
+          - IpvContraIndicatorStorageGetEndAuditEventClass: audit-events/classes/IpvContraIndicatorStorageGetEndAuditEventClass.md
+          - IpvContraIndicatorStorageGetEndUserClass: audit-events/classes/IpvContraIndicatorStorageGetEndUserClass.md
+          - IpvContraIndicatorStorageGetQueryAuditEventClass: audit-events/classes/IpvContraIndicatorStorageGetQueryAuditEventClass.md
+          - IpvContraIndicatorStorageGetQueryUserClass: audit-events/classes/IpvContraIndicatorStorageGetQueryUserClass.md
+          - IpvContraIndicatorStorageGetStartAuditEventClass: audit-events/classes/IpvContraIndicatorStorageGetStartAuditEventClass.md
+          - IpvContraIndicatorStorageGetStartUserClass: audit-events/classes/IpvContraIndicatorStorageGetStartUserClass.md
+          - IpvContraIndicatorStoragePutEndAuditEventClass: audit-events/classes/IpvContraIndicatorStoragePutEndAuditEventClass.md
+          - IpvContraIndicatorStoragePutEndUserClass: audit-events/classes/IpvContraIndicatorStoragePutEndUserClass.md
+          - IpvContraIndicatorStoragePutNewCisAuditEventClass: audit-events/classes/IpvContraIndicatorStoragePutNewCisAuditEventClass.md
+          - IpvContraIndicatorStoragePutNewCisExtensionsClass: audit-events/classes/IpvContraIndicatorStoragePutNewCisExtensionsClass.md
+          - IpvContraIndicatorStoragePutNewCisUserClass: audit-events/classes/IpvContraIndicatorStoragePutNewCisUserClass.md
+          - IpvContraIndicatorStoragePutStartAuditEventClass: audit-events/classes/IpvContraIndicatorStoragePutStartAuditEventClass.md
+          - IpvContraIndicatorStoragePutStartUserClass: audit-events/classes/IpvContraIndicatorStoragePutStartUserClass.md
+          - IpvCriAuthResponseReceivedAuditEventClass: audit-events/classes/IpvCriAuthResponseReceivedAuditEventClass.md
+          - IpvCriAuthResponseReceivedUserClass: audit-events/classes/IpvCriAuthResponseReceivedUserClass.md
+          - IpvDeleteUserDataAuditEventClass: audit-events/classes/IpvDeleteUserDataAuditEventClass.md
+          - IpvDeleteUserDataExtenstionsClass: audit-events/classes/IpvDeleteUserDataExtenstionsClass.md
+          - IpvDeleteUserDataUserClass: audit-events/classes/IpvDeleteUserDataUserClass.md
+          - IpvDlCriEndAuditEventClass: audit-events/classes/IpvDlCriEndAuditEventClass.md
+          - IpvDlCriEndUserClass: audit-events/classes/IpvDlCriEndUserClass.md
+          - IpvDlCriRequestSentAuditEventClass: audit-events/classes/IpvDlCriRequestSentAuditEventClass.md
+          - IpvDlCriRequestSentRestrictedClass: audit-events/classes/IpvDlCriRequestSentRestrictedClass.md
+          - IpvDlCriRequestSentUserClass: audit-events/classes/IpvDlCriRequestSentUserClass.md
+          - IpvDlCriResponseReceivedAuditEventClass: audit-events/classes/IpvDlCriResponseReceivedAuditEventClass.md
+          - IpvDlCriResponseReceivedUserClass: audit-events/classes/IpvDlCriResponseReceivedUserClass.md
+          - IpvDlCriStartAuditEventClass: audit-events/classes/IpvDlCriStartAuditEventClass.md
+          - IpvDlCriStartUserClass: audit-events/classes/IpvDlCriStartUserClass.md
+          - IpvDlCriThirdPartyRequestEndedAuditEventClass: audit-events/classes/IpvDlCriThirdPartyRequestEndedAuditEventClass.md
+          - IpvDlCriThirdPartyRequestEndedUserClass: audit-events/classes/IpvDlCriThirdPartyRequestEndedUserClass.md
+          - IpvDlCriVcIssuedAuditEventClass: audit-events/classes/IpvDlCriVcIssuedAuditEventClass.md
+          - IpvDlCriVcIssuedExtensionsClass: audit-events/classes/IpvDlCriVcIssuedExtensionsClass.md
+          - IpvDlCriVcIssuedExtensionsEvidenceClass: audit-events/classes/IpvDlCriVcIssuedExtensionsEvidenceClass.md
+          - IpvDlCriVcIssuedRestrictedClass: audit-events/classes/IpvDlCriVcIssuedRestrictedClass.md
+          - IpvDlCriVcIssuedUserClass: audit-events/classes/IpvDlCriVcIssuedUserClass.md
+          - IpvF2FCriVcConsumedAuditEventClass: audit-events/classes/IpvF2FCriVcConsumedAuditEventClass.md
+          - IpvF2FCriVcConsumedUserClass: audit-events/classes/IpvF2FCriVcConsumedUserClass.md
+          - IpvF2FCriVcReceivedAuditEventClass: audit-events/classes/IpvF2FCriVcReceivedAuditEventClass.md
+          - IpvF2FCriVcReceivedExtensionsClass: audit-events/classes/IpvF2FCriVcReceivedExtensionsClass.md
+          - IpvF2FCriVcReceivedExtensionsEvidenceClass: audit-events/classes/IpvF2FCriVcReceivedExtensionsEvidenceClass.md
+          - IpvF2FCriVcReceivedUserClass: audit-events/classes/IpvF2FCriVcReceivedUserClass.md
+          - IpvFraudCriEndAuditEventClass: audit-events/classes/IpvFraudCriEndAuditEventClass.md
+          - IpvFraudCriEndUserClass: audit-events/classes/IpvFraudCriEndUserClass.md
+          - IpvFraudCriRequestSentAuditEventClass: audit-events/classes/IpvFraudCriRequestSentAuditEventClass.md
+          - IpvFraudCriRequestSentRestrictedClass: audit-events/classes/IpvFraudCriRequestSentRestrictedClass.md
+          - IpvFraudCriRequestSentUserClass: audit-events/classes/IpvFraudCriRequestSentUserClass.md
+          - IpvFraudCriResponseReceivedAuditEventClass: audit-events/classes/IpvFraudCriResponseReceivedAuditEventClass.md
+          - IpvFraudCriResponseReceivedExtensionsClass: audit-events/classes/IpvFraudCriResponseReceivedExtensionsClass.md
+          - IpvFraudCriResponseReceivedUserClass: audit-events/classes/IpvFraudCriResponseReceivedUserClass.md
+          - IpvFraudCriStartAuditEventClass: audit-events/classes/IpvFraudCriStartAuditEventClass.md
+          - IpvFraudCriStartUserClass: audit-events/classes/IpvFraudCriStartUserClass.md
+          - IpvFraudCriThirdPartyRequestEndedAuditEventClass: audit-events/classes/IpvFraudCriThirdPartyRequestEndedAuditEventClass.md
+          - IpvFraudCriVcIssuedAuditEventClass: audit-events/classes/IpvFraudCriVcIssuedAuditEventClass.md
+          - IpvFraudCriVcIssuedExtensionsClass: audit-events/classes/IpvFraudCriVcIssuedExtensionsClass.md
+          - IpvFraudCriVcIssuedExtensionsEvidenceClass: audit-events/classes/IpvFraudCriVcIssuedExtensionsEvidenceClass.md
+          - IpvFraudCriVcIssuedRestrictedClass: audit-events/classes/IpvFraudCriVcIssuedRestrictedClass.md
+          - IpvFraudCriVcIssuedUserClass: audit-events/classes/IpvFraudCriVcIssuedUserClass.md
+          - IpvGpg45ProfileMatchedAuditEventClass: audit-events/classes/IpvGpg45ProfileMatchedAuditEventClass.md
+          - IpvGpg45ProfileMatchedExtensionsClass: audit-events/classes/IpvGpg45ProfileMatchedExtensionsClass.md
+          - IpvGpg45ProfileMatchedExtensionsEvidenceClass: audit-events/classes/IpvGpg45ProfileMatchedExtensionsEvidenceClass.md
+          - IpvGpg45ProfileMatchedUserClass: audit-events/classes/IpvGpg45ProfileMatchedUserClass.md
+          - IpvIdentityIssuedAuditEventClass: audit-events/classes/IpvIdentityIssuedAuditEventClass.md
+          - IpvIdentityIssuedExtensionsClass: audit-events/classes/IpvIdentityIssuedExtensionsClass.md
+          - IpvIdentityIssuedUserClass: audit-events/classes/IpvIdentityIssuedUserClass.md
+          - IpvIdentityReuseCompleteAuditEventClass: audit-events/classes/IpvIdentityReuseCompleteAuditEventClass.md
+          - IpvIdentityReuseCompleteUserClass: audit-events/classes/IpvIdentityReuseCompleteUserClass.md
+          - IpvIdentityReuseResetAuditEventClass: audit-events/classes/IpvIdentityReuseResetAuditEventClass.md
+          - IpvIdentityReuseResetUserClass: audit-events/classes/IpvIdentityReuseResetUserClass.md
+          - IpvJourneyEndAuditEventClass: audit-events/classes/IpvJourneyEndAuditEventClass.md
+          - IpvJourneyEndUserClass: audit-events/classes/IpvJourneyEndUserClass.md
+          - IpvJourneyStartAuditEventClass: audit-events/classes/IpvJourneyStartAuditEventClass.md
+          - IpvJourneyStartUserClass: audit-events/classes/IpvJourneyStartUserClass.md
+          - IpvKbvCriEndAuditEventClass: audit-events/classes/IpvKbvCriEndAuditEventClass.md
+          - IpvKbvCriEndUserClass: audit-events/classes/IpvKbvCriEndUserClass.md
+          - IpvKbvCriRequestSentAuditEventClass: audit-events/classes/IpvKbvCriRequestSentAuditEventClass.md
+          - IpvKbvCriRequestSentRestrictedClass: audit-events/classes/IpvKbvCriRequestSentRestrictedClass.md
+          - IpvKbvCriRequestSentUserClass: audit-events/classes/IpvKbvCriRequestSentUserClass.md
+          - IpvKbvCriStartAuditEventClass: audit-events/classes/IpvKbvCriStartAuditEventClass.md
+          - IpvKbvCriStartUserClass: audit-events/classes/IpvKbvCriStartUserClass.md
+          - IpvKbvCriVcIssuedAuditEventClass: audit-events/classes/IpvKbvCriVcIssuedAuditEventClass.md
+          - IpvKbvCriVcIssuedExtensionsClass: audit-events/classes/IpvKbvCriVcIssuedExtensionsClass.md
+          - IpvKbvCriVcIssuedExtensionsEvidenceClass: audit-events/classes/IpvKbvCriVcIssuedExtensionsEvidenceClass.md
+          - IpvKbvCriVcIssuedRestrictedClass: audit-events/classes/IpvKbvCriVcIssuedRestrictedClass.md
+          - IpvKbvCriVcIssuedUserClass: audit-events/classes/IpvKbvCriVcIssuedUserClass.md
+          - IpvPassportCriEndAuditEventClass: audit-events/classes/IpvPassportCriEndAuditEventClass.md
+          - IpvPassportCriEndUserClass: audit-events/classes/IpvPassportCriEndUserClass.md
+          - IpvPassportCriRequestSentAuditEventClass: audit-events/classes/IpvPassportCriRequestSentAuditEventClass.md
+          - IpvPassportCriRequestSentExtensionsClass: audit-events/classes/IpvPassportCriRequestSentExtensionsClass.md
+          - IpvPassportCriRequestSentExtensionsEvidenceClass: audit-events/classes/IpvPassportCriRequestSentExtensionsEvidenceClass.md
+          - IpvPassportCriRequestSentRestrictedClass: audit-events/classes/IpvPassportCriRequestSentRestrictedClass.md
+          - IpvPassportCriRequestSentUserClass: audit-events/classes/IpvPassportCriRequestSentUserClass.md
+          - IpvPassportCriResponseReceivedAuditEventClass: audit-events/classes/IpvPassportCriResponseReceivedAuditEventClass.md
+          - IpvPassportCriResponseReceivedUserClass: audit-events/classes/IpvPassportCriResponseReceivedUserClass.md
+          - IpvPassportCriStartAuditEventClass: audit-events/classes/IpvPassportCriStartAuditEventClass.md
+          - IpvPassportCriStartUserClass: audit-events/classes/IpvPassportCriStartUserClass.md
+          - IpvPassportCriVcIssuedAuditEventClass: audit-events/classes/IpvPassportCriVcIssuedAuditEventClass.md
+          - IpvPassportCriVcIssuedExtensionsClass: audit-events/classes/IpvPassportCriVcIssuedExtensionsClass.md
+          - IpvPassportCriVcIssuedExtensionsEvidenceClass: audit-events/classes/IpvPassportCriVcIssuedExtensionsEvidenceClass.md
+          - IpvPassportCriVcIssuedRestrictedClass: audit-events/classes/IpvPassportCriVcIssuedRestrictedClass.md
+          - IpvPassportCriVcIssuedUserClass: audit-events/classes/IpvPassportCriVcIssuedUserClass.md
+          - IpvRedirectToCriAuditEventClass: audit-events/classes/IpvRedirectToCriAuditEventClass.md
+          - IpvRedirectToCriUserClass: audit-events/classes/IpvRedirectToCriUserClass.md
+          - IpvSpotRequestReceivedAuditEventClass: audit-events/classes/IpvSpotRequestReceivedAuditEventClass.md
+          - IpvSpotRequestReceivedUserClass: audit-events/classes/IpvSpotRequestReceivedUserClass.md
+          - IpvSpotRequestValidationFailureAuditEventClass: audit-events/classes/IpvSpotRequestValidationFailureAuditEventClass.md
+          - IpvSpotRequestValidationFailureExtensionsClass: audit-events/classes/IpvSpotRequestValidationFailureExtensionsClass.md
+          - IpvSpotRequestValidationFailureRestrictedClass: audit-events/classes/IpvSpotRequestValidationFailureRestrictedClass.md
+          - IpvSpotRequestValidationFailureUserClass: audit-events/classes/IpvSpotRequestValidationFailureUserClass.md
+          - IpvSpotResponseApprovedAuditEventClass: audit-events/classes/IpvSpotResponseApprovedAuditEventClass.md
+          - IpvSpotResponseApprovedUserClass: audit-events/classes/IpvSpotResponseApprovedUserClass.md
+          - IpvSpotResponseRejectedAuditEventClass: audit-events/classes/IpvSpotResponseRejectedAuditEventClass.md
+          - IpvSpotResponseRejectedUserClass: audit-events/classes/IpvSpotResponseRejectedUserClass.md
+          - IpvToyCriEndAuditEventClass: audit-events/classes/IpvToyCriEndAuditEventClass.md
+          - IpvToyCriEndExtensionsClass: audit-events/classes/IpvToyCriEndExtensionsClass.md
+          - IpvToyCriEndExtensionsEvidenceClass: audit-events/classes/IpvToyCriEndExtensionsEvidenceClass.md
+          - IpvToyCriEndExtensionsExperianiiqresponseClass: audit-events/classes/IpvToyCriEndExtensionsExperianiiqresponseClass.md
+          - IpvToyCriEndExtenstionsClass: audit-events/classes/IpvToyCriEndExtenstionsClass.md
+          - IpvToyCriEndPlatformClass: audit-events/classes/IpvToyCriEndPlatformClass.md
+          - IpvToyCriEndRestrictedClass: audit-events/classes/IpvToyCriEndRestrictedClass.md
+          - IpvToyCriEndUserClass: audit-events/classes/IpvToyCriEndUserClass.md
+          - IpvToyCriRequestSentAuditEventClass: audit-events/classes/IpvToyCriRequestSentAuditEventClass.md
+          - IpvToyCriRequestSentExtensionsClass: audit-events/classes/IpvToyCriRequestSentExtensionsClass.md
+          - IpvToyCriRequestSentExtensionsEvidenceClass: audit-events/classes/IpvToyCriRequestSentExtensionsEvidenceClass.md
+          - IpvToyCriRequestSentExtensionsExperianiiqresponseClass: audit-events/classes/IpvToyCriRequestSentExtensionsExperianiiqresponseClass.md
+          - IpvToyCriRequestSentExtenstionsClass: audit-events/classes/IpvToyCriRequestSentExtenstionsClass.md
+          - IpvToyCriRequestSentPlatformClass: audit-events/classes/IpvToyCriRequestSentPlatformClass.md
+          - IpvToyCriRequestSentRestrictedClass: audit-events/classes/IpvToyCriRequestSentRestrictedClass.md
+          - IpvToyCriRequestSentUserClass: audit-events/classes/IpvToyCriRequestSentUserClass.md
+          - IpvToyCriResponseReceivedAuditEventClass: audit-events/classes/IpvToyCriResponseReceivedAuditEventClass.md
+          - IpvToyCriResponseReceivedExtensionsClass: audit-events/classes/IpvToyCriResponseReceivedExtensionsClass.md
+          - IpvToyCriResponseReceivedExtensionsEvidenceClass: audit-events/classes/IpvToyCriResponseReceivedExtensionsEvidenceClass.md
+          - IpvToyCriResponseReceivedExtensionsExperianiiqresponseClass: 
+              audit-events/classes/IpvToyCriResponseReceivedExtensionsExperianiiqresponseClass.md
+          - IpvToyCriResponseReceivedExtenstionsClass: audit-events/classes/IpvToyCriResponseReceivedExtenstionsClass.md
+          - IpvToyCriResponseReceivedPlatformClass: audit-events/classes/IpvToyCriResponseReceivedPlatformClass.md
+          - IpvToyCriResponseReceivedRestrictedClass: audit-events/classes/IpvToyCriResponseReceivedRestrictedClass.md
+          - IpvToyCriResponseReceivedUserClass: audit-events/classes/IpvToyCriResponseReceivedUserClass.md
+          - IpvToyCriStartAuditEventClass: audit-events/classes/IpvToyCriStartAuditEventClass.md
+          - IpvToyCriStartExtensionsClass: audit-events/classes/IpvToyCriStartExtensionsClass.md
+          - IpvToyCriStartExtensionsEvidenceClass: audit-events/classes/IpvToyCriStartExtensionsEvidenceClass.md
+          - IpvToyCriStartExtensionsExperianiiqresponseClass: audit-events/classes/IpvToyCriStartExtensionsExperianiiqresponseClass.md
+          - IpvToyCriStartExtenstionsClass: audit-events/classes/IpvToyCriStartExtenstionsClass.md
+          - IpvToyCriStartPlatformClass: audit-events/classes/IpvToyCriStartPlatformClass.md
+          - IpvToyCriStartRestrictedClass: audit-events/classes/IpvToyCriStartRestrictedClass.md
+          - IpvToyCriStartUserClass: audit-events/classes/IpvToyCriStartUserClass.md
+          - IpvToyCriVcIssuedAuditEventClass: audit-events/classes/IpvToyCriVcIssuedAuditEventClass.md
+          - IpvToyCriVcIssuedExtensionsClass: audit-events/classes/IpvToyCriVcIssuedExtensionsClass.md
+          - IpvToyCriVcIssuedExtensionsEvidenceClass: audit-events/classes/IpvToyCriVcIssuedExtensionsEvidenceClass.md
+          - IpvToyCriVcIssuedExtensionsExperianiiqresponseClass: audit-events/classes/IpvToyCriVcIssuedExtensionsExperianiiqresponseClass.md
+          - IpvToyCriVcIssuedExtenstionsClass: audit-events/classes/IpvToyCriVcIssuedExtenstionsClass.md
+          - IpvToyCriVcIssuedPlatformClass: audit-events/classes/IpvToyCriVcIssuedPlatformClass.md
+          - IpvToyCriVcIssuedRestrictedClass: audit-events/classes/IpvToyCriVcIssuedRestrictedClass.md
+          - IpvToyCriVcIssuedUserClass: audit-events/classes/IpvToyCriVcIssuedUserClass.md
+          - IpvVcReceivedAuditEventClass: audit-events/classes/IpvVcReceivedAuditEventClass.md
+          - IpvVcReceivedExtensionsClass: audit-events/classes/IpvVcReceivedExtensionsClass.md
+          - IpvVcReceivedExtensionsEvidenceClass: audit-events/classes/IpvVcReceivedExtensionsEvidenceClass.md
+          - IpvVcReceivedRestrictedClass: audit-events/classes/IpvVcReceivedRestrictedClass.md
+          - IpvVcReceivedUserClass: audit-events/classes/IpvVcReceivedUserClass.md
+          - SsfInboundAccountCredentialChangeRequiredAuditEventClass: audit-events/classes/SsfInboundAccountCredentialChangeRequiredAuditEventClass.md
+          - SsfInboundAccountCredentialChangeRequiredExtensionsClass: audit-events/classes/SsfInboundAccountCredentialChangeRequiredExtensionsClass.md
+          - SsfInboundAccountCredentialChangeRequiredExtensionsEvidenceClass: 
+              audit-events/classes/SsfInboundAccountCredentialChangeRequiredExtensionsEvidenceClass.md
+          - SsfInboundAccountCredentialChangeRequiredExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundAccountCredentialChangeRequiredExtensionsExperianiiqresponseClass.md
+          - SsfInboundAccountCredentialChangeRequiredExtenstionsClass: 
+              audit-events/classes/SsfInboundAccountCredentialChangeRequiredExtenstionsClass.md
+          - SsfInboundAccountCredentialChangeRequiredPlatformClass: audit-events/classes/SsfInboundAccountCredentialChangeRequiredPlatformClass.md
+          - SsfInboundAccountCredentialChangeRequiredRestrictedClass: audit-events/classes/SsfInboundAccountCredentialChangeRequiredRestrictedClass.md
+          - SsfInboundAccountCredentialChangeRequiredUserClass: audit-events/classes/SsfInboundAccountCredentialChangeRequiredUserClass.md
+          - SsfInboundAccountDisabledAuditEventClass: audit-events/classes/SsfInboundAccountDisabledAuditEventClass.md
+          - SsfInboundAccountDisabledExtensionsClass: audit-events/classes/SsfInboundAccountDisabledExtensionsClass.md
+          - SsfInboundAccountDisabledExtensionsEvidenceClass: audit-events/classes/SsfInboundAccountDisabledExtensionsEvidenceClass.md
+          - SsfInboundAccountDisabledExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundAccountDisabledExtensionsExperianiiqresponseClass.md
+          - SsfInboundAccountDisabledExtenstionsClass: audit-events/classes/SsfInboundAccountDisabledExtenstionsClass.md
+          - SsfInboundAccountDisabledPlatformClass: audit-events/classes/SsfInboundAccountDisabledPlatformClass.md
+          - SsfInboundAccountDisabledRestrictedClass: audit-events/classes/SsfInboundAccountDisabledRestrictedClass.md
+          - SsfInboundAccountDisabledUserClass: audit-events/classes/SsfInboundAccountDisabledUserClass.md
+          - SsfInboundAccountEnabledAuditEventClass: audit-events/classes/SsfInboundAccountEnabledAuditEventClass.md
+          - SsfInboundAccountEnabledExtensionsClass: audit-events/classes/SsfInboundAccountEnabledExtensionsClass.md
+          - SsfInboundAccountEnabledExtensionsEvidenceClass: audit-events/classes/SsfInboundAccountEnabledExtensionsEvidenceClass.md
+          - SsfInboundAccountEnabledExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundAccountEnabledExtensionsExperianiiqresponseClass.md
+          - SsfInboundAccountEnabledExtenstionsClass: audit-events/classes/SsfInboundAccountEnabledExtenstionsClass.md
+          - SsfInboundAccountEnabledPlatformClass: audit-events/classes/SsfInboundAccountEnabledPlatformClass.md
+          - SsfInboundAccountEnabledRestrictedClass: audit-events/classes/SsfInboundAccountEnabledRestrictedClass.md
+          - SsfInboundAccountEnabledUserClass: audit-events/classes/SsfInboundAccountEnabledUserClass.md
+          - SsfInboundAccountPurgedAuditEventClass: audit-events/classes/SsfInboundAccountPurgedAuditEventClass.md
+          - SsfInboundAccountPurgedExtensionsClass: audit-events/classes/SsfInboundAccountPurgedExtensionsClass.md
+          - SsfInboundAccountPurgedExtensionsEvidenceClass: audit-events/classes/SsfInboundAccountPurgedExtensionsEvidenceClass.md
+          - SsfInboundAccountPurgedExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundAccountPurgedExtensionsExperianiiqresponseClass.md
+          - SsfInboundAccountPurgedExtenstionsClass: audit-events/classes/SsfInboundAccountPurgedExtenstionsClass.md
+          - SsfInboundAccountPurgedPlatformClass: audit-events/classes/SsfInboundAccountPurgedPlatformClass.md
+          - SsfInboundAccountPurgedRestrictedClass: audit-events/classes/SsfInboundAccountPurgedRestrictedClass.md
+          - SsfInboundAccountPurgedUserClass: audit-events/classes/SsfInboundAccountPurgedUserClass.md
+          - SsfInboundCredentialCompromiseAuditEventClass: audit-events/classes/SsfInboundCredentialCompromiseAuditEventClass.md
+          - SsfInboundCredentialCompromiseExtensionsClass: audit-events/classes/SsfInboundCredentialCompromiseExtensionsClass.md
+          - SsfInboundCredentialCompromiseExtensionsEvidenceClass: audit-events/classes/SsfInboundCredentialCompromiseExtensionsEvidenceClass.md
+          - SsfInboundCredentialCompromiseExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundCredentialCompromiseExtensionsExperianiiqresponseClass.md
+          - SsfInboundCredentialCompromiseExtenstionsClass: audit-events/classes/SsfInboundCredentialCompromiseExtenstionsClass.md
+          - SsfInboundCredentialCompromisePlatformClass: audit-events/classes/SsfInboundCredentialCompromisePlatformClass.md
+          - SsfInboundCredentialCompromiseRestrictedClass: audit-events/classes/SsfInboundCredentialCompromiseRestrictedClass.md
+          - SsfInboundCredentialCompromiseUserClass: audit-events/classes/SsfInboundCredentialCompromiseUserClass.md
+          - SsfInboundOptInAuditEventClass: audit-events/classes/SsfInboundOptInAuditEventClass.md
+          - SsfInboundOptInExtensionsClass: audit-events/classes/SsfInboundOptInExtensionsClass.md
+          - SsfInboundOptInExtensionsEvidenceClass: audit-events/classes/SsfInboundOptInExtensionsEvidenceClass.md
+          - SsfInboundOptInExtensionsExperianiiqresponseClass: audit-events/classes/SsfInboundOptInExtensionsExperianiiqresponseClass.md
+          - SsfInboundOptInExtenstionsClass: audit-events/classes/SsfInboundOptInExtenstionsClass.md
+          - SsfInboundOptInPlatformClass: audit-events/classes/SsfInboundOptInPlatformClass.md
+          - SsfInboundOptInRestrictedClass: audit-events/classes/SsfInboundOptInRestrictedClass.md
+          - SsfInboundOptInUserClass: audit-events/classes/SsfInboundOptInUserClass.md
+          - SsfInboundOptOutCancelledAuditEventClass: audit-events/classes/SsfInboundOptOutCancelledAuditEventClass.md
+          - SsfInboundOptOutCancelledExtensionsClass: audit-events/classes/SsfInboundOptOutCancelledExtensionsClass.md
+          - SsfInboundOptOutCancelledExtensionsEvidenceClass: audit-events/classes/SsfInboundOptOutCancelledExtensionsEvidenceClass.md
+          - SsfInboundOptOutCancelledExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundOptOutCancelledExtensionsExperianiiqresponseClass.md
+          - SsfInboundOptOutCancelledExtenstionsClass: audit-events/classes/SsfInboundOptOutCancelledExtenstionsClass.md
+          - SsfInboundOptOutCancelledPlatformClass: audit-events/classes/SsfInboundOptOutCancelledPlatformClass.md
+          - SsfInboundOptOutCancelledRestrictedClass: audit-events/classes/SsfInboundOptOutCancelledRestrictedClass.md
+          - SsfInboundOptOutCancelledUserClass: audit-events/classes/SsfInboundOptOutCancelledUserClass.md
+          - SsfInboundOptOutEffectiveAuditEventClass: audit-events/classes/SsfInboundOptOutEffectiveAuditEventClass.md
+          - SsfInboundOptOutEffectiveExtensionsClass: audit-events/classes/SsfInboundOptOutEffectiveExtensionsClass.md
+          - SsfInboundOptOutEffectiveExtensionsEvidenceClass: audit-events/classes/SsfInboundOptOutEffectiveExtensionsEvidenceClass.md
+          - SsfInboundOptOutEffectiveExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundOptOutEffectiveExtensionsExperianiiqresponseClass.md
+          - SsfInboundOptOutEffectiveExtenstionsClass: audit-events/classes/SsfInboundOptOutEffectiveExtenstionsClass.md
+          - SsfInboundOptOutEffectivePlatformClass: audit-events/classes/SsfInboundOptOutEffectivePlatformClass.md
+          - SsfInboundOptOutEffectiveRestrictedClass: audit-events/classes/SsfInboundOptOutEffectiveRestrictedClass.md
+          - SsfInboundOptOutEffectiveUserClass: audit-events/classes/SsfInboundOptOutEffectiveUserClass.md
+          - SsfInboundOptOutInitiatedAuditEventClass: audit-events/classes/SsfInboundOptOutInitiatedAuditEventClass.md
+          - SsfInboundOptOutInitiatedExtensionsClass: audit-events/classes/SsfInboundOptOutInitiatedExtensionsClass.md
+          - SsfInboundOptOutInitiatedExtensionsEvidenceClass: audit-events/classes/SsfInboundOptOutInitiatedExtensionsEvidenceClass.md
+          - SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass.md
+          - SsfInboundOptOutInitiatedExtenstionsClass: audit-events/classes/SsfInboundOptOutInitiatedExtenstionsClass.md
+          - SsfInboundOptOutInitiatedPlatformClass: audit-events/classes/SsfInboundOptOutInitiatedPlatformClass.md
+          - SsfInboundOptOutInitiatedRestrictedClass: audit-events/classes/SsfInboundOptOutInitiatedRestrictedClass.md
+          - SsfInboundOptOutInitiatedUserClass: audit-events/classes/SsfInboundOptOutInitiatedUserClass.md
+          - SsfInboundRecoveryActivatedAuditEventClass: audit-events/classes/SsfInboundRecoveryActivatedAuditEventClass.md
+          - SsfInboundRecoveryActivatedExtensionsClass: audit-events/classes/SsfInboundRecoveryActivatedExtensionsClass.md
+          - SsfInboundRecoveryActivatedExtensionsEvidenceClass: audit-events/classes/SsfInboundRecoveryActivatedExtensionsEvidenceClass.md
+          - SsfInboundRecoveryActivatedExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundRecoveryActivatedExtensionsExperianiiqresponseClass.md
+          - SsfInboundRecoveryActivatedExtenstionsClass: audit-events/classes/SsfInboundRecoveryActivatedExtenstionsClass.md
+          - SsfInboundRecoveryActivatedPlatformClass: audit-events/classes/SsfInboundRecoveryActivatedPlatformClass.md
+          - SsfInboundRecoveryActivatedRestrictedClass: audit-events/classes/SsfInboundRecoveryActivatedRestrictedClass.md
+          - SsfInboundRecoveryActivatedUserClass: audit-events/classes/SsfInboundRecoveryActivatedUserClass.md
+          - SsfInboundRecoveryInformationChangedAuditEventClass: audit-events/classes/SsfInboundRecoveryInformationChangedAuditEventClass.md
+          - SsfInboundRecoveryInformationChangedExtensionsClass: audit-events/classes/SsfInboundRecoveryInformationChangedExtensionsClass.md
+          - SsfInboundRecoveryInformationChangedExtensionsEvidenceClass: 
+              audit-events/classes/SsfInboundRecoveryInformationChangedExtensionsEvidenceClass.md
+          - SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass: 
+              audit-events/classes/SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass.md
+          - SsfInboundRecoveryInformationChangedExtenstionsClass: audit-events/classes/SsfInboundRecoveryInformationChangedExtenstionsClass.md
+          - SsfInboundRecoveryInformationChangedPlatformClass: audit-events/classes/SsfInboundRecoveryInformationChangedPlatformClass.md
+          - SsfInboundRecoveryInformationChangedRestrictedClass: audit-events/classes/SsfInboundRecoveryInformationChangedRestrictedClass.md
+          - SsfInboundRecoveryInformationChangedUserClass: audit-events/classes/SsfInboundRecoveryInformationChangedUserClass.md
+          - TxmaAuditQueryDataRequestAuditEventClass: audit-events/classes/TxmaAuditQueryDataRequestAuditEventClass.md
+          - TxmaAuditQueryDataRequestExtensionsClass: audit-events/classes/TxmaAuditQueryDataRequestExtensionsClass.md
+          - TxmaAuditQueryDataRequestRestrictedClass: audit-events/classes/TxmaAuditQueryDataRequestRestrictedClass.md
+          - TxmaAuditQueryIllegalRequestAuditEventClass: audit-events/classes/TxmaAuditQueryIllegalRequestAuditEventClass.md
+          - TxmaAuditQueryIllegalRequestExtensionsClass: audit-events/classes/TxmaAuditQueryIllegalRequestExtensionsClass.md
+          - TxmaAuditQueryOutputAccessedAuditEventClass: audit-events/classes/TxmaAuditQueryOutputAccessedAuditEventClass.md
+          - TxmaAuditQueryOutputAccessedExtensionsClass: audit-events/classes/TxmaAuditQueryOutputAccessedExtensionsClass.md
+          - TxmaAuditQueryOutputGeneratedAuditEventClass: audit-events/classes/TxmaAuditQueryOutputGeneratedAuditEventClass.md
+          - TxmaAuditQueryOutputGeneratedExtensionsClass: audit-events/classes/TxmaAuditQueryOutputGeneratedExtensionsClass.md
+      - Slots:
+          - activityScore: audit-events/slots/activityScore.md
+          - address: audit-events/slots/address.md
+          - addressesEntered: audit-events/slots/addressesEntered.md
+          - AuditEventType: audit-events/slots/AuditEventType.md
+          - birthDate: audit-events/slots/birthDate.md
+          - checkDetails: audit-events/slots/checkDetails.md
+          - ci: audit-events/slots/ci.md
+          - ci_count: audit-events/slots/ci_count.md
+          - client_id: audit-events/slots/client_id.md
+          - client_name: audit-events/slots/client_name.md
+          - component_id: audit-events/slots/component_id.md
+          - decisionScore: audit-events/slots/decisionScore.md
+          - description: audit-events/slots/description.md
+          - device_info: audit-events/slots/device_info.md
+          - deviceId: audit-events/slots/deviceId.md
+          - documentType: audit-events/slots/documentType.md
+          - drivingPermit: audit-events/slots/drivingPermit.md
+          - email: audit-events/slots/email.md
+          - error: audit-events/slots/error.md
+          - event_name: audit-events/slots/event_name.md
+          - evidence: audit-events/slots/evidence.md
+          - evidence_value: audit-events/slots/evidence_value.md
+          - experianCrossCoreResponse: audit-events/slots/experianCrossCoreResponse.md
+          - experianIiqResponse: audit-events/slots/experianIiqResponse.md
+          - experianIiqResponse_value: audit-events/slots/experianIiqResponse_value.md
+          - extensions: audit-events/slots/extensions.md
+          - extenstions: audit-events/slots/extenstions.md
+          - failedCheckDetails: audit-events/slots/failedCheckDetails.md
+          - govuk_signin_journey_id: audit-events/slots/govuk_signin_journey_id.md
+          - internalSubjectId: audit-events/slots/internalSubjectId.md
+          - ip_address: audit-events/slots/ip_address.md
+          - isNewAccount: audit-events/slots/isNewAccount.md
+          - iss: audit-events/slots/iss.md
+          - issuingCountry: audit-events/slots/issuingCountry.md
+          - levelOfConfidence: audit-events/slots/levelOfConfidence.md
+          - mfa_type: audit-events/slots/mfa_type.md
+          - mismatched_pii: audit-events/slots/mismatched_pii.md
+          - name: audit-events/slots/name.md
+          - notification_type: audit-events/slots/notification_type.md
+          - outcome: audit-events/slots/outcome.md
+          - passport: audit-events/slots/passport.md
+          - persistent_session_id: audit-events/slots/persistent_session_id.md
+          - phone: audit-events/slots/phone.md
+          - platform: audit-events/slots/platform.md
+          - post_office_details: audit-events/slots/post_office_details.md
+          - previous_govuk_signin_journey_id: audit-events/slots/previous_govuk_signin_journey_id.md
+          - recipientEmail: audit-events/slots/recipientEmail.md
+          - recipientName: audit-events/slots/recipientName.md
+          - rejectionReason: audit-events/slots/rejectionReason.md
+          - requesterEmail: audit-events/slots/requesterEmail.md
+          - requesterName: audit-events/slots/requesterName.md
+          - residencePermit: audit-events/slots/residencePermit.md
+          - restricted: audit-events/slots/restricted.md
+          - session_id: audit-events/slots/session_id.md
+          - source_topic_arn: audit-events/slots/source_topic_arn.md
+          - spot_request: audit-events/slots/spot_request.md
+          - strengthScore: audit-events/slots/strengthScore.md
+          - successful: audit-events/slots/successful.md
+          - test_user: audit-events/slots/test_user.md
+          - ticket_details: audit-events/slots/ticket_details.md
+          - totalQuestionsAnsweredCorrect: audit-events/slots/totalQuestionsAnsweredCorrect.md
+          - totalQuestionsAnsweredIncorrect: audit-events/slots/totalQuestionsAnsweredIncorrect.md
+          - totalQuestionsAsked: audit-events/slots/totalQuestionsAsked.md
+          - toy: audit-events/slots/toy.md
+          - toyResponse: audit-events/slots/toyResponse.md
+          - transaction_id: audit-events/slots/transaction_id.md
+          - txn: audit-events/slots/txn.md
+          - type: audit-events/slots/type.md
+          - user: audit-events/slots/user.md
+          - user_id: audit-events/slots/user_id.md
+          - validityScore: audit-events/slots/validityScore.md
+          - verificationScore: audit-events/slots/verificationScore.md
+      - Types:
+          - Boolean: audit-events/types/Boolean.md
+          - Curie: audit-events/types/Curie.md
+          - Date: audit-events/types/Date.md
+          - DateOrDatetime: audit-events/types/DateOrDatetime.md
+          - Datetime: audit-events/types/Datetime.md
+          - Decimal: audit-events/types/Decimal.md
+          - Double: audit-events/types/Double.md
+          - Float: audit-events/types/Float.md
+          - Integer: audit-events/types/Integer.md
+          - Jsonpath: audit-events/types/Jsonpath.md
+          - Jsonpointer: audit-events/types/Jsonpointer.md
+          - Ncname: audit-events/types/Ncname.md
+          - Nodeidentifier: audit-events/types/Nodeidentifier.md
+          - Objectidentifier: audit-events/types/Objectidentifier.md
+          - Sparqlpath: audit-events/types/Sparqlpath.md
+          - String: audit-events/types/String.md
+          - Time: audit-events/types/Time.md
+          - Uri: audit-events/types/Uri.md
+          - Uriorcurie: audit-events/types/Uriorcurie.md
+  - audit-events-index: audit-events-index.md

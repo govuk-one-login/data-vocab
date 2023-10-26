@@ -3,6 +3,7 @@ node_modules
 .vscode
 .idea
 docs/v1
+docs/audit-events
 docs/css
 docs/js
 site

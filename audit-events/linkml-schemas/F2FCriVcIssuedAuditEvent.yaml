@@ -1,0 +1,64 @@
+id: https://vocab.account.gov.uk/linkml/f2f-cri-vc-issued
+name: f2f-cri-vc-issued
+description: >-
+  Description for audit event F2F_CRI_VC_ISSUED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  F2FCriVcIssuedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+
+  F2FCriVcIssuedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  F2FCriVcIssuedRestrictedClass:
+    slots:
+      - user
+
+  F2FCriVcIssuedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+
+  F2FCriVcIssuedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - verificationScore
+      - strengthScore
+      - type
+
+slots:
+  user:
+    range: F2FCriVcIssuedUserClass
+    description: Description for user
+  restricted:
+    range: F2FCriVcIssuedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: F2FCriVcIssuedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: F2FCriVcIssuedExtensionsEvidenceClass
+    description: Description for evidence

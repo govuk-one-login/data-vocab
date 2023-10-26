@@ -1,0 +1,34 @@
+id: https://vocab.account.gov.uk/linkml/ipv-spot-response-rejected
+name: ipv-spot-response-rejected
+description: >-
+  Description for audit event IPV_SPOT_RESPONSE_REJECTED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvSpotResponseRejectedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  IpvSpotResponseRejectedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - persistent_session_id
+      - session_id
+
+slots:
+  user:
+    range: IpvSpotResponseRejectedUserClass
+    description: Description for user

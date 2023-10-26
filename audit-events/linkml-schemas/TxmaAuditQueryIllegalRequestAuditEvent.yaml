@@ -1,0 +1,32 @@
+id: https://vocab.account.gov.uk/linkml/txma-audit-query-illegal-request
+name: txma-audit-query-illegal-request
+description: >-
+  Description for audit event TXMA_AUDIT_QUERY_ILLEGAL_REQUEST
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  TxmaAuditQueryIllegalRequestAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - extensions
+
+  TxmaAuditQueryIllegalRequestExtensionsClass:
+    slots:
+      - ticket_details
+      - error
+
+slots:
+  extensions:
+    range: TxmaAuditQueryIllegalRequestExtensionsClass
+    description: Description for extensions

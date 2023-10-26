@@ -1,0 +1,39 @@
+id: https://vocab.account.gov.uk/linkml/ipv-delete-user-data
+name: ipv-delete-user-data
+description: >-
+  Description for audit event IPV_DELETE_USER_DATA
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvDeleteUserDataAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+      - extenstions
+
+  IpvDeleteUserDataUserClass:
+    slots:
+      - user_id
+
+  IpvDeleteUserDataExtenstionsClass:
+    slots:
+      - source_topic_arn
+
+slots:
+  user:
+    range: IpvDeleteUserDataUserClass
+    description: Description for user
+  extenstions:
+    range: IpvDeleteUserDataExtenstionsClass
+    description: Description for extenstions

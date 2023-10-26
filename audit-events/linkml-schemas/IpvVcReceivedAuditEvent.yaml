@@ -1,0 +1,64 @@
+id: https://vocab.account.gov.uk/linkml/ipv-vc-received
+name: ipv-vc-received
+description: >-
+  Description for audit event IPV_VC_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvVcReceivedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+      - restricted
+      - extensions
+
+  IpvVcReceivedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  IpvVcReceivedRestrictedClass:
+    slots:
+      - documentType
+      - issuingCountry
+      - user
+
+  IpvVcReceivedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+      - successful
+
+  IpvVcReceivedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - type
+
+slots:
+  user:
+    range: IpvVcReceivedUserClass
+    description: Description for user
+  restricted:
+    range: IpvVcReceivedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: IpvVcReceivedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: IpvVcReceivedExtensionsEvidenceClass
+    description: Description for evidence

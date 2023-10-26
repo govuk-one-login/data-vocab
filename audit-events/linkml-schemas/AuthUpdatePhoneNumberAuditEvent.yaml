@@ -1,0 +1,36 @@
+id: https://vocab.account.gov.uk/linkml/auth-update-phone-number
+name: auth-update-phone-number
+description: >-
+  Description for audit event AUTH_UPDATE_PHONE_NUMBER
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthUpdatePhoneNumberAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  AuthUpdatePhoneNumberUserClass:
+    slots:
+      - email
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: AuthUpdatePhoneNumberUserClass
+    description: Description for user

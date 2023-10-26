@@ -1,0 +1,135 @@
+id: https://vocab.account.gov.uk/linkml/ssf-inbound-recovery-information-changed
+name: ssf-inbound-recovery-information-changed
+description: >-
+  Description for audit event SSF_INBOUND_RECOVERY_INFORMATION_CHANGED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  SsfInboundRecoveryInformationChangedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+      - restricted
+      - extensions
+      - extenstions
+      - platform
+
+  SsfInboundRecoveryInformationChangedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - phone
+      - session_id
+      - transaction_id
+      - user_id
+
+  SsfInboundRecoveryInformationChangedRestrictedClass:
+    slots:
+      - address
+      - birthDate
+      - drivingPermit
+      - name
+      - passport
+      - residencePermit
+      - deviceId
+      - requesterEmail
+      - requesterName
+      - recipientEmail
+      - recipientName
+      - mismatched_pii
+      - spot_request
+      - documentType
+      - issuingCountry
+      - user
+
+  SsfInboundRecoveryInformationChangedExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+      - notification-type
+      - mfa-type
+      - test-user
+      - internalSubjectId
+      - isNewAccount
+      - client-name
+      - description
+      - experianIiqResponse
+      - experianIiqResponse_value
+      - successful
+      - levelOfConfidence
+      - ticket_details
+      - error
+      - rejectionReason
+      - addressesEntered
+      - experianCrossCoreResponse
+      - previous_govuk_signin_journey_id
+      - ci_count
+      - toy
+      - toyResponse
+      - post_office_details
+
+  SsfInboundRecoveryInformationChangedExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - checkDetails
+      - failedCheckDetails
+      - verificationScore
+      - decisionScore
+      - strengthScore
+      - validityScore
+      - activityScore
+      - type
+
+  SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass:
+    slots:
+      - outcome
+      - totalQuestionsAsked
+      - totalQuestionsAnsweredCorrect
+      - totalQuestionsAnsweredIncorrect
+
+  SsfInboundRecoveryInformationChangedExtenstionsClass:
+    slots:
+      - source_topic_arn
+
+  SsfInboundRecoveryInformationChangedPlatformClass:
+    slots:
+      - device_info
+
+slots:
+  user:
+    range: SsfInboundRecoveryInformationChangedUserClass
+    description: Description for user
+  restricted:
+    range: SsfInboundRecoveryInformationChangedRestrictedClass
+    description: Description for restricted
+  extensions:
+    range: SsfInboundRecoveryInformationChangedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: SsfInboundRecoveryInformationChangedExtensionsEvidenceClass
+    description: Description for evidence
+  experianIiqResponse:
+    range: SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass
+    description: Description for experianiiqresponse
+  extenstions:
+    range: SsfInboundRecoveryInformationChangedExtenstionsClass
+    description: Description for extenstions
+  platform:
+    range: SsfInboundRecoveryInformationChangedPlatformClass
+    description: Description for platform

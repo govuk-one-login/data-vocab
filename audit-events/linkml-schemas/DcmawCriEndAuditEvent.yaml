@@ -1,0 +1,35 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-cri-end
+name: dcmaw-cri-end
+description: >-
+  Description for audit event DCMAW_CRI_END
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  DcmawCriEndAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  DcmawCriEndUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - session_id
+      - transaction_id
+      - user_id
+
+slots:
+  user:
+    range: DcmawCriEndUserClass
+    description: Description for user

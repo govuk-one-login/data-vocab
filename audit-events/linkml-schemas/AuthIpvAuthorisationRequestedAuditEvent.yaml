@@ -1,0 +1,37 @@
+id: https://vocab.account.gov.uk/linkml/auth-ipv-authorisation-requested
+name: auth-ipv-authorisation-requested
+description: >-
+  Description for audit event AUTH_IPV_AUTHORISATION_REQUESTED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  AuthIpvAuthorisationRequestedAuditEventClass:
+    slots:
+      - event_name
+      - client_id
+      - component_id
+      - user
+
+  AuthIpvAuthorisationRequestedUserClass:
+    slots:
+      - email
+      - govuk_signin_journey_id
+      - ip_address
+      - persistent_session_id
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: AuthIpvAuthorisationRequestedUserClass
+    description: Description for user

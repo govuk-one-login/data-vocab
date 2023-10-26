@@ -1,0 +1,56 @@
+id: https://vocab.account.gov.uk/linkml/ipv-f2f-cri-vc-received
+name: ipv-f2f-cri-vc-received
+description: >-
+  Description for audit event IPV_F2F_CRI_VC_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvF2FCriVcReceivedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+      - extensions
+
+  IpvF2FCriVcReceivedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+  IpvF2FCriVcReceivedExtensionsClass:
+    slots:
+      - evidence
+      - iss
+      - notification-type
+      - levelOfConfidence
+
+  IpvF2FCriVcReceivedExtensionsEvidenceClass:
+    slots:
+      - checkDetails
+      - verificationScore
+      - strengthScore
+      - validityScore
+      - type
+
+slots:
+  user:
+    range: IpvF2FCriVcReceivedUserClass
+    description: Description for user
+  extensions:
+    range: IpvF2FCriVcReceivedExtensionsClass
+    description: Description for extensions
+  evidence:
+    range: IpvF2FCriVcReceivedExtensionsEvidenceClass
+    description: Description for evidence

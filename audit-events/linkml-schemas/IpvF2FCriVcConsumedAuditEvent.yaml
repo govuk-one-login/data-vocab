@@ -1,0 +1,34 @@
+id: https://vocab.account.gov.uk/linkml/ipv-f2f-cri-vc-consumed
+name: ipv-f2f-cri-vc-consumed
+description: >-
+  Description for audit event IPV_F2F_CRI_VC_CONSUMED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+
+imports:
+  - ./slots
+
+default_curi_maps:
+  - semweb_context  
+default_prefix: di_vocab
+default_range: string
+
+classes:
+  IpvF2FCriVcConsumedAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - user
+
+  IpvF2FCriVcConsumedUserClass:
+    slots:
+      - govuk_signin_journey_id
+      - ip_address
+      - session_id
+      - user_id
+
+slots:
+  user:
+    range: IpvF2FCriVcConsumedUserClass
+    description: Description for user
