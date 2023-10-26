@@ -18,7 +18,7 @@ CUSTOM_NAMES = {
 
 CUSTOM_CATEGORY_NAMES = {
     "slots": "Slots",
-    "_Home": "-Home",
+    "_Home": "Home",
     "types": "Types",
     "classes": "Classes",
     "enums": "Enums",
@@ -52,12 +52,26 @@ def add_to_structure(path_parts, nav_list, file_path):
     add_to_structure(path_parts, item[part], file_path)
 
 def sort_nav_structure(nav_list):
-    """Sort the given navigation structure."""
-    sorted_nav_list = sorted(nav_list, key=lambda item: list(item.keys())[0].lower())
-    for item in sorted_nav_list:
+    """
+    Sort the given navigation structure.
+    
+    - Home appears on top
+    - Everything else appears alphabetically
+    """
+
+    home_item = [item for item in nav_list if 'Home' in item]
+    other_items = [item for item in nav_list if 'Home' not in item]
+
+    sorted_other_items = sorted(other_items, key=lambda item: list(item.keys())[0].lower())
+
+    for item in sorted_other_items:
         for key, value in item.items():
             if isinstance(value, list):
                 item[key] = sort_nav_structure(value)
+
+
+    sorted_nav_list = home_item + sorted_other_items
+
     return sorted_nav_list
 
 def generate_navigation_structure():
