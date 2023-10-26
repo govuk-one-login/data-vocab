@@ -39,9 +39,6 @@ jobs:
       - name: Install JS
         run: npm ci
 
-      - name: Install SASS
-        run: npm install -g sass
-
       - name: Install Python
         run: poetry install
 
