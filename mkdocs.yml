@@ -15,7 +15,7 @@ markdown_extensions:
   - admonition
 repo_url: https://github.com/govuk-one-login/data-vocab
 nav:
-  - index: index.md
+  - GOV.UK One Login Vocabulary: index.md
   - v1:
       - Home:
           - credentials: v1/_Home/index.md

@@ -12,6 +12,7 @@ import ruamel.yaml
 DOCS_DIR = "./docs"
 
 CUSTOM_NAMES = {
+    "index.md": "GOV.UK One Login Vocabulary",
     "v1/_Home/index.md": "credentials",
     "v1/json-schemas/index.md": "JSON Schema files"
 }
