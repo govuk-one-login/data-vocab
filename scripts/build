@@ -10,6 +10,7 @@ EXAMPLES=(
   "SocialSecurityRecordDetailsClass"
   "IdCardDetailsClass"
   "NameClass"
+  "BankAccountDetailsClass"
 )
 
 bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"

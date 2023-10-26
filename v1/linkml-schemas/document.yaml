@@ -140,6 +140,22 @@ classes:
       - icaoIssuerCode
     see_also:
       - ../json-schemas/IdCard.json
+  BankAccountDetailsClass:
+    description: The details of a Bank Account as presented by a user for checking for identity verification purposes.
+      <p>JSON schema&#58; [di_vocab:BankAccount](../json-schemas/BankAccount.json)</p> 
+      <p>Examples</p>
+      <ul>
+      <li>
+      [Bank Account](../examples/BankAccountDetailsClass/BankAccount.json)
+      </li>
+      </ul>
+    mixins:
+      - ValidityClass
+    slots:
+      - sortCode
+      - accountNumber
+    see_also:
+      - ../json-schemas/BankAccount.json
 slots:
   passport:
     range: PassportDetailsClass
@@ -186,3 +202,9 @@ slots:
     description: Issuing country for documents represented as an [ISO 3166 two character country code](https://www.iso.org/iso-3166-country-codes.html#2012_iso3166-2). Not used for passports see `icaoIssuerCode`.
   documentType:
     description: An identifier of the type of document, for example IR for Biometric Residence Permit, CR for Biometric Residence Card.
+  sortCode:
+    description: The sort code for a bank account.  This is a string holding a 6-digit numerical code where leading 0 values are maintained.
+    pattern: "[0-9]{6}"
+  accountNumber:
+    description: The account number for a bank account.  This is a string holding a 8-digit numerical code where leading 0 values are maintained.
+    pattern: "[0-9]{8}"

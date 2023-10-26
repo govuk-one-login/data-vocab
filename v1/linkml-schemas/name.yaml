@@ -82,7 +82,7 @@ slots:
 
 enums:
   NamePartType:
-    description: Reference data enumeration applied to the `type` property for a specific [NamePart](../NamePartClass)
+    description: Reference data enumeration applied to the `type` property for a specific [NamePart](../../classes/NamePartClass)
     permissible_values:
       GivenName:
         description: Part of a personal name that identifies a person, for UK citizens this type is commonly used for first names/forenames and middle names.
