@@ -25,8 +25,7 @@
     "assert": false
   },
   "dependencies": {
-    "json-schema-to-typescript": "^13.1.1",
-    "mkdocs-govuk": "file:mkdocs-govuk"
+    "json-schema-to-typescript": "^13.1.1"
   },
   "scripts": {
     "copy-pkg-misc": "cp src/package-template.json v1/types/package.json && cp README.md v1/types",
