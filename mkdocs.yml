@@ -6,7 +6,7 @@ theme:
   name: tech_docs_template
   features:
     - content.tabs.link
-  favicon: assets/images/favicon.ico
+  favicon: assets/govuk/assets/images/favicon.ico
   logo: assets/govuk/assets/images/govuk-logotype-crown.png
 plugins:
   - material/search
@@ -17,7 +17,7 @@ repo_url: https://github.com/govuk-one-login/data-vocab
 nav:
   - index: index.md
   - v1:
-      - -Home:
+      - Home:
           - credentials: v1/_Home/index.md
       - Classes:
           - AddressAssertionClass: v1/classes/AddressAssertionClass.md

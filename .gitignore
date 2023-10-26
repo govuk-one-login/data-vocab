@@ -5,7 +5,6 @@ node_modules
 docs/v1
 docs/css
 docs/js
-docs/assets/govuk
 site
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
