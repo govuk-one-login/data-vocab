@@ -24,6 +24,7 @@ classes:
       - residencePermit
       - socialSecurityRecord
       - idCard
+      - bankAccount
 
   DocumentDetailsClass:
     mixins:
