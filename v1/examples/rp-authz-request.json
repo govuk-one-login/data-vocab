@@ -1,5 +1,8 @@
 {
   "claims": "%7B%22userinfo%22%3A%7B%22https%3A%2F%2Fvocab.account.gov.uk%2Fv1%2FcoreIdentityJWT%22%3A%7B%22essential%22%3Atrue%7D%7D%7D",
+  "iss": "https://oidc.account.gov.uk/identity/v1",
+  "nbf": 1691637001,
+  "sub": "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
   "response_type": "code",
   "redirect_uri": "http://localhost:3001/oauth/callback",
   "state": "tRNlWtowYYcSBUzFfkjXbn8GX0V4RansaA2USbjZmlQ",

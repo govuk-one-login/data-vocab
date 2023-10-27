@@ -74,12 +74,15 @@ slots:
     range: date
     slot_uri: schema:validUntil
   iss:
+    required: true
     range: uri
     description: The `iss` (issuer) claim identifies the principal that issued the JWT.
   sub:
+    required: true
     range: uri
     description: The `sub` (subject) claim identifies the principal that is the subject of the JWT.
   nbf:
+    required: true
     range: integer
     description: The `nbf` (not before) claim identifies the time the JWT is valid from.
   exp:
