@@ -27,6 +27,7 @@ LINKML_ITEMS=(
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
   "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
+  "document.yaml,BankAccountDetailsClass,BankAccount.json"
 )
 
 ROOT_DIR="$( git rev-parse --show-toplevel )"

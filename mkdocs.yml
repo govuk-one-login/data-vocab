@@ -23,6 +23,7 @@ nav:
           - AddressAssertionClass: v1/classes/AddressAssertionClass.md
           - AddressCredentialClass: v1/classes/AddressCredentialClass.md
           - AuthorizationRequestClass: v1/classes/AuthorizationRequestClass.md
+          - BankAccountDetailsClass: v1/classes/BankAccountDetailsClass.md
           - BirthDateClass: v1/classes/BirthDateClass.md
           - CheckDetailsClass: v1/classes/CheckDetailsClass.md
           - ContraIndicatorClass: v1/classes/ContraIndicatorClass.md
@@ -74,6 +75,7 @@ nav:
           - JSON Schema files: v1/json-schemas/index.md
       - Slots:
           - '@context': v1/slots/@context.md
+          - accountNumber: v1/slots/accountNumber.md
           - activityFrom: v1/slots/activityFrom.md
           - activityHistoryScore: v1/slots/activityHistoryScore.md
           - address: v1/slots/address.md
@@ -82,6 +84,7 @@ nav:
           - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
           - addressLocality: v1/slots/addressLocality.md
           - aud: v1/slots/aud.md
+          - bankAccount: v1/slots/bankAccount.md
           - biometricVerificationProcessLevel: v1/slots/biometricVerificationProcessLevel.md
           - birthDate: v1/slots/birthDate.md
           - birthDateClass__value: v1/slots/birthDateClass__value.md
@@ -166,6 +169,7 @@ nav:
           - sex: v1/slots/sex.md
           - shared_claims: v1/slots/shared_claims.md
           - socialSecurityRecord: v1/slots/socialSecurityRecord.md
+          - sortCode: v1/slots/sortCode.md
           - state: v1/slots/state.md
           - streetName: v1/slots/streetName.md
           - strengthScore: v1/slots/strengthScore.md
