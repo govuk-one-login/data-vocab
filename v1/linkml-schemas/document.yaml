@@ -209,3 +209,7 @@ slots:
   accountNumber:
     description: The account number for a bank account.  This is a string holding a 8-digit numerical code where leading 0 values are maintained.
     pattern: "[0-9]{8}"
+  bankAccount:
+    range: BankAccountDetailsClass
+    multivalued: true
+    inlined_as_list: true

@@ -84,6 +84,7 @@ nav:
           - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
           - addressLocality: v1/slots/addressLocality.md
           - aud: v1/slots/aud.md
+          - bankAccount: v1/slots/bankAccount.md
           - biometricVerificationProcessLevel: v1/slots/biometricVerificationProcessLevel.md
           - birthDate: v1/slots/birthDate.md
           - birthDateClass__value: v1/slots/birthDateClass__value.md
