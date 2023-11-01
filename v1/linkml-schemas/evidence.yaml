@@ -121,7 +121,7 @@ enums:
         impersonation_risk_check:
   DataCheckType:
       permissible_values:
-        data_verification_check:
+        verification_check:
         cancelled_check:
         lost_stolen_check:
 
