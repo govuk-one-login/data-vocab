@@ -65,6 +65,7 @@ nav:
           - VerifiableIdentityCredentialClass: v1/classes/VerifiableIdentityCredentialClass.md
       - Enums:
           - CheckMethodType: v1/enums/CheckMethodType.md
+          - DataCheckType: v1/enums/DataCheckType.md
           - FraudCheckType: v1/enums/FraudCheckType.md
           - IdentityVectorOfTrust: v1/enums/IdentityVectorOfTrust.md
           - KBVResponseModeType: v1/enums/KBVResponseModeType.md
@@ -98,6 +99,7 @@ nav:
           - coreIdentityJWTClass__vc: v1/slots/coreIdentityJWTClass__vc.md
           - credentialJWT: v1/slots/credentialJWT.md
           - credentialSubject: v1/slots/credentialSubject.md
+          - dataCheck: v1/slots/dataCheck.md
           - departmentName: v1/slots/departmentName.md
           - dependentAddressLocality: v1/slots/dependentAddressLocality.md
           - dependentStreetName: v1/slots/dependentStreetName.md
