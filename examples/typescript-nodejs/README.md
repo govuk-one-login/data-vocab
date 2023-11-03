@@ -14,9 +14,7 @@ In the `package.json`, note the `@govuk-one-login/data-vocab` dependency:
 
 ### Build the project
 
-##### Prerequisities
-
-This project uses TypeScript and expects the `tsc` command to be available.
+##### Prerequisites
 
 Ensure you have authenticated to the `@govuk-one-login` npm scope in GitHub Packages:
 
@@ -30,6 +28,12 @@ npm login --scope=@govuk-one-login --auth-type=legacy --registry=https://npm.pkg
 > For instructions on using the package from GitHub Actions, see the [main README](https://github.com/govuk-one-login/data-vocab#setting-permissions).
 
 ##### Steps
+
+Install dependencies:
+
+```shell
+npm ci
+```
 
 Build the project using:
 
