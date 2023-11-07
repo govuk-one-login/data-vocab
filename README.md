@@ -89,7 +89,7 @@ Type definition files (`.d.ts`) are published with each tagged version of this r
 These are published as [an npm module](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab) to GitHub Packages.
 
 > **Note**
-> Check out the [sample project](./examples/typescript-nodejs) for an example.
+> Check out the [sample project](https://github.com/govuk-one-login/data-vocab/tree/main/examples/typescript-nodejs) for an example.
 
 ## Add the dependency
 
