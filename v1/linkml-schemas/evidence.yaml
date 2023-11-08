@@ -191,7 +191,7 @@ slots:
     description: Specifies the kind of fraud check performed as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud)
   dataCheck:
     range: DataCheckType
-    description: Specifies the kind of data check performed allows for the distinction between a data verification, cancelled check and a lost or stolen check
+    description: Specifies the kind of data check performed allows for the distinction between a record check, cancelled check and a lost or stolen check
   activityFrom:
     range: date
     description: The date of the earliest activity found for the user.
