@@ -27,3 +27,4 @@ slots:
     range: IdentityVectorOfTrust
   vtm:
     range: uri
+    description: The `vtm` identifies the Vector Trust Mark.
