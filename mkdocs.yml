@@ -115,8 +115,10 @@ nav:
           - exp: v1/slots/exp.md
           - expiryDate: v1/slots/expiryDate.md
           - failedCheckDetails: v1/slots/failedCheckDetails.md
+          - FamilyNameClass_value: v1/slots/FamilyNameClass_value.md
           - fraudCheck: v1/slots/fraudCheck.md
           - fullAddress: v1/slots/fullAddress.md
+          - GivenNameClass_value: v1/slots/GivenNameClass_value.md
           - govuk_signin_journey_id: v1/slots/govuk_signin_journey_id.md
           - iat: v1/slots/iat.md
           - icaoIssuerCode: v1/slots/icaoIssuerCode.md
@@ -128,7 +130,11 @@ nav:
           - identityCheckClass__type: v1/slots/identityCheckClass__type.md
           - identityCheckCredentialClass__type: v1/slots/identityCheckCredentialClass__type.md
           - IdentityCheckCredentialClass_credentialSubject: v1/slots/IdentityCheckCredentialClass_credentialSubject.md
-          - identityCheckCredentialJWTClass__vc: v1/slots/identityCheckCredentialJWTClass__vc.md
+          - IdentityCheckCredentialJWTClass_iss: v1/slots/IdentityCheckCredentialJWTClass_iss.md
+          - IdentityCheckCredentialJWTClass_jti: v1/slots/IdentityCheckCredentialJWTClass_jti.md
+          - IdentityCheckCredentialJWTClass_nbf: v1/slots/IdentityCheckCredentialJWTClass_nbf.md
+          - IdentityCheckCredentialJWTClass_sub: v1/slots/IdentityCheckCredentialJWTClass_sub.md
+          - IdentityCheckCredentialJWTClass_vc: v1/slots/IdentityCheckCredentialJWTClass_vc.md
           - identityCheckLevel: v1/slots/identityCheckLevel.md
           - identityCheckPolicy: v1/slots/identityCheckPolicy.md
           - identityFraudScore: v1/slots/identityFraudScore.md
