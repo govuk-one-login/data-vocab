@@ -128,6 +128,7 @@ enums:
 slots:
   txn:
     description: A unique transaction identifier for this check, or part of a check, if any.
+    range: string
   strengthScore:
     description: The strength score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#strength) 
     range: integer
@@ -230,4 +231,3 @@ slots:
   id:
     description: The identifier of a verifiable credential.
     range: uri
-  

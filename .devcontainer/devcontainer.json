@@ -8,5 +8,8 @@
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
 	},
 	"forwardPorts": ["8000:8000"],
-	"postCreateCommand": "poetry install && npm ci && npm install -g ajv-cli@5.0.0 ajv-formats@2.1.1 sass"
+	"postCreateCommand": "poetry install && npm ci && npm install -g ajv-cli@5.0.0 ajv-formats@2.1.1 sass",
+	"containerEnv": {
+		"TZ": "UTC"
+	}
 }
