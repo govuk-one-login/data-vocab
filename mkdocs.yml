@@ -144,6 +144,7 @@ nav:
           - issuedBy: v1/slots/issuedBy.md
           - issueNumber: v1/slots/issueNumber.md
           - issuer: v1/slots/issuer.md
+          - IssuerAuthorizationRequestClass_scope: v1/slots/IssuerAuthorizationRequestClass_scope.md
           - issuingCountry: v1/slots/issuingCountry.md
           - jti: v1/slots/jti.md
           - kbvQuality: v1/slots/kbvQuality.md
@@ -154,6 +155,7 @@ nav:
           - nameParts: v1/slots/nameParts.md
           - nbf: v1/slots/nbf.md
           - nonce: v1/slots/nonce.md
+          - OpenIDConnectAuthenticationRequestClass_scope: v1/slots/OpenIDConnectAuthenticationRequestClass_scope.md
           - organisationName: v1/slots/organisationName.md
           - passport: v1/slots/passport.md
           - PassportDetailsClass_expiryDate: v1/slots/PassportDetailsClass_expiryDate.md
