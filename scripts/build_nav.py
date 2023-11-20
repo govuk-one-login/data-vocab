@@ -97,24 +97,12 @@ def generate_navigation_structure():
                 rel_path = os.path.relpath(full_path, DOCS_DIR)
                 path_parts = rel_path.split(os.sep)
 
-
-
-                #
-                # Audit Event Logic
-                #
-
-                # Check if in the audit_events directory and filter files
-
-                print(file)
-                #print(path_parts)
-                #print(full_path)
-
-
-                
+          
                 if 'audit-events' in path_parts and 'classes' in path_parts and 'AuditEventClass.md' not in file:
-                    print(file)
+
                     continue
                 if 'audit-events' in path_parts and 'classes' in path_parts:
+                    path_parts[1] = 'Events'
                     path_parts[-1] = pascal_to_upper_snake(path_parts[-1].replace('AuditEventClass.md', ''))
 
         

@@ -210,7 +210,7 @@ nav:
   - 3. Audit Events:
       - Home:
           - index: audit-events/_Home/index.md
-      - Classes:
+      - Events:
           - AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE: audit-events/classes/AuthAccountManagementAuthenticateAuditEventClass.md
           - AUTH_ACCOUNT_RECOVERY_BLOCK_ADDED: audit-events/classes/AuthAccountRecoveryBlockAddedAuditEventClass.md
           - AUTH_ACCOUNT_RECOVERY_BLOCK_REMOVED: audit-events/classes/AuthAccountRecoveryBlockRemovedAuditEventClass.md
