@@ -12,126 +12,126 @@ imports:
   - linkml:types
 slots:
   event_name:
-    description: Evene name or type
+    description: The Audit Event type that is being submitted
     required: true
   AuditEventType:
     description: Description for AuditEventType
   activityScore:
-    description: Description for activityScore
+    description: The activityScore from the check done by the CRI
   address:
-    description: Description for address
+    description: Address information
   addressesEntered:
-    description: Description for addressesEntered
+    description: Number of addresses entered by a user
   birthDate:
-    description: Description for birthDate
+    description: DoB information
   checkDetails:
-    description: Description for checkDetails
+    description: The check details of the check carried out by the CRI
   ci:
-    description: Description for ci
+    description: CIs in an array
   ci_count:
-    description: Description for ci_count
+    description: Count of contra-indicators
   client-name:
-    description: Description for client-name
+    description: Client name as defined in the client registry
   client_id:
     description: OAuth client identifier for the relying party 
   component_id:
-    description: Description for component_id
+    description: The system component that generated the event
   decisionScore:
-    description: Description for decisionScore
+    description: The decisionScore from the check done by the CRI
   description:
-    description: Description for description
+    description: Generic description field
   deviceId:
-    description: Description for deviceId
+    description: Device fingerprint
   device_info:
-    description: Description for device_info
+    description: Device information object from DCMAW with data populated from Mobile App 3rd Party Suppliers
   documentType:
-    description: Description for documentType
+    description: The document type that a user has chosen to perform their identity checks with
   drivingPermit:
-    description: Description for drivingPermit
+    description: Driving Licence information
   email:
-    description: Description for email
+    description: The user account email address.
   error:
-    description: Description for error
+    description: Generic error field
   extensions:
-    description: Description for extensions
+    description: The extended audit data relating to the event.
   extenstions:
-    description: Decription for extenstions
+    description: The extended audit data relating to the event.
   experianIiqResponse:
-    description: Decription for experianIiqResponse
+    description: Experian KBV questions answered incorrect
   evidence:
-    description: Description for Evidence
+    description: Any evidence
   evidence_value:
     description: Description for evidence_value
   experianCrossCoreResponse:
-    description: Description for experianCrossCoreResponse
+    description: Experian Crosscore Response object
   experianIiqResponse_value:
     description: Description for experianIiqResponse_value
   failedCheckDetails:
-    description: Description for failedCheckDetails
+    description: The failed check details of the check carried out by the CRI
   govuk_signin_journey_id:
     description: Description for govuk_signin_journey_id
   internalSubjectId:
-    description: Description for internalSubjectId
+    description: The DI Pairwise or internal subject id
   ip_address:
-    description: Description for ip_address
+    description: The user ip address.
   isNewAccount:
-    description: Description for isNewAccount
+    description: If the account is a newly created account
   iss:
-    description: Description for iss
+    description: issuer URI
   issuingCountry:
-    description: Description for issuingCountry
+    description: The issuing country of the document a user has choosen to perform their identity checks with
   levelOfConfidence:
-    description: Description for levelOfConfidence
+    description: Level of confidence achieved in matching the GPG45 Profile
   mfa-type:
-    description: Description for mfa-type
+    description: If the user is a test user
   mismatched_pii:
-    description: Description for mismatched_pii
+    description: Mismatched PII in SPOT request
   name:
-    description: Description for name
+    description: Name information
   notification-type:
-    description: Description for notification-type
+    description: The notification type used to notify the user
   outcome:
     description: Description for outcome
   passport:
-    description: Description for passport
+    description: Passport information
   persistent_session_id:
-    description: Description for persistent_session_id
+    description: The persistent session id.
   phone:
-    description: Description for phone
+    description: The user account phone number.
   post_office_details:
-    description: Description for post_office_details
+    description: Post office a user has chosen to complete their in-person checks at
   platform:
-    description: Description for Platform
+    description: The data relating to the user.
   previous_govuk_signin_journey_id:
-    description: Description for previous_govuk_signin_journey_id
+    description: Previous journey id in case of session recovery
   recipientEmail:
-    description: Description for recipientEmail
+    description: TXMA Log recipient email
   recipientName:
-    description: Description for recipientName
+    description: TXMA Log recipient name
   rejectionReason:
-    description: Description for rejectionReason
+    description: Generic rejection reason field
   requesterEmail:
-    description: Description for requesterEmail
+    description: TXMA Log requester email
   requesterName:
-    description: Description for requesterName
+    description: TXMA Log requester name
   residencePermit:
-    description: Description for residencePermit
+    description: Residence Permit information
   restricted:
-    description: Description for restrictions
+    description: The restricted audit data relating to the event.
   session_id:
-    description: Description for session_id
+    description: The user session id.
   source_topic_arn:
-    description: Description for source_topic_arn
+    description: The reference number for the topic that deleted the user data
   spot_request:
-    description: Description for spot_request
+    description: The SPOT Request object
   strengthScore:
-    description: Description for strengthScore
+    description: The strengthScore from the check done by the CRI
   successful:
-    description: Description for successful
+    description: Flag to inform if a transaction was successful
   test-user:
-    description: Description for test-user
+    description: If the user is a test user
   ticket_details:
-    description: Description for ticket_details
+    description: The zendesk reference for the ticket to get TXMA data from logs
   totalQuestionsAnsweredCorrect:
     description: Description for totalQuestionsAnsweredCorrect
   totalQuestionsAnsweredIncorrect:
@@ -139,20 +139,20 @@ slots:
   totalQuestionsAsked:
     description: Description for totalQuestionsAsked
   toy:
-    description: Description for toy
+    description: Value submitted as part of the Toy CRI
   toyResponse:
-    description: Description for toyResponse
+    description: Response from mock external Toy CRI API
   transaction_id:
-    description: Description for transaction_id
+    description: The transaction id from the transaction that generated the audit event.
   txn:
-    description: Description for txn
+    description: Third party transaction id
   type:
     description: Description for type
   user:
-    description: Description for user
+    description: The data relating to the user.
   user_id:
-    description: Description for user_id
+    description: The pairwise identifier from the component of the system that submitted the event.
   validityScore:
-    description: Description for validityScore
+    description: The validityScore from the check done by the CRI
   verificationScore:
-    description: Description for verificationScore
+    description: The verificationScore from the check done by the CRI
