@@ -1,31 +1,31 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-update-client-request-error
 name: auth-update-client-request-error
-description: >-
-  Description for audit event AUTH_UPDATE_CLIENT_REQUEST_ERROR
+description: Description for audit event AUTH_UPDATE_CLIENT_REQUEST_ERROR
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthUpdateClientRequestErrorAuditEventClass:
     slots:
       - event_name
       - client_id
       - user
+    slot_usage:
+      user:
+        range: AuthUpdateClientRequestErrorUserClass
 
   AuthUpdateClientRequestErrorUserClass:
     slots:
       - ip_address
 
 slots:
-  user:
+  AuthUpdateClientRequestErrorUser:
     range: AuthUpdateClientRequestErrorUserClass
     description: Description for user

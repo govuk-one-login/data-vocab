@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-opt-in
 name: ssf-inbound-opt-in
-description: >-
-  Description for audit event SSF_INBOUND_OPT_IN
+description: Description for audit event SSF_INBOUND_OPT_IN
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundOptInAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundOptInUserClass
+      restricted:
+        range: SsfInboundOptInRestrictedClass
+      extensions:
+        range: SsfInboundOptInExtensionsClass
+      evidence:
+        range: SsfInboundOptInExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundOptInExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundOptInExtenstionsClass
+      platform:
+        range: SsfInboundOptInPlatformClass
 
   SsfInboundOptInUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundOptInUser:
     range: SsfInboundOptInUserClass
     description: Description for user
-  restricted:
+  SsfInboundOptInRestricted:
     range: SsfInboundOptInRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundOptInExtensions:
     range: SsfInboundOptInExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundOptInExtensionsEvidence:
     range: SsfInboundOptInExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundOptInExtensionsExperianiiqresponse:
     range: SsfInboundOptInExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundOptInExtenstions:
     range: SsfInboundOptInExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundOptInPlatform:
     range: SsfInboundOptInPlatformClass
     description: Description for platform

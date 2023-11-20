@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-identity-reuse-complete
 name: ipv-identity-reuse-complete
-description: >-
-  Description for audit event IPV_IDENTITY_REUSE_COMPLETE
+description: Description for audit event IPV_IDENTITY_REUSE_COMPLETE
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvIdentityReuseCompleteAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvIdentityReuseCompleteUserClass
 
   IpvIdentityReuseCompleteUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  IpvIdentityReuseCompleteUser:
     range: IpvIdentityReuseCompleteUserClass
     description: Description for user

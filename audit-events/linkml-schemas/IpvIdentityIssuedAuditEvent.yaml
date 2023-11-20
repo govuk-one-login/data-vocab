@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-identity-issued
 name: ipv-identity-issued
-description: >-
-  Description for audit event IPV_IDENTITY_ISSUED
+description: Description for audit event IPV_IDENTITY_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvIdentityIssuedAuditEventClass:
     slots:
@@ -21,6 +18,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: IpvIdentityIssuedUserClass
+      extensions:
+        range: IpvIdentityIssuedExtensionsClass
 
   IpvIdentityIssuedUserClass:
     slots:
@@ -33,9 +35,9 @@ classes:
       - levelOfConfidence
 
 slots:
-  user:
+  IpvIdentityIssuedUser:
     range: IpvIdentityIssuedUserClass
     description: Description for user
-  extensions:
+  IpvIdentityIssuedExtensions:
     range: IpvIdentityIssuedExtensionsClass
     description: Description for extensions

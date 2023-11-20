@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-toy-cri-vc-issued
 name: ipv-toy-cri-vc-issued
-description: >-
-  Description for audit event IPV_TOY_CRI_VC_ISSUED
+description: Description for audit event IPV_TOY_CRI_VC_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvToyCriVcIssuedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: IpvToyCriVcIssuedUserClass
+      restricted:
+        range: IpvToyCriVcIssuedRestrictedClass
+      extensions:
+        range: IpvToyCriVcIssuedExtensionsClass
+      evidence:
+        range: IpvToyCriVcIssuedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: IpvToyCriVcIssuedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: IpvToyCriVcIssuedExtenstionsClass
+      platform:
+        range: IpvToyCriVcIssuedPlatformClass
 
   IpvToyCriVcIssuedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  IpvToyCriVcIssuedUser:
     range: IpvToyCriVcIssuedUserClass
     description: Description for user
-  restricted:
+  IpvToyCriVcIssuedRestricted:
     range: IpvToyCriVcIssuedRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvToyCriVcIssuedExtensions:
     range: IpvToyCriVcIssuedExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvToyCriVcIssuedExtensionsEvidence:
     range: IpvToyCriVcIssuedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  IpvToyCriVcIssuedExtensionsExperianiiqresponse:
     range: IpvToyCriVcIssuedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  IpvToyCriVcIssuedExtenstions:
     range: IpvToyCriVcIssuedExtenstionsClass
     description: Description for extenstions
-  platform:
+  IpvToyCriVcIssuedPlatform:
     range: IpvToyCriVcIssuedPlatformClass
     description: Description for platform

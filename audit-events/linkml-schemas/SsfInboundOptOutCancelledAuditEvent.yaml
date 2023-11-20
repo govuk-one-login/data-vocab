@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-opt-out-cancelled
 name: ssf-inbound-opt-out-cancelled
-description: >-
-  Description for audit event SSF_INBOUND_OPT_OUT_CANCELLED
+description: Description for audit event SSF_INBOUND_OPT_OUT_CANCELLED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundOptOutCancelledAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundOptOutCancelledUserClass
+      restricted:
+        range: SsfInboundOptOutCancelledRestrictedClass
+      extensions:
+        range: SsfInboundOptOutCancelledExtensionsClass
+      evidence:
+        range: SsfInboundOptOutCancelledExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundOptOutCancelledExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundOptOutCancelledExtenstionsClass
+      platform:
+        range: SsfInboundOptOutCancelledPlatformClass
 
   SsfInboundOptOutCancelledUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundOptOutCancelledUser:
     range: SsfInboundOptOutCancelledUserClass
     description: Description for user
-  restricted:
+  SsfInboundOptOutCancelledRestricted:
     range: SsfInboundOptOutCancelledRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundOptOutCancelledExtensions:
     range: SsfInboundOptOutCancelledExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundOptOutCancelledExtensionsEvidence:
     range: SsfInboundOptOutCancelledExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundOptOutCancelledExtensionsExperianiiqresponse:
     range: SsfInboundOptOutCancelledExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundOptOutCancelledExtenstions:
     range: SsfInboundOptOutCancelledExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundOptOutCancelledPlatform:
     range: SsfInboundOptOutCancelledPlatformClass
     description: Description for platform

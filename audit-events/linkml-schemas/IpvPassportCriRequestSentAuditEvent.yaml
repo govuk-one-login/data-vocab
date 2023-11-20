@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-passport-cri-request-sent
 name: ipv-passport-cri-request-sent
-description: >-
-  Description for audit event IPV_PASSPORT_CRI_REQUEST_SENT
+description: Description for audit event IPV_PASSPORT_CRI_REQUEST_SENT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvPassportCriRequestSentAuditEventClass:
     slots:
@@ -22,6 +19,15 @@ classes:
       - user
       - restricted
       - extensions
+    slot_usage:
+      user:
+        range: IpvPassportCriRequestSentUserClass
+      restricted:
+        range: IpvPassportCriRequestSentRestrictedClass
+      extensions:
+        range: IpvPassportCriRequestSentExtensionsClass
+      evidence:
+        range: IpvPassportCriRequestSentExtensionsEvidenceClass
 
   IpvPassportCriRequestSentUserClass:
     slots:
@@ -46,15 +52,15 @@ classes:
       - type
 
 slots:
-  user:
+  IpvPassportCriRequestSentUser:
     range: IpvPassportCriRequestSentUserClass
     description: Description for user
-  restricted:
+  IpvPassportCriRequestSentRestricted:
     range: IpvPassportCriRequestSentRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvPassportCriRequestSentExtensions:
     range: IpvPassportCriRequestSentExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvPassportCriRequestSentExtensionsEvidence:
     range: IpvPassportCriRequestSentExtensionsEvidenceClass
     description: Description for evidence

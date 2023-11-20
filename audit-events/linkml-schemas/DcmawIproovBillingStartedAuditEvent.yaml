@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/dcmaw-iproov-billing-started
 name: dcmaw-iproov-billing-started
-description: >-
-  Description for audit event DCMAW_IPROOV_BILLING_STARTED
+description: Description for audit event DCMAW_IPROOV_BILLING_STARTED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   DcmawIproovBillingStartedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: DcmawIproovBillingStartedUserClass
 
   DcmawIproovBillingStartedUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  DcmawIproovBillingStartedUser:
     range: DcmawIproovBillingStartedUserClass
     description: Description for user

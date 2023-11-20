@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-end
 name: ipv-dl-cri-end
-description: >-
-  Description for audit event IPV_DL_CRI_END
+description: Description for audit event IPV_DL_CRI_END
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvDlCriEndAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvDlCriEndUserClass
 
   IpvDlCriEndUserClass:
     slots:
@@ -30,6 +30,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  IpvDlCriEndUser:
     range: IpvDlCriEndUserClass
     description: Description for user

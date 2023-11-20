@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/dcmaw-cri-4xxerror
 name: dcmaw-cri-4xxerror
-description: >-
-  Description for audit event DCMAW_CRI_4XXERROR
+description: Description for audit event DCMAW_CRI_4XXERROR
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   DcmawCri4XxerrorAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: DcmawCri4XxerrorUserClass
 
   DcmawCri4XxerrorUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  DcmawCri4XxerrorUser:
     range: DcmawCri4XxerrorUserClass
     description: Description for user

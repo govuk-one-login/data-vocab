@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-authorisation-initiated
 name: auth-authorisation-initiated
-description: >-
-  Description for audit event AUTH_AUTHORISATION_INITIATED
+description: Description for audit event AUTH_AUTHORISATION_INITIATED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthAuthorisationInitiatedAuditEventClass:
     slots:
@@ -22,6 +19,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: AuthAuthorisationInitiatedUserClass
+      extensions:
+        range: AuthAuthorisationInitiatedExtensionsClass
 
   AuthAuthorisationInitiatedUserClass:
     slots:
@@ -35,9 +37,9 @@ classes:
       - client-name
 
 slots:
-  user:
+  AuthAuthorisationInitiatedUser:
     range: AuthAuthorisationInitiatedUserClass
     description: Description for user
-  extensions:
+  AuthAuthorisationInitiatedExtensions:
     range: AuthAuthorisationInitiatedExtensionsClass
     description: Description for extensions

@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/dcmaw-missing-context-after-abort
 name: dcmaw-missing-context-after-abort
-description: >-
-  Description for audit event DCMAW_MISSING_CONTEXT_AFTER_ABORT
+description: Description for audit event DCMAW_MISSING_CONTEXT_AFTER_ABORT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   DcmawMissingContextAfterAbortAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: DcmawMissingContextAfterAbortUserClass
 
   DcmawMissingContextAfterAbortUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  DcmawMissingContextAfterAbortUser:
     range: DcmawMissingContextAfterAbortUserClass
     description: Description for user

@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-account-purged
 name: ssf-inbound-account-purged
-description: >-
-  Description for audit event SSF_INBOUND_ACCOUNT_PURGED
+description: Description for audit event SSF_INBOUND_ACCOUNT_PURGED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundAccountPurgedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundAccountPurgedUserClass
+      restricted:
+        range: SsfInboundAccountPurgedRestrictedClass
+      extensions:
+        range: SsfInboundAccountPurgedExtensionsClass
+      evidence:
+        range: SsfInboundAccountPurgedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundAccountPurgedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundAccountPurgedExtenstionsClass
+      platform:
+        range: SsfInboundAccountPurgedPlatformClass
 
   SsfInboundAccountPurgedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundAccountPurgedUser:
     range: SsfInboundAccountPurgedUserClass
     description: Description for user
-  restricted:
+  SsfInboundAccountPurgedRestricted:
     range: SsfInboundAccountPurgedRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundAccountPurgedExtensions:
     range: SsfInboundAccountPurgedExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundAccountPurgedExtensionsEvidence:
     range: SsfInboundAccountPurgedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundAccountPurgedExtensionsExperianiiqresponse:
     range: SsfInboundAccountPurgedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundAccountPurgedExtenstions:
     range: SsfInboundAccountPurgedExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundAccountPurgedPlatform:
     range: SsfInboundAccountPurgedPlatformClass
     description: Description for platform

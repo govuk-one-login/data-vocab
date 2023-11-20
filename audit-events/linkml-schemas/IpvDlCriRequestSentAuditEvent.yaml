@@ -1,7 +1,7 @@
 
-id: https://vocab.account.gov.uk/linkml/ipv-fraud-cri-request-sent
-name: ipv-fraud-cri-request-sent
-description: Description for audit event IPV_FRAUD_CRI_REQUEST_SENT
+id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-request-sent
+name: ipv-dl-cri-request-sent
+description: Description for audit event IPV_DL_CRI_REQUEST_SENT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
@@ -12,7 +12,7 @@ default_curi_maps:
 default_prefix: di_vocab
 default_range: string
 classes:
-  IpvFraudCriRequestSentAuditEventClass:
+  IpvDlCriRequestSentAuditEventClass:
     slots:
       - event_name
       - component_id
@@ -20,11 +20,11 @@ classes:
       - restricted
     slot_usage:
       user:
-        range: IpvFraudCriRequestSentUserClass
+        range: IpvDlCriRequestSentUserClass
       restricted:
-        range: IpvFraudCriRequestSentRestrictedClass
+        range: IpvDlCriRequestSentRestrictedClass
 
-  IpvFraudCriRequestSentUserClass:
+  IpvDlCriRequestSentUserClass:
     slots:
       - govuk_signin_journey_id
       - ip_address
@@ -32,16 +32,17 @@ classes:
       - session_id
       - user_id
 
-  IpvFraudCriRequestSentRestrictedClass:
+  IpvDlCriRequestSentRestrictedClass:
     slots:
       - address
       - birthDate
+      - drivingPermit
       - name
 
 slots:
-  IpvFraudCriRequestSentUser:
-    range: IpvFraudCriRequestSentUserClass
+  IpvDlCriRequestSentUser:
+    range: IpvDlCriRequestSentUserClass
     description: Description for user
-  IpvFraudCriRequestSentRestricted:
-    range: IpvFraudCriRequestSentRestrictedClass
+  IpvDlCriRequestSentRestricted:
+    range: IpvDlCriRequestSentRestrictedClass
     description: Description for restricted

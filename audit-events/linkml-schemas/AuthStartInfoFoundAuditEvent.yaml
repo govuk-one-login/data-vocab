@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-start-info-found
 name: auth-start-info-found
-description: >-
-  Description for audit event AUTH_START_INFO_FOUND
+description: Description for audit event AUTH_START_INFO_FOUND
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthStartInfoFoundAuditEventClass:
     slots:
@@ -22,6 +19,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: AuthStartInfoFoundUserClass
+      extensions:
+        range: AuthStartInfoFoundExtensionsClass
 
   AuthStartInfoFoundUserClass:
     slots:
@@ -37,9 +39,9 @@ classes:
       - internalSubjectId
 
 slots:
-  user:
+  AuthStartInfoFoundUser:
     range: AuthStartInfoFoundUserClass
     description: Description for user
-  extensions:
+  AuthStartInfoFoundExtensions:
     range: AuthStartInfoFoundExtensionsClass
     description: Description for extensions

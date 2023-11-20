@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-recovery-information-changed
 name: ssf-inbound-recovery-information-changed
-description: >-
-  Description for audit event SSF_INBOUND_RECOVERY_INFORMATION_CHANGED
+description: Description for audit event SSF_INBOUND_RECOVERY_INFORMATION_CHANGED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundRecoveryInformationChangedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundRecoveryInformationChangedUserClass
+      restricted:
+        range: SsfInboundRecoveryInformationChangedRestrictedClass
+      extensions:
+        range: SsfInboundRecoveryInformationChangedExtensionsClass
+      evidence:
+        range: SsfInboundRecoveryInformationChangedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundRecoveryInformationChangedExtenstionsClass
+      platform:
+        range: SsfInboundRecoveryInformationChangedPlatformClass
 
   SsfInboundRecoveryInformationChangedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundRecoveryInformationChangedUser:
     range: SsfInboundRecoveryInformationChangedUserClass
     description: Description for user
-  restricted:
+  SsfInboundRecoveryInformationChangedRestricted:
     range: SsfInboundRecoveryInformationChangedRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundRecoveryInformationChangedExtensions:
     range: SsfInboundRecoveryInformationChangedExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundRecoveryInformationChangedExtensionsEvidence:
     range: SsfInboundRecoveryInformationChangedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponse:
     range: SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundRecoveryInformationChangedExtenstions:
     range: SsfInboundRecoveryInformationChangedExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundRecoveryInformationChangedPlatform:
     range: SsfInboundRecoveryInformationChangedPlatformClass
     description: Description for platform

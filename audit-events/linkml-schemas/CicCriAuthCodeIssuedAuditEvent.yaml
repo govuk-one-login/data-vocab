@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/cic-cri-auth-code-issued
 name: cic-cri-auth-code-issued
-description: >-
-  Description for audit event CIC_CRI_AUTH_CODE_ISSUED
+description: Description for audit event CIC_CRI_AUTH_CODE_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   CicCriAuthCodeIssuedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: CicCriAuthCodeIssuedUserClass
 
   CicCriAuthCodeIssuedUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  CicCriAuthCodeIssuedUser:
     range: CicCriAuthCodeIssuedUserClass
     description: Description for user

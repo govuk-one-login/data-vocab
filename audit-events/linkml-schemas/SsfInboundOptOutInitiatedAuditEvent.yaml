@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-opt-out-initiated
 name: ssf-inbound-opt-out-initiated
-description: >-
-  Description for audit event SSF_INBOUND_OPT_OUT_INITIATED
+description: Description for audit event SSF_INBOUND_OPT_OUT_INITIATED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundOptOutInitiatedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundOptOutInitiatedUserClass
+      restricted:
+        range: SsfInboundOptOutInitiatedRestrictedClass
+      extensions:
+        range: SsfInboundOptOutInitiatedExtensionsClass
+      evidence:
+        range: SsfInboundOptOutInitiatedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundOptOutInitiatedExtenstionsClass
+      platform:
+        range: SsfInboundOptOutInitiatedPlatformClass
 
   SsfInboundOptOutInitiatedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundOptOutInitiatedUser:
     range: SsfInboundOptOutInitiatedUserClass
     description: Description for user
-  restricted:
+  SsfInboundOptOutInitiatedRestricted:
     range: SsfInboundOptOutInitiatedRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundOptOutInitiatedExtensions:
     range: SsfInboundOptOutInitiatedExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundOptOutInitiatedExtensionsEvidence:
     range: SsfInboundOptOutInitiatedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundOptOutInitiatedExtensionsExperianiiqresponse:
     range: SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundOptOutInitiatedExtenstions:
     range: SsfInboundOptOutInitiatedExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundOptOutInitiatedPlatform:
     range: SsfInboundOptOutInitiatedPlatformClass
     description: Description for platform

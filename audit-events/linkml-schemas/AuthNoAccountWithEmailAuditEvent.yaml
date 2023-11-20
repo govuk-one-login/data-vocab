@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-no-account-with-email
 name: auth-no-account-with-email
-description: >-
-  Description for audit event AUTH_NO_ACCOUNT_WITH_EMAIL
+description: Description for audit event AUTH_NO_ACCOUNT_WITH_EMAIL
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthNoAccountWithEmailAuditEventClass:
     slots:
@@ -22,6 +19,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: AuthNoAccountWithEmailUserClass
+      extensions:
+        range: AuthNoAccountWithEmailExtensionsClass
 
   AuthNoAccountWithEmailUserClass:
     slots:
@@ -36,9 +38,9 @@ classes:
       - mfa-type
 
 slots:
-  user:
+  AuthNoAccountWithEmailUser:
     range: AuthNoAccountWithEmailUserClass
     description: Description for user
-  extensions:
+  AuthNoAccountWithEmailExtensions:
     range: AuthNoAccountWithEmailExtensionsClass
     description: Description for extensions

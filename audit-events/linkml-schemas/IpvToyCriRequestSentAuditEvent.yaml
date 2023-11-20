@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-toy-cri-request-sent
 name: ipv-toy-cri-request-sent
-description: >-
-  Description for audit event IPV_TOY_CRI_REQUEST_SENT
+description: Description for audit event IPV_TOY_CRI_REQUEST_SENT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvToyCriRequestSentAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: IpvToyCriRequestSentUserClass
+      restricted:
+        range: IpvToyCriRequestSentRestrictedClass
+      extensions:
+        range: IpvToyCriRequestSentExtensionsClass
+      evidence:
+        range: IpvToyCriRequestSentExtensionsEvidenceClass
+      experianIiqResponse:
+        range: IpvToyCriRequestSentExtensionsExperianiiqresponseClass
+      extenstions:
+        range: IpvToyCriRequestSentExtenstionsClass
+      platform:
+        range: IpvToyCriRequestSentPlatformClass
 
   IpvToyCriRequestSentUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  IpvToyCriRequestSentUser:
     range: IpvToyCriRequestSentUserClass
     description: Description for user
-  restricted:
+  IpvToyCriRequestSentRestricted:
     range: IpvToyCriRequestSentRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvToyCriRequestSentExtensions:
     range: IpvToyCriRequestSentExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvToyCriRequestSentExtensionsEvidence:
     range: IpvToyCriRequestSentExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  IpvToyCriRequestSentExtensionsExperianiiqresponse:
     range: IpvToyCriRequestSentExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  IpvToyCriRequestSentExtenstions:
     range: IpvToyCriRequestSentExtenstionsClass
     description: Description for extenstions
-  platform:
+  IpvToyCriRequestSentPlatform:
     range: IpvToyCriRequestSentPlatformClass
     description: Description for platform

@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/dcmaw-cri-abort
 name: dcmaw-cri-abort
-description: >-
-  Description for audit event DCMAW_CRI_ABORT
+description: Description for audit event DCMAW_CRI_ABORT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   DcmawCriAbortAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: DcmawCriAbortUserClass
 
   DcmawCriAbortUserClass:
     slots:
@@ -27,6 +27,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  DcmawCriAbortUser:
     range: DcmawCriAbortUserClass
     description: Description for user

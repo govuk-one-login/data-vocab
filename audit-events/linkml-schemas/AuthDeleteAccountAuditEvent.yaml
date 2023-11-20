@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-delete-account
 name: auth-delete-account
-description: >-
-  Description for audit event AUTH_DELETE_ACCOUNT
+description: Description for audit event AUTH_DELETE_ACCOUNT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthDeleteAccountAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthDeleteAccountUserClass
 
   AuthDeleteAccountUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  AuthDeleteAccountUser:
     range: AuthDeleteAccountUserClass
     description: Description for user

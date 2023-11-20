@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/dcmaw-redirect-success
 name: dcmaw-redirect-success
-description: >-
-  Description for audit event DCMAW_REDIRECT_SUCCESS
+description: Description for audit event DCMAW_REDIRECT_SUCCESS
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   DcmawRedirectSuccessAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: DcmawRedirectSuccessUserClass
 
   DcmawRedirectSuccessUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  DcmawRedirectSuccessUser:
     range: DcmawRedirectSuccessUserClass
     description: Description for user

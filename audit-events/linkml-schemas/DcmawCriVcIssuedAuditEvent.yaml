@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/dcmaw-cri-vc-issued
 name: dcmaw-cri-vc-issued
-description: >-
-  Description for audit event DCMAW_CRI_VC_ISSUED
+description: Description for audit event DCMAW_CRI_VC_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   DcmawCriVcIssuedAuditEventClass:
     slots:
@@ -24,6 +21,17 @@ classes:
       - restricted
       - extensions
       - platform
+    slot_usage:
+      user:
+        range: DcmawCriVcIssuedUserClass
+      restricted:
+        range: DcmawCriVcIssuedRestrictedClass
+      extensions:
+        range: DcmawCriVcIssuedExtensionsClass
+      evidence:
+        range: DcmawCriVcIssuedExtensionsEvidenceClass
+      platform:
+        range: DcmawCriVcIssuedPlatformClass
 
   DcmawCriVcIssuedUserClass:
     slots:
@@ -67,18 +75,18 @@ classes:
       - device_info
 
 slots:
-  user:
+  DcmawCriVcIssuedUser:
     range: DcmawCriVcIssuedUserClass
     description: Description for user
-  restricted:
+  DcmawCriVcIssuedRestricted:
     range: DcmawCriVcIssuedRestrictedClass
     description: Description for restricted
-  extensions:
+  DcmawCriVcIssuedExtensions:
     range: DcmawCriVcIssuedExtensionsClass
     description: Description for extensions
-  evidence:
+  DcmawCriVcIssuedExtensionsEvidence:
     range: DcmawCriVcIssuedExtensionsEvidenceClass
     description: Description for evidence
-  platform:
+  DcmawCriVcIssuedPlatform:
     range: DcmawCriVcIssuedPlatformClass
     description: Description for platform

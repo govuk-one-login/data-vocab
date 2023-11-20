@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-spot-response-approved
 name: ipv-spot-response-approved
-description: >-
-  Description for audit event IPV_SPOT_RESPONSE_APPROVED
+description: Description for audit event IPV_SPOT_RESPONSE_APPROVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvSpotResponseApprovedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvSpotResponseApprovedUserClass
 
   IpvSpotResponseApprovedUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  IpvSpotResponseApprovedUser:
     range: IpvSpotResponseApprovedUserClass
     description: Description for user

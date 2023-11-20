@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/f2f-cri-auth-code-issued
 name: f2f-cri-auth-code-issued
-description: >-
-  Description for audit event F2F_CRI_AUTH_CODE_ISSUED
+description: Description for audit event F2F_CRI_AUTH_CODE_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   F2FCriAuthCodeIssuedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: F2FCriAuthCodeIssuedUserClass
 
   F2FCriAuthCodeIssuedUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  F2FCriAuthCodeIssuedUser:
     range: F2FCriAuthCodeIssuedUserClass
     description: Description for user

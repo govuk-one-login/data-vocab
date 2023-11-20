@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-kbv-cri-request-sent
 name: ipv-kbv-cri-request-sent
-description: >-
-  Description for audit event IPV_KBV_CRI_REQUEST_SENT
+description: Description for audit event IPV_KBV_CRI_REQUEST_SENT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvKbvCriRequestSentAuditEventClass:
     slots:
@@ -21,6 +18,11 @@ classes:
       - component_id
       - user
       - restricted
+    slot_usage:
+      user:
+        range: IpvKbvCriRequestSentUserClass
+      restricted:
+        range: IpvKbvCriRequestSentRestrictedClass
 
   IpvKbvCriRequestSentUserClass:
     slots:
@@ -37,9 +39,9 @@ classes:
       - name
 
 slots:
-  user:
+  IpvKbvCriRequestSentUser:
     range: IpvKbvCriRequestSentUserClass
     description: Description for user
-  restricted:
+  IpvKbvCriRequestSentRestricted:
     range: IpvKbvCriRequestSentRestrictedClass
     description: Description for restricted

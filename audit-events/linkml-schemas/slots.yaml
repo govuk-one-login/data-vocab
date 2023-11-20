@@ -1,148 +1,158 @@
-id: https://vocab.account.gov.uk/linkml/audit-slots
-name: audit-slots
-description: >-
+id: https://vocab.account.gov.uk/linkml/slots
+name: slots
+description: Global slots for all events
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
-imports:
-  - linkml:types
-                       
 default_curi_maps:
   - semweb_context  
 default_prefix: di_vocab
 default_range: string
-
+imports:
+  - linkml:types
 slots:
   event_name:
-    description: EVENT_NAME                       
-  experianCrossCoreResponse:
-    description: Description for experianCrossCoreResponse
-  ip_address:
-    description: Description for ip_address
-  rejectionReason:
-    description: Description for rejectionReason
-  birthDate:
-    description: Description for birthDate
-  name:
-    description: Description for name
-  checkDetails:
-    description: Description for checkDetails
-  notification-type:
-    description: Description for notification-type
-  client-name:
-    description: Description for client-name
-  transaction_id:
-    description: Description for transaction_id
-  failedCheckDetails:
-    description: Description for failedCheckDetails
-  type:
-    description: Description for type
-  requesterEmail:
-    description: Description for requesterEmail
-  activityScore:
-    description: Description for activityScore
-  outcome:
-    description: Description for outcome
-  user_id:
-    description: Description for user_id
-  session_id:
-    description: Description for session_id
-  iss:
-    description: Description for iss
-  drivingPermit:
-    description: Description for drivingPermit
-  govuk_signin_journey_id:
-    description: Description for govuk_signin_journey_id
-  deviceId:
-    description: Description for deviceId
-  ci:
-    description: Description for ci
-  addressesEntered:
-    description: Description for addressesEntered
-  previous_govuk_signin_journey_id:
-    description: Description for previous_govuk_signin_journey_id
-  mfa-type:
-    description: Description for mfa-type
-  recipientEmail:
-    description: Description for recipientEmail
-  error:
-    description: Description for error
-  post_office_details:
-    description: Description for post_office_details
+    description: Evene name or type
+    required: true
   AuditEventType:
     description: Description for AuditEventType
-  totalQuestionsAnsweredIncorrect:
-    description: Description for totalQuestionsAnsweredIncorrect
-  isNewAccount:
-    description: Description for isNewAccount
-  toy:
-    description: Description for toy
-  decisionScore:
-    description: Description for decisionScore
-#  user:
-#    description: Description for user
-  totalQuestionsAnsweredCorrect:
-    description: Description for totalQuestionsAnsweredCorrect
-  verificationScore:
-    description: Description for verificationScore
-  totalQuestionsAsked:
-    description: Description for totalQuestionsAsked
-  component_id:
-    description: Description for component_id
-  successful:
-    description: Description for successful
-  spot_request:
-    description: Description for spot_request
-  client_id:
-    description: Description for client_id
-  residencePermit:
-    description: Description for residencePermit
-  issuingCountry:
-    description: Description for issuingCountry
-  validityScore:
-    description: Description for validityScore
-  evidence_value:
-    description: Description for evidence_value
-  ticket_details:
-    description: Description for ticket_details
-  email:
-    description: Description for email
-  passport:
-    description: Description for passport
-  levelOfConfidence:
-    description: Description for levelOfConfidence
-  phone:
-    description: Description for phone
-  txn:
-    description: Description for txn
-  strengthScore:
-    description: Description for strengthScore
-  internalSubjectId:
-    description: Description for internalSubjectId
-  description:
-    description: Description for description
-  mismatched_pii:
-    description: Description for mismatched_pii
-  toyResponse:
-    description: Description for toyResponse
-  recipientName:
-    description: Description for recipientName
-  ci_count:
-    description: Description for ci_count
-  source_topic_arn:
-    description: Description for source_topic_arn
+  activityScore:
+    description: Description for activityScore
   address:
     description: Description for address
-  test-user:
-    description: Description for test-user
+  addressesEntered:
+    description: Description for addressesEntered
+  birthDate:
+    description: Description for birthDate
+  checkDetails:
+    description: Description for checkDetails
+  ci:
+    description: Description for ci
+  ci_count:
+    description: Description for ci_count
+  client-name:
+    description: Description for client-name
+  client_id:
+    description: OAuth client identifier for the relying party 
+  component_id:
+    description: Description for component_id
+  decisionScore:
+    description: Description for decisionScore
+  description:
+    description: Description for description
+  deviceId:
+    description: Description for deviceId
   device_info:
     description: Description for device_info
   documentType:
     description: Description for documentType
-  requesterName:
-    description: Description for requesterName
+  drivingPermit:
+    description: Description for drivingPermit
+  email:
+    description: Description for email
+  error:
+    description: Description for error
+  extensions:
+    description: Description for extensions
+  extenstions:
+    description: Decription for extenstions
+  experianIiqResponse:
+    description: Decription for experianIiqResponse
+  evidence:
+    description: Description for Evidence
+  evidence_value:
+    description: Description for evidence_value
+  experianCrossCoreResponse:
+    description: Description for experianCrossCoreResponse
   experianIiqResponse_value:
     description: Description for experianIiqResponse_value
+  failedCheckDetails:
+    description: Description for failedCheckDetails
+  govuk_signin_journey_id:
+    description: Description for govuk_signin_journey_id
+  internalSubjectId:
+    description: Description for internalSubjectId
+  ip_address:
+    description: Description for ip_address
+  isNewAccount:
+    description: Description for isNewAccount
+  iss:
+    description: Description for iss
+  issuingCountry:
+    description: Description for issuingCountry
+  levelOfConfidence:
+    description: Description for levelOfConfidence
+  mfa-type:
+    description: Description for mfa-type
+  mismatched_pii:
+    description: Description for mismatched_pii
+  name:
+    description: Description for name
+  notification-type:
+    description: Description for notification-type
+  outcome:
+    description: Description for outcome
+  passport:
+    description: Description for passport
   persistent_session_id:
     description: Description for persistent_session_id
+  phone:
+    description: Description for phone
+  post_office_details:
+    description: Description for post_office_details
+  platform:
+    description: Description for Platform
+  previous_govuk_signin_journey_id:
+    description: Description for previous_govuk_signin_journey_id
+  recipientEmail:
+    description: Description for recipientEmail
+  recipientName:
+    description: Description for recipientName
+  rejectionReason:
+    description: Description for rejectionReason
+  requesterEmail:
+    description: Description for requesterEmail
+  requesterName:
+    description: Description for requesterName
+  residencePermit:
+    description: Description for residencePermit
+  restricted:
+    description: Description for restrictions
+  session_id:
+    description: Description for session_id
+  source_topic_arn:
+    description: Description for source_topic_arn
+  spot_request:
+    description: Description for spot_request
+  strengthScore:
+    description: Description for strengthScore
+  successful:
+    description: Description for successful
+  test-user:
+    description: Description for test-user
+  ticket_details:
+    description: Description for ticket_details
+  totalQuestionsAnsweredCorrect:
+    description: Description for totalQuestionsAnsweredCorrect
+  totalQuestionsAnsweredIncorrect:
+    description: Description for totalQuestionsAnsweredIncorrect
+  totalQuestionsAsked:
+    description: Description for totalQuestionsAsked
+  toy:
+    description: Description for toy
+  toyResponse:
+    description: Description for toyResponse
+  transaction_id:
+    description: Description for transaction_id
+  txn:
+    description: Description for txn
+  type:
+    description: Description for type
+  user:
+    description: Description for user
+  user_id:
+    description: Description for user_id
+  validityScore:
+    description: Description for validityScore
+  verificationScore:
+    description: Description for verificationScore

@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-update-profile-phone-number
 name: auth-update-profile-phone-number
-description: >-
-  Description for audit event AUTH_UPDATE_PROFILE_PHONE_NUMBER
+description: Description for audit event AUTH_UPDATE_PROFILE_PHONE_NUMBER
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthUpdateProfilePhoneNumberAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthUpdateProfilePhoneNumberUserClass
 
   AuthUpdateProfilePhoneNumberUserClass:
     slots:
@@ -33,6 +33,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  AuthUpdateProfilePhoneNumberUser:
     range: AuthUpdateProfilePhoneNumberUserClass
     description: Description for user

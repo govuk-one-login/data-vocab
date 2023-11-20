@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-kbv-cri-vc-issued
 name: ipv-kbv-cri-vc-issued
-description: >-
-  Description for audit event IPV_KBV_CRI_VC_ISSUED
+description: Description for audit event IPV_KBV_CRI_VC_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvKbvCriVcIssuedAuditEventClass:
     slots:
@@ -22,6 +19,15 @@ classes:
       - user
       - restricted
       - extensions
+    slot_usage:
+      user:
+        range: IpvKbvCriVcIssuedUserClass
+      restricted:
+        range: IpvKbvCriVcIssuedRestrictedClass
+      extensions:
+        range: IpvKbvCriVcIssuedExtensionsClass
+      evidence:
+        range: IpvKbvCriVcIssuedExtensionsEvidenceClass
 
   IpvKbvCriVcIssuedUserClass:
     slots:
@@ -53,15 +59,15 @@ classes:
       - type
 
 slots:
-  user:
+  IpvKbvCriVcIssuedUser:
     range: IpvKbvCriVcIssuedUserClass
     description: Description for user
-  restricted:
+  IpvKbvCriVcIssuedRestricted:
     range: IpvKbvCriVcIssuedRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvKbvCriVcIssuedExtensions:
     range: IpvKbvCriVcIssuedExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvKbvCriVcIssuedExtensionsEvidence:
     range: IpvKbvCriVcIssuedExtensionsEvidenceClass
     description: Description for evidence

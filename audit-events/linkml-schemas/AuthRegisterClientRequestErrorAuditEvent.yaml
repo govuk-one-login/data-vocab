@@ -1,24 +1,24 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-register-client-request-error
 name: auth-register-client-request-error
-description: >-
-  Description for audit event AUTH_REGISTER_CLIENT_REQUEST_ERROR
+description: Description for audit event AUTH_REGISTER_CLIENT_REQUEST_ERROR
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthRegisterClientRequestErrorAuditEventClass:
     slots:
       - event_name
       - user
+    slot_usage:
+      user:
+        range: AuthRegisterClientRequestErrorUserClass
 
   AuthRegisterClientRequestErrorUserClass:
     slots:
@@ -26,6 +26,6 @@ classes:
       - ip_address
 
 slots:
-  user:
+  AuthRegisterClientRequestErrorUser:
     range: AuthRegisterClientRequestErrorUserClass
     description: Description for user

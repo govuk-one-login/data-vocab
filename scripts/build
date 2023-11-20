@@ -16,7 +16,7 @@ EXAMPLES=(
   "NameClass"
 )
 
-bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
+#bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
 
 #
 # Generate Markdown
@@ -27,11 +27,12 @@ rm -rf "${ROOT_DIR}/docs/audit-events"
 
 AUDIT_EVENTS_DIR="${ROOT_DIR}/audit-events/linkml-schemas"
 DEST_DIR="${ROOT_DIR}/docs/audit-events/"
-for file in ${AUDIT_EVENTS_DIR}/*AuditEvent.yaml; do 
-  echo $file
-  echo "----"
-  poetry run gen-markdown "$file" -d "${DEST_DIR}/" --index-file index.md
-done
+#for file in ${AUDIT_EVENTS_DIR}/*AuditEvent.yaml; do 
+#  echo $file
+#  echo "----"
+#  poetry run gen-markdown "$file" -d "${DEST_DIR}/" --index-file index.md
+#done
+poetry run gen-markdown "${ROOT_DIR}/audit-events/linkml-schemas/base_schema.yaml" -d "${ROOT_DIR}/docs/audit-events/" --index-file index.md --mergeimports
 
 # Physical Data Model
 rm -rf "${ROOT_DIR}/docs/v1"

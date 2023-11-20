@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-authorisation-request-error
 name: auth-authorisation-request-error
-description: >-
-  Description for audit event AUTH_AUTHORISATION_REQUEST_ERROR
+description: Description for audit event AUTH_AUTHORISATION_REQUEST_ERROR
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthAuthorisationRequestErrorAuditEventClass:
     slots:
@@ -22,6 +19,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: AuthAuthorisationRequestErrorUserClass
+      extensions:
+        range: AuthAuthorisationRequestErrorExtensionsClass
 
   AuthAuthorisationRequestErrorUserClass:
     slots:
@@ -34,9 +36,9 @@ classes:
       - description
 
 slots:
-  user:
+  AuthAuthorisationRequestErrorUser:
     range: AuthAuthorisationRequestErrorUserClass
     description: Description for user
-  extensions:
+  AuthAuthorisationRequestErrorExtensions:
     range: AuthAuthorisationRequestErrorExtensionsClass
     description: Description for extensions

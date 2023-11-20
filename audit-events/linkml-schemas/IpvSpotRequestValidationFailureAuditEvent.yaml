@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-spot-request-validation-failure
 name: ipv-spot-request-validation-failure
-description: >-
-  Description for audit event IPV_SPOT_REQUEST_VALIDATION_FAILURE
+description: Description for audit event IPV_SPOT_REQUEST_VALIDATION_FAILURE
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvSpotRequestValidationFailureAuditEventClass:
     slots:
@@ -23,6 +20,13 @@ classes:
       - user
       - restricted
       - extensions
+    slot_usage:
+      user:
+        range: IpvSpotRequestValidationFailureUserClass
+      restricted:
+        range: IpvSpotRequestValidationFailureRestrictedClass
+      extensions:
+        range: IpvSpotRequestValidationFailureExtensionsClass
 
   IpvSpotRequestValidationFailureUserClass:
     slots:
@@ -40,12 +44,12 @@ classes:
       - rejectionReason
 
 slots:
-  user:
+  IpvSpotRequestValidationFailureUser:
     range: IpvSpotRequestValidationFailureUserClass
     description: Description for user
-  restricted:
+  IpvSpotRequestValidationFailureRestricted:
     range: IpvSpotRequestValidationFailureRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvSpotRequestValidationFailureExtensions:
     range: IpvSpotRequestValidationFailureExtensionsClass
     description: Description for extensions

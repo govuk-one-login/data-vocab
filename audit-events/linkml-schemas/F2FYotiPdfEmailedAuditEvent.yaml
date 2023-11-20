@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/f2f-yoti-pdf-emailed
 name: f2f-yoti-pdf-emailed
-description: >-
-  Description for audit event F2F_YOTI_PDF_EMAILED
+description: Description for audit event F2F_YOTI_PDF_EMAILED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   F2FYotiPdfEmailedAuditEventClass:
     slots:
@@ -22,6 +19,13 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: F2FYotiPdfEmailedUserClass
+      extensions:
+        range: F2FYotiPdfEmailedExtensionsClass
+      evidence:
+        range: F2FYotiPdfEmailedExtensionsEvidenceClass
 
   F2FYotiPdfEmailedUserClass:
     slots:
@@ -41,12 +45,12 @@ classes:
       - txn
 
 slots:
-  user:
+  F2FYotiPdfEmailedUser:
     range: F2FYotiPdfEmailedUserClass
     description: Description for user
-  extensions:
+  F2FYotiPdfEmailedExtensions:
     range: F2FYotiPdfEmailedExtensionsClass
     description: Description for extensions
-  evidence:
+  F2FYotiPdfEmailedExtensionsEvidence:
     range: F2FYotiPdfEmailedExtensionsEvidenceClass
     description: Description for evidence

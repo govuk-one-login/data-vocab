@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-contra-indicator-storage-get-query
 name: ipv-contra-indicator-storage-get-query
-description: >-
-  Description for audit event IPV_CONTRA_INDICATOR_STORAGE_GET_QUERY
+description: Description for audit event IPV_CONTRA_INDICATOR_STORAGE_GET_QUERY
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvContraIndicatorStorageGetQueryAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvContraIndicatorStorageGetQueryUserClass
 
   IpvContraIndicatorStorageGetQueryUserClass:
     slots:
@@ -28,6 +28,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  IpvContraIndicatorStorageGetQueryUser:
     range: IpvContraIndicatorStorageGetQueryUserClass
     description: Description for user

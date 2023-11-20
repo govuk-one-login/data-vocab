@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-mfa-mismatched-email
 name: auth-mfa-mismatched-email
-description: >-
-  Description for audit event AUTH_MFA_MISMATCHED_EMAIL
+description: Description for audit event AUTH_MFA_MISMATCHED_EMAIL
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthMfaMismatchedEmailAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthMfaMismatchedEmailUserClass
 
   AuthMfaMismatchedEmailUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  AuthMfaMismatchedEmailUser:
     range: AuthMfaMismatchedEmailUserClass
     description: Description for user

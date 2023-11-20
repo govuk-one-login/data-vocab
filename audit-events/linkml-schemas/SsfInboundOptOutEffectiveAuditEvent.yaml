@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-opt-out-effective
 name: ssf-inbound-opt-out-effective
-description: >-
-  Description for audit event SSF_INBOUND_OPT_OUT_EFFECTIVE
+description: Description for audit event SSF_INBOUND_OPT_OUT_EFFECTIVE
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundOptOutEffectiveAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundOptOutEffectiveUserClass
+      restricted:
+        range: SsfInboundOptOutEffectiveRestrictedClass
+      extensions:
+        range: SsfInboundOptOutEffectiveExtensionsClass
+      evidence:
+        range: SsfInboundOptOutEffectiveExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundOptOutEffectiveExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundOptOutEffectiveExtenstionsClass
+      platform:
+        range: SsfInboundOptOutEffectivePlatformClass
 
   SsfInboundOptOutEffectiveUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundOptOutEffectiveUser:
     range: SsfInboundOptOutEffectiveUserClass
     description: Description for user
-  restricted:
+  SsfInboundOptOutEffectiveRestricted:
     range: SsfInboundOptOutEffectiveRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundOptOutEffectiveExtensions:
     range: SsfInboundOptOutEffectiveExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundOptOutEffectiveExtensionsEvidence:
     range: SsfInboundOptOutEffectiveExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundOptOutEffectiveExtensionsExperianiiqresponse:
     range: SsfInboundOptOutEffectiveExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundOptOutEffectiveExtenstions:
     range: SsfInboundOptOutEffectiveExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundOptOutEffectivePlatform:
     range: SsfInboundOptOutEffectivePlatformClass
     description: Description for platform

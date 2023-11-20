@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-vc-issued
 name: ipv-dl-cri-vc-issued
-description: >-
-  Description for audit event IPV_DL_CRI_VC_ISSUED
+description: Description for audit event IPV_DL_CRI_VC_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvDlCriVcIssuedAuditEventClass:
     slots:
@@ -22,6 +19,15 @@ classes:
       - user
       - restricted
       - extensions
+    slot_usage:
+      user:
+        range: IpvDlCriVcIssuedUserClass
+      restricted:
+        range: IpvDlCriVcIssuedRestrictedClass
+      extensions:
+        range: IpvDlCriVcIssuedExtensionsClass
+      evidence:
+        range: IpvDlCriVcIssuedExtensionsEvidenceClass
 
   IpvDlCriVcIssuedUserClass:
     slots:
@@ -59,15 +65,15 @@ classes:
       - type
 
 slots:
-  user:
+  IpvDlCriVcIssuedUser:
     range: IpvDlCriVcIssuedUserClass
     description: Description for user
-  restricted:
+  IpvDlCriVcIssuedRestricted:
     range: IpvDlCriVcIssuedRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvDlCriVcIssuedExtensions:
     range: IpvDlCriVcIssuedExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvDlCriVcIssuedExtensionsEvidence:
     range: IpvDlCriVcIssuedExtensionsEvidenceClass
     description: Description for evidence

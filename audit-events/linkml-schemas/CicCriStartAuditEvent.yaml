@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/cic-cri-start
 name: cic-cri-start
-description: >-
-  Description for audit event CIC_CRI_START
+description: Description for audit event CIC_CRI_START
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   CicCriStartAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: CicCriStartUserClass
 
   CicCriStartUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  CicCriStartUser:
     range: CicCriStartUserClass
     description: Description for user

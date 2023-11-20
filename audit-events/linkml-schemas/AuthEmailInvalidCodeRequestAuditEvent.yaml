@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-email-invalid-code-request
 name: auth-email-invalid-code-request
-description: >-
-  Description for audit event AUTH_EMAIL_INVALID_CODE_REQUEST
+description: Description for audit event AUTH_EMAIL_INVALID_CODE_REQUEST
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthEmailInvalidCodeRequestAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthEmailInvalidCodeRequestUserClass
 
   AuthEmailInvalidCodeRequestUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  AuthEmailInvalidCodeRequestUser:
     range: AuthEmailInvalidCodeRequestUserClass
     description: Description for user

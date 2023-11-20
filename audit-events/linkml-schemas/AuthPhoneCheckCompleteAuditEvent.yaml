@@ -1,0 +1,56 @@
+
+id: https://vocab.account.gov.uk/linkml/auth-phone-check-complete
+name: auth-phone-check-complete
+description: Description for audit event AUTH_PHONE_CHECK_COMPLETE
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+  - ./slots
+default_curi_maps:
+  - semweb_context 
+default_prefix: di_vocab
+default_range: string
+classes:
+  AuthPhoneCheckCompleteAuditEventClass:
+    slots:
+      - event_name
+      - component_id
+      - restricted
+      - extensions
+    slot_usage:
+      restricted:
+        range: AuthPhoneCheckCompleteRestrictedClass
+      extensions:
+        range: AuthPhoneCheckCompleteExtensionsClass
+      evidence:
+        range: AuthPhoneCheckCompleteExtensionsEvidenceClass
+
+  AuthPhoneCheckCompleteRestrictedClass:
+    slots:
+      - documentType
+      - issuingCountry
+      - user
+
+  AuthPhoneCheckCompleteExtensionsClass:
+    slots:
+      - evidence
+      - evidence_value
+      - iss
+
+  AuthPhoneCheckCompleteExtensionsEvidenceClass:
+    slots:
+      - ci
+      - txn
+      - type
+
+slots:
+  AuthPhoneCheckCompleteRestricted:
+    range: AuthPhoneCheckCompleteRestrictedClass
+    description: Description for restricted
+  AuthPhoneCheckCompleteExtensions:
+    range: AuthPhoneCheckCompleteExtensionsClass
+    description: Description for extensions
+  AuthPhoneCheckCompleteExtensionsEvidence:
+    range: AuthPhoneCheckCompleteExtensionsEvidenceClass
+    description: Description for evidence

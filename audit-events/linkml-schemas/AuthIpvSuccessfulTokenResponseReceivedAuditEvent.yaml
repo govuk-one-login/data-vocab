@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-ipv-successful-token-response-received
 name: auth-ipv-successful-token-response-received
-description: >-
-  Description for audit event AUTH_IPV_SUCCESSFUL_TOKEN_RESPONSE_RECEIVED
+description: Description for audit event AUTH_IPV_SUCCESSFUL_TOKEN_RESPONSE_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthIpvSuccessfulTokenResponseReceivedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthIpvSuccessfulTokenResponseReceivedUserClass
 
   AuthIpvSuccessfulTokenResponseReceivedUserClass:
     slots:
@@ -32,6 +32,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  AuthIpvSuccessfulTokenResponseReceivedUser:
     range: AuthIpvSuccessfulTokenResponseReceivedUserClass
     description: Description for user

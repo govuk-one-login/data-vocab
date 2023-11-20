@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-redirect-to-cri
 name: ipv-redirect-to-cri
-description: >-
-  Description for audit event IPV_REDIRECT_TO_CRI
+description: Description for audit event IPV_REDIRECT_TO_CRI
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvRedirectToCriAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvRedirectToCriUserClass
 
   IpvRedirectToCriUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  IpvRedirectToCriUser:
     range: IpvRedirectToCriUserClass
     description: Description for user

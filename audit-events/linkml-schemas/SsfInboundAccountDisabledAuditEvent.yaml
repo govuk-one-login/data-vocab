@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-account-disabled
 name: ssf-inbound-account-disabled
-description: >-
-  Description for audit event SSF_INBOUND_ACCOUNT_DISABLED
+description: Description for audit event SSF_INBOUND_ACCOUNT_DISABLED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundAccountDisabledAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundAccountDisabledUserClass
+      restricted:
+        range: SsfInboundAccountDisabledRestrictedClass
+      extensions:
+        range: SsfInboundAccountDisabledExtensionsClass
+      evidence:
+        range: SsfInboundAccountDisabledExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundAccountDisabledExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundAccountDisabledExtenstionsClass
+      platform:
+        range: SsfInboundAccountDisabledPlatformClass
 
   SsfInboundAccountDisabledUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundAccountDisabledUser:
     range: SsfInboundAccountDisabledUserClass
     description: Description for user
-  restricted:
+  SsfInboundAccountDisabledRestricted:
     range: SsfInboundAccountDisabledRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundAccountDisabledExtensions:
     range: SsfInboundAccountDisabledExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundAccountDisabledExtensionsEvidence:
     range: SsfInboundAccountDisabledExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundAccountDisabledExtensionsExperianiiqresponse:
     range: SsfInboundAccountDisabledExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundAccountDisabledExtenstions:
     range: SsfInboundAccountDisabledExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundAccountDisabledPlatform:
     range: SsfInboundAccountDisabledPlatformClass
     description: Description for platform

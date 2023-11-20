@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-send-otp
 name: auth-send-otp
-description: >-
-  Description for audit event AUTH_SEND_OTP
+description: Description for audit event AUTH_SEND_OTP
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthSendOtpAuditEventClass:
     slots:
@@ -21,6 +18,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: AuthSendOtpUserClass
+      extensions:
+        range: AuthSendOtpExtensionsClass
 
   AuthSendOtpUserClass:
     slots:
@@ -35,9 +37,9 @@ classes:
       - test-user
 
 slots:
-  user:
+  AuthSendOtpUser:
     range: AuthSendOtpUserClass
     description: Description for user
-  extensions:
+  AuthSendOtpExtensions:
     range: AuthSendOtpExtensionsClass
     description: Description for extensions

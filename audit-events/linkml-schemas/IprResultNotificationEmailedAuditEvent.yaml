@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipr-result-notification-emailed
 name: ipr-result-notification-emailed
-description: >-
-  Description for audit event IPR_RESULT_NOTIFICATION_EMAILED
+description: Description for audit event IPR_RESULT_NOTIFICATION_EMAILED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IprResultNotificationEmailedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: IprResultNotificationEmailedUserClass
+      restricted:
+        range: IprResultNotificationEmailedRestrictedClass
+      extensions:
+        range: IprResultNotificationEmailedExtensionsClass
+      evidence:
+        range: IprResultNotificationEmailedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: IprResultNotificationEmailedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: IprResultNotificationEmailedExtenstionsClass
+      platform:
+        range: IprResultNotificationEmailedPlatformClass
 
   IprResultNotificationEmailedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  IprResultNotificationEmailedUser:
     range: IprResultNotificationEmailedUserClass
     description: Description for user
-  restricted:
+  IprResultNotificationEmailedRestricted:
     range: IprResultNotificationEmailedRestrictedClass
     description: Description for restricted
-  extensions:
+  IprResultNotificationEmailedExtensions:
     range: IprResultNotificationEmailedExtensionsClass
     description: Description for extensions
-  evidence:
+  IprResultNotificationEmailedExtensionsEvidence:
     range: IprResultNotificationEmailedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  IprResultNotificationEmailedExtensionsExperianiiqresponse:
     range: IprResultNotificationEmailedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  IprResultNotificationEmailedExtenstions:
     range: IprResultNotificationEmailedExtenstionsClass
     description: Description for extenstions
-  platform:
+  IprResultNotificationEmailedPlatform:
     range: IprResultNotificationEmailedPlatformClass
     description: Description for platform

@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-spot-request-received
 name: ipv-spot-request-received
-description: >-
-  Description for audit event IPV_SPOT_REQUEST_RECEIVED
+description: Description for audit event IPV_SPOT_REQUEST_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvSpotRequestReceivedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvSpotRequestReceivedUserClass
 
   IpvSpotRequestReceivedUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  IpvSpotRequestReceivedUser:
     range: IpvSpotRequestReceivedUserClass
     description: Description for user

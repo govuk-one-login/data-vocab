@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/f2f-yoti-response-received
 name: f2f-yoti-response-received
-description: >-
-  Description for audit event F2F_YOTI_RESPONSE_RECEIVED
+description: Description for audit event F2F_YOTI_RESPONSE_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   F2FYotiResponseReceivedAuditEventClass:
     slots:
@@ -22,6 +19,13 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: F2FYotiResponseReceivedUserClass
+      extensions:
+        range: F2FYotiResponseReceivedExtensionsClass
+      evidence:
+        range: F2FYotiResponseReceivedExtensionsEvidenceClass
 
   F2FYotiResponseReceivedUserClass:
     slots:
@@ -40,12 +44,12 @@ classes:
       - txn
 
 slots:
-  user:
+  F2FYotiResponseReceivedUser:
     range: F2FYotiResponseReceivedUserClass
     description: Description for user
-  extensions:
+  F2FYotiResponseReceivedExtensions:
     range: F2FYotiResponseReceivedExtensionsClass
     description: Description for extensions
-  evidence:
+  F2FYotiResponseReceivedExtensionsEvidence:
     range: F2FYotiResponseReceivedExtensionsEvidenceClass
     description: Description for evidence

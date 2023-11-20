@@ -1,25 +1,27 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-account-management-authenticate
 name: auth-account-management-authenticate
-description: >-
-  Description for audit event AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE
+description: Description for audit event AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthAccountManagementAuthenticateAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      event_name:
+        pattern: "^AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE$"
+      user:
+        range: AuthAccountManagementAuthenticateUserClass
 
   AuthAccountManagementAuthenticateUserClass:
     slots:
@@ -29,6 +31,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  AuthAccountManagementAuthenticateUser:
     range: AuthAccountManagementAuthenticateUserClass
     description: Description for user

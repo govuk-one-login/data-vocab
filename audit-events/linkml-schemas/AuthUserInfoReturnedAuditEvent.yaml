@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-user-info-returned
 name: auth-user-info-returned
-description: >-
-  Description for audit event AUTH_USER_INFO_RETURNED
+description: Description for audit event AUTH_USER_INFO_RETURNED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthUserInfoReturnedAuditEventClass:
     slots:
@@ -21,12 +18,15 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthUserInfoReturnedUserClass
 
   AuthUserInfoReturnedUserClass:
     slots:
       - user_id
 
 slots:
-  user:
+  AuthUserInfoReturnedUser:
     range: AuthUserInfoReturnedUserClass
     description: Description for user

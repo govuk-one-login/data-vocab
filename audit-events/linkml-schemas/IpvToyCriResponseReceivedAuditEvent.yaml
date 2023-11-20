@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-toy-cri-response-received
 name: ipv-toy-cri-response-received
-description: >-
-  Description for audit event IPV_TOY_CRI_RESPONSE_RECEIVED
+description: Description for audit event IPV_TOY_CRI_RESPONSE_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvToyCriResponseReceivedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: IpvToyCriResponseReceivedUserClass
+      restricted:
+        range: IpvToyCriResponseReceivedRestrictedClass
+      extensions:
+        range: IpvToyCriResponseReceivedExtensionsClass
+      evidence:
+        range: IpvToyCriResponseReceivedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: IpvToyCriResponseReceivedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: IpvToyCriResponseReceivedExtenstionsClass
+      platform:
+        range: IpvToyCriResponseReceivedPlatformClass
 
   IpvToyCriResponseReceivedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  IpvToyCriResponseReceivedUser:
     range: IpvToyCriResponseReceivedUserClass
     description: Description for user
-  restricted:
+  IpvToyCriResponseReceivedRestricted:
     range: IpvToyCriResponseReceivedRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvToyCriResponseReceivedExtensions:
     range: IpvToyCriResponseReceivedExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvToyCriResponseReceivedExtensionsEvidence:
     range: IpvToyCriResponseReceivedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  IpvToyCriResponseReceivedExtensionsExperianiiqresponse:
     range: IpvToyCriResponseReceivedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  IpvToyCriResponseReceivedExtenstions:
     range: IpvToyCriResponseReceivedExtenstionsClass
     description: Description for extenstions
-  platform:
+  IpvToyCriResponseReceivedPlatform:
     range: IpvToyCriResponseReceivedPlatformClass
     description: Description for platform

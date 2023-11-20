@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-account-recovery-email-code-sent-for-test-client
 name: auth-account-recovery-email-code-sent-for-test-client
-description: >-
-  Description for audit event AUTH_ACCOUNT_RECOVERY_EMAIL_CODE_SENT_FOR_TEST_CLIENT
+description: Description for audit event AUTH_ACCOUNT_RECOVERY_EMAIL_CODE_SENT_FOR_TEST_CLIENT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthAccountRecoveryEmailCodeSentForTestClientUserClass
 
   AuthAccountRecoveryEmailCodeSentForTestClientUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  AuthAccountRecoveryEmailCodeSentForTestClientUser:
     range: AuthAccountRecoveryEmailCodeSentForTestClientUserClass
     description: Description for user

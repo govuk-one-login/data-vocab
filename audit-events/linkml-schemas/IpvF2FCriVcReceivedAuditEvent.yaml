@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-f2f-cri-vc-received
 name: ipv-f2f-cri-vc-received
-description: >-
-  Description for audit event IPV_F2F_CRI_VC_RECEIVED
+description: Description for audit event IPV_F2F_CRI_VC_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvF2FCriVcReceivedAuditEventClass:
     slots:
@@ -21,6 +18,13 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: IpvF2FCriVcReceivedUserClass
+      extensions:
+        range: IpvF2FCriVcReceivedExtensionsClass
+      evidence:
+        range: IpvF2FCriVcReceivedExtensionsEvidenceClass
 
   IpvF2FCriVcReceivedUserClass:
     slots:
@@ -45,12 +49,12 @@ classes:
       - type
 
 slots:
-  user:
+  IpvF2FCriVcReceivedUser:
     range: IpvF2FCriVcReceivedUserClass
     description: Description for user
-  extensions:
+  IpvF2FCriVcReceivedExtensions:
     range: IpvF2FCriVcReceivedExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvF2FCriVcReceivedExtensionsEvidence:
     range: IpvF2FCriVcReceivedExtensionsEvidenceClass
     description: Description for evidence

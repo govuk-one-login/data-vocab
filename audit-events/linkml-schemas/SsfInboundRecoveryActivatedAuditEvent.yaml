@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ssf-inbound-recovery-activated
 name: ssf-inbound-recovery-activated
-description: >-
-  Description for audit event SSF_INBOUND_RECOVERY_ACTIVATED
+description: Description for audit event SSF_INBOUND_RECOVERY_ACTIVATED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   SsfInboundRecoveryActivatedAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: SsfInboundRecoveryActivatedUserClass
+      restricted:
+        range: SsfInboundRecoveryActivatedRestrictedClass
+      extensions:
+        range: SsfInboundRecoveryActivatedExtensionsClass
+      evidence:
+        range: SsfInboundRecoveryActivatedExtensionsEvidenceClass
+      experianIiqResponse:
+        range: SsfInboundRecoveryActivatedExtensionsExperianiiqresponseClass
+      extenstions:
+        range: SsfInboundRecoveryActivatedExtenstionsClass
+      platform:
+        range: SsfInboundRecoveryActivatedPlatformClass
 
   SsfInboundRecoveryActivatedUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  SsfInboundRecoveryActivatedUser:
     range: SsfInboundRecoveryActivatedUserClass
     description: Description for user
-  restricted:
+  SsfInboundRecoveryActivatedRestricted:
     range: SsfInboundRecoveryActivatedRestrictedClass
     description: Description for restricted
-  extensions:
+  SsfInboundRecoveryActivatedExtensions:
     range: SsfInboundRecoveryActivatedExtensionsClass
     description: Description for extensions
-  evidence:
+  SsfInboundRecoveryActivatedExtensionsEvidence:
     range: SsfInboundRecoveryActivatedExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  SsfInboundRecoveryActivatedExtensionsExperianiiqresponse:
     range: SsfInboundRecoveryActivatedExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  SsfInboundRecoveryActivatedExtenstions:
     range: SsfInboundRecoveryActivatedExtenstionsClass
     description: Description for extenstions
-  platform:
+  SsfInboundRecoveryActivatedPlatform:
     range: SsfInboundRecoveryActivatedPlatformClass
     description: Description for platform

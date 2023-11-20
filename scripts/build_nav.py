@@ -28,6 +28,11 @@ CUSTOM_CATEGORY_NAMES = {
     "v1": "2. Physical Data Model",
 }
 
+def pascal_to_upper_snake(pascal_str):
+    """Convert a PascalCase string to UPPER_SNAKE_CASE."""
+    return ''.join(['_' + i.lower() if i.isupper() else i for i in pascal_str]).lstrip('_').upper()
+
+
 def is_redirect(file_path):
     """Check if the given file path is a redirect."""
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -77,9 +82,11 @@ def sort_nav_structure(nav_list):
 
     return sorted_nav_list
 
+
 def generate_navigation_structure():
     """Generate and return the navigation structure based on the DOCS_DIR."""
     nav_structure = []
+
 
     for root, dirs, files in os.walk(DOCS_DIR, followlinks=True):
         for file in files:
@@ -89,12 +96,39 @@ def generate_navigation_structure():
                     continue
                 rel_path = os.path.relpath(full_path, DOCS_DIR)
                 path_parts = rel_path.split(os.sep)
+
+
+
+                #
+                # Audit Event Logic
+                #
+
+                # Check if in the audit_events directory and filter files
+
+                print(file)
+                #print(path_parts)
+                #print(full_path)
+
+
+                
+                if 'audit-events' in path_parts and 'classes' in path_parts and 'AuditEventClass.md' not in file:
+                    print(file)
+                    continue
+                if 'audit-events' in path_parts and 'classes' in path_parts:
+                    path_parts[-1] = pascal_to_upper_snake(path_parts[-1].replace('AuditEventClass.md', ''))
+
+        
+
+
                 if rel_path in CUSTOM_NAMES:
                     path_parts[-1] = CUSTOM_NAMES[rel_path]
                 else:
                     path_parts[-1] = path_parts[-1].replace('.md', '')
                 add_to_structure(path_parts, nav_structure, rel_path)
+
+
     return sort_nav_structure(nav_structure)
+
 
 def update_mkdocs_config(nav_structure):
     """Update the mkdocs.yml file with the given navigation structure."""

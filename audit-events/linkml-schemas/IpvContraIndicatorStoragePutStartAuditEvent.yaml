@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-contra-indicator-storage-put-start
 name: ipv-contra-indicator-storage-put-start
-description: >-
-  Description for audit event IPV_CONTRA_INDICATOR_STORAGE_PUT_START
+description: Description for audit event IPV_CONTRA_INDICATOR_STORAGE_PUT_START
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvContraIndicatorStoragePutStartAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvContraIndicatorStoragePutStartUserClass
 
   IpvContraIndicatorStoragePutStartUserClass:
     slots:
@@ -27,6 +27,6 @@ classes:
       - ip_address
 
 slots:
-  user:
+  IpvContraIndicatorStoragePutStartUser:
     range: IpvContraIndicatorStoragePutStartUserClass
     description: Description for user

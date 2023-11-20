@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-account-recovery-not-permitted
 name: auth-account-recovery-not-permitted
-description: >-
-  Description for audit event AUTH_ACCOUNT_RECOVERY_NOT_PERMITTED
+description: Description for audit event AUTH_ACCOUNT_RECOVERY_NOT_PERMITTED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthAccountRecoveryNotPermittedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthAccountRecoveryNotPermittedUserClass
 
   AuthAccountRecoveryNotPermittedUserClass:
     slots:
@@ -32,6 +32,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  AuthAccountRecoveryNotPermittedUser:
     range: AuthAccountRecoveryNotPermittedUserClass
     description: Description for user

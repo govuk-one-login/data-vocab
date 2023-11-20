@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-create-account
 name: auth-create-account
-description: >-
-  Description for audit event AUTH_CREATE_ACCOUNT
+description: Description for audit event AUTH_CREATE_ACCOUNT
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthCreateAccountAuditEventClass:
     slots:
@@ -22,6 +19,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: AuthCreateAccountUserClass
+      extensions:
+        range: AuthCreateAccountExtensionsClass
 
   AuthCreateAccountUserClass:
     slots:
@@ -37,9 +39,9 @@ classes:
       - internalSubjectId
 
 slots:
-  user:
+  AuthCreateAccountUser:
     range: AuthCreateAccountUserClass
     description: Description for user
-  extensions:
+  AuthCreateAccountExtensions:
     range: AuthCreateAccountExtensionsClass
     description: Description for extensions

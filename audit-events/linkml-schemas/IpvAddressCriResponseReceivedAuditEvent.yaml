@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-address-cri-response-received
 name: ipv-address-cri-response-received
-description: >-
-  Description for audit event IPV_ADDRESS_CRI_RESPONSE_RECEIVED
+description: Description for audit event IPV_ADDRESS_CRI_RESPONSE_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvAddressCriResponseReceivedAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvAddressCriResponseReceivedUserClass
 
   IpvAddressCriResponseReceivedUserClass:
     slots:
@@ -30,6 +30,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  IpvAddressCriResponseReceivedUser:
     range: IpvAddressCriResponseReceivedUserClass
     description: Description for user

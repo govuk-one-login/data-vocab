@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-ipv-spot-requested
 name: auth-ipv-spot-requested
-description: >-
-  Description for audit event AUTH_IPV_SPOT_REQUESTED
+description: Description for audit event AUTH_IPV_SPOT_REQUESTED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthIpvSpotRequestedAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthIpvSpotRequestedUserClass
 
   AuthIpvSpotRequestedUserClass:
     slots:
@@ -32,6 +32,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  AuthIpvSpotRequestedUser:
     range: AuthIpvSpotRequestedUserClass
     description: Description for user

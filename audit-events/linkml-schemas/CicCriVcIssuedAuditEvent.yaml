@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/cic-cri-vc-issued
 name: cic-cri-vc-issued
-description: >-
-  Description for audit event CIC_CRI_VC_ISSUED
+description: Description for audit event CIC_CRI_VC_ISSUED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   CicCriVcIssuedAuditEventClass:
     slots:
@@ -22,6 +19,11 @@ classes:
       - component_id
       - user
       - restricted
+    slot_usage:
+      user:
+        range: CicCriVcIssuedUserClass
+      restricted:
+        range: CicCriVcIssuedRestrictedClass
 
   CicCriVcIssuedUserClass:
     slots:
@@ -36,9 +38,9 @@ classes:
       - name
 
 slots:
-  user:
+  CicCriVcIssuedUser:
     range: CicCriVcIssuedUserClass
     description: Description for user
-  restricted:
+  CicCriVcIssuedRestricted:
     range: CicCriVcIssuedRestrictedClass
     description: Description for restricted

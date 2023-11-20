@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/auth-create-account-email-already-exists
 name: auth-create-account-email-already-exists
-description: >-
-  Description for audit event AUTH_CREATE_ACCOUNT_EMAIL_ALREADY_EXISTS
+description: Description for audit event AUTH_CREATE_ACCOUNT_EMAIL_ALREADY_EXISTS
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthCreateAccountEmailAlreadyExistsAuditEventClass:
     slots:
@@ -21,6 +18,9 @@ classes:
       - client_id
       - component_id
       - user
+    slot_usage:
+      user:
+        range: AuthCreateAccountEmailAlreadyExistsUserClass
 
   AuthCreateAccountEmailAlreadyExistsUserClass:
     slots:
@@ -31,6 +31,6 @@ classes:
       - session_id
 
 slots:
-  user:
+  AuthCreateAccountEmailAlreadyExistsUser:
     range: AuthCreateAccountEmailAlreadyExistsUserClass
     description: Description for user

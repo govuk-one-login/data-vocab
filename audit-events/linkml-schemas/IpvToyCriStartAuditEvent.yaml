@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-toy-cri-start
 name: ipv-toy-cri-start
-description: >-
-  Description for audit event IPV_TOY_CRI_START
+description: Description for audit event IPV_TOY_CRI_START
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvToyCriStartAuditEventClass:
     slots:
@@ -25,6 +22,21 @@ classes:
       - extensions
       - extenstions
       - platform
+    slot_usage:
+      user:
+        range: IpvToyCriStartUserClass
+      restricted:
+        range: IpvToyCriStartRestrictedClass
+      extensions:
+        range: IpvToyCriStartExtensionsClass
+      evidence:
+        range: IpvToyCriStartExtensionsEvidenceClass
+      experianIiqResponse:
+        range: IpvToyCriStartExtensionsExperianiiqresponseClass
+      extenstions:
+        range: IpvToyCriStartExtenstionsClass
+      platform:
+        range: IpvToyCriStartPlatformClass
 
   IpvToyCriStartUserClass:
     slots:
@@ -112,24 +124,24 @@ classes:
       - device_info
 
 slots:
-  user:
+  IpvToyCriStartUser:
     range: IpvToyCriStartUserClass
     description: Description for user
-  restricted:
+  IpvToyCriStartRestricted:
     range: IpvToyCriStartRestrictedClass
     description: Description for restricted
-  extensions:
+  IpvToyCriStartExtensions:
     range: IpvToyCriStartExtensionsClass
     description: Description for extensions
-  evidence:
+  IpvToyCriStartExtensionsEvidence:
     range: IpvToyCriStartExtensionsEvidenceClass
     description: Description for evidence
-  experianIiqResponse:
+  IpvToyCriStartExtensionsExperianiiqresponse:
     range: IpvToyCriStartExtensionsExperianiiqresponseClass
     description: Description for experianiiqresponse
-  extenstions:
+  IpvToyCriStartExtenstions:
     range: IpvToyCriStartExtenstionsClass
     description: Description for extenstions
-  platform:
+  IpvToyCriStartPlatform:
     range: IpvToyCriStartPlatformClass
     description: Description for platform

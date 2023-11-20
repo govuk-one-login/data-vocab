@@ -1,19 +1,16 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-contra-indicator-storage-put-new-cis
 name: ipv-contra-indicator-storage-put-new-cis
-description: >-
-  Description for audit event IPV_CONTRA_INDICATOR_STORAGE_PUT_NEW_CIS
+description: Description for audit event IPV_CONTRA_INDICATOR_STORAGE_PUT_NEW_CIS
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvContraIndicatorStoragePutNewCisAuditEventClass:
     slots:
@@ -21,6 +18,11 @@ classes:
       - component_id
       - user
       - extensions
+    slot_usage:
+      user:
+        range: IpvContraIndicatorStoragePutNewCisUserClass
+      extensions:
+        range: IpvContraIndicatorStoragePutNewCisExtensionsClass
 
   IpvContraIndicatorStoragePutNewCisUserClass:
     slots:
@@ -33,9 +35,9 @@ classes:
       - ci_count
 
 slots:
-  user:
+  IpvContraIndicatorStoragePutNewCisUser:
     range: IpvContraIndicatorStoragePutNewCisUserClass
     description: Description for user
-  extensions:
+  IpvContraIndicatorStoragePutNewCisExtensions:
     range: IpvContraIndicatorStoragePutNewCisExtensionsClass
     description: Description for extensions

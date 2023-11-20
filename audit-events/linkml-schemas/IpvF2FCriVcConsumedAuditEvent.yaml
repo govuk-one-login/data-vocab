@@ -1,25 +1,25 @@
+
 id: https://vocab.account.gov.uk/linkml/ipv-f2f-cri-vc-consumed
 name: ipv-f2f-cri-vc-consumed
-description: >-
-  Description for audit event IPV_F2F_CRI_VC_CONSUMED
+description: Description for audit event IPV_F2F_CRI_VC_CONSUMED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
-
 imports:
   - ./slots
-
 default_curi_maps:
-  - semweb_context  
+  - semweb_context 
 default_prefix: di_vocab
 default_range: string
-
 classes:
   IpvF2FCriVcConsumedAuditEventClass:
     slots:
       - event_name
       - component_id
       - user
+    slot_usage:
+      user:
+        range: IpvF2FCriVcConsumedUserClass
 
   IpvF2FCriVcConsumedUserClass:
     slots:
@@ -29,6 +29,6 @@ classes:
       - user_id
 
 slots:
-  user:
+  IpvF2FCriVcConsumedUser:
     range: IpvF2FCriVcConsumedUserClass
     description: Description for user
