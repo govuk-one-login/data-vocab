@@ -30,6 +30,7 @@ nav:
           - CredentialSubjectClass: v1/classes/CredentialSubjectClass.md
           - DocumentDetailsClass: v1/classes/DocumentDetailsClass.md
           - DrivingPermitDetailsClass: v1/classes/DrivingPermitDetailsClass.md
+          - EvidenceRequestedClass: v1/classes/EvidenceRequestedClass.md
           - FamilyNameClass: v1/classes/FamilyNameClass.md
           - GivenNameClass: v1/classes/GivenNameClass.md
           - IdCardDetailsClass: v1/classes/IdCardDetailsClass.md
@@ -109,6 +110,12 @@ nav:
           - drivingPermit: v1/slots/drivingPermit.md
           - DrivingPermitDetailsClass_expiryDate: v1/slots/DrivingPermitDetailsClass_expiryDate.md
           - evidence: v1/slots/evidence.md
+          - evidence_requested: v1/slots/evidence_requested.md
+          - EvidenceRequestedClass_activityHistoryScore: v1/slots/EvidenceRequestedClass_activityHistoryScore.md
+          - EvidenceRequestedClass_identityFraudScore: v1/slots/EvidenceRequestedClass_identityFraudScore.md
+          - EvidenceRequestedClass_strengthScore: v1/slots/EvidenceRequestedClass_strengthScore.md
+          - EvidenceRequestedClass_validityScore: v1/slots/EvidenceRequestedClass_validityScore.md
+          - EvidenceRequestedClass_verificationScore: v1/slots/EvidenceRequestedClass_verificationScore.md
           - exp: v1/slots/exp.md
           - expiryDate: v1/slots/expiryDate.md
           - failedCheckDetails: v1/slots/failedCheckDetails.md
