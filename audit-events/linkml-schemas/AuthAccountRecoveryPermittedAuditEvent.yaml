@@ -30,8 +30,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  AuthAccountRecoveryPermittedUser:
-    range: AuthAccountRecoveryPermittedUserClass
-    description: Description for user

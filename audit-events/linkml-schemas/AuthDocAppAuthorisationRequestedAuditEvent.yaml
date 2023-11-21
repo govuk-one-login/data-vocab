@@ -29,8 +29,3 @@ classes:
       - persistent_session_id
       - session_id
       - user_id
-
-slots:
-  AuthDocAppAuthorisationRequestedUser:
-    range: AuthDocAppAuthorisationRequestedUserClass
-    description: Description for user

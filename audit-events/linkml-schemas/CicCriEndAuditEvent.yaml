@@ -28,8 +28,3 @@ classes:
       - ip_address
       - session_id
       - user_id
-
-slots:
-  CicCriEndUser:
-    range: CicCriEndUserClass
-    description: Description for user

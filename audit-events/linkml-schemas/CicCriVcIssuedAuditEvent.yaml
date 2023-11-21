@@ -36,11 +36,3 @@ classes:
     slots:
       - birthDate
       - name
-
-slots:
-  CicCriVcIssuedUser:
-    range: CicCriVcIssuedUserClass
-    description: Description for user
-  CicCriVcIssuedRestricted:
-    range: CicCriVcIssuedRestrictedClass
-    description: Description for restricted

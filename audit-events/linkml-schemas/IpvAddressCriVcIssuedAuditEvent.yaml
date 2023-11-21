@@ -35,11 +35,3 @@ classes:
   IpvAddressCriVcIssuedExtensionsClass:
     slots:
       - addressesEntered
-
-slots:
-  IpvAddressCriVcIssuedUser:
-    range: IpvAddressCriVcIssuedUserClass
-    description: Description for user
-  IpvAddressCriVcIssuedExtensions:
-    range: IpvAddressCriVcIssuedExtensionsClass
-    description: Description for extensions

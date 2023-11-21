@@ -35,11 +35,3 @@ classes:
   DcmawSessionRecoveredExtensionsClass:
     slots:
       - previous_govuk_signin_journey_id
-
-slots:
-  DcmawSessionRecoveredUser:
-    range: DcmawSessionRecoveredUserClass
-    description: Description for user
-  DcmawSessionRecoveredExtensions:
-    range: DcmawSessionRecoveredExtensionsClass
-    description: Description for extensions

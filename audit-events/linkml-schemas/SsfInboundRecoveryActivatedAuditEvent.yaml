@@ -122,26 +122,3 @@ classes:
   SsfInboundRecoveryActivatedPlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundRecoveryActivatedUser:
-    range: SsfInboundRecoveryActivatedUserClass
-    description: Description for user
-  SsfInboundRecoveryActivatedRestricted:
-    range: SsfInboundRecoveryActivatedRestrictedClass
-    description: Description for restricted
-  SsfInboundRecoveryActivatedExtensions:
-    range: SsfInboundRecoveryActivatedExtensionsClass
-    description: Description for extensions
-  SsfInboundRecoveryActivatedExtensionsEvidence:
-    range: SsfInboundRecoveryActivatedExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundRecoveryActivatedExtensionsExperianiiqresponse:
-    range: SsfInboundRecoveryActivatedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundRecoveryActivatedExtenstions:
-    range: SsfInboundRecoveryActivatedExtenstionsClass
-    description: Description for extenstions
-  SsfInboundRecoveryActivatedPlatform:
-    range: SsfInboundRecoveryActivatedPlatformClass
-    description: Description for platform

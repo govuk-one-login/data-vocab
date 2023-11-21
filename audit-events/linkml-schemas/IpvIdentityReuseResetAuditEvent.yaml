@@ -28,7 +28,3 @@ classes:
       - session_id
       - user_id
 
-slots:
-  IpvIdentityReuseResetUser:
-    range: IpvIdentityReuseResetUserClass
-    description: Description for user

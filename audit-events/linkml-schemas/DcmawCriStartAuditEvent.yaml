@@ -28,8 +28,3 @@ classes:
       - ip_address
       - session_id
       - user_id
-
-slots:
-  DcmawCriStartUser:
-    range: DcmawCriStartUserClass
-    description: Description for user

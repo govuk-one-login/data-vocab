@@ -24,8 +24,3 @@ classes:
     slots:
       - email
       - ip_address
-
-slots:
-  AuthSyntheticsUserDeletedUser:
-    range: AuthSyntheticsUserDeletedUserClass
-    description: Description for user

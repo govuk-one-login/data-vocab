@@ -42,14 +42,3 @@ classes:
   IpvSpotRequestValidationFailureExtensionsClass:
     slots:
       - rejectionReason
-
-slots:
-  IpvSpotRequestValidationFailureUser:
-    range: IpvSpotRequestValidationFailureUserClass
-    description: Description for user
-  IpvSpotRequestValidationFailureRestricted:
-    range: IpvSpotRequestValidationFailureRestrictedClass
-    description: Description for restricted
-  IpvSpotRequestValidationFailureExtensions:
-    range: IpvSpotRequestValidationFailureExtensionsClass
-    description: Description for extensions

@@ -35,11 +35,3 @@ classes:
     slots:
       - notification-type
       - test-user
-
-slots:
-  AuthSendOtpUser:
-    range: AuthSendOtpUserClass
-    description: Description for user
-  AuthSendOtpExtensions:
-    range: AuthSendOtpExtensionsClass
-    description: Description for extensions

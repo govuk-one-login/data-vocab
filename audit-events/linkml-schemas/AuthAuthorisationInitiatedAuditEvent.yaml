@@ -13,6 +13,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthAuthorisationInitiatedAuditEventClass:
+    description: >
+      Journey via the one login platform initiated. Triggered Just before starting the Auth journey. 
     slots:
       - event_name
       - client_id
@@ -35,11 +37,3 @@ classes:
   AuthAuthorisationInitiatedExtensionsClass:
     slots:
       - client-name
-
-slots:
-  AuthAuthorisationInitiatedUser:
-    range: AuthAuthorisationInitiatedUserClass
-    description: Description for user
-  AuthAuthorisationInitiatedExtensions:
-    range: AuthAuthorisationInitiatedExtensionsClass
-    description: Description for extensions

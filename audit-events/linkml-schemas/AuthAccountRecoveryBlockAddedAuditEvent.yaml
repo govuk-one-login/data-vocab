@@ -1,7 +1,6 @@
 
 id: https://vocab.account.gov.uk/linkml/auth-account-recovery-block-added
 name: auth-account-recovery-block-added
-description: Description for audit event AUTH_ACCOUNT_RECOVERY_BLOCK_ADDED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
@@ -13,6 +12,7 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthAccountRecoveryBlockAddedAuditEventClass:
+    description: TBC
     slots:
       - event_name
       - client_id
@@ -30,8 +30,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  AuthAccountRecoveryBlockAddedUser:
-    range: AuthAccountRecoveryBlockAddedUserClass
-    description: Description for user

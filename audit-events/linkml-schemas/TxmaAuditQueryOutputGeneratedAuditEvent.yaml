@@ -24,8 +24,3 @@ classes:
   TxmaAuditQueryOutputGeneratedExtensionsClass:
     slots:
       - ticket_details
-
-slots:
-  TxmaAuditQueryOutputGeneratedExtensions:
-    range: TxmaAuditQueryOutputGeneratedExtensionsClass
-    description: Description for extensions

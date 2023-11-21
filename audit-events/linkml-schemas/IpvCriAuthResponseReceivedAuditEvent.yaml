@@ -27,8 +27,3 @@ classes:
       - ip_address
       - session_id
       - user_id
-
-slots:
-  IpvCriAuthResponseReceivedUser:
-    range: IpvCriAuthResponseReceivedUserClass
-    description: Description for user

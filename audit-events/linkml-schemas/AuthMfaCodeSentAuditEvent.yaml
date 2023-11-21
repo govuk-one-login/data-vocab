@@ -31,8 +31,3 @@ classes:
       - phone
       - session_id
       - user_id
-
-slots:
-  AuthMfaCodeSentUser:
-    range: AuthMfaCodeSentUserClass
-    description: Description for user

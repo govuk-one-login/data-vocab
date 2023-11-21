@@ -26,8 +26,3 @@ classes:
     slots:
       - govuk_signin_journey_id
       - session_id
-
-slots:
-  AuthIpvUnsuccessfulAuthorisationResponseReceivedUser:
-    range: AuthIpvUnsuccessfulAuthorisationResponseReceivedUserClass
-    description: Description for user

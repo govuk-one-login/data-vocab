@@ -27,8 +27,3 @@ classes:
       - email
       - ip_address
       - session_id
-
-slots:
-  AuthEmailInvalidCodeRequestUser:
-    range: AuthEmailInvalidCodeRequestUserClass
-    description: Description for user

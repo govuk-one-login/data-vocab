@@ -34,8 +34,3 @@ classes:
       - ip_address
       - persistent_session_id
       - session_id
-
-slots:
-  AuthAccountManagementAuthenticateUser:
-    range: AuthAccountManagementAuthenticateUserClass
-    description: Description for user

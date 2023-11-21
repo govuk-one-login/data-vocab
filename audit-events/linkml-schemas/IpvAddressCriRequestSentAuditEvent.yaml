@@ -35,11 +35,3 @@ classes:
   IpvAddressCriRequestSentRestrictedClass:
     slots:
       - address
-
-slots:
-  IpvAddressCriRequestSentUser:
-    range: IpvAddressCriRequestSentUserClass
-    description: Description for user
-  IpvAddressCriRequestSentRestricted:
-    range: IpvAddressCriRequestSentRestrictedClass
-    description: Description for restricted

@@ -29,8 +29,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  CicCriAuthCodeIssuedUser:
-    range: CicCriAuthCodeIssuedUserClass
-    description: Description for user

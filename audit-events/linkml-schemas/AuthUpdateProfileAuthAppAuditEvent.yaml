@@ -31,8 +31,3 @@ classes:
       - phone
       - session_id
       - user_id
-
-slots:
-  AuthUpdateProfileAuthAppUser:
-    range: AuthUpdateProfileAuthAppUserClass
-    description: Description for user

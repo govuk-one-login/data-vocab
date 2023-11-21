@@ -122,26 +122,3 @@ classes:
   SsfInboundOptOutCancelledPlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundOptOutCancelledUser:
-    range: SsfInboundOptOutCancelledUserClass
-    description: Description for user
-  SsfInboundOptOutCancelledRestricted:
-    range: SsfInboundOptOutCancelledRestrictedClass
-    description: Description for restricted
-  SsfInboundOptOutCancelledExtensions:
-    range: SsfInboundOptOutCancelledExtensionsClass
-    description: Description for extensions
-  SsfInboundOptOutCancelledExtensionsEvidence:
-    range: SsfInboundOptOutCancelledExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundOptOutCancelledExtensionsExperianiiqresponse:
-    range: SsfInboundOptOutCancelledExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundOptOutCancelledExtenstions:
-    range: SsfInboundOptOutCancelledExtenstionsClass
-    description: Description for extenstions
-  SsfInboundOptOutCancelledPlatform:
-    range: SsfInboundOptOutCancelledPlatformClass
-    description: Description for platform

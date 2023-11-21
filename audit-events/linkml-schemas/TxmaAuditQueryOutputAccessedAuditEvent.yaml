@@ -24,8 +24,3 @@ classes:
   TxmaAuditQueryOutputAccessedExtensionsClass:
     slots:
       - ticket_details
-
-slots:
-  TxmaAuditQueryOutputAccessedExtensions:
-    range: TxmaAuditQueryOutputAccessedExtensionsClass
-    description: Description for extensions

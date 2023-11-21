@@ -13,6 +13,10 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthAuthCodeIssuedAuditEventClass:
+    description: >
+      Code sent to user for MFA / This event is also fired at the end of a successful journey 
+      in the one login platform. Triggered Just before sending the Authorisation code to Relying party. 
+      If it is Auth + IPV journey, it will be triggered once the IPV is complete
     slots:
       - event_name
       - client_id
@@ -38,11 +42,3 @@ classes:
     slots:
       - internalSubjectId
       - isNewAccount
-
-slots:
-  AuthAuthCodeIssuedUser:
-    range: AuthAuthCodeIssuedUserClass
-    description: Description for user
-  AuthAuthCodeIssuedExtensions:
-    range: AuthAuthCodeIssuedExtensionsClass
-    description: Description for extensions

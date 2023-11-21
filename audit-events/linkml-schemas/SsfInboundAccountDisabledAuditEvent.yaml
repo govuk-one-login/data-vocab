@@ -122,26 +122,3 @@ classes:
   SsfInboundAccountDisabledPlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundAccountDisabledUser:
-    range: SsfInboundAccountDisabledUserClass
-    description: Description for user
-  SsfInboundAccountDisabledRestricted:
-    range: SsfInboundAccountDisabledRestrictedClass
-    description: Description for restricted
-  SsfInboundAccountDisabledExtensions:
-    range: SsfInboundAccountDisabledExtensionsClass
-    description: Description for extensions
-  SsfInboundAccountDisabledExtensionsEvidence:
-    range: SsfInboundAccountDisabledExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundAccountDisabledExtensionsExperianiiqresponse:
-    range: SsfInboundAccountDisabledExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundAccountDisabledExtenstions:
-    range: SsfInboundAccountDisabledExtenstionsClass
-    description: Description for extenstions
-  SsfInboundAccountDisabledPlatform:
-    range: SsfInboundAccountDisabledPlatformClass
-    description: Description for platform

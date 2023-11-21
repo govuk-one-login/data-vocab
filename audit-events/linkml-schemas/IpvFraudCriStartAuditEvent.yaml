@@ -27,8 +27,3 @@ classes:
       - ip_address
       - session_id
       - user_id
-
-slots:
-  IpvFraudCriStartUser:
-    range: IpvFraudCriStartUserClass
-    description: Description for user

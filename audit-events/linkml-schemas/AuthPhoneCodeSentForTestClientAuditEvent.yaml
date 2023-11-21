@@ -28,8 +28,3 @@ classes:
       - ip_address
       - phone
       - session_id
-
-slots:
-  AuthPhoneCodeSentForTestClientUser:
-    range: AuthPhoneCodeSentForTestClientUserClass
-    description: Description for user

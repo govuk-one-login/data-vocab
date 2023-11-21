@@ -29,8 +29,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  DcmawPassportSelectedUser:
-    range: DcmawPassportSelectedUserClass
-    description: Description for user

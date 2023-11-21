@@ -27,7 +27,3 @@ classes:
       - session_id
       - user_id
 
-slots:
-  IpvPassportCriResponseReceivedUser:
-    range: IpvPassportCriResponseReceivedUserClass
-    description: Description for user

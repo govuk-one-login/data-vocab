@@ -43,14 +43,3 @@ classes:
   F2FYotiPdfEmailedExtensionsEvidenceClass:
     slots:
       - txn
-
-slots:
-  F2FYotiPdfEmailedUser:
-    range: F2FYotiPdfEmailedUserClass
-    description: Description for user
-  F2FYotiPdfEmailedExtensions:
-    range: F2FYotiPdfEmailedExtensionsClass
-    description: Description for extensions
-  F2FYotiPdfEmailedExtensionsEvidence:
-    range: F2FYotiPdfEmailedExtensionsEvidenceClass
-    description: Description for evidence

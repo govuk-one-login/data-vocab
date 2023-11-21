@@ -24,8 +24,3 @@ classes:
     slots:
       - govuk_signin_journey_id
       - ip_address
-
-slots:
-  AuthRegisterClientRequestErrorUser:
-    range: AuthRegisterClientRequestErrorUserClass
-    description: Description for user

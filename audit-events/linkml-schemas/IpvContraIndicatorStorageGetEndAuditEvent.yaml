@@ -26,8 +26,3 @@ classes:
       - govuk_signin_journey_id
       - ip_address
       - user_id
-
-slots:
-  IpvContraIndicatorStorageGetEndUser:
-    range: IpvContraIndicatorStorageGetEndUserClass
-    description: Description for user

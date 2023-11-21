@@ -122,26 +122,3 @@ classes:
   IprResultNotificationEmailedPlatformClass:
     slots:
       - device_info
-
-slots:
-  IprResultNotificationEmailedUser:
-    range: IprResultNotificationEmailedUserClass
-    description: Description for user
-  IprResultNotificationEmailedRestricted:
-    range: IprResultNotificationEmailedRestrictedClass
-    description: Description for restricted
-  IprResultNotificationEmailedExtensions:
-    range: IprResultNotificationEmailedExtensionsClass
-    description: Description for extensions
-  IprResultNotificationEmailedExtensionsEvidence:
-    range: IprResultNotificationEmailedExtensionsEvidenceClass
-    description: Description for evidence
-  IprResultNotificationEmailedExtensionsExperianiiqresponse:
-    range: IprResultNotificationEmailedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  IprResultNotificationEmailedExtenstions:
-    range: IprResultNotificationEmailedExtenstionsClass
-    description: Description for extenstions
-  IprResultNotificationEmailedPlatform:
-    range: IprResultNotificationEmailedPlatformClass
-    description: Description for platform

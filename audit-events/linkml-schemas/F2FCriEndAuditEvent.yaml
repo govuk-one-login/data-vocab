@@ -41,14 +41,3 @@ classes:
   F2FCriEndExtensionsEvidenceClass:
     slots:
       - txn
-
-slots:
-  F2FCriEndUser:
-    range: F2FCriEndUserClass
-    description: Description for user
-  F2FCriEndExtensions:
-    range: F2FCriEndExtensionsClass
-    description: Description for extensions
-  F2FCriEndExtensionsEvidence:
-    range: F2FCriEndExtensionsEvidenceClass
-    description: Description for evidence

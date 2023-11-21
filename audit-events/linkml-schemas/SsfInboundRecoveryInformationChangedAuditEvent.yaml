@@ -122,26 +122,3 @@ classes:
   SsfInboundRecoveryInformationChangedPlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundRecoveryInformationChangedUser:
-    range: SsfInboundRecoveryInformationChangedUserClass
-    description: Description for user
-  SsfInboundRecoveryInformationChangedRestricted:
-    range: SsfInboundRecoveryInformationChangedRestrictedClass
-    description: Description for restricted
-  SsfInboundRecoveryInformationChangedExtensions:
-    range: SsfInboundRecoveryInformationChangedExtensionsClass
-    description: Description for extensions
-  SsfInboundRecoveryInformationChangedExtensionsEvidence:
-    range: SsfInboundRecoveryInformationChangedExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponse:
-    range: SsfInboundRecoveryInformationChangedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundRecoveryInformationChangedExtenstions:
-    range: SsfInboundRecoveryInformationChangedExtenstionsClass
-    description: Description for extenstions
-  SsfInboundRecoveryInformationChangedPlatform:
-    range: SsfInboundRecoveryInformationChangedPlatformClass
-    description: Description for platform

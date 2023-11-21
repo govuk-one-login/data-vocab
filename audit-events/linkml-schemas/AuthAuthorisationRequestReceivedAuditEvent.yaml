@@ -26,8 +26,3 @@ classes:
       - govuk_signin_journey_id
       - ip_address
       - persistent_session_id
-
-slots:
-  AuthAuthorisationRequestReceivedUser:
-    range: AuthAuthorisationRequestReceivedUserClass
-    description: Description for user

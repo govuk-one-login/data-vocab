@@ -29,8 +29,3 @@ classes:
       - ip_address
       - persistent_session_id
       - session_id
-
-slots:
-  AuthMfaInvalidCodeRequestUser:
-    range: AuthMfaInvalidCodeRequestUserClass
-    description: Description for user

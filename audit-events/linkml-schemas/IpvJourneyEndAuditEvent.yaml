@@ -28,7 +28,3 @@ classes:
       - session_id
       - user_id
 
-slots:
-  IpvJourneyEndUser:
-    range: IpvJourneyEndUserClass
-    description: Description for user

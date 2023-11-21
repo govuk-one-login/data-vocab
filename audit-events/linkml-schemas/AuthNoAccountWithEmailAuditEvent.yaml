@@ -36,11 +36,3 @@ classes:
     slots:
       - notification-type
       - mfa-type
-
-slots:
-  AuthNoAccountWithEmailUser:
-    range: AuthNoAccountWithEmailUserClass
-    description: Description for user
-  AuthNoAccountWithEmailExtensions:
-    range: AuthNoAccountWithEmailExtensionsClass
-    description: Description for extensions

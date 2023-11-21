@@ -122,26 +122,3 @@ classes:
   IprUserRedirectedPlatformClass:
     slots:
       - device_info
-
-slots:
-  IprUserRedirectedUser:
-    range: IprUserRedirectedUserClass
-    description: Description for user
-  IprUserRedirectedRestricted:
-    range: IprUserRedirectedRestrictedClass
-    description: Description for restricted
-  IprUserRedirectedExtensions:
-    range: IprUserRedirectedExtensionsClass
-    description: Description for extensions
-  IprUserRedirectedExtensionsEvidence:
-    range: IprUserRedirectedExtensionsEvidenceClass
-    description: Description for evidence
-  IprUserRedirectedExtensionsExperianiiqresponse:
-    range: IprUserRedirectedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  IprUserRedirectedExtenstions:
-    range: IprUserRedirectedExtenstionsClass
-    description: Description for extenstions
-  IprUserRedirectedPlatform:
-    range: IprUserRedirectedPlatformClass
-    description: Description for platform

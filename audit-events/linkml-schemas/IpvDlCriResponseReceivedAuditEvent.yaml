@@ -28,8 +28,3 @@ classes:
       - persistent_session_id
       - session_id
       - user_id
-
-slots:
-  IpvDlCriResponseReceivedUser:
-    range: IpvDlCriResponseReceivedUserClass
-    description: Description for user

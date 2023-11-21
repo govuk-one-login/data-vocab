@@ -30,8 +30,3 @@ classes:
       - phone
       - session_id
       - user_id
-
-slots:
-  AuthIpvSpotRequestedUser:
-    range: AuthIpvSpotRequestedUserClass
-    description: Description for user

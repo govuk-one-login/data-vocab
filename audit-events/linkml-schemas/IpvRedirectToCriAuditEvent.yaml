@@ -27,8 +27,3 @@ classes:
       - ip_address
       - session_id
       - user_id
-
-slots:
-  IpvRedirectToCriUser:
-    range: IpvRedirectToCriUserClass
-    description: Description for user

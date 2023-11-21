@@ -31,11 +31,3 @@ classes:
   IpvDeleteUserDataExtenstionsClass:
     slots:
       - source_topic_arn
-
-slots:
-  IpvDeleteUserDataUser:
-    range: IpvDeleteUserDataUserClass
-    description: Description for user
-  IpvDeleteUserDataExtenstions:
-    range: IpvDeleteUserDataExtenstionsClass
-    description: Description for extenstions

@@ -26,8 +26,3 @@ classes:
       - govuk_signin_journey_id
       - session_id
       - user_id
-
-slots:
-  IpvPassportCriEndUser:
-    range: IpvPassportCriEndUserClass
-    description: Description for user

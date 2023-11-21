@@ -23,8 +23,3 @@ classes:
   AuthUpdateClientRequestReceivedUserClass:
     slots:
       - ip_address
-
-slots:
-  AuthUpdateClientRequestReceivedUser:
-    range: AuthUpdateClientRequestReceivedUserClass
-    description: Description for user

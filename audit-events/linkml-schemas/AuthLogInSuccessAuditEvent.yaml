@@ -38,11 +38,3 @@ classes:
   AuthLogInSuccessExtensionsClass:
     slots:
       - internalSubjectId
-
-slots:
-  AuthLogInSuccessUser:
-    range: AuthLogInSuccessUserClass
-    description: Description for user
-  AuthLogInSuccessExtensions:
-    range: AuthLogInSuccessExtensionsClass
-    description: Description for extensions

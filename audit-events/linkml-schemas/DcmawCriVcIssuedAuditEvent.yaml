@@ -73,20 +73,3 @@ classes:
   DcmawCriVcIssuedPlatformClass:
     slots:
       - device_info
-
-slots:
-  DcmawCriVcIssuedUser:
-    range: DcmawCriVcIssuedUserClass
-    description: Description for user
-  DcmawCriVcIssuedRestricted:
-    range: DcmawCriVcIssuedRestrictedClass
-    description: Description for restricted
-  DcmawCriVcIssuedExtensions:
-    range: DcmawCriVcIssuedExtensionsClass
-    description: Description for extensions
-  DcmawCriVcIssuedExtensionsEvidence:
-    range: DcmawCriVcIssuedExtensionsEvidenceClass
-    description: Description for evidence
-  DcmawCriVcIssuedPlatform:
-    range: DcmawCriVcIssuedPlatformClass
-    description: Description for platform

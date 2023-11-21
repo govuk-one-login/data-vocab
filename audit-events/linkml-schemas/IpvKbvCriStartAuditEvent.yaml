@@ -28,7 +28,3 @@ classes:
       - session_id
       - user_id
 
-slots:
-  IpvKbvCriStartUser:
-    range: IpvKbvCriStartUserClass
-    description: Description for user

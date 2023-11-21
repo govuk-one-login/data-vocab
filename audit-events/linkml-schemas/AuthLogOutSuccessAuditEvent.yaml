@@ -27,8 +27,3 @@ classes:
       - ip_address
       - persistent_session_id
       - session_id
-
-slots:
-  AuthLogOutSuccessUser:
-    range: AuthLogOutSuccessUserClass
-    description: Description for user

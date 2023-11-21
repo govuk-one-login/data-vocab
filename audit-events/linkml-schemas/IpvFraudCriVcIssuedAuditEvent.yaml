@@ -58,16 +58,3 @@ classes:
       - decisionScore
       - type
 
-slots:
-  IpvFraudCriVcIssuedUser:
-    range: IpvFraudCriVcIssuedUserClass
-    description: Description for user
-  IpvFraudCriVcIssuedRestricted:
-    range: IpvFraudCriVcIssuedRestrictedClass
-    description: Description for restricted
-  IpvFraudCriVcIssuedExtensions:
-    range: IpvFraudCriVcIssuedExtensionsClass
-    description: Description for extensions
-  IpvFraudCriVcIssuedExtensionsEvidence:
-    range: IpvFraudCriVcIssuedExtensionsEvidenceClass
-    description: Description for evidence

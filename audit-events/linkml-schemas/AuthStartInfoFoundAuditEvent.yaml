@@ -37,11 +37,3 @@ classes:
   AuthStartInfoFoundExtensionsClass:
     slots:
       - internalSubjectId
-
-slots:
-  AuthStartInfoFoundUser:
-    range: AuthStartInfoFoundUserClass
-    description: Description for user
-  AuthStartInfoFoundExtensions:
-    range: AuthStartInfoFoundExtensionsClass
-    description: Description for extensions

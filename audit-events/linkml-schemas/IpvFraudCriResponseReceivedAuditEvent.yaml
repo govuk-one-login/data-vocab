@@ -35,11 +35,3 @@ classes:
   IpvFraudCriResponseReceivedExtensionsClass:
     slots:
       - experianCrossCoreResponse
-
-slots:
-  IpvFraudCriResponseReceivedUser:
-    range: IpvFraudCriResponseReceivedUserClass
-    description: Description for user
-  IpvFraudCriResponseReceivedExtensions:
-    range: IpvFraudCriResponseReceivedExtensionsClass
-    description: Description for extensions

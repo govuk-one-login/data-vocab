@@ -25,8 +25,3 @@ classes:
   AuthUserInfoReturnedUserClass:
     slots:
       - user_id
-
-slots:
-  AuthUserInfoReturnedUser:
-    range: AuthUserInfoReturnedUserClass
-    description: Description for user

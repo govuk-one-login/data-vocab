@@ -38,11 +38,3 @@ classes:
     slots:
       - notification-type
       - mfa-type
-
-slots:
-  AuthInvalidCodeSentUser:
-    range: AuthInvalidCodeSentUserClass
-    description: Description for user
-  AuthInvalidCodeSentExtensions:
-    range: AuthInvalidCodeSentExtensionsClass
-    description: Description for extensions

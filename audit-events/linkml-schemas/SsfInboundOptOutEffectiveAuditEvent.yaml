@@ -122,26 +122,3 @@ classes:
   SsfInboundOptOutEffectivePlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundOptOutEffectiveUser:
-    range: SsfInboundOptOutEffectiveUserClass
-    description: Description for user
-  SsfInboundOptOutEffectiveRestricted:
-    range: SsfInboundOptOutEffectiveRestrictedClass
-    description: Description for restricted
-  SsfInboundOptOutEffectiveExtensions:
-    range: SsfInboundOptOutEffectiveExtensionsClass
-    description: Description for extensions
-  SsfInboundOptOutEffectiveExtensionsEvidence:
-    range: SsfInboundOptOutEffectiveExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundOptOutEffectiveExtensionsExperianiiqresponse:
-    range: SsfInboundOptOutEffectiveExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundOptOutEffectiveExtenstions:
-    range: SsfInboundOptOutEffectiveExtenstionsClass
-    description: Description for extenstions
-  SsfInboundOptOutEffectivePlatform:
-    range: SsfInboundOptOutEffectivePlatformClass
-    description: Description for platform

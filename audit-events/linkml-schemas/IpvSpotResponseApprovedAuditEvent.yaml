@@ -27,8 +27,3 @@ classes:
       - govuk_signin_journey_id
       - persistent_session_id
       - session_id
-
-slots:
-  IpvSpotResponseApprovedUser:
-    range: IpvSpotResponseApprovedUserClass
-    description: Description for user

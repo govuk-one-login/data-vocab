@@ -42,14 +42,3 @@ classes:
   F2FYotiResponseReceivedExtensionsEvidenceClass:
     slots:
       - txn
-
-slots:
-  F2FYotiResponseReceivedUser:
-    range: F2FYotiResponseReceivedUserClass
-    description: Description for user
-  F2FYotiResponseReceivedExtensions:
-    range: F2FYotiResponseReceivedExtensionsClass
-    description: Description for extensions
-  F2FYotiResponseReceivedExtensionsEvidence:
-    range: F2FYotiResponseReceivedExtensionsEvidenceClass
-    description: Description for evidence

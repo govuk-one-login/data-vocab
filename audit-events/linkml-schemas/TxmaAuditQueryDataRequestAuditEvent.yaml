@@ -34,11 +34,3 @@ classes:
   TxmaAuditQueryDataRequestExtensionsClass:
     slots:
       - ticket_details
-
-slots:
-  TxmaAuditQueryDataRequestRestricted:
-    range: TxmaAuditQueryDataRequestRestrictedClass
-    description: Description for restricted
-  TxmaAuditQueryDataRequestExtensions:
-    range: TxmaAuditQueryDataRequestExtensionsClass
-    description: Description for extensions

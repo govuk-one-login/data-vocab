@@ -29,8 +29,3 @@ classes:
       - ip_address
       - persistent_session_id
       - session_id
-
-slots:
-  AuthCheckUserKnownEmailUser:
-    range: AuthCheckUserKnownEmailUserClass
-    description: Description for user

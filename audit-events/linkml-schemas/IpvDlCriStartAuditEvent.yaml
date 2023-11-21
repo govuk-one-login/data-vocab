@@ -23,8 +23,3 @@ classes:
   IpvDlCriStartUserClass:
     slots:
       - ip_address
-
-slots:
-  IpvDlCriStartUser:
-    range: IpvDlCriStartUserClass
-    description: Description for user

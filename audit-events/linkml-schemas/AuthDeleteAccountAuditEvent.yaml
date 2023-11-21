@@ -29,8 +29,3 @@ classes:
       - phone
       - session_id
       - user_id
-
-slots:
-  AuthDeleteAccountUser:
-    range: AuthDeleteAccountUserClass
-    description: Description for user

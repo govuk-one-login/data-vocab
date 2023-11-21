@@ -13,6 +13,7 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthAccountTemporarilyLockedAuditEventClass:
+    description: After many failed login trials, the user account gets blocked
     slots:
       - event_name
       - client_id
@@ -38,11 +39,3 @@ classes:
   AuthAccountTemporarilyLockedExtensionsClass:
     slots:
       - internalSubjectId
-
-slots:
-  AuthAccountTemporarilyLockedUser:
-    range: AuthAccountTemporarilyLockedUserClass
-    description: Description for user
-  AuthAccountTemporarilyLockedExtensions:
-    range: AuthAccountTemporarilyLockedExtensionsClass
-    description: Description for extensions

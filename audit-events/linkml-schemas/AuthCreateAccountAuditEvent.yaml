@@ -37,11 +37,3 @@ classes:
   AuthCreateAccountExtensionsClass:
     slots:
       - internalSubjectId
-
-slots:
-  AuthCreateAccountUser:
-    range: AuthCreateAccountUserClass
-    description: Description for user
-  AuthCreateAccountExtensions:
-    range: AuthCreateAccountExtensionsClass
-    description: Description for extensions

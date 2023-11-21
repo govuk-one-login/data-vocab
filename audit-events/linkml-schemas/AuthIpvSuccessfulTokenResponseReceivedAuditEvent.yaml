@@ -30,8 +30,3 @@ classes:
       - phone
       - session_id
       - user_id
-
-slots:
-  AuthIpvSuccessfulTokenResponseReceivedUser:
-    range: AuthIpvSuccessfulTokenResponseReceivedUserClass
-    description: Description for user

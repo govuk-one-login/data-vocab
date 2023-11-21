@@ -29,8 +29,3 @@ classes:
       - phone
       - session_id
       - user_id
-
-slots:
-  AuthUpdateEmailUser:
-    range: AuthUpdateEmailUserClass
-    description: Description for user

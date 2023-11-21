@@ -51,17 +51,3 @@ classes:
   F2FYotiStartExtensionsEvidenceClass:
     slots:
       - txn
-
-slots:
-  F2FYotiStartUser:
-    range: F2FYotiStartUserClass
-    description: Description for user
-  F2FYotiStartRestricted:
-    range: F2FYotiStartRestrictedClass
-    description: Description for restricted
-  F2FYotiStartExtensions:
-    range: F2FYotiStartExtensionsClass
-    description: Description for extensions
-  F2FYotiStartExtensionsEvidence:
-    range: F2FYotiStartExtensionsEvidenceClass
-    description: Description for evidence

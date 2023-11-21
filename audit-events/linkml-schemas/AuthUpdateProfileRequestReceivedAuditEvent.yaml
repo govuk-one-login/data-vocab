@@ -24,8 +24,3 @@ classes:
   AuthUpdateProfileRequestReceivedUserClass:
     slots:
       - govuk_signin_journey_id
-
-slots:
-  AuthUpdateProfileRequestReceivedUser:
-    range: AuthUpdateProfileRequestReceivedUserClass
-    description: Description for user

@@ -24,8 +24,3 @@ classes:
   AuthUpdateClientRequestErrorUserClass:
     slots:
       - ip_address
-
-slots:
-  AuthUpdateClientRequestErrorUser:
-    range: AuthUpdateClientRequestErrorUserClass
-    description: Description for user

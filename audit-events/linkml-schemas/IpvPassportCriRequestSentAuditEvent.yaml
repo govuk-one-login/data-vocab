@@ -51,16 +51,3 @@ classes:
     slots:
       - type
 
-slots:
-  IpvPassportCriRequestSentUser:
-    range: IpvPassportCriRequestSentUserClass
-    description: Description for user
-  IpvPassportCriRequestSentRestricted:
-    range: IpvPassportCriRequestSentRestrictedClass
-    description: Description for restricted
-  IpvPassportCriRequestSentExtensions:
-    range: IpvPassportCriRequestSentExtensionsClass
-    description: Description for extensions
-  IpvPassportCriRequestSentExtensionsEvidence:
-    range: IpvPassportCriRequestSentExtensionsEvidenceClass
-    description: Description for evidence

@@ -29,8 +29,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  F2FCriAccessTokenIssuedUser:
-    range: F2FCriAccessTokenIssuedUserClass
-    description: Description for user

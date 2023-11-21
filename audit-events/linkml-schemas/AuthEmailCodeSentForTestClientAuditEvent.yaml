@@ -27,8 +27,3 @@ classes:
       - email
       - ip_address
       - session_id
-
-slots:
-  AuthEmailCodeSentForTestClientUser:
-    range: AuthEmailCodeSentForTestClientUserClass
-    description: Description for user

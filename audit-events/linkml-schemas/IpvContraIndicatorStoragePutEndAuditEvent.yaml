@@ -25,8 +25,3 @@ classes:
     slots:
       - govuk_signin_journey_id
       - ip_address
-
-slots:
-  IpvContraIndicatorStoragePutEndUser:
-    range: IpvContraIndicatorStoragePutEndUserClass
-    description: Description for user

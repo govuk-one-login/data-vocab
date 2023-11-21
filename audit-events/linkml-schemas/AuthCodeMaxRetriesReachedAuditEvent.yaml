@@ -38,11 +38,3 @@ classes:
     slots:
       - notification-type
       - mfa-type
-
-slots:
-  AuthCodeMaxRetriesReachedUser:
-    range: AuthCodeMaxRetriesReachedUserClass
-    description: Description for user
-  AuthCodeMaxRetriesReachedExtensions:
-    range: AuthCodeMaxRetriesReachedExtensionsClass
-    description: Description for extensions

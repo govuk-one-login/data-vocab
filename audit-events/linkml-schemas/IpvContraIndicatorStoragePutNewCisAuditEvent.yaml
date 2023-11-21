@@ -33,11 +33,3 @@ classes:
   IpvContraIndicatorStoragePutNewCisExtensionsClass:
     slots:
       - ci_count
-
-slots:
-  IpvContraIndicatorStoragePutNewCisUser:
-    range: IpvContraIndicatorStoragePutNewCisUserClass
-    description: Description for user
-  IpvContraIndicatorStoragePutNewCisExtensions:
-    range: IpvContraIndicatorStoragePutNewCisExtensionsClass
-    description: Description for extensions

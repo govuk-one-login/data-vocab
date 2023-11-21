@@ -28,8 +28,3 @@ classes:
       - ip_address
       - phone
       - session_id
-
-slots:
-  AuthPhoneInvalidCodeRequestUser:
-    range: AuthPhoneInvalidCodeRequestUserClass
-    description: Description for user

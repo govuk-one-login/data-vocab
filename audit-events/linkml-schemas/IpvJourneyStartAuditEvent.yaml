@@ -27,8 +27,3 @@ classes:
       - ip_address
       - session_id
       - user_id
-
-slots:
-  IpvJourneyStartUser:
-    range: IpvJourneyStartUserClass
-    description: Description for user

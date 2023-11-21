@@ -28,7 +28,3 @@ classes:
       - session_id
       - user_id
 
-slots:
-  IpvIdentityReuseCompleteUser:
-    range: IpvIdentityReuseCompleteUserClass
-    description: Description for user

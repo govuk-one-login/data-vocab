@@ -30,8 +30,3 @@ classes:
       - persistent_session_id
       - session_id
       - user_id
-
-slots:
-  AuthCodeVerifiedUser:
-    range: AuthCodeVerifiedUserClass
-    description: Description for user

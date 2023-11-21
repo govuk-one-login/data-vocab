@@ -29,8 +29,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  DcmawWebEndUser:
-    range: DcmawWebEndUserClass
-    description: Description for user

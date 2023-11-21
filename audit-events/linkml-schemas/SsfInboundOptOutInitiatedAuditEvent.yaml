@@ -122,26 +122,3 @@ classes:
   SsfInboundOptOutInitiatedPlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundOptOutInitiatedUser:
-    range: SsfInboundOptOutInitiatedUserClass
-    description: Description for user
-  SsfInboundOptOutInitiatedRestricted:
-    range: SsfInboundOptOutInitiatedRestrictedClass
-    description: Description for restricted
-  SsfInboundOptOutInitiatedExtensions:
-    range: SsfInboundOptOutInitiatedExtensionsClass
-    description: Description for extensions
-  SsfInboundOptOutInitiatedExtensionsEvidence:
-    range: SsfInboundOptOutInitiatedExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundOptOutInitiatedExtensionsExperianiiqresponse:
-    range: SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundOptOutInitiatedExtenstions:
-    range: SsfInboundOptOutInitiatedExtenstionsClass
-    description: Description for extenstions
-  SsfInboundOptOutInitiatedPlatform:
-    range: SsfInboundOptOutInitiatedPlatformClass
-    description: Description for platform

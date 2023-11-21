@@ -28,8 +28,3 @@ classes:
       - session_id
       - transaction_id
       - user_id
-
-slots:
-  DcmawCriEndUser:
-    range: DcmawCriEndUserClass
-    description: Description for user

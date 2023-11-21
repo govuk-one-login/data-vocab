@@ -23,8 +23,3 @@ classes:
   IpvDlCriThirdPartyRequestEndedUserClass:
     slots:
       - ip_address
-
-slots:
-  IpvDlCriThirdPartyRequestEndedUser:
-    range: IpvDlCriThirdPartyRequestEndedUserClass
-    description: Description for user

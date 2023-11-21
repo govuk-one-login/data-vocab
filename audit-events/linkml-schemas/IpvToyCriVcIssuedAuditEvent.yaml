@@ -122,26 +122,3 @@ classes:
   IpvToyCriVcIssuedPlatformClass:
     slots:
       - device_info
-
-slots:
-  IpvToyCriVcIssuedUser:
-    range: IpvToyCriVcIssuedUserClass
-    description: Description for user
-  IpvToyCriVcIssuedRestricted:
-    range: IpvToyCriVcIssuedRestrictedClass
-    description: Description for restricted
-  IpvToyCriVcIssuedExtensions:
-    range: IpvToyCriVcIssuedExtensionsClass
-    description: Description for extensions
-  IpvToyCriVcIssuedExtensionsEvidence:
-    range: IpvToyCriVcIssuedExtensionsEvidenceClass
-    description: Description for evidence
-  IpvToyCriVcIssuedExtensionsExperianiiqresponse:
-    range: IpvToyCriVcIssuedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  IpvToyCriVcIssuedExtenstions:
-    range: IpvToyCriVcIssuedExtenstionsClass
-    description: Description for extenstions
-  IpvToyCriVcIssuedPlatform:
-    range: IpvToyCriVcIssuedPlatformClass
-    description: Description for platform

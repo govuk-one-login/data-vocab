@@ -122,26 +122,3 @@ classes:
   SsfInboundAccountPurgedPlatformClass:
     slots:
       - device_info
-
-slots:
-  SsfInboundAccountPurgedUser:
-    range: SsfInboundAccountPurgedUserClass
-    description: Description for user
-  SsfInboundAccountPurgedRestricted:
-    range: SsfInboundAccountPurgedRestrictedClass
-    description: Description for restricted
-  SsfInboundAccountPurgedExtensions:
-    range: SsfInboundAccountPurgedExtensionsClass
-    description: Description for extensions
-  SsfInboundAccountPurgedExtensionsEvidence:
-    range: SsfInboundAccountPurgedExtensionsEvidenceClass
-    description: Description for evidence
-  SsfInboundAccountPurgedExtensionsExperianiiqresponse:
-    range: SsfInboundAccountPurgedExtensionsExperianiiqresponseClass
-    description: Description for experianiiqresponse
-  SsfInboundAccountPurgedExtenstions:
-    range: SsfInboundAccountPurgedExtenstionsClass
-    description: Description for extenstions
-  SsfInboundAccountPurgedPlatform:
-    range: SsfInboundAccountPurgedPlatformClass
-    description: Description for platform

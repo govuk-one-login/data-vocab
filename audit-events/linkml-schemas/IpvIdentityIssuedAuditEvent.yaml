@@ -34,10 +34,3 @@ classes:
     slots:
       - levelOfConfidence
 
-slots:
-  IpvIdentityIssuedUser:
-    range: IpvIdentityIssuedUserClass
-    description: Description for user
-  IpvIdentityIssuedExtensions:
-    range: IpvIdentityIssuedExtensionsClass
-    description: Description for extensions

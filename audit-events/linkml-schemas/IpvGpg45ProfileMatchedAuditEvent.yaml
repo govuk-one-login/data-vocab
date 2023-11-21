@@ -40,14 +40,3 @@ classes:
   IpvGpg45ProfileMatchedExtensionsEvidenceClass:
     slots:
       - txn
-
-slots:
-  IpvGpg45ProfileMatchedUser:
-    range: IpvGpg45ProfileMatchedUserClass
-    description: Description for user
-  IpvGpg45ProfileMatchedExtensions:
-    range: IpvGpg45ProfileMatchedExtensionsClass
-    description: Description for extensions
-  IpvGpg45ProfileMatchedExtensionsEvidence:
-    range: IpvGpg45ProfileMatchedExtensionsEvidenceClass
-    description: Description for evidence
