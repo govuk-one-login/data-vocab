@@ -1,57 +1,126 @@
 #!/usr/bin/env bash
-ROOT_DIR="$( git rev-parse --show-toplevel )"
 set -e
 
+# Parse command-line options
+RUN_JSON_SCHEMAS=true
+RUN_MARKDOWN=true
+RUN_EXAMPLES=true
+RUN_NAV_BAR=true
+RUN_MKDOCS=true
 
-#
-# Generate JSON Schemas
-#
-EXAMPLES=(
-  "PostalAddressClass"
-  "PassportDetailsClass"
-  "DrivingPermitDetailsClass"
-  "ResidencePermitDetailsClass"
-  "SocialSecurityRecordDetailsClass"
-  "IdCardDetailsClass"
-  "NameClass"
-)
-
-#bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
-
-#
-# Generate Markdown
-#
-
-# Audit Events
-rm -rf "${ROOT_DIR}/docs/audit-events"
-
-AUDIT_EVENTS_DIR="${ROOT_DIR}/audit-events/linkml-schemas"
-DEST_DIR="${ROOT_DIR}/docs/audit-events/"
-#for file in ${AUDIT_EVENTS_DIR}/*AuditEvent.yaml; do 
-#  echo $file
-#  echo "----"
-#  poetry run gen-markdown "$file" -d "${DEST_DIR}/" --index-file index.md
-#done
-poetry run gen-markdown "${ROOT_DIR}/audit-events/linkml-schemas/base_schema.yaml" -d "${ROOT_DIR}/docs/audit-events/" --index-file index.md --mergeimports
-ln -s "${ROOT_DIR}/audit-events/json-schemas" "${ROOT_DIR}/docs/audit-events/json-schemas"
-
-# Physical Data Model
-rm -rf "${ROOT_DIR}/docs/v1"
-poetry run gen-markdown "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${ROOT_DIR}/docs/v1/" --index-file index.md
-ln -s "${ROOT_DIR}/v1/linkml-schemas" "${ROOT_DIR}/docs/v1/linkml-schemas"
-ln -s "${ROOT_DIR}/v1/json-schemas" "${ROOT_DIR}/docs/v1/json-schemas"
-
-#
-# Build Examples
-#
-echo "Building examples"
-mkdir "${ROOT_DIR}/docs/v1/examples"
-for EXAMPLE in "${EXAMPLES[@]}"; do
-  cp -R "${ROOT_DIR}/v1/examples/${EXAMPLE}" "${ROOT_DIR}/docs/v1/examples/${EXAMPLE}"
+# 
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --skip-json-schemas) RUN_JSON_SCHEMAS=false ;;
+        --skip-markdown) RUN_MARKDOWN=false ;;
+        --skip-examples) RUN_EXAMPLES=false ;;
+        --skip-nav-bar) RUN_NAV_BAR=false ;;
+        --skip-mkdocs) RUN_MKDOCS=false ;;
+        *) echo "Unknown parameter passed: $1"; exit 1 ;;
+    esac
+    shift
 done
 
 
-echo "Building Nav Bar"
-poetry run python "${ROOT_DIR}/scripts/build_nav.py"
 
-poetry run mkdocs build -c
+# Dependencies check
+check_dependency() {
+  if ! command -v "$1" &> /dev/null; then
+    echo "Error: $1 is not installed." >&2
+    exit 1
+  fi
+}
+
+
+check_dependency git
+check_dependency poetry
+
+
+# Directories and file paths
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+[ -z "$ROOT_DIR" ] && { echo "Error: ROOT_DIR not set."; exit 1; }
+
+
+SCHEMA_SCRIPT="${ROOT_DIR}/scripts/generate_json_schemas.sh"
+AUDIT_EVENTS_DIR="${ROOT_DIR}/docs/audit-events"
+PHYSICAL_DATA_MODEL_DIR="${ROOT_DIR}/docs/v1"
+EXAMPLES_DIR="${ROOT_DIR}/docs/v1/examples"
+NAV_BAR_SCRIPT="${ROOT_DIR}/scripts/build_nav.py"
+
+
+# JSON Schemas generation
+generate_json_schemas() {
+  echo "Generating JSON Schemas..."
+  bash "${SCHEMA_SCRIPT}" || {
+    echo "Error: Failed to generate JSON schemas."
+    exit 1
+  }
+}
+
+
+# Markdown generation
+generate_markdown() {
+  echo "Generating Markdown..."
+
+  # Audit Events
+  [ -d "${AUDIT_EVENTS_DIR}" ] && rm -rf "${AUDIT_EVENTS_DIR}"
+  poetry run gen-markdown "${ROOT_DIR}/audit-events/linkml-schemas/base_schema.yaml" -d "${AUDIT_EVENTS_DIR}/" --index-file index.md --mergeimports
+  ln -snf "${ROOT_DIR}/audit-events/linkml-schemas" "${AUDIT_EVENTS_DIR}/linkml-schemas"
+  ln -snf "${ROOT_DIR}/audit-events/json-schemas" "${AUDIT_EVENTS_DIR}/json-schemas"
+
+
+  # Physical Data Model
+  [ -d "${PHYSICAL_DATA_MODEL_DIR}" ] && rm -rf "${PHYSICAL_DATA_MODEL_DIR}"
+  poetry run gen-markdown "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${PHYSICAL_DATA_MODEL_DIR}/" --index-file index.md
+  ln -snf "${ROOT_DIR}/v1/linkml-schemas" "${PHYSICAL_DATA_MODEL_DIR}/linkml-schemas"
+  ln -snf "${ROOT_DIR}/v1/json-schemas" "${PHYSICAL_DATA_MODEL_DIR}/json-schemas"
+}
+
+
+# Examples generation
+EXAMPLES=(
+ "PostalAddressClass"
+ "PassportDetailsClass"
+ "DrivingPermitDetailsClass"
+ "ResidencePermitDetailsClass"
+ "SocialSecurityRecordDetailsClass"
+ "IdCardDetailsClass"
+ "NameClass"
+)
+
+
+generate_examples() {
+  echo "Building examples..."
+  mkdir -p "${EXAMPLES_DIR}"
+  for EXAMPLE in "${EXAMPLES[@]}"; do
+    cp -R "${ROOT_DIR}/v1/examples/${EXAMPLE}" "${EXAMPLES_DIR}/${EXAMPLE}"
+  done
+}
+
+
+# Navigation bar generation
+generate_nav_bar() {
+  echo "Building Nav Bar..."
+  poetry run python "${NAV_BAR_SCRIPT}"
+}
+
+
+# MkDocs build
+mkdocs_build() {
+  echo "Building documentation with MkDocs..."
+  poetry run mkdocs build -c
+}
+
+
+# Run tasks 
+$RUN_JSON_SCHEMAS && generate_json_schemas
+$RUN_MARKDOWN && generate_markdown
+$RUN_EXAMPLES && generate_examples
+$RUN_NAV_BAR && generate_nav_bar
+$RUN_MKDOCS && mkdocs_build
+
+
+
+
+
+
