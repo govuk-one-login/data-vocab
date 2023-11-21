@@ -1,0 +1,19 @@
+{
+  "name": "example-typescript",
+  "version": "0.1.0",
+  "description": "Example project that consumes DI Vocab TypeScript types.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@govuk-one-login/data-vocab": "^1.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

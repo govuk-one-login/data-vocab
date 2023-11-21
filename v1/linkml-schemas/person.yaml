@@ -42,6 +42,7 @@ classes:
     attributes:
       value:
         range: date
+        required: true
     slots:
       - description
 

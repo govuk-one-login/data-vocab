@@ -79,3 +79,93 @@ If the styling appears off, you may need to run the build script first
 ```
 ./scripts/deploy
 ```
+
+---
+
+# Using the TypeScript types
+
+Type definition files (`.d.ts`) are published with each tagged version of this repository. You can add these as a dependency in your TypeScript/Node.js project.
+
+These are published as [an npm module](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab) to GitHub Packages.
+
+> **Note**
+> Check out the [sample project](https://github.com/govuk-one-login/data-vocab/tree/main/examples/typescript-nodejs) for an example.
+
+## Add the dependency
+
+You can add it as a dependency using npm:
+
+```shell
+npm install @govuk-one-login/data-vocab@1.4.2
+```
+
+Or in your `package.json` dependencies:
+
+```json
+"@govuk-one-login/data-vocab": "1.4.2"
+```
+
+> **Note**
+> See [releases](https://github.com/govuk-one-login/data-vocab/releases) for the latest version.
+
+## Setting permissions
+
+### Working locally
+
+If you are working locally, ensure you have authenticated to the `@govuk-one-login` npm scope in GitHub Packages:
+
+```shell
+npm login --scope=@govuk-one-login --auth-type=legacy --registry=https://npm.pkg.github.com
+```
+
+> See [Authenticating to GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) documentation.
+
+### Using the package in GitHub Actions 
+
+If you are building your project in a GitHub Actions workflow, grant access to your repository from the [package settings](https://github.com/orgs/govuk-one-login/packages/npm/data-vocab/settings) page.
+
+In your workflow file, set the following permission for the GitHub token:
+
+```yaml
+permissions:
+  packages: read
+```
+
+In your `setup-node` step, set the registry URL:
+
+```yaml
+registry-url: "https://npm.pkg.github.com"
+```
+
+<details>
+<summary>Full setup-node step example</summary>
+
+Here's an example of the step with the registry configured:
+```yaml
+steps: 
+- name: Setup node and npm
+  uses: actions/setup-node@v3
+  with:
+    node-version: 18
+    cache: npm
+    registry-url: "https://npm.pkg.github.com"
+```
+</details>
+
+In the step where you run `npm install`, set the `NODE_AUTH_TOKEN` environment variable:
+
+```yaml
+NODE_AUTH_TOKEN: ${{ github.token }}
+```
+
+<details>
+<summary>Full npm install example</summary>
+
+Here's an example of the step with the `NODE_AUTH_TOKEN` configured:
+```yaml
+- name: Install npm dependencies
+  run: "npm ci --ignore-scripts"
+  env:
+    NODE_AUTH_TOKEN: ${{ github.token }}
+```
+</details>

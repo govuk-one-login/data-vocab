@@ -79,13 +79,14 @@ generate_markdown() {
 
 # Examples generation
 EXAMPLES=(
- "PostalAddressClass"
- "PassportDetailsClass"
- "DrivingPermitDetailsClass"
- "ResidencePermitDetailsClass"
- "SocialSecurityRecordDetailsClass"
- "IdCardDetailsClass"
- "NameClass"
+  "PostalAddressClass"
+  "PassportDetailsClass"
+  "DrivingPermitDetailsClass"
+  "ResidencePermitDetailsClass"
+  "SocialSecurityRecordDetailsClass"
+  "IdCardDetailsClass"
+  "NameClass"
+  "BankAccountDetailsClass"
 )
 
 

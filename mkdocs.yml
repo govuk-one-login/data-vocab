@@ -23,6 +23,7 @@ nav:
           - AddressAssertionClass: v1/classes/AddressAssertionClass.md
           - AddressCredentialClass: v1/classes/AddressCredentialClass.md
           - AuthorizationRequestClass: v1/classes/AuthorizationRequestClass.md
+          - BankAccountDetailsClass: v1/classes/BankAccountDetailsClass.md
           - BirthDateClass: v1/classes/BirthDateClass.md
           - CheckDetailsClass: v1/classes/CheckDetailsClass.md
           - ContraIndicatorClass: v1/classes/ContraIndicatorClass.md
@@ -65,6 +66,7 @@ nav:
           - VerifiableIdentityCredentialClass: v1/classes/VerifiableIdentityCredentialClass.md
       - Enums:
           - CheckMethodType: v1/enums/CheckMethodType.md
+          - DataCheckType: v1/enums/DataCheckType.md
           - FraudCheckType: v1/enums/FraudCheckType.md
           - IdentityVectorOfTrust: v1/enums/IdentityVectorOfTrust.md
           - KBVResponseModeType: v1/enums/KBVResponseModeType.md
@@ -74,6 +76,7 @@ nav:
           - JSON Schema files: v1/json-schemas/index.md
       - Slots:
           - '@context': v1/slots/@context.md
+          - accountNumber: v1/slots/accountNumber.md
           - activityFrom: v1/slots/activityFrom.md
           - activityHistoryScore: v1/slots/activityHistoryScore.md
           - address: v1/slots/address.md
@@ -82,6 +85,7 @@ nav:
           - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
           - addressLocality: v1/slots/addressLocality.md
           - aud: v1/slots/aud.md
+          - bankAccount: v1/slots/bankAccount.md
           - biometricVerificationProcessLevel: v1/slots/biometricVerificationProcessLevel.md
           - birthDate: v1/slots/birthDate.md
           - birthDateClass__value: v1/slots/birthDateClass__value.md
@@ -98,6 +102,7 @@ nav:
           - coreIdentityJWTClass__vc: v1/slots/coreIdentityJWTClass__vc.md
           - credentialJWT: v1/slots/credentialJWT.md
           - credentialSubject: v1/slots/credentialSubject.md
+          - dataCheck: v1/slots/dataCheck.md
           - departmentName: v1/slots/departmentName.md
           - dependentAddressLocality: v1/slots/dependentAddressLocality.md
           - dependentStreetName: v1/slots/dependentStreetName.md
@@ -112,8 +117,10 @@ nav:
           - exp: v1/slots/exp.md
           - expiryDate: v1/slots/expiryDate.md
           - failedCheckDetails: v1/slots/failedCheckDetails.md
+          - FamilyNameClass_value: v1/slots/FamilyNameClass_value.md
           - fraudCheck: v1/slots/fraudCheck.md
           - fullAddress: v1/slots/fullAddress.md
+          - GivenNameClass_value: v1/slots/GivenNameClass_value.md
           - govuk_signin_journey_id: v1/slots/govuk_signin_journey_id.md
           - iat: v1/slots/iat.md
           - icaoIssuerCode: v1/slots/icaoIssuerCode.md
@@ -125,7 +132,11 @@ nav:
           - identityCheckClass__type: v1/slots/identityCheckClass__type.md
           - identityCheckCredentialClass__type: v1/slots/identityCheckCredentialClass__type.md
           - IdentityCheckCredentialClass_credentialSubject: v1/slots/IdentityCheckCredentialClass_credentialSubject.md
-          - identityCheckCredentialJWTClass__vc: v1/slots/identityCheckCredentialJWTClass__vc.md
+          - IdentityCheckCredentialJWTClass_iss: v1/slots/IdentityCheckCredentialJWTClass_iss.md
+          - IdentityCheckCredentialJWTClass_jti: v1/slots/IdentityCheckCredentialJWTClass_jti.md
+          - IdentityCheckCredentialJWTClass_nbf: v1/slots/IdentityCheckCredentialJWTClass_nbf.md
+          - IdentityCheckCredentialJWTClass_sub: v1/slots/IdentityCheckCredentialJWTClass_sub.md
+          - IdentityCheckCredentialJWTClass_vc: v1/slots/IdentityCheckCredentialJWTClass_vc.md
           - identityCheckLevel: v1/slots/identityCheckLevel.md
           - identityCheckPolicy: v1/slots/identityCheckPolicy.md
           - identityFraudScore: v1/slots/identityFraudScore.md
@@ -166,6 +177,7 @@ nav:
           - sex: v1/slots/sex.md
           - shared_claims: v1/slots/shared_claims.md
           - socialSecurityRecord: v1/slots/socialSecurityRecord.md
+          - sortCode: v1/slots/sortCode.md
           - state: v1/slots/state.md
           - streetName: v1/slots/streetName.md
           - strengthScore: v1/slots/strengthScore.md

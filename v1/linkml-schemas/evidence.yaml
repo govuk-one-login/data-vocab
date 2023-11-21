@@ -36,6 +36,7 @@ classes:
       - photoVerificationProcessLevel
       - biometricVerificationProcessLevel
       - fraudCheck
+      - dataCheck
       - activityFrom
       - identityCheckLevel
       - identityCheckPolicy
@@ -118,10 +119,16 @@ enums:
         identity_theft_check:
         synthetic_identity_check:
         impersonation_risk_check:
+  DataCheckType:
+      permissible_values:
+        record_check:
+        cancelled_check:
+        lost_stolen_check:
 
 slots:
   txn:
     description: A unique transaction identifier for this check, or part of a check, if any.
+    range: string
   strengthScore:
     description: The strength score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#strength) 
     range: integer
@@ -183,6 +190,9 @@ slots:
   fraudCheck:
     range: FraudCheckType
     description: Specifies the kind of fraud check performed as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud)
+  dataCheck:
+    range: DataCheckType
+    description: Specifies the kind of data check performed allows for the distinction between a record check, cancelled check and a lost or stolen check
   activityFrom:
     range: date
     description: The date of the earliest activity found for the user.
@@ -221,4 +231,3 @@ slots:
   id:
     description: The identifier of a verifiable credential.
     range: uri
-  

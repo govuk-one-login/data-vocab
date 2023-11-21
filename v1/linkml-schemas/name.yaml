@@ -62,11 +62,19 @@ classes:
   GivenNameClass:
     description: Name part object that represents a Given Name. There may be multiple [NamePart](../NamePartClass) objects with a [NamePartType](../../enums/NamePartType) of `GivenName` within the representation of a [Name](../NameClass) for a specific period of validity. These will appear in the order in which the user specified or the order in which they were read from official documentation.
     is_a: NamePartClass
+    slot_usage:
+      value:
+        range: string
+        required: true
 
   FamilyNameClass: 
     description: Name part object that represents a Family Name. There currently will be a single [NamePart](../NamePartClass) object with a [NamePartType](../../enums/NamePartType) of `FamilyName` within the representation of a [Name](../NameClass) for a specific period of validity. This property will contain the user specified family name or the family name that was read from official documentation and may contain space characters.
                  <br/><br/>**NOTE** Considering names in a global context across multiple cultures, consumers of this format should understand that multiple `FamilyName` name parts may be used in future.
     is_a: NamePartClass
+    slot_usage:
+      value:
+        range: string
+        required: true
 
 slots:
   type:
@@ -82,7 +90,7 @@ slots:
 
 enums:
   NamePartType:
-    description: Reference data enumeration applied to the `type` property for a specific [NamePart](../NamePartClass)
+    description: Reference data enumeration applied to the `type` property for a specific [NamePart](../../classes/NamePartClass)
     permissible_values:
       GivenName:
         description: Part of a personal name that identifies a person, for UK citizens this type is commonly used for first names/forenames and middle names.

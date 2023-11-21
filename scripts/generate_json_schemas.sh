@@ -40,6 +40,7 @@ LINKML_ITEMS=(
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
   "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
+  "document.yaml,BankAccountDetailsClass,BankAccount.json"
 )
 
 JSON_SCHEMA_DIR="${ROOT_DIR}/v1/json-schemas"
