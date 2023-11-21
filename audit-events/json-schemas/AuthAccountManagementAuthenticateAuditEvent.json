@@ -2,7 +2,7 @@
    "$defs": {
       "AuthAccountManagementAuthenticateAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Viewing page to update the how to authenticate . Triggered by Auth upon successful authentication of  GOV.UK Accounts for the given user context. This will be triggered as part of the journey where user  wants to update Email, Password or Phone number through GOV.UK accounts",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

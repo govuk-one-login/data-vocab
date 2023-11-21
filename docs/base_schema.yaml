@@ -1,5 +1,5 @@
-
-id: https://vocab.account.gov.uk/linkml/audit_event
+id: https://vocab.account.gov.uk/linkml/base-schema
+name: base_schema
 description: Base schema for all events
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -110,7 +110,7 @@ imports:
   - ./DcmawMissingContextAfterAbortAuditEvent
   - ./DcmawMissingContextAfterCompletionAuditEvent
   - ./DcmawPassportSelectedAuditEvent
-  - ./DcmawReadidNfcBillingStartedAuditEvent
+ # - ./DcmawReadidNfcBillingStartedAuditEvent
   - ./DcmawRedirectAbortAuditEvent
   - ./DcmawRedirectSuccessAuditEvent
   - ./DcmawSessionRecoveredAuditEvent
@@ -138,7 +138,7 @@ imports:
   - ./IpvCriAuthResponseReceivedAuditEvent
   - ./IpvDeleteUserDataAuditEvent
   - ./IpvDlCriEndAuditEvent
-  - ./IpvDlCriRequestSentAuditEvent
+#  - ./IpvDlCriRequestSentAuditEvent
   - ./IpvDlCriResponseReceivedAuditEvent
   - ./IpvDlCriStartAuditEvent
   - ./IpvDlCriThirdPartyRequestEndedAuditEvent
