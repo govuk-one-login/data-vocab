@@ -12,6 +12,7 @@ import ruamel.yaml
 DOCS_DIR = "./docs"
 
 CUSTOM_NAMES = {
+    "audit-events/json-schemas/index.md": "JSON Schema files",
     "index.md": "1. GOV.UK One Login Vocabulary",
     "v1/_Home/index.md": "credentials",
     "v1/json-schemas/index.md": "JSON Schema files"
@@ -92,6 +93,7 @@ def generate_navigation_structure():
         for file in files:
             if file.endswith('.md'):
                 full_path = os.path.join(root, file)
+                print(full_path)
                 if is_redirect(full_path):
                     continue
                 rel_path = os.path.relpath(full_path, DOCS_DIR)

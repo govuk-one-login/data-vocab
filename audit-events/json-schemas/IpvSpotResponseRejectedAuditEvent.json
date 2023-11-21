@@ -1,0 +1,60 @@
+{
+   "$defs": {
+      "IpvSpotResponseRejectedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/IpvSpotResponseRejectedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvSpotResponseRejectedAuditEventClass",
+         "type": "object"
+      },
+      "IpvSpotResponseRejectedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvSpotResponseRejectedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-spot-response-rejected",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-spot-response-rejected",
+   "type": "object"
+}
+

@@ -1,0 +1,122 @@
+{
+   "$defs": {
+      "IpvF2FCriVcReceivedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/IpvF2FCriVcReceivedExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "extensions": {
+               "$ref": "#/$defs/IpvF2FCriVcReceivedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/IpvF2FCriVcReceivedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvF2FCriVcReceivedAuditEventClass",
+         "type": "object"
+      },
+      "IpvF2FCriVcReceivedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "iss": {
+               "description": "issuer URI",
+               "type": "string"
+            },
+            "levelOfConfidence": {
+               "description": "Level of confidence achieved in matching the GPG45 Profile",
+               "type": "string"
+            },
+            "notification_type": {
+               "description": "The notification type used to notify the user",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvF2FCriVcReceivedExtensionsClass",
+         "type": "object"
+      },
+      "IpvF2FCriVcReceivedExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "checkDetails": {
+               "description": "The check details of the check carried out by the CRI",
+               "type": "string"
+            },
+            "strengthScore": {
+               "description": "The strengthScore from the check done by the CRI",
+               "type": "string"
+            },
+            "type": {
+               "description": "Description for type",
+               "type": "string"
+            },
+            "validityScore": {
+               "description": "The validityScore from the check done by the CRI",
+               "type": "string"
+            },
+            "verificationScore": {
+               "description": "The verificationScore from the check done by the CRI",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvF2FCriVcReceivedExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "IpvF2FCriVcReceivedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvF2FCriVcReceivedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-f2f-cri-vc-received",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-f2f-cri-vc-received",
+   "type": "object"
+}
+

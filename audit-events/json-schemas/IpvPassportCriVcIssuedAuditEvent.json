@@ -1,0 +1,147 @@
+{
+   "$defs": {
+      "IpvPassportCriVcIssuedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/IpvPassportCriVcIssuedExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "extensions": {
+               "$ref": "#/$defs/IpvPassportCriVcIssuedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "restricted": {
+               "$ref": "#/$defs/IpvPassportCriVcIssuedRestrictedClass",
+               "description": "The restricted audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/IpvPassportCriVcIssuedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvPassportCriVcIssuedAuditEventClass",
+         "type": "object"
+      },
+      "IpvPassportCriVcIssuedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "evidence_value": {
+               "description": "Description for evidence_value",
+               "type": "string"
+            },
+            "iss": {
+               "description": "issuer URI",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriVcIssuedExtensionsClass",
+         "type": "object"
+      },
+      "IpvPassportCriVcIssuedExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "ci": {
+               "description": "CIs in an array",
+               "type": "string"
+            },
+            "txn": {
+               "description": "Third party transaction id",
+               "type": "string"
+            },
+            "type": {
+               "description": "Description for type",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriVcIssuedExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "IpvPassportCriVcIssuedRestrictedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "birthDate": {
+               "description": "DoB information",
+               "type": "string"
+            },
+            "documentType": {
+               "description": "The document type that a user has chosen to perform their identity checks with",
+               "type": "string"
+            },
+            "issuingCountry": {
+               "description": "The issuing country of the document a user has choosen to perform their identity checks with",
+               "type": "string"
+            },
+            "name": {
+               "description": "Name information",
+               "type": "string"
+            },
+            "passport": {
+               "description": "Passport information",
+               "type": "string"
+            },
+            "user": {
+               "description": "The data relating to the user.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriVcIssuedRestrictedClass",
+         "type": "object"
+      },
+      "IpvPassportCriVcIssuedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriVcIssuedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-passport-cri-vc-issued",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-passport-cri-vc-issued",
+   "type": "object"
+}
+

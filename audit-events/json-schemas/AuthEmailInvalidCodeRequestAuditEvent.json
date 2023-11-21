@@ -1,0 +1,60 @@
+{
+   "$defs": {
+      "AuthEmailInvalidCodeRequestAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthEmailInvalidCodeRequestUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthEmailInvalidCodeRequestAuditEventClass",
+         "type": "object"
+      },
+      "AuthEmailInvalidCodeRequestUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "email": {
+               "description": "The user account email address.",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthEmailInvalidCodeRequestUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-email-invalid-code-request",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-email-invalid-code-request",
+   "type": "object"
+}
+

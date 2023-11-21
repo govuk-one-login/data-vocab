@@ -1,0 +1,48 @@
+{
+   "$defs": {
+      "TxmaAuditQueryOutputAccessedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "extensions": {
+               "$ref": "#/$defs/TxmaAuditQueryOutputAccessedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "TxmaAuditQueryOutputAccessedAuditEventClass",
+         "type": "object"
+      },
+      "TxmaAuditQueryOutputAccessedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "ticket_details": {
+               "description": "The zendesk reference for the ticket to get TXMA data from logs",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "TxmaAuditQueryOutputAccessedExtensionsClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/txma-audit-query-output-accessed",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "txma-audit-query-output-accessed",
+   "type": "object"
+}
+

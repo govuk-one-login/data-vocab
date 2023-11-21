@@ -1,0 +1,64 @@
+{
+   "$defs": {
+      "IpvFraudCriEndAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/IpvFraudCriEndUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvFraudCriEndAuditEventClass",
+         "type": "object"
+      },
+      "IpvFraudCriEndUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvFraudCriEndUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-fraud-cri-end",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-fraud-cri-end",
+   "type": "object"
+}
+

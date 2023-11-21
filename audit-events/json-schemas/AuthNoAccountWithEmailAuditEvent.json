@@ -1,0 +1,85 @@
+{
+   "$defs": {
+      "AuthNoAccountWithEmailAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "extensions": {
+               "$ref": "#/$defs/AuthNoAccountWithEmailExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/AuthNoAccountWithEmailUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthNoAccountWithEmailAuditEventClass",
+         "type": "object"
+      },
+      "AuthNoAccountWithEmailExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "mfa_type": {
+               "description": "If the user is a test user",
+               "type": "string"
+            },
+            "notification_type": {
+               "description": "The notification type used to notify the user",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthNoAccountWithEmailExtensionsClass",
+         "type": "object"
+      },
+      "AuthNoAccountWithEmailUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthNoAccountWithEmailUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-no-account-with-email",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-no-account-with-email",
+   "type": "object"
+}
+

@@ -403,6 +403,8 @@ nav:
           - TXMA_AUDIT_QUERY_ILLEGAL_REQUEST: audit-events/classes/TxmaAuditQueryIllegalRequestAuditEventClass.md
           - TXMA_AUDIT_QUERY_OUTPUT_ACCESSED: audit-events/classes/TxmaAuditQueryOutputAccessedAuditEventClass.md
           - TXMA_AUDIT_QUERY_OUTPUT_GENERATED: audit-events/classes/TxmaAuditQueryOutputGeneratedAuditEventClass.md
+      - JSON Schemas:
+          - JSON Schema files: audit-events/json-schemas/index.md
       - Slots:
           - activityScore: audit-events/slots/activityScore.md
           - address: audit-events/slots/address.md
@@ -1253,4 +1255,3 @@ nav:
           - Time: audit-events/types/Time.md
           - Uri: audit-events/types/Uri.md
           - Uriorcurie: audit-events/types/Uriorcurie.md
-  - audit-events-index: audit-events-index.md

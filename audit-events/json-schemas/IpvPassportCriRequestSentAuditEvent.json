@@ -1,0 +1,123 @@
+{
+   "$defs": {
+      "IpvPassportCriRequestSentAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/IpvPassportCriRequestSentExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "extensions": {
+               "$ref": "#/$defs/IpvPassportCriRequestSentExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "restricted": {
+               "$ref": "#/$defs/IpvPassportCriRequestSentRestrictedClass",
+               "description": "The restricted audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/IpvPassportCriRequestSentUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvPassportCriRequestSentAuditEventClass",
+         "type": "object"
+      },
+      "IpvPassportCriRequestSentExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "iss": {
+               "description": "issuer URI",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriRequestSentExtensionsClass",
+         "type": "object"
+      },
+      "IpvPassportCriRequestSentExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "type": {
+               "description": "Description for type",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriRequestSentExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "IpvPassportCriRequestSentRestrictedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "birthDate": {
+               "description": "DoB information",
+               "type": "string"
+            },
+            "name": {
+               "description": "Name information",
+               "type": "string"
+            },
+            "passport": {
+               "description": "Passport information",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriRequestSentRestrictedClass",
+         "type": "object"
+      },
+      "IpvPassportCriRequestSentUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvPassportCriRequestSentUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-passport-cri-request-sent",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-passport-cri-request-sent",
+   "type": "object"
+}
+

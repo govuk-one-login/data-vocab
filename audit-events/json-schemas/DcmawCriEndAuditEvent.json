@@ -1,0 +1,64 @@
+{
+   "$defs": {
+      "DcmawCriEndAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/DcmawCriEndUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "DcmawCriEndAuditEventClass",
+         "type": "object"
+      },
+      "DcmawCriEndUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "transaction_id": {
+               "description": "The transaction id from the transaction that generated the audit event.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "DcmawCriEndUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/dcmaw-cri-end",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "dcmaw-cri-end",
+   "type": "object"
+}
+

@@ -1,0 +1,61 @@
+{
+   "$defs": {
+      "AuthAccountManagementAuthenticateAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "pattern": "^AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE$",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthAccountManagementAuthenticateUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthAccountManagementAuthenticateAuditEventClass",
+         "type": "object"
+      },
+      "AuthAccountManagementAuthenticateUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "email": {
+               "description": "The user account email address.",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthAccountManagementAuthenticateUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-account-management-authenticate",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-account-management-authenticate",
+   "type": "object"
+}
+

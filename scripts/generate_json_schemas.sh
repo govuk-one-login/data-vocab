@@ -9,6 +9,19 @@ set -e
 # - Poetry
 #
 
+
+ROOT_DIR="$( git rev-parse --show-toplevel )"
+
+
+
+
+
+
+
+#
+# PDM (v1)
+#
+
 # format: <linkml schema file>,<linkml class>,<json schema file>
 LINKML_ITEMS=(
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
@@ -29,7 +42,6 @@ LINKML_ITEMS=(
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
 )
 
-ROOT_DIR="$( git rev-parse --show-toplevel )"
 JSON_SCHEMA_DIR="${ROOT_DIR}/v1/json-schemas"
 LINKML_SCHEMA_DIR="${ROOT_DIR}/v1/linkml-schemas"
 
@@ -49,3 +61,33 @@ for LINKML_ITEM in "${LINKML_ITEMS[@]}"; do
   echo "| [$JSON_SCHEMA]($JSON_SCHEMA) | [$LINKML_CLASS](../classes/$LINKML_CLASS) |" >> $JSON_SCHEMA_DIR/index.md
   poetry run python ./scripts/check_schema_see_also.py  "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" $LINKML_CLASS ../json-schemas/$JSON_SCHEMA
 done
+
+
+
+#
+# Audit Events
+#
+AUDIT_EVENT_JSON_SCHEMA_DIR="${ROOT_DIR}/audit-events/json-schemas"
+AUDIT_EVENT_LINKML_SCHEMA_DIR="${ROOT_DIR}/audit-events/linkml-schemas"
+rm -f "${AUDIT_EVENT_JSON_SCHEMA_DIR}/*.json"
+#mkdir $AUDIT_EVENT_JSON_SCHEMA_DIR
+
+cp $AUDIT_EVENT_JSON_SCHEMA_DIR/index.md.template $AUDIT_EVENT_JSON_SCHEMA_DIR/index.md
+
+for file in ${AUDIT_EVENT_LINKML_SCHEMA_DIR}/*AuditEvent.yaml; do
+  echo "----"
+  # Remove the .yaml extension and then append .json
+  json_schema_output_file="${AUDIT_EVENT_JSON_SCHEMA_DIR}/$(basename "${file}" .yaml).json"
+  link_ml_class="${AUDIT_EVENT_JSON_SCHEMA_DIR}/$(basename "${file}" .yaml)Class/"
+  event_name=$(basename $json_schema_output_file | sed -r 's#.*/##; s/AuditEvent\.json$//; s/([a-z0-9])([A-Z])/\1_\2/g' | tr '[:lower:]' '[:upper:]')
+
+
+  echo $json_schema_output_file
+  poetry run gen-json-schema --closed --no-metadata -t "$file" "$file" > "$json_schema_output_file"
+  echo $json_schema_output_file
+  echo $event_name
+  echo "| $event_name |[$(basename "${json_schema_output_file}")]($(basename "${json_schema_output_file}"))| [$(basename ${link_ml_class})](../classes/$(basename "${link_ml_class}"))" >> $AUDIT_EVENT_JSON_SCHEMA_DIR/index.md
+done
+
+
+

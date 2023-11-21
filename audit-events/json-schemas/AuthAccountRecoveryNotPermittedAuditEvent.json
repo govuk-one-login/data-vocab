@@ -1,0 +1,72 @@
+{
+   "$defs": {
+      "AuthAccountRecoveryNotPermittedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthAccountRecoveryNotPermittedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthAccountRecoveryNotPermittedAuditEventClass",
+         "type": "object"
+      },
+      "AuthAccountRecoveryNotPermittedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "email": {
+               "description": "The user account email address.",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "transaction_id": {
+               "description": "The transaction id from the transaction that generated the audit event.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthAccountRecoveryNotPermittedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-account-recovery-not-permitted",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-account-recovery-not-permitted",
+   "type": "object"
+}
+

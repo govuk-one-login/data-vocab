@@ -1,0 +1,139 @@
+{
+   "$defs": {
+      "F2FCriVcIssuedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/F2FCriVcIssuedExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "extensions": {
+               "$ref": "#/$defs/F2FCriVcIssuedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "restricted": {
+               "$ref": "#/$defs/F2FCriVcIssuedRestrictedClass",
+               "description": "The restricted audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/F2FCriVcIssuedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "F2FCriVcIssuedAuditEventClass",
+         "type": "object"
+      },
+      "F2FCriVcIssuedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "evidence_value": {
+               "description": "Description for evidence_value",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FCriVcIssuedExtensionsClass",
+         "type": "object"
+      },
+      "F2FCriVcIssuedExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "checkDetails": {
+               "description": "The check details of the check carried out by the CRI",
+               "type": "string"
+            },
+            "ci": {
+               "description": "CIs in an array",
+               "type": "string"
+            },
+            "strengthScore": {
+               "description": "The strengthScore from the check done by the CRI",
+               "type": "string"
+            },
+            "txn": {
+               "description": "Third party transaction id",
+               "type": "string"
+            },
+            "type": {
+               "description": "Description for type",
+               "type": "string"
+            },
+            "verificationScore": {
+               "description": "The verificationScore from the check done by the CRI",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FCriVcIssuedExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "F2FCriVcIssuedRestrictedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "user": {
+               "description": "The data relating to the user.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FCriVcIssuedRestrictedClass",
+         "type": "object"
+      },
+      "F2FCriVcIssuedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FCriVcIssuedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/f2f-cri-vc-issued",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "f2f-cri-vc-issued",
+   "type": "object"
+}
+

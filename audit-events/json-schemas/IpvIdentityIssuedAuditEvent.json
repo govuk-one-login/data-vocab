@@ -1,0 +1,73 @@
+{
+   "$defs": {
+      "IpvIdentityIssuedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "extensions": {
+               "$ref": "#/$defs/IpvIdentityIssuedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/IpvIdentityIssuedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvIdentityIssuedAuditEventClass",
+         "type": "object"
+      },
+      "IpvIdentityIssuedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "levelOfConfidence": {
+               "description": "Level of confidence achieved in matching the GPG45 Profile",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvIdentityIssuedExtensionsClass",
+         "type": "object"
+      },
+      "IpvIdentityIssuedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvIdentityIssuedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-identity-issued",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-identity-issued",
+   "type": "object"
+}
+

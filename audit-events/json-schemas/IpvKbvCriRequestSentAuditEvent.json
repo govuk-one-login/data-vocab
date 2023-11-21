@@ -1,0 +1,89 @@
+{
+   "$defs": {
+      "IpvKbvCriRequestSentAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "restricted": {
+               "$ref": "#/$defs/IpvKbvCriRequestSentRestrictedClass",
+               "description": "The restricted audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/IpvKbvCriRequestSentUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvKbvCriRequestSentAuditEventClass",
+         "type": "object"
+      },
+      "IpvKbvCriRequestSentRestrictedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "address": {
+               "description": "Address information",
+               "type": "string"
+            },
+            "birthDate": {
+               "description": "DoB information",
+               "type": "string"
+            },
+            "name": {
+               "description": "Name information",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvKbvCriRequestSentRestrictedClass",
+         "type": "object"
+      },
+      "IpvKbvCriRequestSentUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "IpvKbvCriRequestSentUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-kbv-cri-request-sent",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-kbv-cri-request-sent",
+   "type": "object"
+}
+

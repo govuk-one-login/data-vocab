@@ -1,0 +1,48 @@
+{
+   "$defs": {
+      "AuthRegisterClientRequestReceivedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthRegisterClientRequestReceivedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthRegisterClientRequestReceivedAuditEventClass",
+         "type": "object"
+      },
+      "AuthRegisterClientRequestReceivedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthRegisterClientRequestReceivedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-register-client-request-received",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-register-client-request-received",
+   "type": "object"
+}
+

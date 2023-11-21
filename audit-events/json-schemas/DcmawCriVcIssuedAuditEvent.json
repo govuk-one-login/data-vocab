@@ -1,0 +1,204 @@
+{
+   "$defs": {
+      "DcmawCriVcIssuedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/DcmawCriVcIssuedExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "extensions": {
+               "$ref": "#/$defs/DcmawCriVcIssuedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "platform": {
+               "$ref": "#/$defs/DcmawCriVcIssuedPlatformClass",
+               "description": "The data relating to the user."
+            },
+            "restricted": {
+               "$ref": "#/$defs/DcmawCriVcIssuedRestrictedClass",
+               "description": "The restricted audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/DcmawCriVcIssuedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "DcmawCriVcIssuedAuditEventClass",
+         "type": "object"
+      },
+      "DcmawCriVcIssuedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "evidence_value": {
+               "description": "Description for evidence_value",
+               "type": "string"
+            },
+            "post_office_details": {
+               "description": "Post office a user has chosen to complete their in-person checks at",
+               "type": "string"
+            },
+            "toy": {
+               "description": "Value submitted as part of the Toy CRI",
+               "type": "string"
+            },
+            "toyResponse": {
+               "description": "Response from mock external Toy CRI API",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "DcmawCriVcIssuedExtensionsClass",
+         "type": "object"
+      },
+      "DcmawCriVcIssuedExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "checkDetails": {
+               "description": "The check details of the check carried out by the CRI",
+               "type": "string"
+            },
+            "ci": {
+               "description": "CIs in an array",
+               "type": "string"
+            },
+            "failedCheckDetails": {
+               "description": "The failed check details of the check carried out by the CRI",
+               "type": "string"
+            },
+            "strengthScore": {
+               "description": "The strengthScore from the check done by the CRI",
+               "type": "string"
+            },
+            "txn": {
+               "description": "Third party transaction id",
+               "type": "string"
+            },
+            "validityScore": {
+               "description": "The validityScore from the check done by the CRI",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "DcmawCriVcIssuedExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "DcmawCriVcIssuedPlatformClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "device_info": {
+               "description": "Device information object from DCMAW with data populated from Mobile App 3rd Party Suppliers",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "DcmawCriVcIssuedPlatformClass",
+         "type": "object"
+      },
+      "DcmawCriVcIssuedRestrictedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "address": {
+               "description": "Address information",
+               "type": "string"
+            },
+            "birthDate": {
+               "description": "DoB information",
+               "type": "string"
+            },
+            "deviceId": {
+               "description": "Device fingerprint",
+               "type": "string"
+            },
+            "documentType": {
+               "description": "The document type that a user has chosen to perform their identity checks with",
+               "type": "string"
+            },
+            "drivingPermit": {
+               "description": "Driving Licence information",
+               "type": "string"
+            },
+            "issuingCountry": {
+               "description": "The issuing country of the document a user has choosen to perform their identity checks with",
+               "type": "string"
+            },
+            "name": {
+               "description": "Name information",
+               "type": "string"
+            },
+            "passport": {
+               "description": "Passport information",
+               "type": "string"
+            },
+            "residencePermit": {
+               "description": "Residence Permit information",
+               "type": "string"
+            },
+            "user": {
+               "description": "The data relating to the user.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "DcmawCriVcIssuedRestrictedClass",
+         "type": "object"
+      },
+      "DcmawCriVcIssuedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "transaction_id": {
+               "description": "The transaction id from the transaction that generated the audit event.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "DcmawCriVcIssuedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/dcmaw-cri-vc-issued",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "dcmaw-cri-vc-issued",
+   "type": "object"
+}
+

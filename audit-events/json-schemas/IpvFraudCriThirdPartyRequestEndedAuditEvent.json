@@ -1,0 +1,27 @@
+{
+   "$defs": {
+      "IpvFraudCriThirdPartyRequestEndedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "IpvFraudCriThirdPartyRequestEndedAuditEventClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ipv-fraud-cri-third-party-request-ended",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ipv-fraud-cri-third-party-request-ended",
+   "type": "object"
+}
+

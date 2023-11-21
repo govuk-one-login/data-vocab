@@ -1,0 +1,382 @@
+{
+   "$defs": {
+      "SsfInboundOptOutInitiatedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "experianIiqResponse": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass",
+               "description": "Experian KBV questions answered incorrect"
+            },
+            "extensions": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "extenstions": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedExtenstionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "platform": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedPlatformClass",
+               "description": "The data relating to the user."
+            },
+            "restricted": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedRestrictedClass",
+               "description": "The restricted audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/SsfInboundOptOutInitiatedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "SsfInboundOptOutInitiatedAuditEventClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "addressesEntered": {
+               "description": "Number of addresses entered by a user",
+               "type": "string"
+            },
+            "ci_count": {
+               "description": "Count of contra-indicators",
+               "type": "string"
+            },
+            "client_name": {
+               "description": "Client name as defined in the client registry",
+               "type": "string"
+            },
+            "description": {
+               "description": "Generic description field",
+               "type": "string"
+            },
+            "error": {
+               "description": "Generic error field",
+               "type": "string"
+            },
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "evidence_value": {
+               "description": "Description for evidence_value",
+               "type": "string"
+            },
+            "experianCrossCoreResponse": {
+               "description": "Experian Crosscore Response object",
+               "type": "string"
+            },
+            "experianIiqResponse": {
+               "description": "Experian KBV questions answered incorrect",
+               "type": "string"
+            },
+            "experianIiqResponse_value": {
+               "description": "Description for experianIiqResponse_value",
+               "type": "string"
+            },
+            "internalSubjectId": {
+               "description": "The DI Pairwise or internal subject id",
+               "type": "string"
+            },
+            "isNewAccount": {
+               "description": "If the account is a newly created account",
+               "type": "string"
+            },
+            "iss": {
+               "description": "issuer URI",
+               "type": "string"
+            },
+            "levelOfConfidence": {
+               "description": "Level of confidence achieved in matching the GPG45 Profile",
+               "type": "string"
+            },
+            "mfa_type": {
+               "description": "If the user is a test user",
+               "type": "string"
+            },
+            "notification_type": {
+               "description": "The notification type used to notify the user",
+               "type": "string"
+            },
+            "post_office_details": {
+               "description": "Post office a user has chosen to complete their in-person checks at",
+               "type": "string"
+            },
+            "previous_govuk_signin_journey_id": {
+               "description": "Previous journey id in case of session recovery",
+               "type": "string"
+            },
+            "rejectionReason": {
+               "description": "Generic rejection reason field",
+               "type": "string"
+            },
+            "successful": {
+               "description": "Flag to inform if a transaction was successful",
+               "type": "string"
+            },
+            "test_user": {
+               "description": "If the user is a test user",
+               "type": "string"
+            },
+            "ticket_details": {
+               "description": "The zendesk reference for the ticket to get TXMA data from logs",
+               "type": "string"
+            },
+            "toy": {
+               "description": "Value submitted as part of the Toy CRI",
+               "type": "string"
+            },
+            "toyResponse": {
+               "description": "Response from mock external Toy CRI API",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedExtensionsClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "activityScore": {
+               "description": "The activityScore from the check done by the CRI",
+               "type": "string"
+            },
+            "checkDetails": {
+               "description": "The check details of the check carried out by the CRI",
+               "type": "string"
+            },
+            "ci": {
+               "description": "CIs in an array",
+               "type": "string"
+            },
+            "decisionScore": {
+               "description": "The decisionScore from the check done by the CRI",
+               "type": "string"
+            },
+            "failedCheckDetails": {
+               "description": "The failed check details of the check carried out by the CRI",
+               "type": "string"
+            },
+            "strengthScore": {
+               "description": "The strengthScore from the check done by the CRI",
+               "type": "string"
+            },
+            "txn": {
+               "description": "Third party transaction id",
+               "type": "string"
+            },
+            "type": {
+               "description": "Description for type",
+               "type": "string"
+            },
+            "validityScore": {
+               "description": "The validityScore from the check done by the CRI",
+               "type": "string"
+            },
+            "verificationScore": {
+               "description": "The verificationScore from the check done by the CRI",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "outcome": {
+               "description": "Description for outcome",
+               "type": "string"
+            },
+            "totalQuestionsAnsweredCorrect": {
+               "description": "Description for totalQuestionsAnsweredCorrect",
+               "type": "string"
+            },
+            "totalQuestionsAnsweredIncorrect": {
+               "description": "Description for totalQuestionsAnsweredIncorrect",
+               "type": "string"
+            },
+            "totalQuestionsAsked": {
+               "description": "Description for totalQuestionsAsked",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedExtensionsExperianiiqresponseClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedExtenstionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "source_topic_arn": {
+               "description": "The reference number for the topic that deleted the user data",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedExtenstionsClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedPlatformClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "device_info": {
+               "description": "Device information object from DCMAW with data populated from Mobile App 3rd Party Suppliers",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedPlatformClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedRestrictedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "address": {
+               "description": "Address information",
+               "type": "string"
+            },
+            "birthDate": {
+               "description": "DoB information",
+               "type": "string"
+            },
+            "deviceId": {
+               "description": "Device fingerprint",
+               "type": "string"
+            },
+            "documentType": {
+               "description": "The document type that a user has chosen to perform their identity checks with",
+               "type": "string"
+            },
+            "drivingPermit": {
+               "description": "Driving Licence information",
+               "type": "string"
+            },
+            "issuingCountry": {
+               "description": "The issuing country of the document a user has choosen to perform their identity checks with",
+               "type": "string"
+            },
+            "mismatched_pii": {
+               "description": "Mismatched PII in SPOT request",
+               "type": "string"
+            },
+            "name": {
+               "description": "Name information",
+               "type": "string"
+            },
+            "passport": {
+               "description": "Passport information",
+               "type": "string"
+            },
+            "recipientEmail": {
+               "description": "TXMA Log recipient email",
+               "type": "string"
+            },
+            "recipientName": {
+               "description": "TXMA Log recipient name",
+               "type": "string"
+            },
+            "requesterEmail": {
+               "description": "TXMA Log requester email",
+               "type": "string"
+            },
+            "requesterName": {
+               "description": "TXMA Log requester name",
+               "type": "string"
+            },
+            "residencePermit": {
+               "description": "Residence Permit information",
+               "type": "string"
+            },
+            "spot_request": {
+               "description": "The SPOT Request object",
+               "type": "string"
+            },
+            "user": {
+               "description": "The data relating to the user.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedRestrictedClass",
+         "type": "object"
+      },
+      "SsfInboundOptOutInitiatedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "email": {
+               "description": "The user account email address.",
+               "type": "string"
+            },
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "persistent_session_id": {
+               "description": "The persistent session id.",
+               "type": "string"
+            },
+            "phone": {
+               "description": "The user account phone number.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "transaction_id": {
+               "description": "The transaction id from the transaction that generated the audit event.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "SsfInboundOptOutInitiatedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/ssf-inbound-opt-out-initiated",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "ssf-inbound-opt-out-initiated",
+   "type": "object"
+}
+

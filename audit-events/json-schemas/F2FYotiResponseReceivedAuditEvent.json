@@ -1,0 +1,102 @@
+{
+   "$defs": {
+      "F2FYotiResponseReceivedAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "component_id": {
+               "description": "The system component that generated the event",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "evidence": {
+               "$ref": "#/$defs/F2FYotiResponseReceivedExtensionsEvidenceClass",
+               "description": "Any evidence"
+            },
+            "extensions": {
+               "$ref": "#/$defs/F2FYotiResponseReceivedExtensionsClass",
+               "description": "The extended audit data relating to the event."
+            },
+            "user": {
+               "$ref": "#/$defs/F2FYotiResponseReceivedUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "F2FYotiResponseReceivedAuditEventClass",
+         "type": "object"
+      },
+      "F2FYotiResponseReceivedExtensionsClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "evidence": {
+               "description": "Any evidence",
+               "type": "string"
+            },
+            "evidence_value": {
+               "description": "Description for evidence_value",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FYotiResponseReceivedExtensionsClass",
+         "type": "object"
+      },
+      "F2FYotiResponseReceivedExtensionsEvidenceClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "txn": {
+               "description": "Third party transaction id",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FYotiResponseReceivedExtensionsEvidenceClass",
+         "type": "object"
+      },
+      "F2FYotiResponseReceivedUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "govuk_signin_journey_id": {
+               "description": "Description for govuk_signin_journey_id",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            },
+            "session_id": {
+               "description": "The user session id.",
+               "type": "string"
+            },
+            "user_id": {
+               "description": "The pairwise identifier from the component of the system that submitted the event.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "F2FYotiResponseReceivedUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/f2f-yoti-response-received",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "f2f-yoti-response-received",
+   "type": "object"
+}
+

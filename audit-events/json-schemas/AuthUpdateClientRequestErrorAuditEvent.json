@@ -1,0 +1,48 @@
+{
+   "$defs": {
+      "AuthUpdateClientRequestErrorAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthUpdateClientRequestErrorUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthUpdateClientRequestErrorAuditEventClass",
+         "type": "object"
+      },
+      "AuthUpdateClientRequestErrorUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthUpdateClientRequestErrorUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-update-client-request-error",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-update-client-request-error",
+   "type": "object"
+}
+

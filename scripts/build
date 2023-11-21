@@ -33,6 +33,7 @@ DEST_DIR="${ROOT_DIR}/docs/audit-events/"
 #  poetry run gen-markdown "$file" -d "${DEST_DIR}/" --index-file index.md
 #done
 poetry run gen-markdown "${ROOT_DIR}/audit-events/linkml-schemas/base_schema.yaml" -d "${ROOT_DIR}/docs/audit-events/" --index-file index.md --mergeimports
+ln -s "${ROOT_DIR}/audit-events/json-schemas" "${ROOT_DIR}/docs/audit-events/json-schemas"
 
 # Physical Data Model
 rm -rf "${ROOT_DIR}/docs/v1"

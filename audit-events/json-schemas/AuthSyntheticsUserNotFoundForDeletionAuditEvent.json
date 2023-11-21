@@ -1,0 +1,48 @@
+{
+   "$defs": {
+      "AuthSyntheticsUserNotFoundForDeletionAuditEventClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthSyntheticsUserNotFoundForDeletionUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthSyntheticsUserNotFoundForDeletionAuditEventClass",
+         "type": "object"
+      },
+      "AuthSyntheticsUserNotFoundForDeletionUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "email": {
+               "description": "The user account email address.",
+               "type": "string"
+            },
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthSyntheticsUserNotFoundForDeletionUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-synthetics-user-not-found-for-deletion",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-synthetics-user-not-found-for-deletion",
+   "type": "object"
+}
+
