@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/ipv-fraud-cri-start
 name: ipv-fraud-cri-start
 description: Description for audit event IPV_FRAUD_CRI_START
@@ -6,24 +5,25 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   IpvFraudCriStartAuditEventClass:
     slots:
-      - event_name
-      - component_id
-      - user
+    - event_name
+    - component_id
+    - user
     slot_usage:
       user:
         range: IpvFraudCriStartUserClass
-
+      event_name:
+        pattern: ^IPV_FRAUD_CRI_START$
   IpvFraudCriStartUserClass:
     slots:
-      - govuk_signin_journey_id
-      - ip_address
-      - session_id
-      - user_id
+    - govuk_signin_journey_id
+    - ip_address
+    - session_id
+    - user_id

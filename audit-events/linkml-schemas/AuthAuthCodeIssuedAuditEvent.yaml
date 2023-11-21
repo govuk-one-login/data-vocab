@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-auth-code-issued
 name: auth-auth-code-issued
 description: Description for audit event AUTH_AUTH_CODE_ISSUED
@@ -6,39 +5,40 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthAuthCodeIssuedAuditEventClass:
     description: >
-      Code sent to user for MFA / This event is also fired at the end of a successful journey 
-      in the one login platform. Triggered Just before sending the Authorisation code to Relying party. 
-      If it is Auth + IPV journey, it will be triggered once the IPV is complete
+      Code sent to user for MFA / This event is also fired at the end of a successful
+      journey  in the one login platform. Triggered Just before sending the Authorisation
+      code to Relying party.  If it is Auth + IPV journey, it will be triggered once
+      the IPV is complete
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
-      - extensions
+    - event_name
+    - client_id
+    - component_id
+    - user
+    - extensions
     slot_usage:
       user:
         range: AuthAuthCodeIssuedUserClass
       extensions:
         range: AuthAuthCodeIssuedExtensionsClass
-
+      event_name:
+        pattern: ^AUTH_AUTH_CODE_ISSUED$
   AuthAuthCodeIssuedUserClass:
     slots:
-      - email
-      - govuk_signin_journey_id
-      - ip_address
-      - persistent_session_id
-      - session_id
-      - user_id
-
+    - email
+    - govuk_signin_journey_id
+    - ip_address
+    - persistent_session_id
+    - session_id
+    - user_id
   AuthAuthCodeIssuedExtensionsClass:
     slots:
-      - internalSubjectId
-      - isNewAccount
+    - internalSubjectId
+    - isNewAccount

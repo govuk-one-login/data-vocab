@@ -10,6 +10,7 @@
             },
             "event_name": {
                "description": "The Audit Event type that is being submitted",
+               "pattern": "^IPV_F2F_CRI_VC_CONSUMED$",
                "type": "string"
             },
             "user": {

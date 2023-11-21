@@ -2,7 +2,7 @@
    "$defs": {
       "AuthAuthCodeIssuedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Code sent to user for MFA / This event is also fired at the end of a successful journey  in the one login platform. Triggered Just before sending the Authorisation code to Relying party.  If it is Auth + IPV journey, it will be triggered once the IPV is complete",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",
@@ -14,6 +14,7 @@
             },
             "event_name": {
                "description": "The Audit Event type that is being submitted",
+               "pattern": "^AUTH_AUTH_CODE_ISSUED$",
                "type": "string"
             },
             "extensions": {

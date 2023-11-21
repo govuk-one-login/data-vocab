@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/ipv-fraud-cri-third-party-request-ended
 name: ipv-fraud-cri-third-party-request-ended
 description: Description for audit event IPV_FRAUD_CRI_THIRD_PARTY_REQUEST_ENDED
@@ -6,15 +5,16 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   IpvFraudCriThirdPartyRequestEndedAuditEventClass:
     slots:
-      - event_name
+    - event_name
     slot_usage:
-
+      event_name:
+        pattern: ^IPV_FRAUD_CRI_THIRD_PARTY_REQUEST_ENDED$
 slots:

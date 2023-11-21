@@ -1,196 +1,195 @@
-
 id: https://vocab.account.gov.uk/linkml/audit_event
 description: Base schema for all events
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 default_curi_maps:
-  - semweb_context  
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 imports:
-  - ./AuthAccountManagementAuthenticateAuditEvent
-  - ./AuthAccountRecoveryBlockAddedAuditEvent
-  - ./AuthAccountRecoveryBlockRemovedAuditEvent
-  - ./AuthAccountRecoveryEmailCodeSentAuditEvent
-  - ./AuthAccountRecoveryEmailCodeSentForTestClientAuditEvent
-  - ./AuthAccountRecoveryEmailInvalidCodeRequestAuditEvent
-  - ./AuthAccountRecoveryNotPermittedAuditEvent
-  - ./AuthAccountRecoveryPermittedAuditEvent
-  - ./AuthAccountTemporarilyLockedAuditEvent
-  - ./AuthAuthCodeIssuedAuditEvent
-  - ./AuthAuthorisationInitiatedAuditEvent
-  - ./AuthAuthorisationRequestErrorAuditEvent
-  - ./AuthAuthorisationRequestReceivedAuditEvent
-  - ./AuthCheckUserInvalidEmailAuditEvent
-  - ./AuthCheckUserKnownEmailAuditEvent
-  - ./AuthCheckUserNoAccountWithEmailAuditEvent
-  - ./AuthCodeMaxRetriesReachedAuditEvent
-  - ./AuthCodeVerifiedAuditEvent
-  - ./AuthCreateAccountAuditEvent
-  - ./AuthCreateAccountEmailAlreadyExistsAuditEvent
-  - ./AuthDeleteAccountAuditEvent
-  - ./AuthDocAppAuthorisationRequestedAuditEvent
-  - ./AuthDocAppAuthorisationResponseReceivedAuditEvent
-  - ./AuthDocAppSuccessfulCredentialResponseReceivedAuditEvent
-  - ./AuthDocAppSuccessfulTokenResponseReceivedAuditEvent
-  - ./AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEvent
-  - ./AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEvent
-  - ./AuthDocAppUnsuccessfulTokenResponseReceivedAuditEvent
-  - ./AuthEmailCodeSentAuditEvent
-  - ./AuthEmailCodeSentForTestClientAuditEvent
-  - ./AuthEmailInvalidCodeRequestAuditEvent
-  - ./AuthInvalidCodeSentAuditEvent
-  - ./AuthInvalidCredentialsAuditEvent
-  - ./AuthIpvAuthorisationRequestedAuditEvent
-  - ./AuthIpvAuthorisationResponseReceivedAuditEvent
-  - ./AuthIpvCapacityRequestedAuditEvent
-  - ./AuthIpvSpotRequestedAuditEvent
-  - ./AuthIpvSuccessfulIdentityResponseReceivedAuditEvent
-  - ./AuthIpvSuccessfulSpotResponseReceivedAuditEvent
-  - ./AuthIpvSuccessfulTokenResponseReceivedAuditEvent
-  - ./AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEvent
-  - ./AuthIpvUnsuccessfulSpotResponseReceivedAuditEvent
-  - ./AuthIpvUnsuccessfulTokenResponseReceivedAuditEvent
-  - ./AuthLogInSuccessAuditEvent
-  - ./AuthLogOutSuccessAuditEvent
-  - ./AuthMfaCodeSentAuditEvent
-  - ./AuthMfaCodeSentForTestClientAuditEvent
-  - ./AuthMfaInvalidCodeRequestAuditEvent
-  - ./AuthMfaMismatchedEmailAuditEvent
-  - ./AuthMfaMissingPhoneNumberAuditEvent
-  - ./AuthNoAccountWithEmailAuditEvent
-  - ./AuthPasswordResetRequestedAuditEvent
-  - ./AuthPasswordResetRequestedForTestClientAuditEvent
-  - ./AuthPasswordResetSuccessfulAuditEvent
-  - ./AuthPasswordResetSuccessfulForTestClientAuditEvent
-  - ./AuthPhoneCheckCompleteAuditEvent
-  - ./AuthPhoneCodeSentAuditEvent
-  - ./AuthPhoneCodeSentForTestClientAuditEvent
-  - ./AuthPhoneInvalidCodeRequestAuditEvent
-  - ./AuthProcessingIdentityRequestAuditEvent
-  - ./AuthRegisterClientRequestErrorAuditEvent
-  - ./AuthRegisterClientRequestReceivedAuditEvent
-  - ./AuthSendOtpAuditEvent
-  - ./AuthStartInfoFoundAuditEvent
-  - ./AuthSyntheticsUserDeletedAuditEvent
-  - ./AuthSyntheticsUserNotFoundForDeletionAuditEvent
-  - ./AuthUpdateClientRequestErrorAuditEvent
-  - ./AuthUpdateClientRequestReceivedAuditEvent
-  - ./AuthUpdateEmailAuditEvent
-  - ./AuthUpdatePasswordAuditEvent
-  - ./AuthUpdatePhoneNumberAuditEvent
-  - ./AuthUpdateProfileAuthAppAuditEvent
-  - ./AuthUpdateProfileConsentUpdatedAuditEvent
-  - ./AuthUpdateProfilePhoneNumberAuditEvent
-  - ./AuthUpdateProfileRequestErrorAuditEvent
-  - ./AuthUpdateProfileRequestReceivedAuditEvent
-  - ./AuthUpdateProfileTermsCondsAcceptanceAuditEvent
-  - ./AuthUserInfoReturnedAuditEvent
-  - ./CicCriAuthCodeIssuedAuditEvent
-  - ./CicCriStartAuditEvent
-  - ./CicCriVcIssuedAuditEvent
-  - ./CicCriEndAuditEvent
-  - ./DcmawAbortAppAuditEvent
-  - ./DcmawAbortWebAuditEvent
-  - ./DcmawAppEndAuditEvent
-  - ./DcmawAppHandoffFailureAuditEvent
-  - ./DcmawAppHandoffStartAuditEvent
-  - ./DcmawAppStartAuditEvent
-  - ./DcmawBrpSelectedAuditEvent
-  - ./DcmawCri4XxerrorAuditEvent
-  - ./DcmawCri5XxerrorAuditEvent
-  - ./DcmawCriAbortAuditEvent
-  - ./DcmawCriEndAuditEvent
-  - ./DcmawCriStartAuditEvent
-  - ./DcmawCriVcIssuedAuditEvent
-  - ./DcmawDrivingLicenceSelectedAuditEvent
-  - ./DcmawHybridBillingStartedAuditEvent
-  - ./DcmawIproovBillingStartedAuditEvent
-  - ./DcmawMissingContextAfterAbortAuditEvent
-  - ./DcmawMissingContextAfterCompletionAuditEvent
-  - ./DcmawPassportSelectedAuditEvent
-  - ./DcmawReadidNfcBillingStartedAuditEvent
-  - ./DcmawRedirectAbortAuditEvent
-  - ./DcmawRedirectSuccessAuditEvent
-  - ./DcmawSessionRecoveredAuditEvent
-  - ./DcmawWebEndAuditEvent
-  - ./F2FCriAccessTokenIssuedAuditEvent
-  - ./F2FCriAuthCodeIssuedAuditEvent
-  - ./F2FCriStartAuditEvent
-  - ./F2FCriVcIssuedAuditEvent
-  - ./F2FYotiResponseReceivedAuditEvent
-  - ./F2FYotiPdfEmailedAuditEvent
-  - ./F2FYotiStartAuditEvent
-  - ./F2FCriEndAuditEvent
-  - ./F2FSessionAbortedAuditEvent
-  - ./IpvAddressCriEndAuditEvent
-  - ./IpvAddressCriRequestSentAuditEvent
-  - ./IpvAddressCriResponseReceivedAuditEvent
-  - ./IpvAddressCriStartAuditEvent
-  - ./IpvAddressCriVcIssuedAuditEvent
-  - ./IpvContraIndicatorStorageGetEndAuditEvent
-  - ./IpvContraIndicatorStorageGetQueryAuditEvent
-  - ./IpvContraIndicatorStorageGetStartAuditEvent
-  - ./IpvContraIndicatorStoragePutEndAuditEvent
-  - ./IpvContraIndicatorStoragePutNewCisAuditEvent
-  - ./IpvContraIndicatorStoragePutStartAuditEvent
-  - ./IpvCriAuthResponseReceivedAuditEvent
-  - ./IpvDeleteUserDataAuditEvent
-  - ./IpvDlCriEndAuditEvent
-  - ./IpvDlCriRequestSentAuditEvent
-  - ./IpvDlCriResponseReceivedAuditEvent
-  - ./IpvDlCriStartAuditEvent
-  - ./IpvDlCriThirdPartyRequestEndedAuditEvent
-  - ./IpvDlCriVcIssuedAuditEvent
-  - ./IpvF2FCriVcConsumedAuditEvent
-  - ./IpvF2FCriVcReceivedAuditEvent
-  - ./IpvFraudCriEndAuditEvent
-  - ./IpvFraudCriRequestSentAuditEvent
-  - ./IpvFraudCriResponseReceivedAuditEvent
-  - ./IpvFraudCriStartAuditEvent
-  - ./IpvFraudCriThirdPartyRequestEndedAuditEvent
-  - ./IpvFraudCriVcIssuedAuditEvent
-  - ./IpvGpg45ProfileMatchedAuditEvent
-  - ./IpvIdentityIssuedAuditEvent
-  - ./IpvIdentityReuseCompleteAuditEvent
-  - ./IpvIdentityReuseResetAuditEvent
-  - ./IpvJourneyEndAuditEvent
-  - ./IpvJourneyStartAuditEvent
-  - ./IpvKbvCriEndAuditEvent
-  - ./IpvKbvCriRequestSentAuditEvent
-  - ./IpvKbvCriStartAuditEvent
-  - ./IpvKbvCriVcIssuedAuditEvent
-  - ./IpvPassportCriEndAuditEvent
-  - ./IpvPassportCriRequestSentAuditEvent
-  - ./IpvPassportCriResponseReceivedAuditEvent
-  - ./IpvPassportCriStartAuditEvent
-  - ./IpvPassportCriVcIssuedAuditEvent
-  - ./IpvRedirectToCriAuditEvent
-  - ./IpvSpotRequestReceivedAuditEvent
-  - ./IpvSpotRequestValidationFailureAuditEvent
-  - ./IpvSpotResponseApprovedAuditEvent
-  - ./IpvSpotResponseRejectedAuditEvent
-  - ./IpvVcReceivedAuditEvent
-  - ./TxmaAuditQueryDataRequestAuditEvent
-  - ./TxmaAuditQueryIllegalRequestAuditEvent
-  - ./TxmaAuditQueryOutputAccessedAuditEvent
-  - ./TxmaAuditQueryOutputGeneratedAuditEvent
-  - ./IpvToyCriStartAuditEvent
-  - ./IpvToyCriRequestSentAuditEvent
-  - ./IpvToyCriResponseReceivedAuditEvent
-  - ./IpvToyCriVcIssuedAuditEvent
-  - ./IpvToyCriEndAuditEvent
-  - ./IprResultNotificationEmailedAuditEvent
-  - ./IprUserRedirectedAuditEvent
-  - ./SsfInboundAccountPurgedAuditEvent
-  - ./SsfInboundAccountCredentialChangeRequiredAuditEvent
-  - ./SsfInboundAccountDisabledAuditEvent
-  - ./SsfInboundAccountEnabledAuditEvent
-  - ./SsfInboundCredentialCompromiseAuditEvent
-  - ./SsfInboundOptInAuditEvent
-  - ./SsfInboundOptOutInitiatedAuditEvent
-  - ./SsfInboundOptOutCancelledAuditEvent
-  - ./SsfInboundOptOutEffectiveAuditEvent
-  - ./SsfInboundRecoveryActivatedAuditEvent
-  - ./SsfInboundRecoveryInformationChangedAuditEvent
+- ./AuthAccountManagementAuthenticateAuditEvent
+- ./AuthAccountRecoveryBlockAddedAuditEvent
+- ./AuthAccountRecoveryBlockRemovedAuditEvent
+- ./AuthAccountRecoveryEmailCodeSentAuditEvent
+- ./AuthAccountRecoveryEmailCodeSentForTestClientAuditEvent
+- ./AuthAccountRecoveryEmailInvalidCodeRequestAuditEvent
+- ./AuthAccountRecoveryNotPermittedAuditEvent
+- ./AuthAccountRecoveryPermittedAuditEvent
+- ./AuthAccountTemporarilyLockedAuditEvent
+- ./AuthAuthCodeIssuedAuditEvent
+- ./AuthAuthorisationInitiatedAuditEvent
+- ./AuthAuthorisationRequestErrorAuditEvent
+- ./AuthAuthorisationRequestReceivedAuditEvent
+- ./AuthCheckUserInvalidEmailAuditEvent
+- ./AuthCheckUserKnownEmailAuditEvent
+- ./AuthCheckUserNoAccountWithEmailAuditEvent
+- ./AuthCodeMaxRetriesReachedAuditEvent
+- ./AuthCodeVerifiedAuditEvent
+- ./AuthCreateAccountAuditEvent
+- ./AuthCreateAccountEmailAlreadyExistsAuditEvent
+- ./AuthDeleteAccountAuditEvent
+- ./AuthDocAppAuthorisationRequestedAuditEvent
+- ./AuthDocAppAuthorisationResponseReceivedAuditEvent
+- ./AuthDocAppSuccessfulCredentialResponseReceivedAuditEvent
+- ./AuthDocAppSuccessfulTokenResponseReceivedAuditEvent
+- ./AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEvent
+- ./AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEvent
+- ./AuthDocAppUnsuccessfulTokenResponseReceivedAuditEvent
+- ./AuthEmailCodeSentAuditEvent
+- ./AuthEmailCodeSentForTestClientAuditEvent
+- ./AuthEmailInvalidCodeRequestAuditEvent
+- ./AuthInvalidCodeSentAuditEvent
+- ./AuthInvalidCredentialsAuditEvent
+- ./AuthIpvAuthorisationRequestedAuditEvent
+- ./AuthIpvAuthorisationResponseReceivedAuditEvent
+- ./AuthIpvCapacityRequestedAuditEvent
+- ./AuthIpvSpotRequestedAuditEvent
+- ./AuthIpvSuccessfulIdentityResponseReceivedAuditEvent
+- ./AuthIpvSuccessfulSpotResponseReceivedAuditEvent
+- ./AuthIpvSuccessfulTokenResponseReceivedAuditEvent
+- ./AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEvent
+- ./AuthIpvUnsuccessfulSpotResponseReceivedAuditEvent
+- ./AuthIpvUnsuccessfulTokenResponseReceivedAuditEvent
+- ./AuthLogInSuccessAuditEvent
+- ./AuthLogOutSuccessAuditEvent
+- ./AuthMfaCodeSentAuditEvent
+- ./AuthMfaCodeSentForTestClientAuditEvent
+- ./AuthMfaInvalidCodeRequestAuditEvent
+- ./AuthMfaMismatchedEmailAuditEvent
+- ./AuthMfaMissingPhoneNumberAuditEvent
+- ./AuthNoAccountWithEmailAuditEvent
+- ./AuthPasswordResetRequestedAuditEvent
+- ./AuthPasswordResetRequestedForTestClientAuditEvent
+- ./AuthPasswordResetSuccessfulAuditEvent
+- ./AuthPasswordResetSuccessfulForTestClientAuditEvent
+- ./AuthPhoneCheckCompleteAuditEvent
+- ./AuthPhoneCodeSentAuditEvent
+- ./AuthPhoneCodeSentForTestClientAuditEvent
+- ./AuthPhoneInvalidCodeRequestAuditEvent
+- ./AuthProcessingIdentityRequestAuditEvent
+- ./AuthRegisterClientRequestErrorAuditEvent
+- ./AuthRegisterClientRequestReceivedAuditEvent
+- ./AuthSendOtpAuditEvent
+- ./AuthStartInfoFoundAuditEvent
+- ./AuthSyntheticsUserDeletedAuditEvent
+- ./AuthSyntheticsUserNotFoundForDeletionAuditEvent
+- ./AuthUpdateClientRequestErrorAuditEvent
+- ./AuthUpdateClientRequestReceivedAuditEvent
+- ./AuthUpdateEmailAuditEvent
+- ./AuthUpdatePasswordAuditEvent
+- ./AuthUpdatePhoneNumberAuditEvent
+- ./AuthUpdateProfileAuthAppAuditEvent
+- ./AuthUpdateProfileConsentUpdatedAuditEvent
+- ./AuthUpdateProfilePhoneNumberAuditEvent
+- ./AuthUpdateProfileRequestErrorAuditEvent
+- ./AuthUpdateProfileRequestReceivedAuditEvent
+- ./AuthUpdateProfileTermsCondsAcceptanceAuditEvent
+- ./AuthUserInfoReturnedAuditEvent
+- ./CicCriAuthCodeIssuedAuditEvent
+- ./CicCriStartAuditEvent
+- ./CicCriVcIssuedAuditEvent
+- ./CicCriEndAuditEvent
+- ./DcmawAbortAppAuditEvent
+- ./DcmawAbortWebAuditEvent
+- ./DcmawAppEndAuditEvent
+- ./DcmawAppHandoffFailureAuditEvent
+- ./DcmawAppHandoffStartAuditEvent
+- ./DcmawAppStartAuditEvent
+- ./DcmawBrpSelectedAuditEvent
+- ./DcmawCri4XxerrorAuditEvent
+- ./DcmawCri5XxerrorAuditEvent
+- ./DcmawCriAbortAuditEvent
+- ./DcmawCriEndAuditEvent
+- ./DcmawCriStartAuditEvent
+- ./DcmawCriVcIssuedAuditEvent
+- ./DcmawDrivingLicenceSelectedAuditEvent
+- ./DcmawHybridBillingStartedAuditEvent
+- ./DcmawIproovBillingStartedAuditEvent
+- ./DcmawMissingContextAfterAbortAuditEvent
+- ./DcmawMissingContextAfterCompletionAuditEvent
+- ./DcmawPassportSelectedAuditEvent
+- ./DcmawReadidNfcBillingStartedAuditEvent
+- ./DcmawRedirectAbortAuditEvent
+- ./DcmawRedirectSuccessAuditEvent
+- ./DcmawSessionRecoveredAuditEvent
+- ./DcmawWebEndAuditEvent
+- ./F2FCriAccessTokenIssuedAuditEvent
+- ./F2FCriAuthCodeIssuedAuditEvent
+- ./F2FCriStartAuditEvent
+- ./F2FCriVcIssuedAuditEvent
+- ./F2FYotiResponseReceivedAuditEvent
+- ./F2FYotiPdfEmailedAuditEvent
+- ./F2FYotiStartAuditEvent
+- ./F2FCriEndAuditEvent
+- ./F2FSessionAbortedAuditEvent
+- ./IpvAddressCriEndAuditEvent
+- ./IpvAddressCriRequestSentAuditEvent
+- ./IpvAddressCriResponseReceivedAuditEvent
+- ./IpvAddressCriStartAuditEvent
+- ./IpvAddressCriVcIssuedAuditEvent
+- ./IpvContraIndicatorStorageGetEndAuditEvent
+- ./IpvContraIndicatorStorageGetQueryAuditEvent
+- ./IpvContraIndicatorStorageGetStartAuditEvent
+- ./IpvContraIndicatorStoragePutEndAuditEvent
+- ./IpvContraIndicatorStoragePutNewCisAuditEvent
+- ./IpvContraIndicatorStoragePutStartAuditEvent
+- ./IpvCriAuthResponseReceivedAuditEvent
+- ./IpvDeleteUserDataAuditEvent
+- ./IpvDlCriEndAuditEvent
+- ./IpvDlCriRequestSentAuditEvent
+- ./IpvDlCriResponseReceivedAuditEvent
+- ./IpvDlCriStartAuditEvent
+- ./IpvDlCriThirdPartyRequestEndedAuditEvent
+- ./IpvDlCriVcIssuedAuditEvent
+- ./IpvF2FCriVcConsumedAuditEvent
+- ./IpvF2FCriVcReceivedAuditEvent
+- ./IpvFraudCriEndAuditEvent
+- ./IpvFraudCriRequestSentAuditEvent
+- ./IpvFraudCriResponseReceivedAuditEvent
+- ./IpvFraudCriStartAuditEvent
+- ./IpvFraudCriThirdPartyRequestEndedAuditEvent
+- ./IpvFraudCriVcIssuedAuditEvent
+- ./IpvGpg45ProfileMatchedAuditEvent
+- ./IpvIdentityIssuedAuditEvent
+- ./IpvIdentityReuseCompleteAuditEvent
+- ./IpvIdentityReuseResetAuditEvent
+- ./IpvJourneyEndAuditEvent
+- ./IpvJourneyStartAuditEvent
+- ./IpvKbvCriEndAuditEvent
+- ./IpvKbvCriRequestSentAuditEvent
+- ./IpvKbvCriStartAuditEvent
+- ./IpvKbvCriVcIssuedAuditEvent
+- ./IpvPassportCriEndAuditEvent
+- ./IpvPassportCriRequestSentAuditEvent
+- ./IpvPassportCriResponseReceivedAuditEvent
+- ./IpvPassportCriStartAuditEvent
+- ./IpvPassportCriVcIssuedAuditEvent
+- ./IpvRedirectToCriAuditEvent
+- ./IpvSpotRequestReceivedAuditEvent
+- ./IpvSpotRequestValidationFailureAuditEvent
+- ./IpvSpotResponseApprovedAuditEvent
+- ./IpvSpotResponseRejectedAuditEvent
+- ./IpvVcReceivedAuditEvent
+- ./TxmaAuditQueryDataRequestAuditEvent
+- ./TxmaAuditQueryIllegalRequestAuditEvent
+- ./TxmaAuditQueryOutputAccessedAuditEvent
+- ./TxmaAuditQueryOutputGeneratedAuditEvent
+- ./IpvToyCriStartAuditEvent
+- ./IpvToyCriRequestSentAuditEvent
+- ./IpvToyCriResponseReceivedAuditEvent
+- ./IpvToyCriVcIssuedAuditEvent
+- ./IpvToyCriEndAuditEvent
+- ./IprResultNotificationEmailedAuditEvent
+- ./IprUserRedirectedAuditEvent
+- ./SsfInboundAccountPurgedAuditEvent
+- ./SsfInboundAccountCredentialChangeRequiredAuditEvent
+- ./SsfInboundAccountDisabledAuditEvent
+- ./SsfInboundAccountEnabledAuditEvent
+- ./SsfInboundCredentialCompromiseAuditEvent
+- ./SsfInboundOptInAuditEvent
+- ./SsfInboundOptOutInitiatedAuditEvent
+- ./SsfInboundOptOutCancelledAuditEvent
+- ./SsfInboundOptOutEffectiveAuditEvent
+- ./SsfInboundRecoveryActivatedAuditEvent
+- ./SsfInboundRecoveryInformationChangedAuditEvent

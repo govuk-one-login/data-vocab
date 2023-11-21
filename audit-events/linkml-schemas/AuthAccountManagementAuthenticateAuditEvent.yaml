@@ -1,36 +1,33 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-account-management-authenticate
 name: auth-account-management-authenticate
-
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
-
 classes:
   AuthAccountManagementAuthenticateAuditEventClass:
     description: >
-      Viewing page to update the how to authenticate . Triggered by Auth upon successful authentication of 
-      GOV.UK Accounts for the given user context. This will be triggered as part of the journey where user 
-      wants to update Email, Password or Phone number through GOV.UK accounts
+      Viewing page to update the how to authenticate . Triggered by Auth upon successful
+      authentication of  GOV.UK Accounts for the given user context. This will be
+      triggered as part of the journey where user  wants to update Email, Password
+      or Phone number through GOV.UK accounts
     slots:
-      - event_name
-      - component_id
-      - user
+    - event_name
+    - component_id
+    - user
     slot_usage:
       event_name:
         pattern: "^AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE$"
       user:
         range: AuthAccountManagementAuthenticateUserClass
-
   AuthAccountManagementAuthenticateUserClass:
     slots:
-      - email
-      - ip_address
-      - persistent_session_id
-      - session_id
+    - email
+    - ip_address
+    - persistent_session_id
+    - session_id

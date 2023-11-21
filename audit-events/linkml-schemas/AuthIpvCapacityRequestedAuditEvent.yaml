@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-ipv-capacity-requested
 name: auth-ipv-capacity-requested
 description: Description for audit event AUTH_IPV_CAPACITY_REQUESTED
@@ -6,15 +5,16 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthIpvCapacityRequestedAuditEventClass:
     slots:
-      - event_name
-      - component_id
+    - event_name
+    - component_id
     slot_usage:
-
+      event_name:
+        pattern: ^AUTH_IPV_CAPACITY_REQUESTED$

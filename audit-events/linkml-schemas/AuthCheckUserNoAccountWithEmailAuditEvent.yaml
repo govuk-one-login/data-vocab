@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-check-user-no-account-with-email
 name: auth-check-user-no-account-with-email
 description: Description for audit event AUTH_CHECK_USER_NO_ACCOUNT_WITH_EMAIL
@@ -6,26 +5,27 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthCheckUserNoAccountWithEmailAuditEventClass:
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
+    - event_name
+    - client_id
+    - component_id
+    - user
     slot_usage:
       user:
         range: AuthCheckUserNoAccountWithEmailUserClass
-
+      event_name:
+        pattern: ^AUTH_CHECK_USER_NO_ACCOUNT_WITH_EMAIL$
   AuthCheckUserNoAccountWithEmailUserClass:
     slots:
-      - email
-      - govuk_signin_journey_id
-      - ip_address
-      - persistent_session_id
-      - session_id
+    - email
+    - govuk_signin_journey_id
+    - ip_address
+    - persistent_session_id
+    - session_id

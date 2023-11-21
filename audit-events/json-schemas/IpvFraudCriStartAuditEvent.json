@@ -10,6 +10,7 @@
             },
             "event_name": {
                "description": "The Audit Event type that is being submitted",
+               "pattern": "^IPV_FRAUD_CRI_START$",
                "type": "string"
             },
             "user": {

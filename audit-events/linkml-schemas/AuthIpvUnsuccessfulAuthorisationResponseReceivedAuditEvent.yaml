@@ -1,28 +1,29 @@
-
-id: https://vocab.account.gov.uk/linkml/auth-ipv-unsuccessful-authorisation-response-received
+id: 
+  https://vocab.account.gov.uk/linkml/auth-ipv-unsuccessful-authorisation-response-received
 name: auth-ipv-unsuccessful-authorisation-response-received
 description: Description for audit event AUTH_IPV_UNSUCCESSFUL_AUTHORISATION_RESPONSE_RECEIVED
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass:
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
+    - event_name
+    - client_id
+    - component_id
+    - user
     slot_usage:
       user:
         range: AuthIpvUnsuccessfulAuthorisationResponseReceivedUserClass
-
+      event_name:
+        pattern: ^AUTH_IPV_UNSUCCESSFUL_AUTHORISATION_RESPONSE_RECEIVED$
   AuthIpvUnsuccessfulAuthorisationResponseReceivedUserClass:
     slots:
-      - govuk_signin_journey_id
-      - session_id
+    - govuk_signin_journey_id
+    - session_id

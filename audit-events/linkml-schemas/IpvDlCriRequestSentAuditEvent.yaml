@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-request-sent
 name: ipv-dl-cri-request-sent
 description: Description for audit event IPV_DL_CRI_REQUEST_SENT
@@ -6,35 +5,35 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   IpvDlCriRequestSentAuditEventClass:
     slots:
-      - event_name
-      - component_id
-      - user
-      - restricted
+    - event_name
+    - component_id
+    - user
+    - restricted
     slot_usage:
       user:
         range: IpvDlCriRequestSentUserClass
       restricted:
         range: IpvDlCriRequestSentRestrictedClass
-
+      event_name:
+        pattern: ^IPV_DL_CRI_REQUEST_SENT$
   IpvDlCriRequestSentUserClass:
     slots:
-      - govuk_signin_journey_id
-      - ip_address
-      - persistent_session_id
-      - session_id
-      - user_id
-
+    - govuk_signin_journey_id
+    - ip_address
+    - persistent_session_id
+    - session_id
+    - user_id
   IpvDlCriRequestSentRestrictedClass:
     slots:
-      - address
-      - birthDate
-      - drivingPermit
-      - name
+    - address
+    - birthDate
+    - drivingPermit
+    - name

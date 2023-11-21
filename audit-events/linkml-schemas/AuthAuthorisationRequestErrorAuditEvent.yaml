@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-authorisation-request-error
 name: auth-authorisation-request-error
 description: Description for audit event AUTH_AUTHORISATION_REQUEST_ERROR
@@ -6,9 +5,9 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
@@ -16,23 +15,23 @@ classes:
     description: >
       Invalid Authorisation request received from Relying party. Triggered by Orchestration
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
-      - extensions
+    - event_name
+    - client_id
+    - component_id
+    - user
+    - extensions
     slot_usage:
       user:
         range: AuthAuthorisationRequestErrorUserClass
       extensions:
         range: AuthAuthorisationRequestErrorExtensionsClass
-
+      event_name:
+        pattern: ^AUTH_AUTHORISATION_REQUEST_ERROR$
   AuthAuthorisationRequestErrorUserClass:
     slots:
-      - govuk_signin_journey_id
-      - ip_address
-      - persistent_session_id
-
+    - govuk_signin_journey_id
+    - ip_address
+    - persistent_session_id
   AuthAuthorisationRequestErrorExtensionsClass:
     slots:
-      - description
+    - description

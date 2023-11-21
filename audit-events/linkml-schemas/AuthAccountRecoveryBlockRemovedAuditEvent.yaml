@@ -1,32 +1,32 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-account-recovery-block-removed
 name: auth-account-recovery-block-removed
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthAccountRecoveryBlockRemovedAuditEventClass:
     description: TBC
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
+    - event_name
+    - client_id
+    - component_id
+    - user
     slot_usage:
+      event_name:
+        pattern: ^AUTH_ACCOUNT_RECOVERY_BLOCK_REMOVED$
       user:
         range: AuthAccountRecoveryBlockRemovedUserClass
-
   AuthAccountRecoveryBlockRemovedUserClass:
     slots:
-      - email
-      - ip_address
-      - persistent_session_id
-      - session_id
-      - transaction_id
-      - user_id
+    - email
+    - ip_address
+    - persistent_session_id
+    - session_id
+    - transaction_id
+    - user_id

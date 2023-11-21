@@ -2,7 +2,7 @@
    "$defs": {
       "AuthAccountTemporarilyLockedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "After many failed login trials, the user account gets blocked",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",
@@ -14,6 +14,7 @@
             },
             "event_name": {
                "description": "The Audit Event type that is being submitted",
+               "pattern": "^AUTH_ACCOUNT_TEMPORARILY_LOCKED$",
                "type": "string"
             },
             "extensions": {

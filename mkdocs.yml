@@ -426,149 +426,275 @@ nav:
               audit-events/slots/AuthAccountManagementAuthenticateAuditEventClass_event_name.md
           - AuthAccountManagementAuthenticateAuditEventClass_user: audit-events/slots/AuthAccountManagementAuthenticateAuditEventClass_user.md
           - AuthAccountRecoveryBlockAddedAuditEventClass_user: audit-events/slots/AuthAccountRecoveryBlockAddedAuditEventClass_user.md
+          - AuthAccountRecoveryBlockRemovedAuditEventClass_event_name: audit-events/slots/AuthAccountRecoveryBlockRemovedAuditEventClass_event_name.md
           - AuthAccountRecoveryBlockRemovedAuditEventClass_user: audit-events/slots/AuthAccountRecoveryBlockRemovedAuditEventClass_user.md
+          - AuthAccountRecoveryEmailCodeSentAuditEventClass_event_name: audit-events/slots/AuthAccountRecoveryEmailCodeSentAuditEventClass_event_name.md
           - AuthAccountRecoveryEmailCodeSentAuditEventClass_user: audit-events/slots/AuthAccountRecoveryEmailCodeSentAuditEventClass_user.md
+          - AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass_event_name: 
+              audit-events/slots/AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass_event_name.md
           - AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass_user: 
               audit-events/slots/AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass_user.md
+          - AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass_event_name: 
+              audit-events/slots/AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass_event_name.md
           - AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass_user: 
               audit-events/slots/AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass_user.md
+          - AuthAccountRecoveryNotPermittedAuditEventClass_event_name: audit-events/slots/AuthAccountRecoveryNotPermittedAuditEventClass_event_name.md
           - AuthAccountRecoveryNotPermittedAuditEventClass_user: audit-events/slots/AuthAccountRecoveryNotPermittedAuditEventClass_user.md
+          - AuthAccountRecoveryPermittedAuditEventClass_event_name: audit-events/slots/AuthAccountRecoveryPermittedAuditEventClass_event_name.md
           - AuthAccountRecoveryPermittedAuditEventClass_user: audit-events/slots/AuthAccountRecoveryPermittedAuditEventClass_user.md
+          - AuthAccountTemporarilyLockedAuditEventClass_event_name: audit-events/slots/AuthAccountTemporarilyLockedAuditEventClass_event_name.md
           - AuthAccountTemporarilyLockedAuditEventClass_extensions: audit-events/slots/AuthAccountTemporarilyLockedAuditEventClass_extensions.md
           - AuthAccountTemporarilyLockedAuditEventClass_user: audit-events/slots/AuthAccountTemporarilyLockedAuditEventClass_user.md
+          - AuthAuthCodeIssuedAuditEventClass_event_name: audit-events/slots/AuthAuthCodeIssuedAuditEventClass_event_name.md
           - AuthAuthCodeIssuedAuditEventClass_extensions: audit-events/slots/AuthAuthCodeIssuedAuditEventClass_extensions.md
           - AuthAuthCodeIssuedAuditEventClass_user: audit-events/slots/AuthAuthCodeIssuedAuditEventClass_user.md
+          - AuthAuthorisationInitiatedAuditEventClass_event_name: audit-events/slots/AuthAuthorisationInitiatedAuditEventClass_event_name.md
           - AuthAuthorisationInitiatedAuditEventClass_extensions: audit-events/slots/AuthAuthorisationInitiatedAuditEventClass_extensions.md
           - AuthAuthorisationInitiatedAuditEventClass_user: audit-events/slots/AuthAuthorisationInitiatedAuditEventClass_user.md
+          - AuthAuthorisationRequestErrorAuditEventClass_event_name: audit-events/slots/AuthAuthorisationRequestErrorAuditEventClass_event_name.md
           - AuthAuthorisationRequestErrorAuditEventClass_extensions: audit-events/slots/AuthAuthorisationRequestErrorAuditEventClass_extensions.md
           - AuthAuthorisationRequestErrorAuditEventClass_user: audit-events/slots/AuthAuthorisationRequestErrorAuditEventClass_user.md
+          - AuthAuthorisationRequestReceivedAuditEventClass_event_name: audit-events/slots/AuthAuthorisationRequestReceivedAuditEventClass_event_name.md
           - AuthAuthorisationRequestReceivedAuditEventClass_user: audit-events/slots/AuthAuthorisationRequestReceivedAuditEventClass_user.md
+          - AuthCheckUserInvalidEmailAuditEventClass_event_name: audit-events/slots/AuthCheckUserInvalidEmailAuditEventClass_event_name.md
           - AuthCheckUserInvalidEmailAuditEventClass_user: audit-events/slots/AuthCheckUserInvalidEmailAuditEventClass_user.md
+          - AuthCheckUserKnownEmailAuditEventClass_event_name: audit-events/slots/AuthCheckUserKnownEmailAuditEventClass_event_name.md
           - AuthCheckUserKnownEmailAuditEventClass_user: audit-events/slots/AuthCheckUserKnownEmailAuditEventClass_user.md
+          - AuthCheckUserNoAccountWithEmailAuditEventClass_event_name: audit-events/slots/AuthCheckUserNoAccountWithEmailAuditEventClass_event_name.md
           - AuthCheckUserNoAccountWithEmailAuditEventClass_user: audit-events/slots/AuthCheckUserNoAccountWithEmailAuditEventClass_user.md
+          - AuthCodeMaxRetriesReachedAuditEventClass_event_name: audit-events/slots/AuthCodeMaxRetriesReachedAuditEventClass_event_name.md
           - AuthCodeMaxRetriesReachedAuditEventClass_extensions: audit-events/slots/AuthCodeMaxRetriesReachedAuditEventClass_extensions.md
           - AuthCodeMaxRetriesReachedAuditEventClass_user: audit-events/slots/AuthCodeMaxRetriesReachedAuditEventClass_user.md
+          - AuthCodeVerifiedAuditEventClass_event_name: audit-events/slots/AuthCodeVerifiedAuditEventClass_event_name.md
           - AuthCodeVerifiedAuditEventClass_user: audit-events/slots/AuthCodeVerifiedAuditEventClass_user.md
+          - AuthCreateAccountAuditEventClass_event_name: audit-events/slots/AuthCreateAccountAuditEventClass_event_name.md
           - AuthCreateAccountAuditEventClass_extensions: audit-events/slots/AuthCreateAccountAuditEventClass_extensions.md
           - AuthCreateAccountAuditEventClass_user: audit-events/slots/AuthCreateAccountAuditEventClass_user.md
+          - AuthCreateAccountEmailAlreadyExistsAuditEventClass_event_name: 
+              audit-events/slots/AuthCreateAccountEmailAlreadyExistsAuditEventClass_event_name.md
           - AuthCreateAccountEmailAlreadyExistsAuditEventClass_user: audit-events/slots/AuthCreateAccountEmailAlreadyExistsAuditEventClass_user.md
+          - AuthDeleteAccountAuditEventClass_event_name: audit-events/slots/AuthDeleteAccountAuditEventClass_event_name.md
           - AuthDeleteAccountAuditEventClass_user: audit-events/slots/AuthDeleteAccountAuditEventClass_user.md
+          - AuthDocAppAuthorisationRequestedAuditEventClass_event_name: audit-events/slots/AuthDocAppAuthorisationRequestedAuditEventClass_event_name.md
           - AuthDocAppAuthorisationRequestedAuditEventClass_user: audit-events/slots/AuthDocAppAuthorisationRequestedAuditEventClass_user.md
+          - AuthDocAppAuthorisationResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthDocAppAuthorisationResponseReceivedAuditEventClass_event_name.md
           - AuthDocAppAuthorisationResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthDocAppAuthorisationResponseReceivedAuditEventClass_user.md
+          - AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass_event_name.md
           - AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass_user.md
+          - AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass_event_name.md
           - AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass_user.md
+          - AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass_event_name.md
           - AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass_user.md
+          - AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass_event_name.md
           - AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass_user.md
+          - AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass_event_name.md
           - AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass_user.md
+          - AuthEmailCodeSentAuditEventClass_event_name: audit-events/slots/AuthEmailCodeSentAuditEventClass_event_name.md
           - AuthEmailCodeSentAuditEventClass_user: audit-events/slots/AuthEmailCodeSentAuditEventClass_user.md
+          - AuthEmailCodeSentForTestClientAuditEventClass_event_name: audit-events/slots/AuthEmailCodeSentForTestClientAuditEventClass_event_name.md
           - AuthEmailCodeSentForTestClientAuditEventClass_user: audit-events/slots/AuthEmailCodeSentForTestClientAuditEventClass_user.md
+          - AuthEmailInvalidCodeRequestAuditEventClass_event_name: audit-events/slots/AuthEmailInvalidCodeRequestAuditEventClass_event_name.md
           - AuthEmailInvalidCodeRequestAuditEventClass_user: audit-events/slots/AuthEmailInvalidCodeRequestAuditEventClass_user.md
+          - AuthInvalidCodeSentAuditEventClass_event_name: audit-events/slots/AuthInvalidCodeSentAuditEventClass_event_name.md
           - AuthInvalidCodeSentAuditEventClass_extensions: audit-events/slots/AuthInvalidCodeSentAuditEventClass_extensions.md
           - AuthInvalidCodeSentAuditEventClass_user: audit-events/slots/AuthInvalidCodeSentAuditEventClass_user.md
+          - AuthInvalidCredentialsAuditEventClass_event_name: audit-events/slots/AuthInvalidCredentialsAuditEventClass_event_name.md
           - AuthInvalidCredentialsAuditEventClass_extensions: audit-events/slots/AuthInvalidCredentialsAuditEventClass_extensions.md
           - AuthInvalidCredentialsAuditEventClass_user: audit-events/slots/AuthInvalidCredentialsAuditEventClass_user.md
+          - AuthIpvAuthorisationRequestedAuditEventClass_event_name: audit-events/slots/AuthIpvAuthorisationRequestedAuditEventClass_event_name.md
           - AuthIpvAuthorisationRequestedAuditEventClass_user: audit-events/slots/AuthIpvAuthorisationRequestedAuditEventClass_user.md
+          - AuthIpvAuthorisationResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvAuthorisationResponseReceivedAuditEventClass_event_name.md
           - AuthIpvAuthorisationResponseReceivedAuditEventClass_user: audit-events/slots/AuthIpvAuthorisationResponseReceivedAuditEventClass_user.md
+          - AuthIpvCapacityRequestedAuditEventClass_event_name: audit-events/slots/AuthIpvCapacityRequestedAuditEventClass_event_name.md
+          - AuthIpvSpotRequestedAuditEventClass_event_name: audit-events/slots/AuthIpvSpotRequestedAuditEventClass_event_name.md
           - AuthIpvSpotRequestedAuditEventClass_user: audit-events/slots/AuthIpvSpotRequestedAuditEventClass_user.md
+          - AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass_event_name.md
           - AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass_user.md
+          - AuthIpvSuccessfulSpotResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvSuccessfulSpotResponseReceivedAuditEventClass_event_name.md
           - AuthIpvSuccessfulSpotResponseReceivedAuditEventClass_user: audit-events/slots/AuthIpvSuccessfulSpotResponseReceivedAuditEventClass_user.md
+          - AuthIpvSuccessfulTokenResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvSuccessfulTokenResponseReceivedAuditEventClass_event_name.md
           - AuthIpvSuccessfulTokenResponseReceivedAuditEventClass_user: audit-events/slots/AuthIpvSuccessfulTokenResponseReceivedAuditEventClass_user.md
+          - AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass_event_name.md
           - AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass_user.md
+          - AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass_event_name.md
           - AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass_user.md
+          - AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass_event_name.md
           - AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass_user: 
               audit-events/slots/AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass_user.md
+          - AuthLogInSuccessAuditEventClass_event_name: audit-events/slots/AuthLogInSuccessAuditEventClass_event_name.md
           - AuthLogInSuccessAuditEventClass_extensions: audit-events/slots/AuthLogInSuccessAuditEventClass_extensions.md
           - AuthLogInSuccessAuditEventClass_user: audit-events/slots/AuthLogInSuccessAuditEventClass_user.md
+          - AuthLogOutSuccessAuditEventClass_event_name: audit-events/slots/AuthLogOutSuccessAuditEventClass_event_name.md
           - AuthLogOutSuccessAuditEventClass_user: audit-events/slots/AuthLogOutSuccessAuditEventClass_user.md
+          - AuthMfaCodeSentAuditEventClass_event_name: audit-events/slots/AuthMfaCodeSentAuditEventClass_event_name.md
           - AuthMfaCodeSentAuditEventClass_user: audit-events/slots/AuthMfaCodeSentAuditEventClass_user.md
+          - AuthMfaCodeSentForTestClientAuditEventClass_event_name: audit-events/slots/AuthMfaCodeSentForTestClientAuditEventClass_event_name.md
           - AuthMfaCodeSentForTestClientAuditEventClass_user: audit-events/slots/AuthMfaCodeSentForTestClientAuditEventClass_user.md
+          - AuthMfaInvalidCodeRequestAuditEventClass_event_name: audit-events/slots/AuthMfaInvalidCodeRequestAuditEventClass_event_name.md
           - AuthMfaInvalidCodeRequestAuditEventClass_user: audit-events/slots/AuthMfaInvalidCodeRequestAuditEventClass_user.md
+          - AuthMfaMismatchedEmailAuditEventClass_event_name: audit-events/slots/AuthMfaMismatchedEmailAuditEventClass_event_name.md
           - AuthMfaMismatchedEmailAuditEventClass_user: audit-events/slots/AuthMfaMismatchedEmailAuditEventClass_user.md
+          - AuthMfaMissingPhoneNumberAuditEventClass_event_name: audit-events/slots/AuthMfaMissingPhoneNumberAuditEventClass_event_name.md
           - AuthMfaMissingPhoneNumberAuditEventClass_user: audit-events/slots/AuthMfaMissingPhoneNumberAuditEventClass_user.md
+          - AuthNoAccountWithEmailAuditEventClass_event_name: audit-events/slots/AuthNoAccountWithEmailAuditEventClass_event_name.md
           - AuthNoAccountWithEmailAuditEventClass_extensions: audit-events/slots/AuthNoAccountWithEmailAuditEventClass_extensions.md
           - AuthNoAccountWithEmailAuditEventClass_user: audit-events/slots/AuthNoAccountWithEmailAuditEventClass_user.md
+          - AuthPasswordResetRequestedAuditEventClass_event_name: audit-events/slots/AuthPasswordResetRequestedAuditEventClass_event_name.md
           - AuthPasswordResetRequestedAuditEventClass_user: audit-events/slots/AuthPasswordResetRequestedAuditEventClass_user.md
+          - AuthPasswordResetRequestedForTestClientAuditEventClass_event_name: 
+              audit-events/slots/AuthPasswordResetRequestedForTestClientAuditEventClass_event_name.md
           - AuthPasswordResetRequestedForTestClientAuditEventClass_user: 
               audit-events/slots/AuthPasswordResetRequestedForTestClientAuditEventClass_user.md
+          - AuthPasswordResetSuccessfulAuditEventClass_event_name: audit-events/slots/AuthPasswordResetSuccessfulAuditEventClass_event_name.md
           - AuthPasswordResetSuccessfulAuditEventClass_user: audit-events/slots/AuthPasswordResetSuccessfulAuditEventClass_user.md
+          - AuthPasswordResetSuccessfulForTestClientAuditEventClass_event_name: 
+              audit-events/slots/AuthPasswordResetSuccessfulForTestClientAuditEventClass_event_name.md
           - AuthPasswordResetSuccessfulForTestClientAuditEventClass_user: 
               audit-events/slots/AuthPasswordResetSuccessfulForTestClientAuditEventClass_user.md
+          - AuthPhoneCheckCompleteAuditEventClass_event_name: audit-events/slots/AuthPhoneCheckCompleteAuditEventClass_event_name.md
           - AuthPhoneCheckCompleteAuditEventClass_evidence: audit-events/slots/AuthPhoneCheckCompleteAuditEventClass_evidence.md
           - AuthPhoneCheckCompleteAuditEventClass_extensions: audit-events/slots/AuthPhoneCheckCompleteAuditEventClass_extensions.md
           - AuthPhoneCheckCompleteAuditEventClass_restricted: audit-events/slots/AuthPhoneCheckCompleteAuditEventClass_restricted.md
+          - AuthPhoneCodeSentAuditEventClass_event_name: audit-events/slots/AuthPhoneCodeSentAuditEventClass_event_name.md
           - AuthPhoneCodeSentAuditEventClass_user: audit-events/slots/AuthPhoneCodeSentAuditEventClass_user.md
+          - AuthPhoneCodeSentForTestClientAuditEventClass_event_name: audit-events/slots/AuthPhoneCodeSentForTestClientAuditEventClass_event_name.md
           - AuthPhoneCodeSentForTestClientAuditEventClass_user: audit-events/slots/AuthPhoneCodeSentForTestClientAuditEventClass_user.md
+          - AuthPhoneInvalidCodeRequestAuditEventClass_event_name: audit-events/slots/AuthPhoneInvalidCodeRequestAuditEventClass_event_name.md
           - AuthPhoneInvalidCodeRequestAuditEventClass_user: audit-events/slots/AuthPhoneInvalidCodeRequestAuditEventClass_user.md
+          - AuthProcessingIdentityRequestAuditEventClass_event_name: audit-events/slots/AuthProcessingIdentityRequestAuditEventClass_event_name.md
           - AuthProcessingIdentityRequestAuditEventClass_user: audit-events/slots/AuthProcessingIdentityRequestAuditEventClass_user.md
+          - AuthRegisterClientRequestErrorAuditEventClass_event_name: audit-events/slots/AuthRegisterClientRequestErrorAuditEventClass_event_name.md
           - AuthRegisterClientRequestErrorAuditEventClass_user: audit-events/slots/AuthRegisterClientRequestErrorAuditEventClass_user.md
+          - AuthRegisterClientRequestReceivedAuditEventClass_event_name: 
+              audit-events/slots/AuthRegisterClientRequestReceivedAuditEventClass_event_name.md
           - AuthRegisterClientRequestReceivedAuditEventClass_user: audit-events/slots/AuthRegisterClientRequestReceivedAuditEventClass_user.md
+          - AuthSendOtpAuditEventClass_event_name: audit-events/slots/AuthSendOtpAuditEventClass_event_name.md
           - AuthSendOtpAuditEventClass_extensions: audit-events/slots/AuthSendOtpAuditEventClass_extensions.md
           - AuthSendOtpAuditEventClass_user: audit-events/slots/AuthSendOtpAuditEventClass_user.md
+          - AuthStartInfoFoundAuditEventClass_event_name: audit-events/slots/AuthStartInfoFoundAuditEventClass_event_name.md
           - AuthStartInfoFoundAuditEventClass_extensions: audit-events/slots/AuthStartInfoFoundAuditEventClass_extensions.md
           - AuthStartInfoFoundAuditEventClass_user: audit-events/slots/AuthStartInfoFoundAuditEventClass_user.md
+          - AuthSyntheticsUserDeletedAuditEventClass_event_name: audit-events/slots/AuthSyntheticsUserDeletedAuditEventClass_event_name.md
           - AuthSyntheticsUserDeletedAuditEventClass_user: audit-events/slots/AuthSyntheticsUserDeletedAuditEventClass_user.md
+          - AuthSyntheticsUserNotFoundForDeletionAuditEventClass_event_name: 
+              audit-events/slots/AuthSyntheticsUserNotFoundForDeletionAuditEventClass_event_name.md
           - AuthSyntheticsUserNotFoundForDeletionAuditEventClass_user: audit-events/slots/AuthSyntheticsUserNotFoundForDeletionAuditEventClass_user.md
+          - AuthUpdateClientRequestErrorAuditEventClass_event_name: audit-events/slots/AuthUpdateClientRequestErrorAuditEventClass_event_name.md
           - AuthUpdateClientRequestErrorAuditEventClass_user: audit-events/slots/AuthUpdateClientRequestErrorAuditEventClass_user.md
+          - AuthUpdateClientRequestReceivedAuditEventClass_event_name: audit-events/slots/AuthUpdateClientRequestReceivedAuditEventClass_event_name.md
           - AuthUpdateClientRequestReceivedAuditEventClass_user: audit-events/slots/AuthUpdateClientRequestReceivedAuditEventClass_user.md
+          - AuthUpdateEmailAuditEventClass_event_name: audit-events/slots/AuthUpdateEmailAuditEventClass_event_name.md
           - AuthUpdateEmailAuditEventClass_user: audit-events/slots/AuthUpdateEmailAuditEventClass_user.md
+          - AuthUpdatePasswordAuditEventClass_event_name: audit-events/slots/AuthUpdatePasswordAuditEventClass_event_name.md
           - AuthUpdatePasswordAuditEventClass_user: audit-events/slots/AuthUpdatePasswordAuditEventClass_user.md
+          - AuthUpdatePhoneNumberAuditEventClass_event_name: audit-events/slots/AuthUpdatePhoneNumberAuditEventClass_event_name.md
           - AuthUpdatePhoneNumberAuditEventClass_user: audit-events/slots/AuthUpdatePhoneNumberAuditEventClass_user.md
+          - AuthUpdateProfileAuthAppAuditEventClass_event_name: audit-events/slots/AuthUpdateProfileAuthAppAuditEventClass_event_name.md
           - AuthUpdateProfileAuthAppAuditEventClass_user: audit-events/slots/AuthUpdateProfileAuthAppAuditEventClass_user.md
+          - AuthUpdateProfileConsentUpdatedAuditEventClass_event_name: audit-events/slots/AuthUpdateProfileConsentUpdatedAuditEventClass_event_name.md
           - AuthUpdateProfileConsentUpdatedAuditEventClass_user: audit-events/slots/AuthUpdateProfileConsentUpdatedAuditEventClass_user.md
+          - AuthUpdateProfilePhoneNumberAuditEventClass_event_name: audit-events/slots/AuthUpdateProfilePhoneNumberAuditEventClass_event_name.md
           - AuthUpdateProfilePhoneNumberAuditEventClass_user: audit-events/slots/AuthUpdateProfilePhoneNumberAuditEventClass_user.md
+          - AuthUpdateProfileRequestErrorAuditEventClass_event_name: audit-events/slots/AuthUpdateProfileRequestErrorAuditEventClass_event_name.md
           - AuthUpdateProfileRequestErrorAuditEventClass_user: audit-events/slots/AuthUpdateProfileRequestErrorAuditEventClass_user.md
+          - AuthUpdateProfileRequestReceivedAuditEventClass_event_name: audit-events/slots/AuthUpdateProfileRequestReceivedAuditEventClass_event_name.md
           - AuthUpdateProfileRequestReceivedAuditEventClass_user: audit-events/slots/AuthUpdateProfileRequestReceivedAuditEventClass_user.md
+          - AuthUpdateProfileTermsCondsAcceptanceAuditEventClass_event_name: 
+              audit-events/slots/AuthUpdateProfileTermsCondsAcceptanceAuditEventClass_event_name.md
           - AuthUpdateProfileTermsCondsAcceptanceAuditEventClass_user: audit-events/slots/AuthUpdateProfileTermsCondsAcceptanceAuditEventClass_user.md
+          - AuthUserInfoReturnedAuditEventClass_event_name: audit-events/slots/AuthUserInfoReturnedAuditEventClass_event_name.md
           - AuthUserInfoReturnedAuditEventClass_user: audit-events/slots/AuthUserInfoReturnedAuditEventClass_user.md
           - birthDate: audit-events/slots/birthDate.md
           - checkDetails: audit-events/slots/checkDetails.md
           - ci: audit-events/slots/ci.md
           - ci_count: audit-events/slots/ci_count.md
+          - CicCriAuthCodeIssuedAuditEventClass_event_name: audit-events/slots/CicCriAuthCodeIssuedAuditEventClass_event_name.md
           - CicCriAuthCodeIssuedAuditEventClass_user: audit-events/slots/CicCriAuthCodeIssuedAuditEventClass_user.md
+          - CicCriEndAuditEventClass_event_name: audit-events/slots/CicCriEndAuditEventClass_event_name.md
           - CicCriEndAuditEventClass_user: audit-events/slots/CicCriEndAuditEventClass_user.md
+          - CicCriStartAuditEventClass_event_name: audit-events/slots/CicCriStartAuditEventClass_event_name.md
           - CicCriStartAuditEventClass_user: audit-events/slots/CicCriStartAuditEventClass_user.md
+          - CicCriVcIssuedAuditEventClass_event_name: audit-events/slots/CicCriVcIssuedAuditEventClass_event_name.md
           - CicCriVcIssuedAuditEventClass_restricted: audit-events/slots/CicCriVcIssuedAuditEventClass_restricted.md
           - CicCriVcIssuedAuditEventClass_user: audit-events/slots/CicCriVcIssuedAuditEventClass_user.md
           - client_id: audit-events/slots/client_id.md
           - client_name: audit-events/slots/client_name.md
           - component_id: audit-events/slots/component_id.md
+          - DcmawAbortAppAuditEventClass_event_name: audit-events/slots/DcmawAbortAppAuditEventClass_event_name.md
           - DcmawAbortAppAuditEventClass_user: audit-events/slots/DcmawAbortAppAuditEventClass_user.md
+          - DcmawAbortWebAuditEventClass_event_name: audit-events/slots/DcmawAbortWebAuditEventClass_event_name.md
           - DcmawAbortWebAuditEventClass_user: audit-events/slots/DcmawAbortWebAuditEventClass_user.md
+          - DcmawAppEndAuditEventClass_event_name: audit-events/slots/DcmawAppEndAuditEventClass_event_name.md
           - DcmawAppEndAuditEventClass_user: audit-events/slots/DcmawAppEndAuditEventClass_user.md
+          - DcmawAppHandoffFailureAuditEventClass_event_name: audit-events/slots/DcmawAppHandoffFailureAuditEventClass_event_name.md
           - DcmawAppHandoffFailureAuditEventClass_user: audit-events/slots/DcmawAppHandoffFailureAuditEventClass_user.md
+          - DcmawAppHandoffStartAuditEventClass_event_name: audit-events/slots/DcmawAppHandoffStartAuditEventClass_event_name.md
           - DcmawAppHandoffStartAuditEventClass_user: audit-events/slots/DcmawAppHandoffStartAuditEventClass_user.md
+          - DcmawAppStartAuditEventClass_event_name: audit-events/slots/DcmawAppStartAuditEventClass_event_name.md
           - DcmawAppStartAuditEventClass_user: audit-events/slots/DcmawAppStartAuditEventClass_user.md
+          - DcmawBrpSelectedAuditEventClass_event_name: audit-events/slots/DcmawBrpSelectedAuditEventClass_event_name.md
           - DcmawBrpSelectedAuditEventClass_user: audit-events/slots/DcmawBrpSelectedAuditEventClass_user.md
+          - DcmawCri4XxerrorAuditEventClass_event_name: audit-events/slots/DcmawCri4XxerrorAuditEventClass_event_name.md
           - DcmawCri4XxerrorAuditEventClass_user: audit-events/slots/DcmawCri4XxerrorAuditEventClass_user.md
+          - DcmawCri5XxerrorAuditEventClass_event_name: audit-events/slots/DcmawCri5XxerrorAuditEventClass_event_name.md
           - DcmawCri5XxerrorAuditEventClass_user: audit-events/slots/DcmawCri5XxerrorAuditEventClass_user.md
+          - DcmawCriAbortAuditEventClass_event_name: audit-events/slots/DcmawCriAbortAuditEventClass_event_name.md
           - DcmawCriAbortAuditEventClass_user: audit-events/slots/DcmawCriAbortAuditEventClass_user.md
+          - DcmawCriEndAuditEventClass_event_name: audit-events/slots/DcmawCriEndAuditEventClass_event_name.md
           - DcmawCriEndAuditEventClass_user: audit-events/slots/DcmawCriEndAuditEventClass_user.md
+          - DcmawCriStartAuditEventClass_event_name: audit-events/slots/DcmawCriStartAuditEventClass_event_name.md
           - DcmawCriStartAuditEventClass_user: audit-events/slots/DcmawCriStartAuditEventClass_user.md
+          - DcmawCriVcIssuedAuditEventClass_event_name: audit-events/slots/DcmawCriVcIssuedAuditEventClass_event_name.md
           - DcmawCriVcIssuedAuditEventClass_evidence: audit-events/slots/DcmawCriVcIssuedAuditEventClass_evidence.md
           - DcmawCriVcIssuedAuditEventClass_extensions: audit-events/slots/DcmawCriVcIssuedAuditEventClass_extensions.md
           - DcmawCriVcIssuedAuditEventClass_platform: audit-events/slots/DcmawCriVcIssuedAuditEventClass_platform.md
           - DcmawCriVcIssuedAuditEventClass_restricted: audit-events/slots/DcmawCriVcIssuedAuditEventClass_restricted.md
           - DcmawCriVcIssuedAuditEventClass_user: audit-events/slots/DcmawCriVcIssuedAuditEventClass_user.md
+          - DcmawDrivingLicenceSelectedAuditEventClass_event_name: audit-events/slots/DcmawDrivingLicenceSelectedAuditEventClass_event_name.md
           - DcmawDrivingLicenceSelectedAuditEventClass_user: audit-events/slots/DcmawDrivingLicenceSelectedAuditEventClass_user.md
+          - DcmawHybridBillingStartedAuditEventClass_event_name: audit-events/slots/DcmawHybridBillingStartedAuditEventClass_event_name.md
           - DcmawHybridBillingStartedAuditEventClass_user: audit-events/slots/DcmawHybridBillingStartedAuditEventClass_user.md
+          - DcmawIproovBillingStartedAuditEventClass_event_name: audit-events/slots/DcmawIproovBillingStartedAuditEventClass_event_name.md
           - DcmawIproovBillingStartedAuditEventClass_user: audit-events/slots/DcmawIproovBillingStartedAuditEventClass_user.md
+          - DcmawMissingContextAfterAbortAuditEventClass_event_name: audit-events/slots/DcmawMissingContextAfterAbortAuditEventClass_event_name.md
           - DcmawMissingContextAfterAbortAuditEventClass_user: audit-events/slots/DcmawMissingContextAfterAbortAuditEventClass_user.md
+          - DcmawMissingContextAfterCompletionAuditEventClass_event_name: 
+              audit-events/slots/DcmawMissingContextAfterCompletionAuditEventClass_event_name.md
           - DcmawMissingContextAfterCompletionAuditEventClass_user: audit-events/slots/DcmawMissingContextAfterCompletionAuditEventClass_user.md
+          - DcmawPassportSelectedAuditEventClass_event_name: audit-events/slots/DcmawPassportSelectedAuditEventClass_event_name.md
           - DcmawPassportSelectedAuditEventClass_user: audit-events/slots/DcmawPassportSelectedAuditEventClass_user.md
+          - DcmawReadidNfcBillingStartedAuditEventClass_event_name: audit-events/slots/DcmawReadidNfcBillingStartedAuditEventClass_event_name.md
           - DcmawReadidNfcBillingStartedAuditEventClass_user: audit-events/slots/DcmawReadidNfcBillingStartedAuditEventClass_user.md
+          - DcmawRedirectAbortAuditEventClass_event_name: audit-events/slots/DcmawRedirectAbortAuditEventClass_event_name.md
           - DcmawRedirectAbortAuditEventClass_user: audit-events/slots/DcmawRedirectAbortAuditEventClass_user.md
+          - DcmawRedirectSuccessAuditEventClass_event_name: audit-events/slots/DcmawRedirectSuccessAuditEventClass_event_name.md
           - DcmawRedirectSuccessAuditEventClass_user: audit-events/slots/DcmawRedirectSuccessAuditEventClass_user.md
+          - DcmawSessionRecoveredAuditEventClass_event_name: audit-events/slots/DcmawSessionRecoveredAuditEventClass_event_name.md
           - DcmawSessionRecoveredAuditEventClass_extensions: audit-events/slots/DcmawSessionRecoveredAuditEventClass_extensions.md
           - DcmawSessionRecoveredAuditEventClass_user: audit-events/slots/DcmawSessionRecoveredAuditEventClass_user.md
+          - DcmawWebEndAuditEventClass_event_name: audit-events/slots/DcmawWebEndAuditEventClass_event_name.md
           - DcmawWebEndAuditEventClass_user: audit-events/slots/DcmawWebEndAuditEventClass_user.md
           - decisionScore: audit-events/slots/decisionScore.md
           - description: audit-events/slots/description.md
@@ -586,23 +712,32 @@ nav:
           - experianIiqResponse_value: audit-events/slots/experianIiqResponse_value.md
           - extensions: audit-events/slots/extensions.md
           - extenstions: audit-events/slots/extenstions.md
+          - F2FCriAccessTokenIssuedAuditEventClass_event_name: audit-events/slots/F2FCriAccessTokenIssuedAuditEventClass_event_name.md
           - F2FCriAccessTokenIssuedAuditEventClass_user: audit-events/slots/F2FCriAccessTokenIssuedAuditEventClass_user.md
+          - F2FCriAuthCodeIssuedAuditEventClass_event_name: audit-events/slots/F2FCriAuthCodeIssuedAuditEventClass_event_name.md
           - F2FCriAuthCodeIssuedAuditEventClass_user: audit-events/slots/F2FCriAuthCodeIssuedAuditEventClass_user.md
+          - F2FCriEndAuditEventClass_event_name: audit-events/slots/F2FCriEndAuditEventClass_event_name.md
           - F2FCriEndAuditEventClass_evidence: audit-events/slots/F2FCriEndAuditEventClass_evidence.md
           - F2FCriEndAuditEventClass_extensions: audit-events/slots/F2FCriEndAuditEventClass_extensions.md
           - F2FCriEndAuditEventClass_user: audit-events/slots/F2FCriEndAuditEventClass_user.md
+          - F2FCriStartAuditEventClass_event_name: audit-events/slots/F2FCriStartAuditEventClass_event_name.md
           - F2FCriStartAuditEventClass_user: audit-events/slots/F2FCriStartAuditEventClass_user.md
+          - F2FCriVcIssuedAuditEventClass_event_name: audit-events/slots/F2FCriVcIssuedAuditEventClass_event_name.md
           - F2FCriVcIssuedAuditEventClass_evidence: audit-events/slots/F2FCriVcIssuedAuditEventClass_evidence.md
           - F2FCriVcIssuedAuditEventClass_extensions: audit-events/slots/F2FCriVcIssuedAuditEventClass_extensions.md
           - F2FCriVcIssuedAuditEventClass_restricted: audit-events/slots/F2FCriVcIssuedAuditEventClass_restricted.md
           - F2FCriVcIssuedAuditEventClass_user: audit-events/slots/F2FCriVcIssuedAuditEventClass_user.md
+          - F2FSessionAbortedAuditEventClass_event_name: audit-events/slots/F2FSessionAbortedAuditEventClass_event_name.md
           - F2FSessionAbortedAuditEventClass_user: audit-events/slots/F2FSessionAbortedAuditEventClass_user.md
+          - F2FYotiPdfEmailedAuditEventClass_event_name: audit-events/slots/F2FYotiPdfEmailedAuditEventClass_event_name.md
           - F2FYotiPdfEmailedAuditEventClass_evidence: audit-events/slots/F2FYotiPdfEmailedAuditEventClass_evidence.md
           - F2FYotiPdfEmailedAuditEventClass_extensions: audit-events/slots/F2FYotiPdfEmailedAuditEventClass_extensions.md
           - F2FYotiPdfEmailedAuditEventClass_user: audit-events/slots/F2FYotiPdfEmailedAuditEventClass_user.md
+          - F2FYotiResponseReceivedAuditEventClass_event_name: audit-events/slots/F2FYotiResponseReceivedAuditEventClass_event_name.md
           - F2FYotiResponseReceivedAuditEventClass_evidence: audit-events/slots/F2FYotiResponseReceivedAuditEventClass_evidence.md
           - F2FYotiResponseReceivedAuditEventClass_extensions: audit-events/slots/F2FYotiResponseReceivedAuditEventClass_extensions.md
           - F2FYotiResponseReceivedAuditEventClass_user: audit-events/slots/F2FYotiResponseReceivedAuditEventClass_user.md
+          - F2FYotiStartAuditEventClass_event_name: audit-events/slots/F2FYotiStartAuditEventClass_event_name.md
           - F2FYotiStartAuditEventClass_evidence: audit-events/slots/F2FYotiStartAuditEventClass_evidence.md
           - F2FYotiStartAuditEventClass_extensions: audit-events/slots/F2FYotiStartAuditEventClass_extensions.md
           - F2FYotiStartAuditEventClass_restricted: audit-events/slots/F2FYotiStartAuditEventClass_restricted.md
@@ -611,6 +746,7 @@ nav:
           - govuk_signin_journey_id: audit-events/slots/govuk_signin_journey_id.md
           - internalSubjectId: audit-events/slots/internalSubjectId.md
           - ip_address: audit-events/slots/ip_address.md
+          - IprResultNotificationEmailedAuditEventClass_event_name: audit-events/slots/IprResultNotificationEmailedAuditEventClass_event_name.md
           - IprResultNotificationEmailedAuditEventClass_evidence: audit-events/slots/IprResultNotificationEmailedAuditEventClass_evidence.md
           - IprResultNotificationEmailedAuditEventClass_experianIiqResponse: 
               audit-events/slots/IprResultNotificationEmailedAuditEventClass_experianIiqResponse.md
@@ -619,6 +755,7 @@ nav:
           - IprResultNotificationEmailedAuditEventClass_platform: audit-events/slots/IprResultNotificationEmailedAuditEventClass_platform.md
           - IprResultNotificationEmailedAuditEventClass_restricted: audit-events/slots/IprResultNotificationEmailedAuditEventClass_restricted.md
           - IprResultNotificationEmailedAuditEventClass_user: audit-events/slots/IprResultNotificationEmailedAuditEventClass_user.md
+          - IprUserRedirectedAuditEventClass_event_name: audit-events/slots/IprUserRedirectedAuditEventClass_event_name.md
           - IprUserRedirectedAuditEventClass_evidence: audit-events/slots/IprUserRedirectedAuditEventClass_evidence.md
           - IprUserRedirectedAuditEventClass_experianIiqResponse: audit-events/slots/IprUserRedirectedAuditEventClass_experianIiqResponse.md
           - IprUserRedirectedAuditEventClass_extensions: audit-events/slots/IprUserRedirectedAuditEventClass_extensions.md
@@ -626,83 +763,136 @@ nav:
           - IprUserRedirectedAuditEventClass_platform: audit-events/slots/IprUserRedirectedAuditEventClass_platform.md
           - IprUserRedirectedAuditEventClass_restricted: audit-events/slots/IprUserRedirectedAuditEventClass_restricted.md
           - IprUserRedirectedAuditEventClass_user: audit-events/slots/IprUserRedirectedAuditEventClass_user.md
+          - IpvAddressCriEndAuditEventClass_event_name: audit-events/slots/IpvAddressCriEndAuditEventClass_event_name.md
           - IpvAddressCriEndAuditEventClass_user: audit-events/slots/IpvAddressCriEndAuditEventClass_user.md
+          - IpvAddressCriRequestSentAuditEventClass_event_name: audit-events/slots/IpvAddressCriRequestSentAuditEventClass_event_name.md
           - IpvAddressCriRequestSentAuditEventClass_restricted: audit-events/slots/IpvAddressCriRequestSentAuditEventClass_restricted.md
           - IpvAddressCriRequestSentAuditEventClass_user: audit-events/slots/IpvAddressCriRequestSentAuditEventClass_user.md
+          - IpvAddressCriResponseReceivedAuditEventClass_event_name: audit-events/slots/IpvAddressCriResponseReceivedAuditEventClass_event_name.md
           - IpvAddressCriResponseReceivedAuditEventClass_user: audit-events/slots/IpvAddressCriResponseReceivedAuditEventClass_user.md
+          - IpvAddressCriStartAuditEventClass_event_name: audit-events/slots/IpvAddressCriStartAuditEventClass_event_name.md
           - IpvAddressCriStartAuditEventClass_user: audit-events/slots/IpvAddressCriStartAuditEventClass_user.md
+          - IpvAddressCriVcIssuedAuditEventClass_event_name: audit-events/slots/IpvAddressCriVcIssuedAuditEventClass_event_name.md
           - IpvAddressCriVcIssuedAuditEventClass_extensions: audit-events/slots/IpvAddressCriVcIssuedAuditEventClass_extensions.md
           - IpvAddressCriVcIssuedAuditEventClass_user: audit-events/slots/IpvAddressCriVcIssuedAuditEventClass_user.md
+          - IpvContraIndicatorStorageGetEndAuditEventClass_event_name: audit-events/slots/IpvContraIndicatorStorageGetEndAuditEventClass_event_name.md
           - IpvContraIndicatorStorageGetEndAuditEventClass_user: audit-events/slots/IpvContraIndicatorStorageGetEndAuditEventClass_user.md
+          - IpvContraIndicatorStorageGetQueryAuditEventClass_event_name: 
+              audit-events/slots/IpvContraIndicatorStorageGetQueryAuditEventClass_event_name.md
           - IpvContraIndicatorStorageGetQueryAuditEventClass_user: audit-events/slots/IpvContraIndicatorStorageGetQueryAuditEventClass_user.md
+          - IpvContraIndicatorStorageGetStartAuditEventClass_event_name: 
+              audit-events/slots/IpvContraIndicatorStorageGetStartAuditEventClass_event_name.md
           - IpvContraIndicatorStorageGetStartAuditEventClass_user: audit-events/slots/IpvContraIndicatorStorageGetStartAuditEventClass_user.md
+          - IpvContraIndicatorStoragePutEndAuditEventClass_event_name: audit-events/slots/IpvContraIndicatorStoragePutEndAuditEventClass_event_name.md
           - IpvContraIndicatorStoragePutEndAuditEventClass_user: audit-events/slots/IpvContraIndicatorStoragePutEndAuditEventClass_user.md
+          - IpvContraIndicatorStoragePutNewCisAuditEventClass_event_name: 
+              audit-events/slots/IpvContraIndicatorStoragePutNewCisAuditEventClass_event_name.md
           - IpvContraIndicatorStoragePutNewCisAuditEventClass_extensions: 
               audit-events/slots/IpvContraIndicatorStoragePutNewCisAuditEventClass_extensions.md
           - IpvContraIndicatorStoragePutNewCisAuditEventClass_user: audit-events/slots/IpvContraIndicatorStoragePutNewCisAuditEventClass_user.md
+          - IpvContraIndicatorStoragePutStartAuditEventClass_event_name: 
+              audit-events/slots/IpvContraIndicatorStoragePutStartAuditEventClass_event_name.md
           - IpvContraIndicatorStoragePutStartAuditEventClass_user: audit-events/slots/IpvContraIndicatorStoragePutStartAuditEventClass_user.md
+          - IpvCriAuthResponseReceivedAuditEventClass_event_name: audit-events/slots/IpvCriAuthResponseReceivedAuditEventClass_event_name.md
           - IpvCriAuthResponseReceivedAuditEventClass_user: audit-events/slots/IpvCriAuthResponseReceivedAuditEventClass_user.md
+          - IpvDeleteUserDataAuditEventClass_event_name: audit-events/slots/IpvDeleteUserDataAuditEventClass_event_name.md
           - IpvDeleteUserDataAuditEventClass_extenstions: audit-events/slots/IpvDeleteUserDataAuditEventClass_extenstions.md
           - IpvDeleteUserDataAuditEventClass_user: audit-events/slots/IpvDeleteUserDataAuditEventClass_user.md
+          - IpvDlCriEndAuditEventClass_event_name: audit-events/slots/IpvDlCriEndAuditEventClass_event_name.md
           - IpvDlCriEndAuditEventClass_user: audit-events/slots/IpvDlCriEndAuditEventClass_user.md
+          - IpvDlCriRequestSentAuditEventClass_event_name: audit-events/slots/IpvDlCriRequestSentAuditEventClass_event_name.md
           - IpvDlCriRequestSentAuditEventClass_restricted: audit-events/slots/IpvDlCriRequestSentAuditEventClass_restricted.md
           - IpvDlCriRequestSentAuditEventClass_user: audit-events/slots/IpvDlCriRequestSentAuditEventClass_user.md
+          - IpvDlCriResponseReceivedAuditEventClass_event_name: audit-events/slots/IpvDlCriResponseReceivedAuditEventClass_event_name.md
           - IpvDlCriResponseReceivedAuditEventClass_user: audit-events/slots/IpvDlCriResponseReceivedAuditEventClass_user.md
+          - IpvDlCriStartAuditEventClass_event_name: audit-events/slots/IpvDlCriStartAuditEventClass_event_name.md
           - IpvDlCriStartAuditEventClass_user: audit-events/slots/IpvDlCriStartAuditEventClass_user.md
+          - IpvDlCriThirdPartyRequestEndedAuditEventClass_event_name: audit-events/slots/IpvDlCriThirdPartyRequestEndedAuditEventClass_event_name.md
           - IpvDlCriThirdPartyRequestEndedAuditEventClass_user: audit-events/slots/IpvDlCriThirdPartyRequestEndedAuditEventClass_user.md
+          - IpvDlCriVcIssuedAuditEventClass_event_name: audit-events/slots/IpvDlCriVcIssuedAuditEventClass_event_name.md
           - IpvDlCriVcIssuedAuditEventClass_evidence: audit-events/slots/IpvDlCriVcIssuedAuditEventClass_evidence.md
           - IpvDlCriVcIssuedAuditEventClass_extensions: audit-events/slots/IpvDlCriVcIssuedAuditEventClass_extensions.md
           - IpvDlCriVcIssuedAuditEventClass_restricted: audit-events/slots/IpvDlCriVcIssuedAuditEventClass_restricted.md
           - IpvDlCriVcIssuedAuditEventClass_user: audit-events/slots/IpvDlCriVcIssuedAuditEventClass_user.md
+          - IpvF2FCriVcConsumedAuditEventClass_event_name: audit-events/slots/IpvF2FCriVcConsumedAuditEventClass_event_name.md
           - IpvF2FCriVcConsumedAuditEventClass_user: audit-events/slots/IpvF2FCriVcConsumedAuditEventClass_user.md
+          - IpvF2FCriVcReceivedAuditEventClass_event_name: audit-events/slots/IpvF2FCriVcReceivedAuditEventClass_event_name.md
           - IpvF2FCriVcReceivedAuditEventClass_evidence: audit-events/slots/IpvF2FCriVcReceivedAuditEventClass_evidence.md
           - IpvF2FCriVcReceivedAuditEventClass_extensions: audit-events/slots/IpvF2FCriVcReceivedAuditEventClass_extensions.md
           - IpvF2FCriVcReceivedAuditEventClass_user: audit-events/slots/IpvF2FCriVcReceivedAuditEventClass_user.md
+          - IpvFraudCriEndAuditEventClass_event_name: audit-events/slots/IpvFraudCriEndAuditEventClass_event_name.md
           - IpvFraudCriEndAuditEventClass_user: audit-events/slots/IpvFraudCriEndAuditEventClass_user.md
+          - IpvFraudCriRequestSentAuditEventClass_event_name: audit-events/slots/IpvFraudCriRequestSentAuditEventClass_event_name.md
           - IpvFraudCriRequestSentAuditEventClass_restricted: audit-events/slots/IpvFraudCriRequestSentAuditEventClass_restricted.md
           - IpvFraudCriRequestSentAuditEventClass_user: audit-events/slots/IpvFraudCriRequestSentAuditEventClass_user.md
+          - IpvFraudCriResponseReceivedAuditEventClass_event_name: audit-events/slots/IpvFraudCriResponseReceivedAuditEventClass_event_name.md
           - IpvFraudCriResponseReceivedAuditEventClass_extensions: audit-events/slots/IpvFraudCriResponseReceivedAuditEventClass_extensions.md
           - IpvFraudCriResponseReceivedAuditEventClass_user: audit-events/slots/IpvFraudCriResponseReceivedAuditEventClass_user.md
+          - IpvFraudCriStartAuditEventClass_event_name: audit-events/slots/IpvFraudCriStartAuditEventClass_event_name.md
           - IpvFraudCriStartAuditEventClass_user: audit-events/slots/IpvFraudCriStartAuditEventClass_user.md
+          - IpvFraudCriThirdPartyRequestEndedAuditEventClass_event_name: 
+              audit-events/slots/IpvFraudCriThirdPartyRequestEndedAuditEventClass_event_name.md
+          - IpvFraudCriVcIssuedAuditEventClass_event_name: audit-events/slots/IpvFraudCriVcIssuedAuditEventClass_event_name.md
           - IpvFraudCriVcIssuedAuditEventClass_evidence: audit-events/slots/IpvFraudCriVcIssuedAuditEventClass_evidence.md
           - IpvFraudCriVcIssuedAuditEventClass_extensions: audit-events/slots/IpvFraudCriVcIssuedAuditEventClass_extensions.md
           - IpvFraudCriVcIssuedAuditEventClass_restricted: audit-events/slots/IpvFraudCriVcIssuedAuditEventClass_restricted.md
           - IpvFraudCriVcIssuedAuditEventClass_user: audit-events/slots/IpvFraudCriVcIssuedAuditEventClass_user.md
+          - IpvGpg45ProfileMatchedAuditEventClass_event_name: audit-events/slots/IpvGpg45ProfileMatchedAuditEventClass_event_name.md
           - IpvGpg45ProfileMatchedAuditEventClass_evidence: audit-events/slots/IpvGpg45ProfileMatchedAuditEventClass_evidence.md
           - IpvGpg45ProfileMatchedAuditEventClass_extensions: audit-events/slots/IpvGpg45ProfileMatchedAuditEventClass_extensions.md
           - IpvGpg45ProfileMatchedAuditEventClass_user: audit-events/slots/IpvGpg45ProfileMatchedAuditEventClass_user.md
+          - IpvIdentityIssuedAuditEventClass_event_name: audit-events/slots/IpvIdentityIssuedAuditEventClass_event_name.md
           - IpvIdentityIssuedAuditEventClass_extensions: audit-events/slots/IpvIdentityIssuedAuditEventClass_extensions.md
           - IpvIdentityIssuedAuditEventClass_user: audit-events/slots/IpvIdentityIssuedAuditEventClass_user.md
+          - IpvIdentityReuseCompleteAuditEventClass_event_name: audit-events/slots/IpvIdentityReuseCompleteAuditEventClass_event_name.md
           - IpvIdentityReuseCompleteAuditEventClass_user: audit-events/slots/IpvIdentityReuseCompleteAuditEventClass_user.md
+          - IpvIdentityReuseResetAuditEventClass_event_name: audit-events/slots/IpvIdentityReuseResetAuditEventClass_event_name.md
           - IpvIdentityReuseResetAuditEventClass_user: audit-events/slots/IpvIdentityReuseResetAuditEventClass_user.md
+          - IpvJourneyEndAuditEventClass_event_name: audit-events/slots/IpvJourneyEndAuditEventClass_event_name.md
           - IpvJourneyEndAuditEventClass_user: audit-events/slots/IpvJourneyEndAuditEventClass_user.md
+          - IpvJourneyStartAuditEventClass_event_name: audit-events/slots/IpvJourneyStartAuditEventClass_event_name.md
           - IpvJourneyStartAuditEventClass_user: audit-events/slots/IpvJourneyStartAuditEventClass_user.md
+          - IpvKbvCriEndAuditEventClass_event_name: audit-events/slots/IpvKbvCriEndAuditEventClass_event_name.md
           - IpvKbvCriEndAuditEventClass_user: audit-events/slots/IpvKbvCriEndAuditEventClass_user.md
+          - IpvKbvCriRequestSentAuditEventClass_event_name: audit-events/slots/IpvKbvCriRequestSentAuditEventClass_event_name.md
           - IpvKbvCriRequestSentAuditEventClass_restricted: audit-events/slots/IpvKbvCriRequestSentAuditEventClass_restricted.md
           - IpvKbvCriRequestSentAuditEventClass_user: audit-events/slots/IpvKbvCriRequestSentAuditEventClass_user.md
+          - IpvKbvCriStartAuditEventClass_event_name: audit-events/slots/IpvKbvCriStartAuditEventClass_event_name.md
           - IpvKbvCriStartAuditEventClass_user: audit-events/slots/IpvKbvCriStartAuditEventClass_user.md
+          - IpvKbvCriVcIssuedAuditEventClass_event_name: audit-events/slots/IpvKbvCriVcIssuedAuditEventClass_event_name.md
           - IpvKbvCriVcIssuedAuditEventClass_evidence: audit-events/slots/IpvKbvCriVcIssuedAuditEventClass_evidence.md
           - IpvKbvCriVcIssuedAuditEventClass_extensions: audit-events/slots/IpvKbvCriVcIssuedAuditEventClass_extensions.md
           - IpvKbvCriVcIssuedAuditEventClass_restricted: audit-events/slots/IpvKbvCriVcIssuedAuditEventClass_restricted.md
           - IpvKbvCriVcIssuedAuditEventClass_user: audit-events/slots/IpvKbvCriVcIssuedAuditEventClass_user.md
+          - IpvPassportCriEndAuditEventClass_event_name: audit-events/slots/IpvPassportCriEndAuditEventClass_event_name.md
           - IpvPassportCriEndAuditEventClass_user: audit-events/slots/IpvPassportCriEndAuditEventClass_user.md
+          - IpvPassportCriRequestSentAuditEventClass_event_name: audit-events/slots/IpvPassportCriRequestSentAuditEventClass_event_name.md
           - IpvPassportCriRequestSentAuditEventClass_evidence: audit-events/slots/IpvPassportCriRequestSentAuditEventClass_evidence.md
           - IpvPassportCriRequestSentAuditEventClass_extensions: audit-events/slots/IpvPassportCriRequestSentAuditEventClass_extensions.md
           - IpvPassportCriRequestSentAuditEventClass_restricted: audit-events/slots/IpvPassportCriRequestSentAuditEventClass_restricted.md
           - IpvPassportCriRequestSentAuditEventClass_user: audit-events/slots/IpvPassportCriRequestSentAuditEventClass_user.md
+          - IpvPassportCriResponseReceivedAuditEventClass_event_name: audit-events/slots/IpvPassportCriResponseReceivedAuditEventClass_event_name.md
           - IpvPassportCriResponseReceivedAuditEventClass_user: audit-events/slots/IpvPassportCriResponseReceivedAuditEventClass_user.md
+          - IpvPassportCriStartAuditEventClass_event_name: audit-events/slots/IpvPassportCriStartAuditEventClass_event_name.md
           - IpvPassportCriStartAuditEventClass_user: audit-events/slots/IpvPassportCriStartAuditEventClass_user.md
+          - IpvPassportCriVcIssuedAuditEventClass_event_name: audit-events/slots/IpvPassportCriVcIssuedAuditEventClass_event_name.md
           - IpvPassportCriVcIssuedAuditEventClass_evidence: audit-events/slots/IpvPassportCriVcIssuedAuditEventClass_evidence.md
           - IpvPassportCriVcIssuedAuditEventClass_extensions: audit-events/slots/IpvPassportCriVcIssuedAuditEventClass_extensions.md
           - IpvPassportCriVcIssuedAuditEventClass_restricted: audit-events/slots/IpvPassportCriVcIssuedAuditEventClass_restricted.md
           - IpvPassportCriVcIssuedAuditEventClass_user: audit-events/slots/IpvPassportCriVcIssuedAuditEventClass_user.md
+          - IpvRedirectToCriAuditEventClass_event_name: audit-events/slots/IpvRedirectToCriAuditEventClass_event_name.md
           - IpvRedirectToCriAuditEventClass_user: audit-events/slots/IpvRedirectToCriAuditEventClass_user.md
+          - IpvSpotRequestReceivedAuditEventClass_event_name: audit-events/slots/IpvSpotRequestReceivedAuditEventClass_event_name.md
           - IpvSpotRequestReceivedAuditEventClass_user: audit-events/slots/IpvSpotRequestReceivedAuditEventClass_user.md
+          - IpvSpotRequestValidationFailureAuditEventClass_event_name: audit-events/slots/IpvSpotRequestValidationFailureAuditEventClass_event_name.md
           - IpvSpotRequestValidationFailureAuditEventClass_extensions: audit-events/slots/IpvSpotRequestValidationFailureAuditEventClass_extensions.md
           - IpvSpotRequestValidationFailureAuditEventClass_restricted: audit-events/slots/IpvSpotRequestValidationFailureAuditEventClass_restricted.md
           - IpvSpotRequestValidationFailureAuditEventClass_user: audit-events/slots/IpvSpotRequestValidationFailureAuditEventClass_user.md
+          - IpvSpotResponseApprovedAuditEventClass_event_name: audit-events/slots/IpvSpotResponseApprovedAuditEventClass_event_name.md
           - IpvSpotResponseApprovedAuditEventClass_user: audit-events/slots/IpvSpotResponseApprovedAuditEventClass_user.md
+          - IpvSpotResponseRejectedAuditEventClass_event_name: audit-events/slots/IpvSpotResponseRejectedAuditEventClass_event_name.md
           - IpvSpotResponseRejectedAuditEventClass_user: audit-events/slots/IpvSpotResponseRejectedAuditEventClass_user.md
+          - IpvToyCriEndAuditEventClass_event_name: audit-events/slots/IpvToyCriEndAuditEventClass_event_name.md
           - IpvToyCriEndAuditEventClass_evidence: audit-events/slots/IpvToyCriEndAuditEventClass_evidence.md
           - IpvToyCriEndAuditEventClass_experianIiqResponse: audit-events/slots/IpvToyCriEndAuditEventClass_experianIiqResponse.md
           - IpvToyCriEndAuditEventClass_extensions: audit-events/slots/IpvToyCriEndAuditEventClass_extensions.md
@@ -710,6 +900,7 @@ nav:
           - IpvToyCriEndAuditEventClass_platform: audit-events/slots/IpvToyCriEndAuditEventClass_platform.md
           - IpvToyCriEndAuditEventClass_restricted: audit-events/slots/IpvToyCriEndAuditEventClass_restricted.md
           - IpvToyCriEndAuditEventClass_user: audit-events/slots/IpvToyCriEndAuditEventClass_user.md
+          - IpvToyCriRequestSentAuditEventClass_event_name: audit-events/slots/IpvToyCriRequestSentAuditEventClass_event_name.md
           - IpvToyCriRequestSentAuditEventClass_evidence: audit-events/slots/IpvToyCriRequestSentAuditEventClass_evidence.md
           - IpvToyCriRequestSentAuditEventClass_experianIiqResponse: audit-events/slots/IpvToyCriRequestSentAuditEventClass_experianIiqResponse.md
           - IpvToyCriRequestSentAuditEventClass_extensions: audit-events/slots/IpvToyCriRequestSentAuditEventClass_extensions.md
@@ -717,6 +908,7 @@ nav:
           - IpvToyCriRequestSentAuditEventClass_platform: audit-events/slots/IpvToyCriRequestSentAuditEventClass_platform.md
           - IpvToyCriRequestSentAuditEventClass_restricted: audit-events/slots/IpvToyCriRequestSentAuditEventClass_restricted.md
           - IpvToyCriRequestSentAuditEventClass_user: audit-events/slots/IpvToyCriRequestSentAuditEventClass_user.md
+          - IpvToyCriResponseReceivedAuditEventClass_event_name: audit-events/slots/IpvToyCriResponseReceivedAuditEventClass_event_name.md
           - IpvToyCriResponseReceivedAuditEventClass_evidence: audit-events/slots/IpvToyCriResponseReceivedAuditEventClass_evidence.md
           - IpvToyCriResponseReceivedAuditEventClass_experianIiqResponse: 
               audit-events/slots/IpvToyCriResponseReceivedAuditEventClass_experianIiqResponse.md
@@ -725,6 +917,7 @@ nav:
           - IpvToyCriResponseReceivedAuditEventClass_platform: audit-events/slots/IpvToyCriResponseReceivedAuditEventClass_platform.md
           - IpvToyCriResponseReceivedAuditEventClass_restricted: audit-events/slots/IpvToyCriResponseReceivedAuditEventClass_restricted.md
           - IpvToyCriResponseReceivedAuditEventClass_user: audit-events/slots/IpvToyCriResponseReceivedAuditEventClass_user.md
+          - IpvToyCriStartAuditEventClass_event_name: audit-events/slots/IpvToyCriStartAuditEventClass_event_name.md
           - IpvToyCriStartAuditEventClass_evidence: audit-events/slots/IpvToyCriStartAuditEventClass_evidence.md
           - IpvToyCriStartAuditEventClass_experianIiqResponse: audit-events/slots/IpvToyCriStartAuditEventClass_experianIiqResponse.md
           - IpvToyCriStartAuditEventClass_extensions: audit-events/slots/IpvToyCriStartAuditEventClass_extensions.md
@@ -732,6 +925,7 @@ nav:
           - IpvToyCriStartAuditEventClass_platform: audit-events/slots/IpvToyCriStartAuditEventClass_platform.md
           - IpvToyCriStartAuditEventClass_restricted: audit-events/slots/IpvToyCriStartAuditEventClass_restricted.md
           - IpvToyCriStartAuditEventClass_user: audit-events/slots/IpvToyCriStartAuditEventClass_user.md
+          - IpvToyCriVcIssuedAuditEventClass_event_name: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_event_name.md
           - IpvToyCriVcIssuedAuditEventClass_evidence: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_evidence.md
           - IpvToyCriVcIssuedAuditEventClass_experianIiqResponse: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_experianIiqResponse.md
           - IpvToyCriVcIssuedAuditEventClass_extensions: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_extensions.md
@@ -739,6 +933,7 @@ nav:
           - IpvToyCriVcIssuedAuditEventClass_platform: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_platform.md
           - IpvToyCriVcIssuedAuditEventClass_restricted: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_restricted.md
           - IpvToyCriVcIssuedAuditEventClass_user: audit-events/slots/IpvToyCriVcIssuedAuditEventClass_user.md
+          - IpvVcReceivedAuditEventClass_event_name: audit-events/slots/IpvVcReceivedAuditEventClass_event_name.md
           - IpvVcReceivedAuditEventClass_evidence: audit-events/slots/IpvVcReceivedAuditEventClass_evidence.md
           - IpvVcReceivedAuditEventClass_extensions: audit-events/slots/IpvVcReceivedAuditEventClass_extensions.md
           - IpvVcReceivedAuditEventClass_restricted: audit-events/slots/IpvVcReceivedAuditEventClass_restricted.md
@@ -768,6 +963,8 @@ nav:
           - session_id: audit-events/slots/session_id.md
           - source_topic_arn: audit-events/slots/source_topic_arn.md
           - spot_request: audit-events/slots/spot_request.md
+          - SsfInboundAccountCredentialChangeRequiredAuditEventClass_event_name: 
+              audit-events/slots/SsfInboundAccountCredentialChangeRequiredAuditEventClass_event_name.md
           - SsfInboundAccountCredentialChangeRequiredAuditEventClass_evidence: 
               audit-events/slots/SsfInboundAccountCredentialChangeRequiredAuditEventClass_evidence.md
           - SsfInboundAccountCredentialChangeRequiredAuditEventClass_experianIiqResponse: 
@@ -782,6 +979,7 @@ nav:
               audit-events/slots/SsfInboundAccountCredentialChangeRequiredAuditEventClass_restricted.md
           - SsfInboundAccountCredentialChangeRequiredAuditEventClass_user: 
               audit-events/slots/SsfInboundAccountCredentialChangeRequiredAuditEventClass_user.md
+          - SsfInboundAccountDisabledAuditEventClass_event_name: audit-events/slots/SsfInboundAccountDisabledAuditEventClass_event_name.md
           - SsfInboundAccountDisabledAuditEventClass_evidence: audit-events/slots/SsfInboundAccountDisabledAuditEventClass_evidence.md
           - SsfInboundAccountDisabledAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundAccountDisabledAuditEventClass_experianIiqResponse.md
@@ -790,6 +988,7 @@ nav:
           - SsfInboundAccountDisabledAuditEventClass_platform: audit-events/slots/SsfInboundAccountDisabledAuditEventClass_platform.md
           - SsfInboundAccountDisabledAuditEventClass_restricted: audit-events/slots/SsfInboundAccountDisabledAuditEventClass_restricted.md
           - SsfInboundAccountDisabledAuditEventClass_user: audit-events/slots/SsfInboundAccountDisabledAuditEventClass_user.md
+          - SsfInboundAccountEnabledAuditEventClass_event_name: audit-events/slots/SsfInboundAccountEnabledAuditEventClass_event_name.md
           - SsfInboundAccountEnabledAuditEventClass_evidence: audit-events/slots/SsfInboundAccountEnabledAuditEventClass_evidence.md
           - SsfInboundAccountEnabledAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundAccountEnabledAuditEventClass_experianIiqResponse.md
@@ -798,6 +997,7 @@ nav:
           - SsfInboundAccountEnabledAuditEventClass_platform: audit-events/slots/SsfInboundAccountEnabledAuditEventClass_platform.md
           - SsfInboundAccountEnabledAuditEventClass_restricted: audit-events/slots/SsfInboundAccountEnabledAuditEventClass_restricted.md
           - SsfInboundAccountEnabledAuditEventClass_user: audit-events/slots/SsfInboundAccountEnabledAuditEventClass_user.md
+          - SsfInboundAccountPurgedAuditEventClass_event_name: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_event_name.md
           - SsfInboundAccountPurgedAuditEventClass_evidence: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_evidence.md
           - SsfInboundAccountPurgedAuditEventClass_experianIiqResponse: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_experianIiqResponse.md
           - SsfInboundAccountPurgedAuditEventClass_extensions: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_extensions.md
@@ -805,6 +1005,7 @@ nav:
           - SsfInboundAccountPurgedAuditEventClass_platform: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_platform.md
           - SsfInboundAccountPurgedAuditEventClass_restricted: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_restricted.md
           - SsfInboundAccountPurgedAuditEventClass_user: audit-events/slots/SsfInboundAccountPurgedAuditEventClass_user.md
+          - SsfInboundCredentialCompromiseAuditEventClass_event_name: audit-events/slots/SsfInboundCredentialCompromiseAuditEventClass_event_name.md
           - SsfInboundCredentialCompromiseAuditEventClass_evidence: audit-events/slots/SsfInboundCredentialCompromiseAuditEventClass_evidence.md
           - SsfInboundCredentialCompromiseAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundCredentialCompromiseAuditEventClass_experianIiqResponse.md
@@ -813,6 +1014,7 @@ nav:
           - SsfInboundCredentialCompromiseAuditEventClass_platform: audit-events/slots/SsfInboundCredentialCompromiseAuditEventClass_platform.md
           - SsfInboundCredentialCompromiseAuditEventClass_restricted: audit-events/slots/SsfInboundCredentialCompromiseAuditEventClass_restricted.md
           - SsfInboundCredentialCompromiseAuditEventClass_user: audit-events/slots/SsfInboundCredentialCompromiseAuditEventClass_user.md
+          - SsfInboundOptInAuditEventClass_event_name: audit-events/slots/SsfInboundOptInAuditEventClass_event_name.md
           - SsfInboundOptInAuditEventClass_evidence: audit-events/slots/SsfInboundOptInAuditEventClass_evidence.md
           - SsfInboundOptInAuditEventClass_experianIiqResponse: audit-events/slots/SsfInboundOptInAuditEventClass_experianIiqResponse.md
           - SsfInboundOptInAuditEventClass_extensions: audit-events/slots/SsfInboundOptInAuditEventClass_extensions.md
@@ -820,6 +1022,7 @@ nav:
           - SsfInboundOptInAuditEventClass_platform: audit-events/slots/SsfInboundOptInAuditEventClass_platform.md
           - SsfInboundOptInAuditEventClass_restricted: audit-events/slots/SsfInboundOptInAuditEventClass_restricted.md
           - SsfInboundOptInAuditEventClass_user: audit-events/slots/SsfInboundOptInAuditEventClass_user.md
+          - SsfInboundOptOutCancelledAuditEventClass_event_name: audit-events/slots/SsfInboundOptOutCancelledAuditEventClass_event_name.md
           - SsfInboundOptOutCancelledAuditEventClass_evidence: audit-events/slots/SsfInboundOptOutCancelledAuditEventClass_evidence.md
           - SsfInboundOptOutCancelledAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundOptOutCancelledAuditEventClass_experianIiqResponse.md
@@ -828,6 +1031,7 @@ nav:
           - SsfInboundOptOutCancelledAuditEventClass_platform: audit-events/slots/SsfInboundOptOutCancelledAuditEventClass_platform.md
           - SsfInboundOptOutCancelledAuditEventClass_restricted: audit-events/slots/SsfInboundOptOutCancelledAuditEventClass_restricted.md
           - SsfInboundOptOutCancelledAuditEventClass_user: audit-events/slots/SsfInboundOptOutCancelledAuditEventClass_user.md
+          - SsfInboundOptOutEffectiveAuditEventClass_event_name: audit-events/slots/SsfInboundOptOutEffectiveAuditEventClass_event_name.md
           - SsfInboundOptOutEffectiveAuditEventClass_evidence: audit-events/slots/SsfInboundOptOutEffectiveAuditEventClass_evidence.md
           - SsfInboundOptOutEffectiveAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundOptOutEffectiveAuditEventClass_experianIiqResponse.md
@@ -836,6 +1040,7 @@ nav:
           - SsfInboundOptOutEffectiveAuditEventClass_platform: audit-events/slots/SsfInboundOptOutEffectiveAuditEventClass_platform.md
           - SsfInboundOptOutEffectiveAuditEventClass_restricted: audit-events/slots/SsfInboundOptOutEffectiveAuditEventClass_restricted.md
           - SsfInboundOptOutEffectiveAuditEventClass_user: audit-events/slots/SsfInboundOptOutEffectiveAuditEventClass_user.md
+          - SsfInboundOptOutInitiatedAuditEventClass_event_name: audit-events/slots/SsfInboundOptOutInitiatedAuditEventClass_event_name.md
           - SsfInboundOptOutInitiatedAuditEventClass_evidence: audit-events/slots/SsfInboundOptOutInitiatedAuditEventClass_evidence.md
           - SsfInboundOptOutInitiatedAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundOptOutInitiatedAuditEventClass_experianIiqResponse.md
@@ -844,6 +1049,7 @@ nav:
           - SsfInboundOptOutInitiatedAuditEventClass_platform: audit-events/slots/SsfInboundOptOutInitiatedAuditEventClass_platform.md
           - SsfInboundOptOutInitiatedAuditEventClass_restricted: audit-events/slots/SsfInboundOptOutInitiatedAuditEventClass_restricted.md
           - SsfInboundOptOutInitiatedAuditEventClass_user: audit-events/slots/SsfInboundOptOutInitiatedAuditEventClass_user.md
+          - SsfInboundRecoveryActivatedAuditEventClass_event_name: audit-events/slots/SsfInboundRecoveryActivatedAuditEventClass_event_name.md
           - SsfInboundRecoveryActivatedAuditEventClass_evidence: audit-events/slots/SsfInboundRecoveryActivatedAuditEventClass_evidence.md
           - SsfInboundRecoveryActivatedAuditEventClass_experianIiqResponse: 
               audit-events/slots/SsfInboundRecoveryActivatedAuditEventClass_experianIiqResponse.md
@@ -852,6 +1058,8 @@ nav:
           - SsfInboundRecoveryActivatedAuditEventClass_platform: audit-events/slots/SsfInboundRecoveryActivatedAuditEventClass_platform.md
           - SsfInboundRecoveryActivatedAuditEventClass_restricted: audit-events/slots/SsfInboundRecoveryActivatedAuditEventClass_restricted.md
           - SsfInboundRecoveryActivatedAuditEventClass_user: audit-events/slots/SsfInboundRecoveryActivatedAuditEventClass_user.md
+          - SsfInboundRecoveryInformationChangedAuditEventClass_event_name: 
+              audit-events/slots/SsfInboundRecoveryInformationChangedAuditEventClass_event_name.md
           - SsfInboundRecoveryInformationChangedAuditEventClass_evidence: 
               audit-events/slots/SsfInboundRecoveryInformationChangedAuditEventClass_evidence.md
           - SsfInboundRecoveryInformationChangedAuditEventClass_experianIiqResponse: 
@@ -875,10 +1083,14 @@ nav:
           - toy: audit-events/slots/toy.md
           - toyResponse: audit-events/slots/toyResponse.md
           - transaction_id: audit-events/slots/transaction_id.md
+          - TxmaAuditQueryDataRequestAuditEventClass_event_name: audit-events/slots/TxmaAuditQueryDataRequestAuditEventClass_event_name.md
           - TxmaAuditQueryDataRequestAuditEventClass_extensions: audit-events/slots/TxmaAuditQueryDataRequestAuditEventClass_extensions.md
           - TxmaAuditQueryDataRequestAuditEventClass_restricted: audit-events/slots/TxmaAuditQueryDataRequestAuditEventClass_restricted.md
+          - TxmaAuditQueryIllegalRequestAuditEventClass_event_name: audit-events/slots/TxmaAuditQueryIllegalRequestAuditEventClass_event_name.md
           - TxmaAuditQueryIllegalRequestAuditEventClass_extensions: audit-events/slots/TxmaAuditQueryIllegalRequestAuditEventClass_extensions.md
+          - TxmaAuditQueryOutputAccessedAuditEventClass_event_name: audit-events/slots/TxmaAuditQueryOutputAccessedAuditEventClass_event_name.md
           - TxmaAuditQueryOutputAccessedAuditEventClass_extensions: audit-events/slots/TxmaAuditQueryOutputAccessedAuditEventClass_extensions.md
+          - TxmaAuditQueryOutputGeneratedAuditEventClass_event_name: audit-events/slots/TxmaAuditQueryOutputGeneratedAuditEventClass_event_name.md
           - TxmaAuditQueryOutputGeneratedAuditEventClass_extensions: audit-events/slots/TxmaAuditQueryOutputGeneratedAuditEventClass_extensions.md
           - txn: audit-events/slots/txn.md
           - type: audit-events/slots/type.md

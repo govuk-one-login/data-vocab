@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-start
 name: ipv-dl-cri-start
 description: Description for audit event IPV_DL_CRI_START
@@ -6,20 +5,21 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   IpvDlCriStartAuditEventClass:
     slots:
-      - event_name
-      - user
+    - event_name
+    - user
     slot_usage:
       user:
         range: IpvDlCriStartUserClass
-
+      event_name:
+        pattern: ^IPV_DL_CRI_START$
   IpvDlCriStartUserClass:
     slots:
-      - ip_address
+    - ip_address

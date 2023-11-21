@@ -14,6 +14,7 @@
             },
             "event_name": {
                "description": "The Audit Event type that is being submitted",
+               "pattern": "^AUTH_IPV_UNSUCCESSFUL_AUTHORISATION_RESPONSE_RECEIVED$",
                "type": "string"
             },
             "user": {

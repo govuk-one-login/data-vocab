@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/txma-audit-query-output-generated
 name: txma-audit-query-output-generated
 description: Description for audit event TXMA_AUDIT_QUERY_OUTPUT_GENERATED
@@ -6,21 +5,22 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   TxmaAuditQueryOutputGeneratedAuditEventClass:
     slots:
-      - event_name
-      - component_id
-      - extensions
+    - event_name
+    - component_id
+    - extensions
     slot_usage:
       extensions:
         range: TxmaAuditQueryOutputGeneratedExtensionsClass
-
+      event_name:
+        pattern: ^TXMA_AUDIT_QUERY_OUTPUT_GENERATED$
   TxmaAuditQueryOutputGeneratedExtensionsClass:
     slots:
-      - ticket_details
+    - ticket_details

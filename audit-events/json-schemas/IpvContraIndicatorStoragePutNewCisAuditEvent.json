@@ -10,6 +10,7 @@
             },
             "event_name": {
                "description": "The Audit Event type that is being submitted",
+               "pattern": "^IPV_CONTRA_INDICATOR_STORAGE_PUT_NEW_CIS$",
                "type": "string"
             },
             "extensions": {

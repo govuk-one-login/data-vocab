@@ -1,28 +1,29 @@
-
-id: https://vocab.account.gov.uk/linkml/auth-account-recovery-email-invalid-code-request
+id: 
+  https://vocab.account.gov.uk/linkml/auth-account-recovery-email-invalid-code-request
 name: auth-account-recovery-email-invalid-code-request
 prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass:
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
+    - event_name
+    - client_id
+    - component_id
+    - user
     slot_usage:
+      event_name:
+        pattern: ^AUTH_ACCOUNT_RECOVERY_EMAIL_INVALID_CODE_REQUEST$
       user:
         range: AuthAccountRecoveryEmailInvalidCodeRequestUserClass
-
   AuthAccountRecoveryEmailInvalidCodeRequestUserClass:
     slots:
-      - email
-      - ip_address
-      - session_id
+    - email
+    - ip_address
+    - session_id

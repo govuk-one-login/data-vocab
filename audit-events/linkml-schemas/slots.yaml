@@ -5,11 +5,11 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 default_curi_maps:
-  - semweb_context  
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 imports:
-  - linkml:types
+- linkml:types
 slots:
   event_name:
     description: The Audit Event type that is being submitted
@@ -33,7 +33,7 @@ slots:
   client-name:
     description: Client name as defined in the client registry
   client_id:
-    description: OAuth client identifier for the relying party 
+    description: OAuth client identifier for the relying party
   component_id:
     description: The system component that generated the event
   decisionScore:
@@ -43,9 +43,11 @@ slots:
   deviceId:
     description: Device fingerprint
   device_info:
-    description: Device information object from DCMAW with data populated from Mobile App 3rd Party Suppliers
+    description: Device information object from DCMAW with data populated from Mobile
+      App 3rd Party Suppliers
   documentType:
-    description: The document type that a user has chosen to perform their identity checks with
+    description: The document type that a user has chosen to perform their identity
+      checks with
   drivingPermit:
     description: Driving Licence information
   email:
@@ -79,7 +81,8 @@ slots:
   iss:
     description: issuer URI
   issuingCountry:
-    description: The issuing country of the document a user has choosen to perform their identity checks with
+    description: The issuing country of the document a user has choosen to perform
+      their identity checks with
   levelOfConfidence:
     description: Level of confidence achieved in matching the GPG45 Profile
   mfa-type:
@@ -99,7 +102,8 @@ slots:
   phone:
     description: The user account phone number.
   post_office_details:
-    description: Post office a user has chosen to complete their in-person checks at
+    description: Post office a user has chosen to complete their in-person checks
+      at
   platform:
     description: The data relating to the user.
   previous_govuk_signin_journey_id:
@@ -143,7 +147,8 @@ slots:
   toyResponse:
     description: Response from mock external Toy CRI API
   transaction_id:
-    description: The transaction id from the transaction that generated the audit event.
+    description: The transaction id from the transaction that generated the audit
+      event.
   txn:
     description: Third party transaction id
   type:
@@ -151,7 +156,8 @@ slots:
   user:
     description: The data relating to the user.
   user_id:
-    description: The pairwise identifier from the component of the system that submitted the event.
+    description: The pairwise identifier from the component of the system that submitted
+      the event.
   validityScore:
     description: The validityScore from the check done by the CRI
   verificationScore:

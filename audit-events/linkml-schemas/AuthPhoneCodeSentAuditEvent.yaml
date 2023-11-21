@@ -1,4 +1,3 @@
-
 id: https://vocab.account.gov.uk/linkml/auth-phone-code-sent
 name: auth-phone-code-sent
 description: Description for audit event AUTH_PHONE_CODE_SENT
@@ -6,25 +5,26 @@ prefixes:
   linkml: https://w3id.org/linkml/
   di_vocab: https://vocab.account.gov.uk/v1/
 imports:
-  - ./slots
+- ./slots
 default_curi_maps:
-  - semweb_context 
+- semweb_context
 default_prefix: di_vocab
 default_range: string
 classes:
   AuthPhoneCodeSentAuditEventClass:
     slots:
-      - event_name
-      - client_id
-      - component_id
-      - user
+    - event_name
+    - client_id
+    - component_id
+    - user
     slot_usage:
       user:
         range: AuthPhoneCodeSentUserClass
-
+      event_name:
+        pattern: ^AUTH_PHONE_CODE_SENT$
   AuthPhoneCodeSentUserClass:
     slots:
-      - email
-      - ip_address
-      - phone
-      - session_id
+    - email
+    - ip_address
+    - phone
+    - session_id
