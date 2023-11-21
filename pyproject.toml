@@ -13,6 +13,7 @@ mkdocs-tech-docs-template = "^0.1.2"
 mkdocs-mermaid2-plugin = "^1.1.1"
 mkdocs-material = "^9.4.6"
 ruamel-yaml = "^0.18.2"
+mkdocs-include-dir-to-nav = "^1.2.0"
 
 [tool.poetry.dev-dependencies]
 
