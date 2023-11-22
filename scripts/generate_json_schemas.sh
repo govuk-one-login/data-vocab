@@ -87,7 +87,7 @@ for file in ${AUDIT_EVENT_LINKML_SCHEMA_DIR}/*AuditEvent.yaml; do
   poetry run gen-json-schema --closed --no-metadata -t "$file" "$file" > "$json_schema_output_file"
   echo $json_schema_output_file
   echo $event_name
-  echo "| $event_name |[$(basename "${json_schema_output_file}")]($(basename "${json_schema_output_file}"))| [$(basename ${link_ml_class})](../classes/$(basename "${link_ml_class}"))" >> $AUDIT_EVENT_JSON_SCHEMA_DIR/index.md
+  echo "| $event_name |[$(basename "${json_schema_output_file}")]($(basename "${json_schema_output_file}"))| [$(basename ${link_ml_class})](../classes/$(basename "${link_ml_class}").md)" >> $AUDIT_EVENT_JSON_SCHEMA_DIR/index.md
 done
 
 
