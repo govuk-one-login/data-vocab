@@ -14,8 +14,6 @@ slots:
   event_name:
     description: The Audit Event type that is being submitted
     required: true
-  AuditEventType:
-    description: Description for AuditEventType
   activityScore:
     description: The activityScore from the check done by the CRI
   address:
