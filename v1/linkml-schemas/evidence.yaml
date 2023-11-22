@@ -66,6 +66,15 @@ classes:
       - validFrom
       - txn
       - id 
+  
+  EvidenceRequestedClass:
+    description: The levels of evidence_requested which are minimum GPG45 criteria that are requested.
+    slot_usage:
+      - strengthScore
+      - validityScore
+      - verificationScore
+      - activityHistoryScore
+      - identityFraudScore
 
 enums:
   CheckMethodType:
