@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "SPOT Rejected the Identity information submitted by Orchestration.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

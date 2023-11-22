@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthSyntheticsUserNotFoundForDeletionAuditEventClass:
+    description: >
+      Auth Create Account smoke test user deletion attempt made using the test services api, but the user did not exist
     slots:
     - event_name
     - user

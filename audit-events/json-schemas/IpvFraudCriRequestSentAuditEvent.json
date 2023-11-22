@@ -2,7 +2,7 @@
    "$defs": {
       "IpvFraudCriRequestSentAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Request to access to Fraud CRI along with user information passed along",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

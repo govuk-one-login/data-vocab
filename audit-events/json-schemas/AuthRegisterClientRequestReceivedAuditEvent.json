@@ -2,7 +2,7 @@
    "$defs": {
       "AuthRegisterClientRequestReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Request to register a new Relying party has been received.",
          "properties": {
             "event_name": {
                "description": "The Audit Event type that is being submitted",

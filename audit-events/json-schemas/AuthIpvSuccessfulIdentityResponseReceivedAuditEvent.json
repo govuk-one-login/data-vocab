@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Orchestration sucessfully received identity proofing information from IPV",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

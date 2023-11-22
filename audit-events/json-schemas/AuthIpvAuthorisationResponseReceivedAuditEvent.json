@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvAuthorisationResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Auth received a repsonse at the end of the IPV journey. Orchestration triggers upon receiving response from IPV (once IPV completes the Identity Journey).",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

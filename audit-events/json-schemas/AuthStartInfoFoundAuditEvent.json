@@ -2,7 +2,7 @@
    "$defs": {
       "AuthStartInfoFoundAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Auth triggers this Audit event as a first step once the control is transferred to Auth for Authenticating the user",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

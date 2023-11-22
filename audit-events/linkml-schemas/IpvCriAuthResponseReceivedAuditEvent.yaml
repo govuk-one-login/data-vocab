@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvCriAuthResponseReceivedAuditEventClass:
+    description: >
+      This event is fired at the end of the IPV journey and an idenity has been received when user is being returned to authorization orchestration
     slots:
     - event_name
     - component_id

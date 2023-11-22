@@ -2,7 +2,7 @@
    "$defs": {
       "IpvGpg45ProfileMatchedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Identiy Verified",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

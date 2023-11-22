@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvSpotRequestedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Orchestration triggers upon sending request to SPOT",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

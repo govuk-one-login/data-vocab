@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthSendOtpAuditEventClass:
+    description: >
+      OTP sent. Triggered by Auth upon sending OTP to Email or Phone number.This will be triggered as part of the journey where user wants to update Email or Phone number through GOV.UK accounts
     slots:
     - event_name
     - component_id

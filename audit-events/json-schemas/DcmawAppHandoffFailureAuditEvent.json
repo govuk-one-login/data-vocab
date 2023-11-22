@@ -2,7 +2,7 @@
    "$defs": {
       "DcmawAppHandoffFailureAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "App deeplink in DCMAW journey fails",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

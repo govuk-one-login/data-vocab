@@ -2,7 +2,7 @@
    "$defs": {
       "SsfInboundOptOutInitiatedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "An inbound Opt Out Initiated message has been received",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

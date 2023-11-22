@@ -2,7 +2,7 @@
    "$defs": {
       "IpvSpotRequestValidationFailureAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "SPOT request fails validation",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

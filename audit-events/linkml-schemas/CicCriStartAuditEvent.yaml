@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   CicCriStartAuditEventClass:
+    description: >
+      Start of the CIC CRI
     slots:
     - event_name
     - client_id

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthSyntheticsUserDeletedAuditEventClass:
+    description: >
+      Auth Create Account smoke test user deleted using the test services api
     slots:
     - event_name
     - user

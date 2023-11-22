@@ -2,7 +2,7 @@
    "$defs": {
       "IpvContraIndicatorStoragePutStartAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Checking if information about the users needs to be added to the CI",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

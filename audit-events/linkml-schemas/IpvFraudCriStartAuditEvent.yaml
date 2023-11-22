@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvFraudCriStartAuditEventClass:
+    description: >
+      Before a session is written to the Session table
     slots:
     - event_name
     - component_id

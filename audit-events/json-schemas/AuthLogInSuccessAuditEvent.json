@@ -2,7 +2,7 @@
    "$defs": {
       "AuthLogInSuccessAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "User was able to login successfull",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

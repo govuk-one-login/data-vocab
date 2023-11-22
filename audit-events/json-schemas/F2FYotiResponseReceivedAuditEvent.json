@@ -2,7 +2,7 @@
    "$defs": {
       "F2FYotiResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "The checks with the post office have been completed, and F2F CRI has received a response from Yoti",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

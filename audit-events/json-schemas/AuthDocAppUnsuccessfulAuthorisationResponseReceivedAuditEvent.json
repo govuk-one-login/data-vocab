@@ -2,7 +2,7 @@
    "$defs": {
       "AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Orchesration triggers when it receives Error Redirect from DCMAW.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

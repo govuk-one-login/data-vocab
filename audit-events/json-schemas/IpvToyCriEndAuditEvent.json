@@ -2,7 +2,7 @@
    "$defs": {
       "IpvToyCriEndAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "End of Toy CRI Journey",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

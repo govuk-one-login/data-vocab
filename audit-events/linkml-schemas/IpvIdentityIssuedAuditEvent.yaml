@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvIdentityIssuedAuditEventClass:
+    description: >
+      Identiy issued by IPV (Collection of all the VCs together)
     slots:
     - event_name
     - component_id

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvDlCriVcIssuedAuditEventClass:
+    description: >
+      When the final VC is created in the issue credential lambda
     slots:
     - event_name
     - component_id

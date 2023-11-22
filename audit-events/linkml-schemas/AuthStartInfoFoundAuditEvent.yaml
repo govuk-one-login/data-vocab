@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthStartInfoFoundAuditEventClass:
+    description: >
+      Auth triggers this Audit event as a first step once the control is transferred to Auth for Authenticating the user
     slots:
     - event_name
     - client_id

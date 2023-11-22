@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthPhoneCheckCompleteAuditEventClass:
+    description: >
+      Checking of new phone number complete (account) . Triggered upon completion of Experian phone check
     slots:
     - event_name
     - component_id

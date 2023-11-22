@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   F2FYotiResponseReceivedAuditEventClass:
+    description: >
+      The checks with the post office have been completed, and F2F CRI has received a response from Yoti
     slots:
     - event_name
     - client_id

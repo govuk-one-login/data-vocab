@@ -2,7 +2,7 @@
    "$defs": {
       "AuthMfaCodeSentForTestClientAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Stub and OTP code is not sent, but other logic is executed.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

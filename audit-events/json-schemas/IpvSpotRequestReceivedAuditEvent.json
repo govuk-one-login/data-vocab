@@ -2,7 +2,7 @@
    "$defs": {
       "IpvSpotRequestReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Request alogn with information to start off SPOT",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

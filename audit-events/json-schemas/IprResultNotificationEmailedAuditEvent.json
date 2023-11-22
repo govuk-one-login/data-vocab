@@ -2,7 +2,7 @@
    "$defs": {
       "IprResultNotificationEmailedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "An email has been sent to the user informing them that a result of their in-person checks is available",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

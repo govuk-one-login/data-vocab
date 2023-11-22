@@ -2,7 +2,7 @@
    "$defs": {
       "TxmaAuditQueryOutputAccessedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Requester access data output generated",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

@@ -2,7 +2,7 @@
    "$defs": {
       "TxmaAuditQueryDataRequestAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Request Access Data older than a year",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

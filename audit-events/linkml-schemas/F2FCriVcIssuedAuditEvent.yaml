@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   F2FCriVcIssuedAuditEventClass:
+    description: >
+      VC has been issued by the CIC CRI, event will also contain info relating to the VC, including CIs (and relevant reasons)
     slots:
     - event_name
     - client_id

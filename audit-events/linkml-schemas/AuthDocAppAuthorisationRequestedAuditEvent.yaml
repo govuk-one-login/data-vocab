@@ -12,6 +12,7 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthDocAppAuthorisationRequestedAuditEventClass:
+    description: Request Access to DCMAW CRI
     slots:
     - event_name
     - client_id

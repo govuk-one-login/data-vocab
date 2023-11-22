@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvSuccessfulSpotResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "SPOT successfully processed Identity information and approved it.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

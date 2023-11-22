@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvJourneyStartAuditEventClass:
+    description: >
+      Start of IPV Journey
     slots:
     - event_name
     - component_id

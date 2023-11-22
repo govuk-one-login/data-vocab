@@ -2,7 +2,7 @@
    "$defs": {
       "AuthSendOtpAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "OTP sent. Triggered by Auth upon sending OTP to Email or Phone number.This will be triggered as part of the journey where user wants to update Email or Phone number through GOV.UK accounts",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

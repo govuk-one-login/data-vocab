@@ -2,7 +2,7 @@
    "$defs": {
       "IpvPassportCriStartAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Before a session is written to the Session table",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

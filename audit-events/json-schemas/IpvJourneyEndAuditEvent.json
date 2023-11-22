@@ -2,7 +2,7 @@
    "$defs": {
       "IpvJourneyEndAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "IPV journey ended",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

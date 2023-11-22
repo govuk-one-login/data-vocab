@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   TxmaAuditQueryDataRequestAuditEventClass:
+    description: >
+      Request Access Data older than a year
     slots:
     - event_name
     - component_id

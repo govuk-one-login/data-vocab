@@ -2,7 +2,7 @@
    "$defs": {
       "AuthDocAppAuthorisationResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "This event is firdd at the end of the DCMAW CRI Journey",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

@@ -2,7 +2,7 @@
    "$defs": {
       "IpvVcReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "IPV Core receives the a VC from a CRI and able to redirect the user to another CRI or end the journey.",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

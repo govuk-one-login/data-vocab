@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   F2FCriStartAuditEventClass:
+    description: >
+      Start of the F2F CRI
     slots:
     - event_name
     - client_id

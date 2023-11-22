@@ -2,7 +2,7 @@
    "$defs": {
       "IpvContraIndicatorStorageGetQueryAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Querying to retrieve any information about the user from the CI",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

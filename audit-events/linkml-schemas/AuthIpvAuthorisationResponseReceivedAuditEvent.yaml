@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthIpvAuthorisationResponseReceivedAuditEventClass:
+    description: >
+      Auth received a repsonse at the end of the IPV journey. Orchestration triggers upon receiving response from IPV (once IPV completes the Identity Journey).
     slots:
     - event_name
     - client_id

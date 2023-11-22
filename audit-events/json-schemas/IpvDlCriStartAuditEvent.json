@@ -2,7 +2,7 @@
    "$defs": {
       "IpvDlCriStartAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Before a session is written to the Session table",
          "properties": {
             "event_name": {
                "description": "The Audit Event type that is being submitted",

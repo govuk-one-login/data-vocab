@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvDlCriEndAuditEventClass:
+    description: >
+      When VC credentials are being returned - final event
     slots:
     - event_name
     - component_id

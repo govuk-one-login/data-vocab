@@ -2,7 +2,7 @@
    "$defs": {
       "IpvFraudCriVcIssuedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "When the final VC is created in the issue credential lambda",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

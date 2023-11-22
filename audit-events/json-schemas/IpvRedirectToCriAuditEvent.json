@@ -2,7 +2,7 @@
    "$defs": {
       "IpvRedirectToCriAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "User is being directed to a specific CRI",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

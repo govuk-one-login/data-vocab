@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthIpvCapacityRequestedAuditEventClass:
+    description: >
+      This is legacy and should not be appearing in TxMA
     slots:
     - event_name
     - component_id

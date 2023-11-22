@@ -2,7 +2,7 @@
    "$defs": {
       "IpvAddressCriRequestSentAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "End of Address CRI Journey",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

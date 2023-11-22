@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthMfaInvalidCodeRequestAuditEventClass:
+    description: >
+      Invalid MFA code request.Too Many OTP requested in the past and Sending OTP to this account is temporarily blocked.
     slots:
     - event_name
     - client_id

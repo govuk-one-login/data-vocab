@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvVcReceivedAuditEventClass:
+    description: >
+      IPV Core receives the a VC from a CRI and able to redirect the user to another CRI or end the journey.
     slots:
     - event_name
     - component_id

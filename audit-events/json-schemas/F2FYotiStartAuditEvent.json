@@ -2,7 +2,7 @@
    "$defs": {
       "F2FYotiStartAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "A session has successfully been set up with the third party Yoti",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

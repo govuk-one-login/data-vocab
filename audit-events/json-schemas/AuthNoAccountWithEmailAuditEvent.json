@@ -2,7 +2,7 @@
    "$defs": {
       "AuthNoAccountWithEmailAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Checking if email to login is valid (in this is case email does not exist)",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

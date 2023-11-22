@@ -2,7 +2,7 @@
    "$defs": {
       "IpvSpotResponseRejectedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "SPOT information does not match with IPV information",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

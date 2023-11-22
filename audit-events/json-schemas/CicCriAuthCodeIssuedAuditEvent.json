@@ -2,7 +2,7 @@
    "$defs": {
       "CicCriAuthCodeIssuedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "An auth_code has been issued to a requester (as part of an OAuth flow)",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

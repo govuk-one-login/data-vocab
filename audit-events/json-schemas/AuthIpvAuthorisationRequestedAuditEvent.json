@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvAuthorisationRequestedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Orchestration triggers upon requesting to IPV",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

@@ -2,7 +2,7 @@
    "$defs": {
       "IpvCriAuthResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "This event is fired at the end of the IPV journey and an idenity has been received when user is being returned to authorization orchestration",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   TxmaAuditQueryOutputGeneratedAuditEventClass:
+    description: >
+      Output to of data request generated
     slots:
     - event_name
     - component_id

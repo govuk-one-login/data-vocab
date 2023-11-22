@@ -2,7 +2,7 @@
    "$defs": {
       "F2FCriVcIssuedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "VC has been issued by the CIC CRI, event will also contain info relating to the VC, including CIs (and relevant reasons)",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

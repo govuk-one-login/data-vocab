@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvDlCriResponseReceivedAuditEventClass:
+    description: >
+      A non-common request has been received
     slots:
     - event_name
     - component_id

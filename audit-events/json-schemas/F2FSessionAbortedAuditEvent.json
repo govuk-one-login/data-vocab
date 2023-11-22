@@ -2,7 +2,7 @@
    "$defs": {
       "F2FSessionAbortedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "The user sesion with the F2F CRI has been aborted. user will be routed back to IPV Core",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

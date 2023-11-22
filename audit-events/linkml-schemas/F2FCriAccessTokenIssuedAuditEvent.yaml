@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   F2FCriAccessTokenIssuedAuditEventClass:
+    description: >
+      An access token has been issued to a requester (as part of an OAuth flow)
     slots:
     - event_name
     - client_id

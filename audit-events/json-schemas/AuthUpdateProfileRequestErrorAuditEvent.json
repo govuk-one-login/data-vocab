@@ -2,7 +2,7 @@
    "$defs": {
       "AuthUpdateProfileRequestErrorAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Update profile request error (Account) . Invalid parameters supplied to the profile update request",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

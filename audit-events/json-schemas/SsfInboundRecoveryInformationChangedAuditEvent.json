@@ -2,7 +2,7 @@
    "$defs": {
       "SsfInboundRecoveryInformationChangedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "An inbound Recovery Information Changed message has been received",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

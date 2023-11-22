@@ -2,7 +2,7 @@
    "$defs": {
       "AuthSyntheticsUserNotFoundForDeletionAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Auth Create Account smoke test user deletion attempt made using the test services api, but the user did not exist",
          "properties": {
             "event_name": {
                "description": "The Audit Event type that is being submitted",

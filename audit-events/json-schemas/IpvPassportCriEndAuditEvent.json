@@ -2,7 +2,7 @@
    "$defs": {
       "IpvPassportCriEndAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "When VC credentials are being returned - final event",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   DcmawMissingContextAfterCompletionAuditEventClass:
+    description: >  
+      User is redirected back to a broswer different to their starting browser after completing the app journey
     slots:
     - event_name
     - client_id

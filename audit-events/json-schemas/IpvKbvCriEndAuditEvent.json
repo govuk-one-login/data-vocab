@@ -2,7 +2,7 @@
    "$defs": {
       "IpvKbvCriEndAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "End of KBV (Knowledge Based Verification) CRI Journey",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

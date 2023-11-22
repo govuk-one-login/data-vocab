@@ -2,7 +2,7 @@
    "$defs": {
       "AuthMfaMismatchedEmailAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Session email is not matching with the email requested for OTP.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

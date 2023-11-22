@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthUpdateProfilePhoneNumberAuditEventClass:
+    description: >
+      Update telephopne number request (Account) .
     slots:
     - event_name
     - client_id

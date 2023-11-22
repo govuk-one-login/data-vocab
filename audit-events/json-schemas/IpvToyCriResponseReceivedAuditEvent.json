@@ -2,7 +2,7 @@
    "$defs": {
       "IpvToyCriResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Toy CRI Checks with mock 3rd Party ended",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

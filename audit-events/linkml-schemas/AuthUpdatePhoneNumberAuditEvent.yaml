@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthUpdatePhoneNumberAuditEventClass:
+    description: >
+      Update phone number (account) . Auth triggers when user password is updated through GOV.UK Accounts.
     slots:
     - event_name
     - component_id

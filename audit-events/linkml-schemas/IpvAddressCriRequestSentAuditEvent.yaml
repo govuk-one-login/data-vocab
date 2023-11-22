@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvAddressCriRequestSentAuditEventClass:
+    description: >
+      End of Address CRI Journey 
     slots:
     - event_name
     - component_id

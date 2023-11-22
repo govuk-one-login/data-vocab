@@ -2,7 +2,7 @@
    "$defs": {
       "DcmawAppStartAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "App Has been Launched",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

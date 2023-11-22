@@ -2,7 +2,7 @@
    "$defs": {
       "AuthRegisterClientRequestErrorAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Invalid Relying party registration request has been received.",
          "properties": {
             "event_name": {
                "description": "The Audit Event type that is being submitted",

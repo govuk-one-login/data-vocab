@@ -2,7 +2,7 @@
    "$defs": {
       "AuthUpdateClientRequestErrorAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Invalid configuration or missing parameters for updating an existing Relying party entry in Client Registry.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

@@ -2,7 +2,7 @@
    "$defs": {
       "AuthDocAppAuthorisationRequestedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Request Access to DCMAW CRI",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

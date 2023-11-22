@@ -2,7 +2,7 @@
    "$defs": {
       "CicCriEndAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "End of the CIC CRI",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

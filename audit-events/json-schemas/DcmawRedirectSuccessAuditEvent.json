@@ -2,7 +2,7 @@
    "$defs": {
       "DcmawRedirectSuccessAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "User is successfully redirected back to their RP after getting an auth code",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

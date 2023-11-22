@@ -2,7 +2,7 @@
    "$defs": {
       "DcmawCri5XxerrorAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Error occurs when we receive a 5XX error from an API call (in most cases, particularly with a valid session)",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

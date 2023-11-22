@@ -2,7 +2,7 @@
    "$defs": {
       "AuthProcessingIdentityRequestAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Auth processing the idenity issued by IPV",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

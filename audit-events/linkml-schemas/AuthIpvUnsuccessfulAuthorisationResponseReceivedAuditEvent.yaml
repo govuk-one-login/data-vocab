@@ -13,6 +13,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass:
+    description: >
+      Indicates IPV had redirected back to Orchestration due to exception/error.
     slots:
     - event_name
     - client_id

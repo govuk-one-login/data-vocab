@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthUpdateClientRequestErrorAuditEventClass:
+    description: >
+      Invalid configuration or missing parameters for updating an existing Relying party entry in Client Registry.
     slots:
     - event_name
     - client_id

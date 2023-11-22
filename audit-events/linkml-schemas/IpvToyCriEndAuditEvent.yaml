@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvToyCriEndAuditEventClass:
+    description: >
+      End of Toy CRI Journey 
     slots:
     - event_name
     - client_id

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvFraudCriThirdPartyRequestEndedAuditEventClass:
+    description: >
+      Fraud CRI Checks with 3rd Party ended
     slots:
     - event_name
     slot_usage:

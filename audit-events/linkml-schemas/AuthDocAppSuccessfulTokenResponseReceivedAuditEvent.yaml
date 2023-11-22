@@ -13,6 +13,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass:
+    description: >
+      Orchestration is able to receive the token from DCMAW successfully.
     slots:
     - event_name
     - client_id

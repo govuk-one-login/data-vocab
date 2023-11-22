@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvGpg45ProfileMatchedAuditEventClass:
+    description: >
+      Identiy Verified
     slots:
     - event_name
     - component_id

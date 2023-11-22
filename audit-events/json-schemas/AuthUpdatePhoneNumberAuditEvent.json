@@ -2,7 +2,7 @@
    "$defs": {
       "AuthUpdatePhoneNumberAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Update phone number (account) . Auth triggers when user password is updated through GOV.UK Accounts.",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

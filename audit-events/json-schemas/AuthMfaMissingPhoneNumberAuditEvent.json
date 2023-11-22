@@ -2,7 +2,7 @@
    "$defs": {
       "AuthMfaMissingPhoneNumberAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "There is no phone number configured on the account",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

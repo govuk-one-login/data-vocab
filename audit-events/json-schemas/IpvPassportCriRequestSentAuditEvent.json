@@ -2,7 +2,7 @@
    "$defs": {
       "IpvPassportCriRequestSentAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "When a third party call is started",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

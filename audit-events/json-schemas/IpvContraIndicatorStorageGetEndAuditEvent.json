@@ -2,7 +2,7 @@
    "$defs": {
       "IpvContraIndicatorStorageGetEndAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "End of the querying task in CI",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

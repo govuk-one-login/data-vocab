@@ -2,7 +2,7 @@
    "$defs": {
       "IpvKbvCriVcIssuedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "VC has been issued from KBV (Knowledge Based Verification) CRI",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

@@ -2,7 +2,7 @@
    "$defs": {
       "SsfInboundAccountPurgedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "An inbound Account Purged message has been received",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthUpdateClientRequestReceivedAuditEventClass:
+    description: >
+      Request to update configuration for an existing Relying party has been received.
     slots:
     - event_name
     - user

@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthUpdateProfileRequestErrorAuditEventClass:
+    description: >
+      Update profile request error (Account) . Invalid parameters supplied to the profile update request
     slots:
     - event_name
     - client_id

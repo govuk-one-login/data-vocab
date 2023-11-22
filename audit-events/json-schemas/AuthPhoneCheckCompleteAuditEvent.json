@@ -2,7 +2,7 @@
    "$defs": {
       "AuthPhoneCheckCompleteAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Checking of new phone number complete (account) . Triggered upon completion of Experian phone check",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

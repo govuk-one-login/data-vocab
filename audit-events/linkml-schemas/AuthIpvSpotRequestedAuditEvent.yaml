@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   AuthIpvSpotRequestedAuditEventClass:
+    description: >
+      Orchestration triggers upon sending request to SPOT
     slots:
     - event_name
     - client_id

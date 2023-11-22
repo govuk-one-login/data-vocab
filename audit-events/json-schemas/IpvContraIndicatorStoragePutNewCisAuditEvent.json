@@ -2,7 +2,7 @@
    "$defs": {
       "IpvContraIndicatorStoragePutNewCisAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Adding new CI infromation about the user into the CI storage",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

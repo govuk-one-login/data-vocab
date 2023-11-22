@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   DcmawCri4XxerrorAuditEventClass:
+    description: >
+      Error occurs when we receive a 4XX error from an API call (in most cases, particularly with a valid session)
     slots:
     - event_name
     - client_id

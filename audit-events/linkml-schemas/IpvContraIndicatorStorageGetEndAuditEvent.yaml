@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvContraIndicatorStorageGetEndAuditEventClass:
+    description: >
+      End of the querying task in CI
     slots:
     - event_name
     - component_id

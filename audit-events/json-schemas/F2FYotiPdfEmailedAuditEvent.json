@@ -2,7 +2,7 @@
    "$defs": {
       "F2FYotiPdfEmailedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "The instrcutions PDF that a user has to take with them to the post office for the checks has been emailed to the user",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

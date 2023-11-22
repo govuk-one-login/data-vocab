@@ -2,7 +2,7 @@
    "$defs": {
       "F2FCriStartAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Start of the F2F CRI",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

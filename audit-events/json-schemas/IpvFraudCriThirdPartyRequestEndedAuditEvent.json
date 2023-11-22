@@ -2,7 +2,7 @@
    "$defs": {
       "IpvFraudCriThirdPartyRequestEndedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Fraud CRI Checks with 3rd Party ended",
          "properties": {
             "event_name": {
                "description": "The Audit Event type that is being submitted",

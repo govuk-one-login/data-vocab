@@ -2,7 +2,7 @@
    "$defs": {
       "AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Orchestration is able to receive the token from DCMAW successfully.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

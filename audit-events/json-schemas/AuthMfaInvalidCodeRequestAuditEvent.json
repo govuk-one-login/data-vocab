@@ -2,7 +2,7 @@
    "$defs": {
       "AuthMfaInvalidCodeRequestAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Invalid MFA code request.Too Many OTP requested in the past and Sending OTP to this account is temporarily blocked.",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

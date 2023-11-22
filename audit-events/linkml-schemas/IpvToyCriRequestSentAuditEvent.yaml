@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvToyCriRequestSentAuditEventClass:
+    description: >
+      Request to access to Toy CRI along with user information passed along
     slots:
     - event_name
     - client_id

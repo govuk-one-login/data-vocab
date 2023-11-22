@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   SsfInboundAccountPurgedAuditEventClass:
+    description: >
+      An inbound Account Purged message has been received
     slots:
     - event_name
     - client_id

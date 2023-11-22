@@ -2,7 +2,7 @@
    "$defs": {
       "AuthUserInfoReturnedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Orchestration triggers just before sending response to Relying party for Userinfo request. Response contains claims requested by RP",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

@@ -2,7 +2,7 @@
    "$defs": {
       "AuthUpdateProfileRequestReceivedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "Indicates request for profile update received.(Account)",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

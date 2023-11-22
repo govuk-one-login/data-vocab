@@ -2,7 +2,7 @@
    "$defs": {
       "DcmawMissingContextAfterCompletionAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "User is redirected back to a broswer different to their starting browser after completing the app journey",
          "properties": {
             "client_id": {
                "description": "OAuth client identifier for the relying party",

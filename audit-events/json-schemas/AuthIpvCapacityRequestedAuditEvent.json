@@ -2,7 +2,7 @@
    "$defs": {
       "AuthIpvCapacityRequestedAuditEventClass": {
          "additionalProperties": false,
-         "description": "",
+         "description": "This is legacy and should not be appearing in TxMA",
          "properties": {
             "component_id": {
                "description": "The system component that generated the event",

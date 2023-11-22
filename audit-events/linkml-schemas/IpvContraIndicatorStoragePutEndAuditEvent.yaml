@@ -12,6 +12,8 @@ default_prefix: di_vocab
 default_range: string
 classes:
   IpvContraIndicatorStoragePutEndAuditEventClass:
+    description: >
+      End of adding new information about the user into the CI storage
     slots:
     - event_name
     - component_id
