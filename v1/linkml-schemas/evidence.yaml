@@ -50,6 +50,7 @@ classes:
     slots:
       - code
       - issuanceDate
+      - issuers
       - document
       - mitigation
       - incompleteMitigation
@@ -221,6 +222,11 @@ slots:
   issuanceDate:
     description: The date a contra-indicator was generated.
     range: date
+  issuers:
+    description: An array of cri issuers.
+    range: uri
+    multivalued: true
+    inlined_as_list: true
   document:
     description: The single string representation of a document that a contra-indicator was raised against.
   mitigation:
