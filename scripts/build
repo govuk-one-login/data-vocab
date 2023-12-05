@@ -26,8 +26,4 @@ for EXAMPLE in "${EXAMPLES[@]}"; do
   cp -R "${ROOT_DIR}/v1/examples/${EXAMPLE}" "${ROOT_DIR}/docs/v1/examples/${EXAMPLE}"
 done
 
-
-echo "Building Nav Bar"
-poetry run python "${ROOT_DIR}/scripts/build_nav.py"
-
 poetry run mkdocs build -c
