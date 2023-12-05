@@ -125,16 +125,22 @@ enums:
       free_text:
       multiple_choice:
   FraudCheckType:
-      permissible_values:
-        mortality_check:
-        identity_theft_check:
-        synthetic_identity_check:
-        impersonation_risk_check:
+    permissible_values:
+      mortality_check:
+      identity_theft_check:
+      synthetic_identity_check:
+      impersonation_risk_check:
   DataCheckType:
-      permissible_values:
-        record_check:
-        cancelled_check:
-        lost_stolen_check:
+    permissible_values:
+      record_check:
+      cancelled_check:
+      lost_stolen_check:
+  IdentityCheckPolicyType:
+    permissible_values:
+      none:
+      published: 
+      money_laundering_regulations:
+      physical_or_biometric_official:
 
 slots:
   txn:
@@ -213,7 +219,7 @@ slots:
     maximum_value: 3
     description: A measure of the level of identity confidence held by the issuer or previously performed in respect of the data being checked.
   identityCheckPolicy:
-    range: string
+    range: IdentityCheckPolicyType
     description: Details of the type of policy that was checked as part of the identity check.
   contraIndicator:
     range: ContraIndicatorClass
