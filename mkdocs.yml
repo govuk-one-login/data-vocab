@@ -118,6 +118,7 @@ nav:
           - evidence_requested: v1/slots/evidence_requested.md
           - EvidenceRequestedClass_activityHistoryScore: v1/slots/EvidenceRequestedClass_activityHistoryScore.md
           - EvidenceRequestedClass_identityFraudScore: v1/slots/EvidenceRequestedClass_identityFraudScore.md
+          - EvidenceRequestedClass_scoringPolicy: v1/slots/EvidenceRequestedClass_scoringPolicy.md
           - EvidenceRequestedClass_strengthScore: v1/slots/EvidenceRequestedClass_strengthScore.md
           - EvidenceRequestedClass_validityScore: v1/slots/EvidenceRequestedClass_validityScore.md
           - EvidenceRequestedClass_verificationScore: v1/slots/EvidenceRequestedClass_verificationScore.md
@@ -155,7 +156,6 @@ nav:
           - issuedBy: v1/slots/issuedBy.md
           - issueNumber: v1/slots/issueNumber.md
           - issuer: v1/slots/issuer.md
-          - IssuerAuthorizationRequestClass_scope: v1/slots/IssuerAuthorizationRequestClass_scope.md
           - issuers: v1/slots/issuers.md
           - issuingCountry: v1/slots/issuingCountry.md
           - jti: v1/slots/jti.md
@@ -167,7 +167,6 @@ nav:
           - nameParts: v1/slots/nameParts.md
           - nbf: v1/slots/nbf.md
           - nonce: v1/slots/nonce.md
-          - OpenIDConnectAuthenticationRequestClass_scope: v1/slots/OpenIDConnectAuthenticationRequestClass_scope.md
           - organisationName: v1/slots/organisationName.md
           - passport: v1/slots/passport.md
           - PassportDetailsClass_expiryDate: v1/slots/PassportDetailsClass_expiryDate.md
@@ -180,6 +179,7 @@ nav:
           - ResidencePermitDetailsClass_expiryDate: v1/slots/ResidencePermitDetailsClass_expiryDate.md
           - response_type: v1/slots/response_type.md
           - scope: v1/slots/scope.md
+          - scoringPolicy: v1/slots/scoringPolicy.md
           - securityCheckClass__type: v1/slots/securityCheckClass__type.md
           - securityCheckCredentialClass__evidence: v1/slots/securityCheckCredentialClass__evidence.md
           - securityCheckCredentialClass__type: v1/slots/securityCheckCredentialClass__type.md
