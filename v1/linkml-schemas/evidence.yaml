@@ -71,6 +71,7 @@ classes:
   EvidenceRequestedClass:
     description: The levels of evidence_requested which are minimum GPG45 criteria that are requested.
     slot_usage:
+      - scoringPolicy
       - strengthScore
       - validityScore
       - verificationScore
@@ -246,3 +247,6 @@ slots:
   id:
     description: The identifier of a verifiable credential.
     range: uri
+  scoringPolicy:
+    description: The scoring policy that is applicable for the evidence requested scores.  The current supported scoring policy is `gpg45`.   
+    range: string
