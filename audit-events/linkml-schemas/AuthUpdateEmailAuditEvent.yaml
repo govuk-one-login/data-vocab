@@ -1,0 +1,34 @@
+id: https://vocab.account.gov.uk/linkml/auth-update-email
+name: auth-update-email
+description: Description for audit event AUTH_UPDATE_EMAIL
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  AuthUpdateEmailAuditEventClass:
+    description: >
+      Update email (account). 
+      Auth Triggers when email address (i.e. GOV.UK One login username) is updated through GOV.UK Account
+    slots:
+    - event_name
+    - component_id
+    - user
+    slot_usage:
+      user:
+        range: AuthUpdateEmailUserClass
+      event_name:
+        pattern: ^AUTH_UPDATE_EMAIL$
+  AuthUpdateEmailUserClass:
+    slots:
+    - email
+    - ip_address
+    - persistent_session_id
+    - phone
+    - session_id
+    - user_id

@@ -1,0 +1,49 @@
+{
+   "$defs": {
+      "AuthUpdateClientRequestErrorAuditEventClass": {
+         "additionalProperties": false,
+         "description": "Invalid configuration or missing parameters for updating an existing Relying party entry in Client Registry.",
+         "properties": {
+            "client_id": {
+               "description": "OAuth client identifier for the relying party",
+               "type": "string"
+            },
+            "event_name": {
+               "description": "The Audit Event type that is being submitted",
+               "pattern": "^AUTH_UPDATE_CLIENT_REQUEST_ERROR$",
+               "type": "string"
+            },
+            "user": {
+               "$ref": "#/$defs/AuthUpdateClientRequestErrorUserClass",
+               "description": "The data relating to the user."
+            }
+         },
+         "required": [
+            "event_name"
+         ],
+         "title": "AuthUpdateClientRequestErrorAuditEventClass",
+         "type": "object"
+      },
+      "AuthUpdateClientRequestErrorUserClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "ip_address": {
+               "description": "The user ip address.",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "AuthUpdateClientRequestErrorUserClass",
+         "type": "object"
+      }
+   },
+   "$id": "https://vocab.account.gov.uk/linkml/auth-update-client-request-error",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": false,
+   "properties": {},
+   "required": [],
+   "title": "auth-update-client-request-error",
+   "type": "object"
+}
+

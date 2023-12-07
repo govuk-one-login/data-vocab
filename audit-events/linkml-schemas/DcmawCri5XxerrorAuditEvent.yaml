@@ -1,0 +1,33 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-cri-5xxerror
+name: dcmaw-cri-5xxerror
+description: Description for audit event DCMAW_CRI_5XXERROR
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  DcmawCri5XxerrorAuditEventClass:
+    description: >
+      Error occurs when we receive a 5XX error from an API call (in most cases, particularly with a valid session)
+    slots:
+    - event_name
+    - client_id
+    - component_id
+    - user
+    slot_usage:
+      user:
+        range: DcmawCri5XxerrorUserClass
+      event_name:
+        pattern: ^DCMAW_CRI_5XXERROR$
+  DcmawCri5XxerrorUserClass:
+    slots:
+    - govuk_signin_journey_id
+    - ip_address
+    - session_id
+    - transaction_id
+    - user_id

@@ -1,0 +1,33 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-brp-selected
+name: dcmaw-brp-selected
+description: Description for audit event DCMAW_BRP_SELECTED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  DcmawBrpSelectedAuditEventClass:
+    description: >
+      User opts to use their biometric residence permit in DCMAW journey, and then selects "Continue" on the app welcome page
+    slots:
+    - event_name
+    - client_id
+    - component_id
+    - user
+    slot_usage:
+      user:
+        range: DcmawBrpSelectedUserClass
+      event_name:
+        pattern: ^DCMAW_BRP_SELECTED$
+  DcmawBrpSelectedUserClass:
+    slots:
+    - govuk_signin_journey_id
+    - ip_address
+    - session_id
+    - transaction_id
+    - user_id

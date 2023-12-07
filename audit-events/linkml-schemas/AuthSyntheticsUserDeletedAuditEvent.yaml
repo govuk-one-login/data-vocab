@@ -1,0 +1,28 @@
+id: https://vocab.account.gov.uk/linkml/auth-synthetics-user-deleted
+name: auth-synthetics-user-deleted
+description: Description for audit event AUTH_SYNTHETICS_USER_DELETED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  AuthSyntheticsUserDeletedAuditEventClass:
+    description: >
+      Auth Create Account smoke test user deleted using the test services api
+    slots:
+    - event_name
+    - user
+    slot_usage:
+      user:
+        range: AuthSyntheticsUserDeletedUserClass
+      event_name:
+        pattern: ^AUTH_SYNTHETICS_USER_DELETED$
+  AuthSyntheticsUserDeletedUserClass:
+    slots:
+    - email
+    - ip_address

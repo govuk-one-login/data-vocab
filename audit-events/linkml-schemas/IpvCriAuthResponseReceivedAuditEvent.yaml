@@ -1,0 +1,31 @@
+id: https://vocab.account.gov.uk/linkml/ipv-cri-auth-response-received
+name: ipv-cri-auth-response-received
+description: Description for audit event IPV_CRI_AUTH_RESPONSE_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  IpvCriAuthResponseReceivedAuditEventClass:
+    description: >
+      This event is fired at the end of the IPV journey and an idenity has been received when user is being returned to authorization orchestration
+    slots:
+    - event_name
+    - component_id
+    - user
+    slot_usage:
+      user:
+        range: IpvCriAuthResponseReceivedUserClass
+      event_name:
+        pattern: ^IPV_CRI_AUTH_RESPONSE_RECEIVED$
+  IpvCriAuthResponseReceivedUserClass:
+    slots:
+    - govuk_signin_journey_id
+    - ip_address
+    - session_id
+    - user_id

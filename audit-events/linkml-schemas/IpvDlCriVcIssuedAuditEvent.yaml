@@ -1,0 +1,64 @@
+id: https://vocab.account.gov.uk/linkml/ipv-dl-cri-vc-issued
+name: ipv-dl-cri-vc-issued
+description: Description for audit event IPV_DL_CRI_VC_ISSUED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  IpvDlCriVcIssuedAuditEventClass:
+    description: >
+      When the final VC is created in the issue credential lambda
+    slots:
+    - event_name
+    - component_id
+    - user
+    - restricted
+    - extensions
+    slot_usage:
+      user:
+        range: IpvDlCriVcIssuedUserClass
+      restricted:
+        range: IpvDlCriVcIssuedRestrictedClass
+      extensions:
+        range: IpvDlCriVcIssuedExtensionsClass
+      evidence:
+        range: IpvDlCriVcIssuedExtensionsEvidenceClass
+      event_name:
+        pattern: ^IPV_DL_CRI_VC_ISSUED$
+  IpvDlCriVcIssuedUserClass:
+    slots:
+    - govuk_signin_journey_id
+    - ip_address
+    - persistent_session_id
+    - session_id
+    - user_id
+  IpvDlCriVcIssuedRestrictedClass:
+    slots:
+    - address
+    - birthDate
+    - drivingPermit
+    - name
+    - documentType
+    - issuingCountry
+    - user
+  IpvDlCriVcIssuedExtensionsClass:
+    slots:
+    - evidence
+    - evidence_value
+    - iss
+  IpvDlCriVcIssuedExtensionsEvidenceClass:
+    slots:
+    - ci
+    - txn
+    - checkDetails
+    - failedCheckDetails
+    - strengthScore
+    - validityScore
+    - activityScore
+    - type
