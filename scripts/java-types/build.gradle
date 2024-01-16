@@ -1,0 +1,61 @@
+plugins {
+    id "java"
+    id "org.jsonschema2pojo" version "1.2.1"
+}
+
+ext {
+    schemaInputDir = "${project.projectDir}/../../v1/json-schemas"
+    modelOutputDir = "${project.buildDir}/generated-sources/di-data-model"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Required if generating JSR-303 annotations
+    implementation 'javax.validation:validation-api:1.1.0.CR2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
+    // Required if generating Jackson 2 annotations
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    // Required if generating JodaTime data types
+    implementation 'joda-time:joda-time:2.2'
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.10.1"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.10.1"
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+jsonSchema2Pojo {
+    // Location of the JSON Schema file(s). This may refer to a single file or a directory of files.
+    source = files(schemaInputDir)
+    fileFilter = { File pathname ->
+        return pathname.name.endsWith(".json")
+    }
+
+    // Target directory for generated Java source files. The plugin will add this directory to the
+    // java source set so the compiler will find and compile the newly generated source files.
+    targetDirectory = file(modelOutputDir)
+
+    // Package name used for generated Java classes (for types where a fully qualified name has not
+    // been supplied in the schema using the 'javaType' property).
+    targetPackage = 'uk.gov.di.model'
+
+    removeOldOutput = true
+}
+
+test {
+    useJUnitPlatform()
+}
+
+generateJsonSchema2Pojo.doLast {
+    logger.quiet("Wrote Java types to ${modelOutputDir}")
+}
+
+assemble.dependsOn(generateJsonSchema2Pojo)
