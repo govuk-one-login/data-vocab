@@ -28,6 +28,13 @@ jobs:
         with:
           node-version: 16.13.x
           cache: npm
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
       - run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
@@ -50,6 +57,10 @@ jobs:
 
       - name: Generate TypeScript types
         run: npm run generate
+
+      - name: Generate Java types
+        working-directory: scripts/java-types
+        run: ./gradlew clean build --stacktrace
 
       - name: Upload site
         uses: actions/upload-artifact@v3
