@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static uk.gov.di.model.ModelUtil.buildNamePart;
 
 class ModelTest {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper()
@@ -29,6 +30,9 @@ class ModelTest {
                   "idCard" : [ ],
                   "name" : [ {
                     "nameParts" : [ {
+                      "type" : "GivenName",
+                      "value" : "Kenneth"
+                    }, {
                       "type" : "FamilyName",
                       "value" : "Decerqueira"
                     } ]
@@ -69,12 +73,9 @@ class ModelTest {
         evidence.setValidityScore(0);
         evidence.setStrengthScore(4);
         evidence.setCi(List.of("D02"));
-        vc.setEvidence(List.of(
-                evidence
-        ));
-        credentials.setVc(vc);
         evidence.setTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9");
         evidence.setType("IdentityCheck");
+        vc.setEvidence(List.of(evidence));
 
         var credentialSubject = new IdentityCheckSubjectClass__1();
 
@@ -85,24 +86,23 @@ class ModelTest {
         credentialSubject.setPassport(List.of(passport));
 
         var name = new NameClass__4();
-        var namePart = new NamePartClass__4();
-        namePart.setType(NamePartClass__4.NamePartType.GIVEN_NAME);
-        namePart.setValue("Kenneth");
-        namePart.setType(NamePartClass__4.NamePartType.FAMILY_NAME);
-        namePart.setValue("Decerqueira");
-        name.setNameParts(List.of(namePart));
+        name.setNameParts(List.of(
+                buildNamePart(NamePartClass__4.NamePartType.GIVEN_NAME, "Kenneth"),
+                buildNamePart(NamePartClass__4.NamePartType.FAMILY_NAME, "Decerqueira")
+        ));
         credentialSubject.setName(List.of(name));
 
         var birthDate = new BirthDateClass__2();
         birthDate.setValue("1990-01-23");
         credentialSubject.setBirthDate(List.of(birthDate));
         vc.setCredentialSubject(credentialSubject);
-        vc.setType(
-                List.of(
-                        VerifiableCredentialType__.VERIFIABLE_CREDENTIAL,
-                        VerifiableCredentialType__.IDENTITY_CHECK_CREDENTIAL
-                )
-        );
+
+        vc.setType(List.of(
+                VerifiableCredentialType__.VERIFIABLE_CREDENTIAL,
+                VerifiableCredentialType__.IDENTITY_CHECK_CREDENTIAL
+        ));
+
+        credentials.setVc(vc);
 
         var json = OBJECT_MAPPER.writeValueAsString(credentials);
         System.out.println(json);
