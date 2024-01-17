@@ -91,23 +91,24 @@ $ tree ~/.m2/repository/uk/gov/di/model
     └── maven-metadata-local.xml
 ```
 
-### Publish to remote Maven repository
+### Publish to GitHub Packages Maven repository
 
-To publish the artifact to your local Maven cache, use the `publish` Gradle task.
+To publish the artifact to the GitHub Packages Maven repository, use the `publish` Gradle task.
 
-You can set the Maven repository URL using the following Gradle properties:
+Per the [GitHub documentation](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle) ensure the following environment variables are set:
 
-- `publish.maven.snapshotRepoUrl`
-- `publish.maven.releaseRepoUrl`
+- `GITHUB_ACTOR`
+- `GITHUB_TOKEN`
 
 > **Note**
-> For this to succeed, you must configure the required Maven repository settings
-> and have the appropriate publishing permissions.
->
-> This is out of the scope of this documentation. See the [official documentation](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example).
+> For this to succeed, you must have the appropriate publishing permissions.
 
 Example:
 
 ```shell
 ./gradlew clean publish
 ```
+
+### Publishing to another Maven repository
+
+This is out of the scope of this README. See the [official Gradle `maven-publish` documentation](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example).

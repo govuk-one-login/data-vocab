@@ -9,6 +9,7 @@ This repository produces the following artifacts:
 * [Vocabulary documentation](https://govuk-one-login.github.io/data-vocab/)
 * [JSON Schemas](https://github.com/govuk-one-login/data-vocab/releases)
 * [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab)
+* [Java data model classes (Maven artifact)](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab)
 
 Further development could include:
 
@@ -169,3 +170,51 @@ Here's an example of the step with the `NODE_AUTH_TOKEN` configured:
     NODE_AUTH_TOKEN: ${{ github.token }}
 ```
 </details>
+
+---
+
+# Using the Java dependency
+
+Java data model classes are published with each tagged version of this repository. You can add these as a dependency in your Gradle/Maven project.
+
+These are published as [a Maven artifact](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab) to GitHub Packages.
+
+## Add the dependency
+
+### Gradle
+
+Add this to `build.gradle`:
+
+```groovy
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/govuk-one-login/data-vocab")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation 'uk.gov.di.model:di-data-model:0.1.0-SNAPSHOT'
+}
+```
+
+> [Learn more](https://docs.github.com/articles/configuring-gradle-for-use-with-github-package-registry/) about consuming the dependency from Gradle.
+
+### Maven
+
+Add the repository and server settings to `~/.m2/settings.xml` per [the GitHub instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages).
+
+Add this to `pom.xml`:
+
+```xml
+<dependency>
+  <groupId>uk.gov.di.model</groupId>
+  <artifactId>di-data-model</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+</dependency>
+```
+
+> [Learn more](https://docs.github.com/articles/configuring-apache-maven-for-use-with-github-package-registry/) about consuming the dependency from Maven.
