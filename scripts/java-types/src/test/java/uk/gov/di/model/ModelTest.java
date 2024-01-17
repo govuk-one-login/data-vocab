@@ -7,8 +7,6 @@ import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.util.List;
 
-import static uk.gov.di.model.ModelUtil.buildNamePart;
-
 class ModelTest {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper()
             .enable(SerializationFeature.INDENT_OUTPUT);
@@ -62,45 +60,46 @@ class ModelTest {
     @Test
     public void useModel() throws Exception {
         var credentials = new IdentityCheckCredentialJWT()
-            .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
-            .withAud("https://passport.core.stubs.account.gov.uk")
-            .withNbf(1690816091)
-            .withIss("https://review-p.build.account.gov.uk");
+                .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
+                .withAud("https://passport.core.stubs.account.gov.uk")
+                .withNbf(1690816091)
+                .withIss("https://review-p.build.account.gov.uk");
 
-        var vc = new IdentityCheckCredentialClass();
+        var vc = new IdentityCheckCredentialClass().withType(List.of(
+                VerifiableCredentialType.VERIFIABLE_CREDENTIAL,
+                VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL
+        ));
+        credentials.setVc(vc);
 
-        var evidence = new IdentityCheckClass__1()
-            .withValidityScore(0)
-            .withStrengthScore(4)
-            .withCi(List.of("D02"))
-            .withTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9")
-            .withType("IdentityCheck");
+        var evidence = new IdentityCheckClass()
+                .withValidityScore(0)
+                .withStrengthScore(4)
+                .withCi(List.of("D02"))
+                .withTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9")
+                .withType("IdentityCheck");
         vc.setEvidence(List.of(evidence));
 
-        var credentialSubject = new IdentityCheckSubjectClass__1();
+        var credentialSubject = new IdentityCheckSubjectClass();
+        vc.setCredentialSubject(credentialSubject);
 
-        var passport = new PassportDetailsClass__1()
-            .withExpiryDate("2030-12-12")
-            .withIcaoIssuerCode("GBR")
-            .withDocumentNumber("123456789");
+        var passport = new PassportDetailsClass()
+                .withExpiryDate("2030-12-12")
+                .withIcaoIssuerCode("GBR")
+                .withDocumentNumber("123456789");
         credentialSubject.setPassport(List.of(passport));
 
-        var name = new NameClass__4().withNameParts(List.of(
-                buildNamePart(NamePartClass__4.NamePartType.GIVEN_NAME, "Kenneth"),
-                buildNamePart(NamePartClass__4.NamePartType.FAMILY_NAME, "Decerqueira")
+        var name = new NameClass().withNameParts(List.of(
+                new NamePartClass()
+                        .withType(NamePartClass.NamePartType.GIVEN_NAME)
+                        .withValue("Kenneth"),
+                new NamePartClass()
+                        .withType(NamePartClass.NamePartType.FAMILY_NAME)
+                        .withValue("Decerqueira")
         ));
         credentialSubject.setName(List.of(name));
 
-        var birthDate = new BirthDateClass__2().withValue("1990-01-23");
+        var birthDate = new BirthDateClass().withValue("1990-01-23");
         credentialSubject.setBirthDate(List.of(birthDate));
-        vc.setCredentialSubject(credentialSubject);
-
-        vc.setType(List.of(
-                VerifiableCredentialType__.VERIFIABLE_CREDENTIAL,
-                VerifiableCredentialType__.IDENTITY_CHECK_CREDENTIAL
-        ));
-
-        credentials.setVc(vc);
 
         var json = OBJECT_MAPPER.writeValueAsString(credentials);
         System.out.println(json);
