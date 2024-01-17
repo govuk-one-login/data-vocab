@@ -79,6 +79,6 @@ jobs:
       - name: Upload TypeScript types
         uses: actions/upload-artifact@v3
         with:
-          name: types
-          path: v1/types
+          name: ts-types
+          path: v1/ts-types
           retention-days: 1
