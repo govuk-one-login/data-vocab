@@ -50,6 +50,10 @@ jsonSchema2Pojo {
     targetPackage = 'uk.gov.di.model'
 
     removeOldOutput = true
+
+    // Whether to generate builder-style methods of the form withXxx(value) (that return this),
+    // alongside the standard, void-return setters.
+    generateBuilders = true
 }
 
 test {
