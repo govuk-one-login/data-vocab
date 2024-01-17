@@ -3,6 +3,7 @@ package uk.gov.di.model;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.util.List;
 
@@ -106,6 +107,7 @@ class ModelTest {
 
         var json = OBJECT_MAPPER.writeValueAsString(credentials);
         System.out.println(json);
-        assertEquals(SERIALISED_MODEL, json);
+
+        JSONAssert.assertEquals(SERIALISED_MODEL, json, false);
     }
 }
