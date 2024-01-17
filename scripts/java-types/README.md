@@ -44,7 +44,7 @@ model, then serialising it to JSON.
 - Generate the schema files from this project (see `scripts/generate_json_schemas.sh`)
 - Ensure you have Java 17+ installed
 
-## Steps
+## Generate
 
 Generate the Java types and run the unit tests:
 
@@ -53,3 +53,61 @@ Generate the Java types and run the unit tests:
 ```
 
 The generated Java types are written to the `build/generated-sources/di-data-model` directory.
+
+## Publish Maven artifact
+
+You can publish the generated sources as a Maven artifact.
+
+> **Note**
+> To set the version of the artifact, set the `version` Gradle property.
+>
+> For example:
+> ```shell
+> ./gradlew <tasks here> -Pversion=0.1.1-SNAPSHOT
+> ```
+
+### Publish to local Maven repository
+
+To publish the artifact to your local Maven cache, use the `publishToMavenLocal` Gradle task:
+
+```shell
+./gradlew clean publishToMavenLocal
+```
+
+You can see the artifact and its Maven metadata in the usual location:
+
+```
+$ tree ~/.m2/repository/uk/gov/di/model
+└── di-data-model
+    ├── 0.1.0-SNAPSHOT
+    │   ├── di-data-model-0.1.0-SNAPSHOT.jar
+    │   ├── di-data-model-0.1.0-SNAPSHOT.module
+    │   └── di-data-model-0.1.0-SNAPSHOT.pom
+    ├── 0.1.1-SNAPSHOT
+    │   ├── di-data-model-0.1.1-SNAPSHOT.jar
+    │   ├── di-data-model-0.1.1-SNAPSHOT.module
+    │   ├── di-data-model-0.1.1-SNAPSHOT.pom
+    │   └── maven-metadata-local.xml
+    └── maven-metadata-local.xml
+```
+
+### Publish to remote Maven repository
+
+To publish the artifact to your local Maven cache, use the `publish` Gradle task.
+
+You can set the Maven repository URL using the following Gradle properties:
+
+- `publish.maven.snapshotRepoUrl`
+- `publish.maven.releaseRepoUrl`
+
+> **Note**
+> For this to succeed, you must configure the required Maven repository settings
+> and have the appropriate publishing permissions.
+>
+> This is out of the scope of this documentation. See the [official documentation](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example).
+
+Example:
+
+```shell
+./gradlew clean publish
+```

@@ -1,5 +1,6 @@
 plugins {
     id "java"
+    id "maven-publish"
     id "org.jsonschema2pojo" version "1.2.1"
 }
 
@@ -64,7 +65,7 @@ jsonSchema2Pojo {
     // that have been generated previously. <strong>Be warned</strong>, when activated this option
     // will cause jsonschema2pojo to <strong>indiscriminately delete the entire contents of the target
     // directory (all files and folders)</strong> before it begins generating sources.
-    removeOldOutput = true
+    removeOldOutput = false
 }
 
 test {
@@ -82,3 +83,23 @@ generateJsonSchema2Pojo.doLast {
 }
 
 assemble.dependsOn(generateJsonSchema2Pojo)
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'uk.gov.di.model'
+            artifactId = 'di-data-model'
+            version = project.version
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            // change URLs to point to target repos, e.g. https://my.org/repo
+            def snapshotsRepoUrl = project.property('publish.maven.snapshotRepoUrl')
+            def releasesRepoUrl = project.property('publish.maven.releaseRepoUrl')
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+        }
+    }
+}
