@@ -34,6 +34,7 @@ java {
     }
 }
 
+// see https://github.com/joelittlejohn/jsonschema2pojo/tree/master/jsonschema2pojo-gradle-plugin#usage
 jsonSchema2Pojo {
     // Location of the JSON Schema file(s). This may refer to a single file or a directory of files.
     source = files(schemaInputDir)
@@ -49,11 +50,21 @@ jsonSchema2Pojo {
     // been supplied in the schema using the 'javaType' property).
     targetPackage = 'uk.gov.di.model'
 
-    removeOldOutput = true
-
     // Whether to generate builder-style methods of the form withXxx(value) (that return this),
     // alongside the standard, void-return setters.
     generateBuilders = true
+
+    // Whether to initialize Set and List fields as empty collections, or leave them as null.
+    initializeCollections = true
+
+    // The style of annotations to use in the generated Java types. Supported values:
+    annotationStyle = 'jackson'
+
+    // Whether to empty the target directory before generation occurs, to clear out all source files
+    // that have been generated previously. <strong>Be warned</strong>, when activated this option
+    // will cause jsonschema2pojo to <strong>indiscriminately delete the entire contents of the target
+    // directory (all files and folders)</strong> before it begins generating sources.
+    removeOldOutput = true
 }
 
 test {
