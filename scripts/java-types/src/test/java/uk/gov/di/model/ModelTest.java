@@ -2,60 +2,29 @@ package uk.gov.di.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
+/**
+ * Builds an instance of the model, serialises it, then compares
+ * the serialised version to an exemplar JSON string.
+ */
 class ModelTest {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper()
             .enable(SerializationFeature.INDENT_OUTPUT);
 
-    private static final String SERIALISED_MODEL = """
-            {
-              "aud" : "https://passport.core.stubs.account.gov.uk",
-              "iss" : "https://review-p.build.account.gov.uk",
-              "nbf" : 1690816091,
-              "sub" : "urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce",
-              "vc" : {
-                "@context" : [ ],
-                "credentialSubject" : {
-                  "address" : [ ],
-                  "birthDate" : [ {
-                    "value" : "1990-01-23"
-                  } ],
-                  "drivingPermit" : [ ],
-                  "idCard" : [ ],
-                  "name" : [ {
-                    "nameParts" : [ {
-                      "type" : "GivenName",
-                      "value" : "Kenneth"
-                    }, {
-                      "type" : "FamilyName",
-                      "value" : "Decerqueira"
-                    } ]
-                  } ],
-                  "passport" : [ {
-                    "documentNumber" : "123456789",
-                    "expiryDate" : "2030-12-12",
-                    "icaoIssuerCode" : "GBR"
-                  } ],
-                  "residencePermit" : [ ],
-                  "socialSecurityRecord" : [ ]
-                },
-                "evidence" : [ {
-                  "checkDetails" : [ ],
-                  "ci" : [ "D02" ],
-                  "failedCheckDetails" : [ ],
-                  "strengthScore" : 4,
-                  "txn" : "5f57a8f2-62b0-4958-9332-06d9f453e5b9",
-                  "type" : "IdentityCheck",
-                  "validityScore" : 0
-                } ],
-                "type" : [ "VerifiableCredential", "IdentityCheckCredential" ]
-              }
-            }
-            """.trim();
+    private static String serialisedModel;
+
+    @BeforeAll
+    static void beforeAll() throws Exception {
+        var serialisedExample = Path.of(ModelTest.class.getResource("/serialised_model.json").toURI());
+        serialisedModel = Files.readString(serialisedExample);
+    }
 
     @Test
     public void useModel() throws Exception {
@@ -104,6 +73,6 @@ class ModelTest {
         var json = OBJECT_MAPPER.writeValueAsString(credentials);
         System.out.println(json);
 
-        JSONAssert.assertEquals(SERIALISED_MODEL, json, false);
+        JSONAssert.assertEquals(serialisedModel, json, false);
     }
 }
