@@ -96,10 +96,12 @@ publishing {
     }
     repositories {
         maven {
-            // change URLs to point to target repos, e.g. https://my.org/repo
-            def snapshotsRepoUrl = project.property('publish.maven.snapshotRepoUrl')
-            def releasesRepoUrl = project.property('publish.maven.releaseRepoUrl')
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/govuk-one-login/data-vocab"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
