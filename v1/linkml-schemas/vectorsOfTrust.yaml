@@ -10,7 +10,7 @@ imports:
   - linkml:types
   - ./common
 default_curi_maps:
-  - semweb_context  
+  - semweb_context
 default_prefix: di_vocab
 default_range: string
 
@@ -21,10 +21,13 @@ enums:
       P2:
       P3:
       P4:
+      PCL200:
+      PCL250:
 
 slots:
   vot:
     range: IdentityVectorOfTrust
+    description: The `vot` identifies the Vector Of Trust.
   vtm:
     range: uri
     description: The `vtm` identifies the Vector Trust Mark.
