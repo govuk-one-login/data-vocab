@@ -40,6 +40,18 @@ classes:
       - activityFrom
       - identityCheckLevel
       - identityCheckPolicy
+  RiskAssessmentClass:
+    attributes:
+      type:
+        equals_string: RiskAssessment
+    slots:
+      - txn
+      - ci
+      - intervention
+  InterventionClass:
+    slots:
+      - interventionCode
+      - interventionReason
   SecurityCheckClass:
     attributes:
       type:
@@ -186,6 +198,13 @@ slots:
   checkMethod:
     range: CheckMethodType
     description: An identifier from the OpenID Check Methods list
+  intervention:
+    range: InterventionClass
+    description: Intervention required by the risk assessment
+  interventionCode:
+    range: string
+  interventionReason:
+    range: string
   kbvQuality:
     range: integer
     minimum_value: 0

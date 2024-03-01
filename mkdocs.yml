@@ -42,6 +42,7 @@ nav:
           - IdentityCheckCredentialJWTClass: v1/classes/IdentityCheckCredentialJWTClass.md
           - IdentityCheckSubjectClass: v1/classes/IdentityCheckSubjectClass.md
           - InheritedIdentityJWTClass: v1/classes/InheritedIdentityJWTClass.md
+          - InterventionClass: v1/classes/InterventionClass.md
           - ISODateClass: v1/classes/ISODateClass.md
           - IssuerAuthorizationRequestClass: v1/classes/IssuerAuthorizationRequestClass.md
           - JWTClass: v1/classes/JWTClass.md
@@ -57,6 +58,9 @@ nav:
           - PersonWithIdentityClass: v1/classes/PersonWithIdentityClass.md
           - PostalAddressClass: v1/classes/PostalAddressClass.md
           - ResidencePermitDetailsClass: v1/classes/ResidencePermitDetailsClass.md
+          - RiskAssessmentClass: v1/classes/RiskAssessmentClass.md
+          - RiskAssessmentCredentialClass: v1/classes/RiskAssessmentCredentialClass.md
+          - RiskAssessmentCredentialJWTClass: v1/classes/RiskAssessmentCredentialJWTClass.md
           - SecurityCheckClass: v1/classes/SecurityCheckClass.md
           - SecurityCheckCredentialClass: v1/classes/SecurityCheckCredentialClass.md
           - SecurityCheckCredentialJWTClass: v1/classes/SecurityCheckCredentialJWTClass.md
@@ -152,6 +156,9 @@ nav:
           - identityFraudScore: v1/slots/identityFraudScore.md
           - incompleteMitigation: v1/slots/incompleteMitigation.md
           - inheritedIdentityJWTClass__vc: v1/slots/inheritedIdentityJWTClass__vc.md
+          - intervention: v1/slots/intervention.md
+          - interventionCode: v1/slots/interventionCode.md
+          - interventionReason: v1/slots/interventionReason.md
           - iSODateClass__value: v1/slots/iSODateClass__value.md
           - iss: v1/slots/iss.md
           - issuanceDate: v1/slots/issuanceDate.md
@@ -181,6 +188,10 @@ nav:
           - residencePermit: v1/slots/residencePermit.md
           - ResidencePermitDetailsClass_expiryDate: v1/slots/ResidencePermitDetailsClass_expiryDate.md
           - response_type: v1/slots/response_type.md
+          - riskAssessmentClass__type: v1/slots/riskAssessmentClass__type.md
+          - riskAssessmentCredentialClass__evidence: v1/slots/riskAssessmentCredentialClass__evidence.md
+          - riskAssessmentCredentialClass__type: v1/slots/riskAssessmentCredentialClass__type.md
+          - riskAssessmentCredentialJWTClass__vc: v1/slots/riskAssessmentCredentialJWTClass__vc.md
           - scope: v1/slots/scope.md
           - scoringPolicy: v1/slots/scoringPolicy.md
           - securityCheckClass__type: v1/slots/securityCheckClass__type.md

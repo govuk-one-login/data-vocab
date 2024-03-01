@@ -26,6 +26,7 @@ LINKML_ITEMS=(
   "document.yaml,PassportDetailsClass,PassportDetails.json"
   "address.yaml,PostalAddressClass,PostalAddress.json"
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
+  "riskAssessmentCredential.yaml,RiskAssessmentCredentialClass,RiskAssessmentCredential.json"
   "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
   "document.yaml,BankAccountDetailsClass,BankAccount.json"
