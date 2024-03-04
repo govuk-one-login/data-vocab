@@ -8,7 +8,7 @@ imports:
   - linkml:types
   - ./common
 default_curi_maps:
-  - semweb_context  
+  - semweb_context
 default_prefix: di_vocab
 default_range: string
 
@@ -66,8 +66,8 @@ classes:
       - issuer
       - validFrom
       - txn
-      - id 
-  
+      - id
+
   EvidenceRequestedClass:
     description: The levels of evidence_requested which are minimum GPG45 criteria that are requested.
     slot_usage:
@@ -138,7 +138,7 @@ enums:
   IdentityCheckPolicyType:
     permissible_values:
       none:
-      published: 
+      published:
       money_laundering_regulations:
       physical_or_biometric_official:
 
@@ -147,30 +147,34 @@ slots:
     description: A unique transaction identifier for this check, or part of a check, if any.
     range: string
   strengthScore:
-    description: The strength score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#strength) 
+    description: The strength score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#strength)
     range: integer
     minimum_value: 1
     maximum_value: 4
   validityScore:
-    description: The validity score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#validity) 
+    description: The validity score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#validity)
     range: integer
     minimum_value: 0
     maximum_value: 4
   verificationScore:
-    description: The verification score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#verification) 
+    description: The verification score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#verification)
     range: integer
     minimum_value: 0
     maximum_value: 4
   activityHistoryScore:
-    description: The activity history score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#activity-history) 
+    description: The activity history score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#activity-history)
     range: integer
     minimum_value: 0
     maximum_value: 4
   identityFraudScore:
-    description: The identity fraud score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud) 
+    description: The identity fraud score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud)
     range: integer
     minimum_value: 0
     maximum_value: 3
+  ciReasons:
+    range: string
+    multivalued: true
+    inlined_as_list: true
   checkDetails:
     range: CheckDetailsClass
     multivalued: true
@@ -254,5 +258,5 @@ slots:
     description: The identifier of a verifiable credential.
     range: uri
   scoringPolicy:
-    description: The scoring policy that is applicable for the evidence requested scores.  The current supported scoring policy is `gpg45`.   
+    description: The scoring policy that is applicable for the evidence requested scores.  The current supported scoring policy is `gpg45`.
     range: string

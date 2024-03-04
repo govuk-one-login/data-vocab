@@ -10,15 +10,15 @@ imports:
   - linkml:types
   - ./common
 default_curi_maps:
-  - semweb_context  
+  - semweb_context
 default_prefix: di_vocab
 default_range: string
 
 classes:
   PostalAddressClass:
     description: >-
-      A postal address associated with a user, returned by an Address Lookup API or by manual data input. 
-      <p>JSON schema&#58; [di_vocab:PostalAddress](../json-schemas/PostalAddress.json)</p>  
+      A postal address associated with a user, returned by an Address Lookup API or by manual data input.
+      <p>JSON schema&#58; [di_vocab:PostalAddress](../json-schemas/PostalAddress.json)</p>
       <p>Examples</p>
       <ul>
       <li>
@@ -49,6 +49,11 @@ classes:
       - ../json-schemas/PostalAddress.json
     mixins:
       - ValidityClass
+    attributes:
+      id:
+        close_mappings:
+          - schema:identifier
+        description: Indentification number for the third party addresses
     slots:
       - uprn
       - organisationName
@@ -63,6 +68,7 @@ classes:
       - addressLocality
       - postalCode
       - addressCountry
+      - poBoxNumber
     close_mappings:
       - schema:PostalAddress
       - adb:Address
@@ -80,10 +86,10 @@ slots:
   departmentName:
     close_mappings: adb:departmentName
     description: For some organisations, department name is indicated because mail is received by subdivisions of the main organisation at distinct delivery points. E.g. Organisation Name - ABC COMMUNICATIONS Department Name - MARKETING DEPARTMENT
-                 <p>Close mapping&#58; [adb:departmentName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>  
+                 <p>Close mapping&#58; [adb:departmentName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
   subBuildingName:
     close_mappings: adb:subBuildingName
-    description: The sub-building name and/or number are identifiers for subdivisions of properties.  
+    description: The sub-building name and/or number are identifiers for subdivisions of properties.
                  E.g. Sub-building Name - FLAT 3 Building Name - POPLAR COURT Thoroughfare - LONDON ROAD NOTE - If the address is styled as 3 POPLAR COURT, all the text will be shown in the Building Name attribute and the Sub-building Name will be empty. The building number will be shown in this field when it contains a range, decimal or non-numeric character (see Building Number).
                  <p>Close mapping&#58; [adb:subBuildingName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
   buildingNumber:
@@ -96,7 +102,7 @@ slots:
                  <p>Close mapping&#58; [adb:buildingNumber](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
   buildingName:
     close_mappings: adb:buildingName
-    description: The building name is a description applied to a single building or a 
+    description: The building name is a description applied to a single building or a
                  small group of buildings, such as Highfield House. This also includes those building
                  numbers that contain non-numeric characters, such as 44A. Some descriptive names,
                  when included with the rest of the address, are sufficient to identify the property
@@ -143,3 +149,8 @@ slots:
     close_mappings: schema:addressCountry
     description: The country. Provided as the two-letter ISO 3166-1 alpha-2 country code.
                  <p>Close mapping&#58; [schema:addressCountry](https://schema.org/addressCountry)</p>
+  poBoxNumber:
+    close_mappings:
+      - schema:postOfficeBoxNumber
+    description: The post office box number for PO box addresses.
+                <p>Close mapping&#58; [schema:postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)</p>"
