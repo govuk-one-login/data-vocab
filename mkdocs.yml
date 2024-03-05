@@ -41,6 +41,7 @@ nav:
           - IdentityCheckCredentialClass: v1/classes/IdentityCheckCredentialClass.md
           - IdentityCheckCredentialJWTClass: v1/classes/IdentityCheckCredentialJWTClass.md
           - IdentityCheckSubjectClass: v1/classes/IdentityCheckSubjectClass.md
+          - InheritedIdentityJWTClass: v1/classes/InheritedIdentityJWTClass.md
           - ISODateClass: v1/classes/ISODateClass.md
           - IssuerAuthorizationRequestClass: v1/classes/IssuerAuthorizationRequestClass.md
           - JWTClass: v1/classes/JWTClass.md
@@ -150,6 +151,7 @@ nav:
           - identityCheckPolicy: v1/slots/identityCheckPolicy.md
           - identityFraudScore: v1/slots/identityFraudScore.md
           - incompleteMitigation: v1/slots/incompleteMitigation.md
+          - inheritedIdentityJWTClass__vc: v1/slots/inheritedIdentityJWTClass__vc.md
           - iSODateClass__value: v1/slots/iSODateClass__value.md
           - iss: v1/slots/iss.md
           - issuanceDate: v1/slots/issuanceDate.md
