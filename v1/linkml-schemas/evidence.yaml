@@ -228,7 +228,7 @@ slots:
     description: A system level code to indentify a contra-indicator.
   issuanceDate:
     description: The date a contra-indicator was generated.
-    range: date
+    range: datetime
   issuers:
     description: An array of cri issuers.
     range: uri
@@ -247,6 +247,7 @@ slots:
   mitigatingCredential:
     description: Details of the credential that was generated as part of the mitigation journey for a particular contra-indicator.
     range: MitigatingCredentialClass
+    multivalued: true
   issuer:
     description: The issuer of a verifiable credential.
     range: uri
