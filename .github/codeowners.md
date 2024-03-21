@@ -1,1 +1,1 @@
-* @govuk-one-login/teams/data-architecture
+* @govuk-one-login/data-architects
