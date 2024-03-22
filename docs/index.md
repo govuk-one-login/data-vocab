@@ -15,6 +15,7 @@ This vocabulary covers a number of use cases in the GOV.UK One Login domain, inc
 * OAuth 2.0 [authorization requests](v1/classes/IssuerAuthorizationRequestClass) to credential issuing and credential collecting services
 * VCs for [identity proofing and verification](v1/classes/IdentityCheckCredentialClass)
 * VCs for [other security checks](v1/classes/SecurityCheckCredentialClass)
+* VCs for [risk assessments](v1/classes/RiskAssessmentCredentialClass)
 
 In future it may be extended to cover security events.
 
