@@ -28,6 +28,7 @@ LINKML_ITEMS=(
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
   "riskAssessmentCredential.yaml,RiskAssessmentCredentialClass,RiskAssessmentCredential.json"
   "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
+  "credentials.yaml,SecurityCheckCredentialJWTClass,SecurityCheckCredentialJWT.json"
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
   "document.yaml,BankAccountDetailsClass,BankAccount.json"
 )
