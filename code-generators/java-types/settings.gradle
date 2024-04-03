@@ -2,3 +2,16 @@ rootProject.name = 'di-data-model'
 
 include ':jackson-annotated'
 include ':plain-pojo'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            library('jackson-databind', 'com.fasterxml.jackson.core:jackson-databind:2.15.2')
+            library('jakarta-validation', 'jakarta.validation:jakarta.validation-api:3.0.0')
+            library('javax-validation', 'javax.validation:validation-api:1.1.0.CR2')
+            library('jsonassert', 'org.skyscreamer:jsonassert:1.5.1')
+            library('junit-api', 'org.junit.jupiter:junit-jupiter-api:5.10.1')
+            library('junit-engine', 'org.junit.jupiter:junit-jupiter-engine:5.10.1')
+        }
+    }
+}
