@@ -1,0 +1,29 @@
+id: https://vocab.account.gov.uk/linkml/dcmaw-cri-abort
+name: dcmaw-cri-abort
+description: Description for audit event DCMAW_CRI_ABORT
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  DcmawCriAbortAuditEventClass:
+    description: >
+      DCMAW CRI has been aborted (usually app has been closed without completing the verification journey)
+    slots:
+    - event_name
+    - component_id
+    - user
+    slot_usage:
+      user:
+        range: DcmawCriAbortUserClass
+      event_name:
+        pattern: ^DCMAW_CRI_ABORT$
+  DcmawCriAbortUserClass:
+    slots:
+    - ip_address
+    - session_id

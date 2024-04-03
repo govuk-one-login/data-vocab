@@ -1,0 +1,162 @@
+id: https://vocab.account.gov.uk/linkml/slots
+name: slots
+description: Global slots for all events
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+imports:
+- linkml:types
+slots:
+  event_name:
+    description: The Audit Event type that is being submitted
+    required: true
+  activityScore:
+    description: The activityScore from the check done by the CRI
+  address:
+    description: Address information
+  addressesEntered:
+    description: Number of addresses entered by a user
+  birthDate:
+    description: DoB information
+  checkDetails:
+    description: The check details of the check carried out by the CRI
+  ci:
+    description: CIs in an array
+  ci_count:
+    description: Count of contra-indicators
+  client-name:
+    description: Client name as defined in the client registry
+  client_id:
+    description: OAuth client identifier for the relying party
+  component_id:
+    description: The system component that generated the event
+  decisionScore:
+    description: The decisionScore from the check done by the CRI
+  description:
+    description: Generic description field
+  deviceId:
+    description: Device fingerprint
+  device_info:
+    description: Device information object from DCMAW with data populated from Mobile
+      App 3rd Party Suppliers
+  documentType:
+    description: The document type that a user has chosen to perform their identity
+      checks with
+  drivingPermit:
+    description: Driving Licence information
+  email:
+    description: The user account email address.
+  error:
+    description: Generic error field
+  extensions:
+    description: The extended audit data relating to the event.
+  extenstions:
+    description: The extended audit data relating to the event.
+  experianIiqResponse:
+    description: Experian KBV questions answered incorrect
+  evidence:
+    description: Any evidence
+  evidence_value:
+    description: Description for evidence_value
+  experianCrossCoreResponse:
+    description: Experian Crosscore Response object
+  experianIiqResponse_value:
+    description: Description for experianIiqResponse_value
+  failedCheckDetails:
+    description: The failed check details of the check carried out by the CRI
+  govuk_signin_journey_id:
+    description: Description for govuk_signin_journey_id
+  internalSubjectId:
+    description: The DI Pairwise or internal subject id
+  ip_address:
+    description: The user ip address.
+  isNewAccount:
+    description: If the account is a newly created account
+  iss:
+    description: issuer URI
+  issuingCountry:
+    description: The issuing country of the document a user has choosen to perform
+      their identity checks with
+  levelOfConfidence:
+    description: Level of confidence achieved in matching the GPG45 Profile
+  mfa-type:
+    description: If the user is a test user
+  mismatched_pii:
+    description: Mismatched PII in SPOT request
+  name:
+    description: Name information
+  notification-type:
+    description: The notification type used to notify the user
+  outcome:
+    description: Description for outcome
+  passport:
+    description: Passport information
+  persistent_session_id:
+    description: The persistent session id.
+  phone:
+    description: The user account phone number.
+  post_office_details:
+    description: Post office a user has chosen to complete their in-person checks
+      at
+  platform:
+    description: The data relating to the user.
+  previous_govuk_signin_journey_id:
+    description: Previous journey id in case of session recovery
+  recipientEmail:
+    description: TXMA Log recipient email
+  recipientName:
+    description: TXMA Log recipient name
+  rejectionReason:
+    description: Generic rejection reason field
+  requesterEmail:
+    description: TXMA Log requester email
+  requesterName:
+    description: TXMA Log requester name
+  residencePermit:
+    description: Residence Permit information
+  restricted:
+    description: The restricted audit data relating to the event.
+  session_id:
+    description: The user session id.
+  source_topic_arn:
+    description: The reference number for the topic that deleted the user data
+  spot_request:
+    description: The SPOT Request object
+  strengthScore:
+    description: The strengthScore from the check done by the CRI
+  successful:
+    description: Flag to inform if a transaction was successful
+  test-user:
+    description: If the user is a test user
+  ticket_details:
+    description: The zendesk reference for the ticket to get TXMA data from logs
+  totalQuestionsAnsweredCorrect:
+    description: Description for totalQuestionsAnsweredCorrect
+  totalQuestionsAnsweredIncorrect:
+    description: Description for totalQuestionsAnsweredIncorrect
+  totalQuestionsAsked:
+    description: Description for totalQuestionsAsked
+  toy:
+    description: Value submitted as part of the Toy CRI
+  toyResponse:
+    description: Response from mock external Toy CRI API
+  transaction_id:
+    description: The transaction id from the transaction that generated the audit
+      event.
+  txn:
+    description: Third party transaction id
+  type:
+    description: Description for type
+  user:
+    description: The data relating to the user.
+  user_id:
+    description: The pairwise identifier from the component of the system that submitted
+      the event.
+  validityScore:
+    description: The validityScore from the check done by the CRI
+  verificationScore:
+    description: The verificationScore from the check done by the CRI

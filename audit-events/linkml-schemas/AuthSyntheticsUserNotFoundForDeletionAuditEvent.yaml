@@ -1,0 +1,28 @@
+id: https://vocab.account.gov.uk/linkml/auth-synthetics-user-not-found-for-deletion
+name: auth-synthetics-user-not-found-for-deletion
+description: Description for audit event AUTH_SYNTHETICS_USER_NOT_FOUND_FOR_DELETION
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  AuthSyntheticsUserNotFoundForDeletionAuditEventClass:
+    description: >
+      Auth Create Account smoke test user deletion attempt made using the test services api, but the user did not exist
+    slots:
+    - event_name
+    - user
+    slot_usage:
+      user:
+        range: AuthSyntheticsUserNotFoundForDeletionUserClass
+      event_name:
+        pattern: ^AUTH_SYNTHETICS_USER_NOT_FOUND_FOR_DELETION$
+  AuthSyntheticsUserNotFoundForDeletionUserClass:
+    slots:
+    - email
+    - ip_address

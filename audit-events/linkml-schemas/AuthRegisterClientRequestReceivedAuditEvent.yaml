@@ -1,0 +1,28 @@
+id: https://vocab.account.gov.uk/linkml/auth-register-client-request-received
+name: auth-register-client-request-received
+description: Description for audit event AUTH_REGISTER_CLIENT_REQUEST_RECEIVED
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  AuthRegisterClientRequestReceivedAuditEventClass:
+    description: >
+      Request to register a new Relying party has been received.
+    slots:
+    - event_name
+    - user
+    slot_usage:
+      user:
+        range: AuthRegisterClientRequestReceivedUserClass
+      event_name:
+        pattern: ^AUTH_REGISTER_CLIENT_REQUEST_RECEIVED$
+  AuthRegisterClientRequestReceivedUserClass:
+    slots:
+    - govuk_signin_journey_id
+    - ip_address

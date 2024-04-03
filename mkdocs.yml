@@ -15,8 +15,8 @@ markdown_extensions:
   - admonition
 repo_url: https://github.com/govuk-one-login/data-vocab
 nav:
-  - GOV.UK One Login Vocabulary: index.md
-  - v1:
+  - 1. GOV.UK One Login Vocabulary: index.md
+  - 2. Physical Data Model:
       - Home:
           - credentials: v1/_Home/index.md
       - Classes:
@@ -243,3 +243,293 @@ nav:
           - Time: v1/types/Time.md
           - Uri: v1/types/Uri.md
           - Uriorcurie: v1/types/Uriorcurie.md
+  - 3. Audit Events:
+      - Home:
+          - index: audit-events/_Home/index.md
+      - Events:
+          - AUTH_ACCOUNT_MANAGEMENT_AUTHENTICATE: audit-events/classes/AuthAccountManagementAuthenticateAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_BLOCK_ADDED: audit-events/classes/AuthAccountRecoveryBlockAddedAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_BLOCK_REMOVED: audit-events/classes/AuthAccountRecoveryBlockRemovedAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_EMAIL_CODE_SENT: audit-events/classes/AuthAccountRecoveryEmailCodeSentAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_EMAIL_CODE_SENT_FOR_TEST_CLIENT: 
+              audit-events/classes/AuthAccountRecoveryEmailCodeSentForTestClientAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_EMAIL_INVALID_CODE_REQUEST: 
+              audit-events/classes/AuthAccountRecoveryEmailInvalidCodeRequestAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_NOT_PERMITTED: audit-events/classes/AuthAccountRecoveryNotPermittedAuditEventClass.md
+          - AUTH_ACCOUNT_RECOVERY_PERMITTED: audit-events/classes/AuthAccountRecoveryPermittedAuditEventClass.md
+          - AUTH_ACCOUNT_TEMPORARILY_LOCKED: audit-events/classes/AuthAccountTemporarilyLockedAuditEventClass.md
+          - AUTH_AUTH_CODE_ISSUED: audit-events/classes/AuthAuthCodeIssuedAuditEventClass.md
+          - AUTH_AUTHORISATION_INITIATED: audit-events/classes/AuthAuthorisationInitiatedAuditEventClass.md
+          - AUTH_AUTHORISATION_REQUEST_ERROR: audit-events/classes/AuthAuthorisationRequestErrorAuditEventClass.md
+          - AUTH_AUTHORISATION_REQUEST_RECEIVED: audit-events/classes/AuthAuthorisationRequestReceivedAuditEventClass.md
+          - AUTH_CHECK_USER_INVALID_EMAIL: audit-events/classes/AuthCheckUserInvalidEmailAuditEventClass.md
+          - AUTH_CHECK_USER_KNOWN_EMAIL: audit-events/classes/AuthCheckUserKnownEmailAuditEventClass.md
+          - AUTH_CHECK_USER_NO_ACCOUNT_WITH_EMAIL: audit-events/classes/AuthCheckUserNoAccountWithEmailAuditEventClass.md
+          - AUTH_CODE_MAX_RETRIES_REACHED: audit-events/classes/AuthCodeMaxRetriesReachedAuditEventClass.md
+          - AUTH_CODE_VERIFIED: audit-events/classes/AuthCodeVerifiedAuditEventClass.md
+          - AUTH_CREATE_ACCOUNT: audit-events/classes/AuthCreateAccountAuditEventClass.md
+          - AUTH_CREATE_ACCOUNT_EMAIL_ALREADY_EXISTS: audit-events/classes/AuthCreateAccountEmailAlreadyExistsAuditEventClass.md
+          - AUTH_DELETE_ACCOUNT: audit-events/classes/AuthDeleteAccountAuditEventClass.md
+          - AUTH_DOC_APP_AUTHORISATION_REQUESTED: audit-events/classes/AuthDocAppAuthorisationRequestedAuditEventClass.md
+          - AUTH_DOC_APP_AUTHORISATION_RESPONSE_RECEIVED: audit-events/classes/AuthDocAppAuthorisationResponseReceivedAuditEventClass.md
+          - AUTH_DOC_APP_SUCCESSFUL_CREDENTIAL_RESPONSE_RECEIVED: 
+              audit-events/classes/AuthDocAppSuccessfulCredentialResponseReceivedAuditEventClass.md
+          - AUTH_DOC_APP_SUCCESSFUL_TOKEN_RESPONSE_RECEIVED: audit-events/classes/AuthDocAppSuccessfulTokenResponseReceivedAuditEventClass.md
+          - AUTH_DOC_APP_UNSUCCESSFUL_AUTHORISATION_RESPONSE_RECEIVED: 
+              audit-events/classes/AuthDocAppUnsuccessfulAuthorisationResponseReceivedAuditEventClass.md
+          - AUTH_DOC_APP_UNSUCCESSFUL_CREDENTIAL_RESPONSE_RECEIVED: 
+              audit-events/classes/AuthDocAppUnsuccessfulCredentialResponseReceivedAuditEventClass.md
+          - AUTH_DOC_APP_UNSUCCESSFUL_TOKEN_RESPONSE_RECEIVED: 
+              audit-events/classes/AuthDocAppUnsuccessfulTokenResponseReceivedAuditEventClass.md
+          - AUTH_EMAIL_CODE_SENT: audit-events/classes/AuthEmailCodeSentAuditEventClass.md
+          - AUTH_EMAIL_CODE_SENT_FOR_TEST_CLIENT: audit-events/classes/AuthEmailCodeSentForTestClientAuditEventClass.md
+          - AUTH_EMAIL_INVALID_CODE_REQUEST: audit-events/classes/AuthEmailInvalidCodeRequestAuditEventClass.md
+          - AUTH_INVALID_CODE_SENT: audit-events/classes/AuthInvalidCodeSentAuditEventClass.md
+          - AUTH_INVALID_CREDENTIALS: audit-events/classes/AuthInvalidCredentialsAuditEventClass.md
+          - AUTH_IPV_AUTHORISATION_REQUESTED: audit-events/classes/AuthIpvAuthorisationRequestedAuditEventClass.md
+          - AUTH_IPV_AUTHORISATION_RESPONSE_RECEIVED: audit-events/classes/AuthIpvAuthorisationResponseReceivedAuditEventClass.md
+          - AUTH_IPV_CAPACITY_REQUESTED: audit-events/classes/AuthIpvCapacityRequestedAuditEventClass.md
+          - AUTH_IPV_SPOT_REQUESTED: audit-events/classes/AuthIpvSpotRequestedAuditEventClass.md
+          - AUTH_IPV_SUCCESSFUL_IDENTITY_RESPONSE_RECEIVED: audit-events/classes/AuthIpvSuccessfulIdentityResponseReceivedAuditEventClass.md
+          - AUTH_IPV_SUCCESSFUL_SPOT_RESPONSE_RECEIVED: audit-events/classes/AuthIpvSuccessfulSpotResponseReceivedAuditEventClass.md
+          - AUTH_IPV_SUCCESSFUL_TOKEN_RESPONSE_RECEIVED: audit-events/classes/AuthIpvSuccessfulTokenResponseReceivedAuditEventClass.md
+          - AUTH_IPV_UNSUCCESSFUL_AUTHORISATION_RESPONSE_RECEIVED: 
+              audit-events/classes/AuthIpvUnsuccessfulAuthorisationResponseReceivedAuditEventClass.md
+          - AUTH_IPV_UNSUCCESSFUL_SPOT_RESPONSE_RECEIVED: audit-events/classes/AuthIpvUnsuccessfulSpotResponseReceivedAuditEventClass.md
+          - AUTH_IPV_UNSUCCESSFUL_TOKEN_RESPONSE_RECEIVED: audit-events/classes/AuthIpvUnsuccessfulTokenResponseReceivedAuditEventClass.md
+          - AUTH_LOG_IN_SUCCESS: audit-events/classes/AuthLogInSuccessAuditEventClass.md
+          - AUTH_LOG_OUT_SUCCESS: audit-events/classes/AuthLogOutSuccessAuditEventClass.md
+          - AUTH_MFA_CODE_SENT: audit-events/classes/AuthMfaCodeSentAuditEventClass.md
+          - AUTH_MFA_CODE_SENT_FOR_TEST_CLIENT: audit-events/classes/AuthMfaCodeSentForTestClientAuditEventClass.md
+          - AUTH_MFA_INVALID_CODE_REQUEST: audit-events/classes/AuthMfaInvalidCodeRequestAuditEventClass.md
+          - AUTH_MFA_MISMATCHED_EMAIL: audit-events/classes/AuthMfaMismatchedEmailAuditEventClass.md
+          - AUTH_MFA_MISSING_PHONE_NUMBER: audit-events/classes/AuthMfaMissingPhoneNumberAuditEventClass.md
+          - AUTH_NO_ACCOUNT_WITH_EMAIL: audit-events/classes/AuthNoAccountWithEmailAuditEventClass.md
+          - AUTH_PASSWORD_RESET_REQUESTED: audit-events/classes/AuthPasswordResetRequestedAuditEventClass.md
+          - AUTH_PASSWORD_RESET_REQUESTED_FOR_TEST_CLIENT: audit-events/classes/AuthPasswordResetRequestedForTestClientAuditEventClass.md
+          - AUTH_PASSWORD_RESET_SUCCESSFUL: audit-events/classes/AuthPasswordResetSuccessfulAuditEventClass.md
+          - AUTH_PASSWORD_RESET_SUCCESSFUL_FOR_TEST_CLIENT: audit-events/classes/AuthPasswordResetSuccessfulForTestClientAuditEventClass.md
+          - AUTH_PHONE_CHECK_COMPLETE: audit-events/classes/AuthPhoneCheckCompleteAuditEventClass.md
+          - AUTH_PHONE_CODE_SENT: audit-events/classes/AuthPhoneCodeSentAuditEventClass.md
+          - AUTH_PHONE_CODE_SENT_FOR_TEST_CLIENT: audit-events/classes/AuthPhoneCodeSentForTestClientAuditEventClass.md
+          - AUTH_PHONE_INVALID_CODE_REQUEST: audit-events/classes/AuthPhoneInvalidCodeRequestAuditEventClass.md
+          - AUTH_PROCESSING_IDENTITY_REQUEST: audit-events/classes/AuthProcessingIdentityRequestAuditEventClass.md
+          - AUTH_REGISTER_CLIENT_REQUEST_ERROR: audit-events/classes/AuthRegisterClientRequestErrorAuditEventClass.md
+          - AUTH_REGISTER_CLIENT_REQUEST_RECEIVED: audit-events/classes/AuthRegisterClientRequestReceivedAuditEventClass.md
+          - AUTH_SEND_OTP: audit-events/classes/AuthSendOtpAuditEventClass.md
+          - AUTH_START_INFO_FOUND: audit-events/classes/AuthStartInfoFoundAuditEventClass.md
+          - AUTH_SYNTHETICS_USER_DELETED: audit-events/classes/AuthSyntheticsUserDeletedAuditEventClass.md
+          - AUTH_SYNTHETICS_USER_NOT_FOUND_FOR_DELETION: audit-events/classes/AuthSyntheticsUserNotFoundForDeletionAuditEventClass.md
+          - AUTH_UPDATE_CLIENT_REQUEST_ERROR: audit-events/classes/AuthUpdateClientRequestErrorAuditEventClass.md
+          - AUTH_UPDATE_CLIENT_REQUEST_RECEIVED: audit-events/classes/AuthUpdateClientRequestReceivedAuditEventClass.md
+          - AUTH_UPDATE_EMAIL: audit-events/classes/AuthUpdateEmailAuditEventClass.md
+          - AUTH_UPDATE_PASSWORD: audit-events/classes/AuthUpdatePasswordAuditEventClass.md
+          - AUTH_UPDATE_PHONE_NUMBER: audit-events/classes/AuthUpdatePhoneNumberAuditEventClass.md
+          - AUTH_UPDATE_PROFILE_AUTH_APP: audit-events/classes/AuthUpdateProfileAuthAppAuditEventClass.md
+          - AUTH_UPDATE_PROFILE_CONSENT_UPDATED: audit-events/classes/AuthUpdateProfileConsentUpdatedAuditEventClass.md
+          - AUTH_UPDATE_PROFILE_PHONE_NUMBER: audit-events/classes/AuthUpdateProfilePhoneNumberAuditEventClass.md
+          - AUTH_UPDATE_PROFILE_REQUEST_ERROR: audit-events/classes/AuthUpdateProfileRequestErrorAuditEventClass.md
+          - AUTH_UPDATE_PROFILE_REQUEST_RECEIVED: audit-events/classes/AuthUpdateProfileRequestReceivedAuditEventClass.md
+          - AUTH_UPDATE_PROFILE_TERMS_CONDS_ACCEPTANCE: audit-events/classes/AuthUpdateProfileTermsCondsAcceptanceAuditEventClass.md
+          - AUTH_USER_INFO_RETURNED: audit-events/classes/AuthUserInfoReturnedAuditEventClass.md
+          - CIC_CRI_AUTH_CODE_ISSUED: audit-events/classes/CicCriAuthCodeIssuedAuditEventClass.md
+          - CIC_CRI_END: audit-events/classes/CicCriEndAuditEventClass.md
+          - CIC_CRI_START: audit-events/classes/CicCriStartAuditEventClass.md
+          - CIC_CRI_VC_ISSUED: audit-events/classes/CicCriVcIssuedAuditEventClass.md
+          - DCMAW_ABORT_APP: audit-events/classes/DcmawAbortAppAuditEventClass.md
+          - DCMAW_ABORT_WEB: audit-events/classes/DcmawAbortWebAuditEventClass.md
+          - DCMAW_APP_END: audit-events/classes/DcmawAppEndAuditEventClass.md
+          - DCMAW_APP_HANDOFF_FAILURE: audit-events/classes/DcmawAppHandoffFailureAuditEventClass.md
+          - DCMAW_APP_HANDOFF_START: audit-events/classes/DcmawAppHandoffStartAuditEventClass.md
+          - DCMAW_APP_START: audit-events/classes/DcmawAppStartAuditEventClass.md
+          - DCMAW_BRP_SELECTED: audit-events/classes/DcmawBrpSelectedAuditEventClass.md
+          - DCMAW_CRI4_XXERROR: audit-events/classes/DcmawCri4XxerrorAuditEventClass.md
+          - DCMAW_CRI5_XXERROR: audit-events/classes/DcmawCri5XxerrorAuditEventClass.md
+          - DCMAW_CRI_ABORT: audit-events/classes/DcmawCriAbortAuditEventClass.md
+          - DCMAW_CRI_END: audit-events/classes/DcmawCriEndAuditEventClass.md
+          - DCMAW_CRI_START: audit-events/classes/DcmawCriStartAuditEventClass.md
+          - DCMAW_CRI_VC_ISSUED: audit-events/classes/DcmawCriVcIssuedAuditEventClass.md
+          - DCMAW_DRIVING_LICENCE_SELECTED: audit-events/classes/DcmawDrivingLicenceSelectedAuditEventClass.md
+          - DCMAW_HYBRID_BILLING_STARTED: audit-events/classes/DcmawHybridBillingStartedAuditEventClass.md
+          - DCMAW_IPROOV_BILLING_STARTED: audit-events/classes/DcmawIproovBillingStartedAuditEventClass.md
+          - DCMAW_MISSING_CONTEXT_AFTER_ABORT: audit-events/classes/DcmawMissingContextAfterAbortAuditEventClass.md
+          - DCMAW_MISSING_CONTEXT_AFTER_COMPLETION: audit-events/classes/DcmawMissingContextAfterCompletionAuditEventClass.md
+          - DCMAW_PASSPORT_SELECTED: audit-events/classes/DcmawPassportSelectedAuditEventClass.md
+          - DCMAW_READID_NFC_BILLING_STARTED: audit-events/classes/DcmawReadidNfcBillingStartedAuditEventClass.md
+          - DCMAW_REDIRECT_ABORT: audit-events/classes/DcmawRedirectAbortAuditEventClass.md
+          - DCMAW_REDIRECT_SUCCESS: audit-events/classes/DcmawRedirectSuccessAuditEventClass.md
+          - DCMAW_SESSION_RECOVERED: audit-events/classes/DcmawSessionRecoveredAuditEventClass.md
+          - DCMAW_WEB_END: audit-events/classes/DcmawWebEndAuditEventClass.md
+          - F2_F_CRI_ACCESS_TOKEN_ISSUED: audit-events/classes/F2FCriAccessTokenIssuedAuditEventClass.md
+          - F2_F_CRI_AUTH_CODE_ISSUED: audit-events/classes/F2FCriAuthCodeIssuedAuditEventClass.md
+          - F2_F_CRI_END: audit-events/classes/F2FCriEndAuditEventClass.md
+          - F2_F_CRI_START: audit-events/classes/F2FCriStartAuditEventClass.md
+          - F2_F_CRI_VC_ISSUED: audit-events/classes/F2FCriVcIssuedAuditEventClass.md
+          - F2_F_SESSION_ABORTED: audit-events/classes/F2FSessionAbortedAuditEventClass.md
+          - F2_F_YOTI_PDF_EMAILED: audit-events/classes/F2FYotiPdfEmailedAuditEventClass.md
+          - F2_F_YOTI_RESPONSE_RECEIVED: audit-events/classes/F2FYotiResponseReceivedAuditEventClass.md
+          - F2_F_YOTI_START: audit-events/classes/F2FYotiStartAuditEventClass.md
+          - IPR_RESULT_NOTIFICATION_EMAILED: audit-events/classes/IprResultNotificationEmailedAuditEventClass.md
+          - IPR_USER_REDIRECTED: audit-events/classes/IprUserRedirectedAuditEventClass.md
+          - IPV_ADDRESS_CRI_END: audit-events/classes/IpvAddressCriEndAuditEventClass.md
+          - IPV_ADDRESS_CRI_REQUEST_SENT: audit-events/classes/IpvAddressCriRequestSentAuditEventClass.md
+          - IPV_ADDRESS_CRI_RESPONSE_RECEIVED: audit-events/classes/IpvAddressCriResponseReceivedAuditEventClass.md
+          - IPV_ADDRESS_CRI_START: audit-events/classes/IpvAddressCriStartAuditEventClass.md
+          - IPV_ADDRESS_CRI_VC_ISSUED: audit-events/classes/IpvAddressCriVcIssuedAuditEventClass.md
+          - IPV_CONTRA_INDICATOR_STORAGE_GET_END: audit-events/classes/IpvContraIndicatorStorageGetEndAuditEventClass.md
+          - IPV_CONTRA_INDICATOR_STORAGE_GET_QUERY: audit-events/classes/IpvContraIndicatorStorageGetQueryAuditEventClass.md
+          - IPV_CONTRA_INDICATOR_STORAGE_GET_START: audit-events/classes/IpvContraIndicatorStorageGetStartAuditEventClass.md
+          - IPV_CONTRA_INDICATOR_STORAGE_PUT_END: audit-events/classes/IpvContraIndicatorStoragePutEndAuditEventClass.md
+          - IPV_CONTRA_INDICATOR_STORAGE_PUT_NEW_CIS: audit-events/classes/IpvContraIndicatorStoragePutNewCisAuditEventClass.md
+          - IPV_CONTRA_INDICATOR_STORAGE_PUT_START: audit-events/classes/IpvContraIndicatorStoragePutStartAuditEventClass.md
+          - IPV_CRI_AUTH_RESPONSE_RECEIVED: audit-events/classes/IpvCriAuthResponseReceivedAuditEventClass.md
+          - IPV_DELETE_USER_DATA: audit-events/classes/IpvDeleteUserDataAuditEventClass.md
+          - IPV_DL_CRI_END: audit-events/classes/IpvDlCriEndAuditEventClass.md
+          - IPV_DL_CRI_REQUEST_SENT: audit-events/classes/IpvDlCriRequestSentAuditEventClass.md
+          - IPV_DL_CRI_RESPONSE_RECEIVED: audit-events/classes/IpvDlCriResponseReceivedAuditEventClass.md
+          - IPV_DL_CRI_START: audit-events/classes/IpvDlCriStartAuditEventClass.md
+          - IPV_DL_CRI_THIRD_PARTY_REQUEST_ENDED: audit-events/classes/IpvDlCriThirdPartyRequestEndedAuditEventClass.md
+          - IPV_DL_CRI_VC_ISSUED: audit-events/classes/IpvDlCriVcIssuedAuditEventClass.md
+          - IPV_F2_F_CRI_VC_CONSUMED: audit-events/classes/IpvF2FCriVcConsumedAuditEventClass.md
+          - IPV_F2_F_CRI_VC_RECEIVED: audit-events/classes/IpvF2FCriVcReceivedAuditEventClass.md
+          - IPV_FRAUD_CRI_END: audit-events/classes/IpvFraudCriEndAuditEventClass.md
+          - IPV_FRAUD_CRI_REQUEST_SENT: audit-events/classes/IpvFraudCriRequestSentAuditEventClass.md
+          - IPV_FRAUD_CRI_RESPONSE_RECEIVED: audit-events/classes/IpvFraudCriResponseReceivedAuditEventClass.md
+          - IPV_FRAUD_CRI_START: audit-events/classes/IpvFraudCriStartAuditEventClass.md
+          - IPV_FRAUD_CRI_THIRD_PARTY_REQUEST_ENDED: audit-events/classes/IpvFraudCriThirdPartyRequestEndedAuditEventClass.md
+          - IPV_FRAUD_CRI_VC_ISSUED: audit-events/classes/IpvFraudCriVcIssuedAuditEventClass.md
+          - IPV_GPG45_PROFILE_MATCHED: audit-events/classes/IpvGpg45ProfileMatchedAuditEventClass.md
+          - IPV_IDENTITY_ISSUED: audit-events/classes/IpvIdentityIssuedAuditEventClass.md
+          - IPV_IDENTITY_REUSE_COMPLETE: audit-events/classes/IpvIdentityReuseCompleteAuditEventClass.md
+          - IPV_IDENTITY_REUSE_RESET: audit-events/classes/IpvIdentityReuseResetAuditEventClass.md
+          - IPV_JOURNEY_END: audit-events/classes/IpvJourneyEndAuditEventClass.md
+          - IPV_JOURNEY_START: audit-events/classes/IpvJourneyStartAuditEventClass.md
+          - IPV_KBV_CRI_END: audit-events/classes/IpvKbvCriEndAuditEventClass.md
+          - IPV_KBV_CRI_REQUEST_SENT: audit-events/classes/IpvKbvCriRequestSentAuditEventClass.md
+          - IPV_KBV_CRI_START: audit-events/classes/IpvKbvCriStartAuditEventClass.md
+          - IPV_KBV_CRI_VC_ISSUED: audit-events/classes/IpvKbvCriVcIssuedAuditEventClass.md
+          - IPV_PASSPORT_CRI_END: audit-events/classes/IpvPassportCriEndAuditEventClass.md
+          - IPV_PASSPORT_CRI_REQUEST_SENT: audit-events/classes/IpvPassportCriRequestSentAuditEventClass.md
+          - IPV_PASSPORT_CRI_RESPONSE_RECEIVED: audit-events/classes/IpvPassportCriResponseReceivedAuditEventClass.md
+          - IPV_PASSPORT_CRI_START: audit-events/classes/IpvPassportCriStartAuditEventClass.md
+          - IPV_PASSPORT_CRI_VC_ISSUED: audit-events/classes/IpvPassportCriVcIssuedAuditEventClass.md
+          - IPV_REDIRECT_TO_CRI: audit-events/classes/IpvRedirectToCriAuditEventClass.md
+          - IPV_SPOT_REQUEST_RECEIVED: audit-events/classes/IpvSpotRequestReceivedAuditEventClass.md
+          - IPV_SPOT_REQUEST_VALIDATION_FAILURE: audit-events/classes/IpvSpotRequestValidationFailureAuditEventClass.md
+          - IPV_SPOT_RESPONSE_APPROVED: audit-events/classes/IpvSpotResponseApprovedAuditEventClass.md
+          - IPV_SPOT_RESPONSE_REJECTED: audit-events/classes/IpvSpotResponseRejectedAuditEventClass.md
+          - IPV_TOY_CRI_END: audit-events/classes/IpvToyCriEndAuditEventClass.md
+          - IPV_TOY_CRI_REQUEST_SENT: audit-events/classes/IpvToyCriRequestSentAuditEventClass.md
+          - IPV_TOY_CRI_RESPONSE_RECEIVED: audit-events/classes/IpvToyCriResponseReceivedAuditEventClass.md
+          - IPV_TOY_CRI_START: audit-events/classes/IpvToyCriStartAuditEventClass.md
+          - IPV_TOY_CRI_VC_ISSUED: audit-events/classes/IpvToyCriVcIssuedAuditEventClass.md
+          - IPV_VC_RECEIVED: audit-events/classes/IpvVcReceivedAuditEventClass.md
+          - SSF_INBOUND_ACCOUNT_CREDENTIAL_CHANGE_REQUIRED: audit-events/classes/SsfInboundAccountCredentialChangeRequiredAuditEventClass.md
+          - SSF_INBOUND_ACCOUNT_DISABLED: audit-events/classes/SsfInboundAccountDisabledAuditEventClass.md
+          - SSF_INBOUND_ACCOUNT_ENABLED: audit-events/classes/SsfInboundAccountEnabledAuditEventClass.md
+          - SSF_INBOUND_ACCOUNT_PURGED: audit-events/classes/SsfInboundAccountPurgedAuditEventClass.md
+          - SSF_INBOUND_CREDENTIAL_COMPROMISE: audit-events/classes/SsfInboundCredentialCompromiseAuditEventClass.md
+          - SSF_INBOUND_OPT_IN: audit-events/classes/SsfInboundOptInAuditEventClass.md
+          - SSF_INBOUND_OPT_OUT_CANCELLED: audit-events/classes/SsfInboundOptOutCancelledAuditEventClass.md
+          - SSF_INBOUND_OPT_OUT_EFFECTIVE: audit-events/classes/SsfInboundOptOutEffectiveAuditEventClass.md
+          - SSF_INBOUND_OPT_OUT_INITIATED: audit-events/classes/SsfInboundOptOutInitiatedAuditEventClass.md
+          - SSF_INBOUND_RECOVERY_ACTIVATED: audit-events/classes/SsfInboundRecoveryActivatedAuditEventClass.md
+          - SSF_INBOUND_RECOVERY_INFORMATION_CHANGED: audit-events/classes/SsfInboundRecoveryInformationChangedAuditEventClass.md
+          - TXMA_AUDIT_QUERY_DATA_REQUEST: audit-events/classes/TxmaAuditQueryDataRequestAuditEventClass.md
+          - TXMA_AUDIT_QUERY_ILLEGAL_REQUEST: audit-events/classes/TxmaAuditQueryIllegalRequestAuditEventClass.md
+          - TXMA_AUDIT_QUERY_OUTPUT_ACCESSED: audit-events/classes/TxmaAuditQueryOutputAccessedAuditEventClass.md
+          - TXMA_AUDIT_QUERY_OUTPUT_GENERATED: audit-events/classes/TxmaAuditQueryOutputGeneratedAuditEventClass.md
+      - JSON Schemas:
+          - JSON Schema files: audit-events/json-schemas/index.md
+      - Slots:
+          - activityScore: audit-events/slots/activityScore.md
+          - address: audit-events/slots/address.md
+          - addressesEntered: audit-events/slots/addressesEntered.md
+          - birthDate: audit-events/slots/birthDate.md
+          - checkDetails: audit-events/slots/checkDetails.md
+          - ci: audit-events/slots/ci.md
+          - ci_count: audit-events/slots/ci_count.md
+          - client_id: audit-events/slots/client_id.md
+          - client_name: audit-events/slots/client_name.md
+          - component_id: audit-events/slots/component_id.md
+          - decisionScore: audit-events/slots/decisionScore.md
+          - description: audit-events/slots/description.md
+          - device_info: audit-events/slots/device_info.md
+          - deviceId: audit-events/slots/deviceId.md
+          - documentType: audit-events/slots/documentType.md
+          - drivingPermit: audit-events/slots/drivingPermit.md
+          - email: audit-events/slots/email.md
+          - error: audit-events/slots/error.md
+          - event_name: audit-events/slots/event_name.md
+          - evidence: audit-events/slots/evidence.md
+          - evidence_value: audit-events/slots/evidence_value.md
+          - experianCrossCoreResponse: audit-events/slots/experianCrossCoreResponse.md
+          - experianIiqResponse: audit-events/slots/experianIiqResponse.md
+          - experianIiqResponse_value: audit-events/slots/experianIiqResponse_value.md
+          - extensions: audit-events/slots/extensions.md
+          - extenstions: audit-events/slots/extenstions.md
+          - failedCheckDetails: audit-events/slots/failedCheckDetails.md
+          - govuk_signin_journey_id: audit-events/slots/govuk_signin_journey_id.md
+          - internalSubjectId: audit-events/slots/internalSubjectId.md
+          - ip_address: audit-events/slots/ip_address.md
+          - isNewAccount: audit-events/slots/isNewAccount.md
+          - iss: audit-events/slots/iss.md
+          - issuingCountry: audit-events/slots/issuingCountry.md
+          - levelOfConfidence: audit-events/slots/levelOfConfidence.md
+          - mfa_type: audit-events/slots/mfa_type.md
+          - mismatched_pii: audit-events/slots/mismatched_pii.md
+          - name: audit-events/slots/name.md
+          - notification_type: audit-events/slots/notification_type.md
+          - outcome: audit-events/slots/outcome.md
+          - passport: audit-events/slots/passport.md
+          - persistent_session_id: audit-events/slots/persistent_session_id.md
+          - phone: audit-events/slots/phone.md
+          - platform: audit-events/slots/platform.md
+          - post_office_details: audit-events/slots/post_office_details.md
+          - previous_govuk_signin_journey_id: audit-events/slots/previous_govuk_signin_journey_id.md
+          - recipientEmail: audit-events/slots/recipientEmail.md
+          - recipientName: audit-events/slots/recipientName.md
+          - rejectionReason: audit-events/slots/rejectionReason.md
+          - requesterEmail: audit-events/slots/requesterEmail.md
+          - requesterName: audit-events/slots/requesterName.md
+          - residencePermit: audit-events/slots/residencePermit.md
+          - restricted: audit-events/slots/restricted.md
+          - session_id: audit-events/slots/session_id.md
+          - source_topic_arn: audit-events/slots/source_topic_arn.md
+          - spot_request: audit-events/slots/spot_request.md
+          - strengthScore: audit-events/slots/strengthScore.md
+          - successful: audit-events/slots/successful.md
+          - test_user: audit-events/slots/test_user.md
+          - ticket_details: audit-events/slots/ticket_details.md
+          - totalQuestionsAnsweredCorrect: audit-events/slots/totalQuestionsAnsweredCorrect.md
+          - totalQuestionsAnsweredIncorrect: audit-events/slots/totalQuestionsAnsweredIncorrect.md
+          - totalQuestionsAsked: audit-events/slots/totalQuestionsAsked.md
+          - toy: audit-events/slots/toy.md
+          - toyResponse: audit-events/slots/toyResponse.md
+          - transaction_id: audit-events/slots/transaction_id.md
+          - txn: audit-events/slots/txn.md
+          - type: audit-events/slots/type.md
+          - user: audit-events/slots/user.md
+          - user_id: audit-events/slots/user_id.md
+          - validityScore: audit-events/slots/validityScore.md
+          - verificationScore: audit-events/slots/verificationScore.md
+      - Types:
+          - Boolean: audit-events/types/Boolean.md
+          - Curie: audit-events/types/Curie.md
+          - Date: audit-events/types/Date.md
+          - DateOrDatetime: audit-events/types/DateOrDatetime.md
+          - Datetime: audit-events/types/Datetime.md
+          - Decimal: audit-events/types/Decimal.md
+          - Double: audit-events/types/Double.md
+          - Float: audit-events/types/Float.md
+          - Integer: audit-events/types/Integer.md
+          - Jsonpath: audit-events/types/Jsonpath.md
+          - Jsonpointer: audit-events/types/Jsonpointer.md
+          - Ncname: audit-events/types/Ncname.md
+          - Nodeidentifier: audit-events/types/Nodeidentifier.md
+          - Objectidentifier: audit-events/types/Objectidentifier.md
+          - Sparqlpath: audit-events/types/Sparqlpath.md
+          - String: audit-events/types/String.md
+          - Time: audit-events/types/Time.md
+          - Uri: audit-events/types/Uri.md
+          - Uriorcurie: audit-events/types/Uriorcurie.md

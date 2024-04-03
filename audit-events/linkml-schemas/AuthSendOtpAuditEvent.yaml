@@ -1,0 +1,38 @@
+id: https://vocab.account.gov.uk/linkml/auth-send-otp
+name: auth-send-otp
+description: Description for audit event AUTH_SEND_OTP
+prefixes:
+  linkml: https://w3id.org/linkml/
+  di_vocab: https://vocab.account.gov.uk/v1/
+imports:
+- ./slots
+default_curi_maps:
+- semweb_context
+default_prefix: di_vocab
+default_range: string
+classes:
+  AuthSendOtpAuditEventClass:
+    description: >
+      OTP sent. Triggered by Auth upon sending OTP to Email or Phone number.This will be triggered as part of the journey where user wants to update Email or Phone number through GOV.UK accounts
+    slots:
+    - event_name
+    - component_id
+    - user
+    - extensions
+    slot_usage:
+      user:
+        range: AuthSendOtpUserClass
+      extensions:
+        range: AuthSendOtpExtensionsClass
+      event_name:
+        pattern: ^AUTH_SEND_OTP$
+  AuthSendOtpUserClass:
+    slots:
+    - email
+    - ip_address
+    - persistent_session_id
+    - phone
+  AuthSendOtpExtensionsClass:
+    slots:
+    - notification-type
+    - test-user
