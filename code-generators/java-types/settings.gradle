@@ -1,1 +1,4 @@
 rootProject.name = 'di-data-model'
+
+include ':jackson-annotated'
+include ':plain-pojo'

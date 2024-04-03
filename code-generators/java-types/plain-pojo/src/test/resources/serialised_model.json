@@ -1,0 +1,62 @@
+{
+  "aud" : "https://passport.core.stubs.account.gov.uk",
+  "exp" : null,
+  "iat" : null,
+  "iss" : "https://review-p.build.account.gov.uk",
+  "jti" : null,
+  "nbf" : 1690816091,
+  "sub" : "urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce",
+  "vc" : {
+    "context" : null,
+    "credentialSubject" : {
+      "address" : null,
+      "birthDate" : [ {
+        "description" : null,
+        "validFrom" : null,
+        "validUntil" : null,
+        "value" : "1990-01-23"
+      } ],
+      "drivingPermit" : null,
+      "idCard" : null,
+      "name" : [ {
+        "description" : null,
+        "nameParts" : [ {
+          "type" : "GIVEN_NAME",
+          "validFrom" : null,
+          "validUntil" : null,
+          "value" : "Kenneth"
+        }, {
+          "type" : "FAMILY_NAME",
+          "validFrom" : null,
+          "validUntil" : null,
+          "value" : "Decerqueira"
+        } ],
+        "validFrom" : null,
+        "validUntil" : null
+      } ],
+      "passport" : [ {
+        "documentNumber" : "123456789",
+        "expiryDate" : "2030-12-12",
+        "icaoIssuerCode" : "GBR",
+        "issueDate" : null,
+        "validFrom" : null,
+        "validUntil" : null
+      } ],
+      "residencePermit" : null,
+      "socialSecurityRecord" : null
+    },
+    "evidence" : [ {
+      "activityHistoryScore" : null,
+      "checkDetails" : null,
+      "ci" : [ "D02" ],
+      "failedCheckDetails" : null,
+      "identityFraudScore" : null,
+      "strengthScore" : 4,
+      "txn" : "5f57a8f2-62b0-4958-9332-06d9f453e5b9",
+      "type" : "IdentityCheck",
+      "validityScore" : 0,
+      "verificationScore" : null
+    } ],
+    "type" : [ "VERIFIABLE_CREDENTIAL", "IDENTITY_CHECK_CREDENTIAL" ]
+  }
+}
