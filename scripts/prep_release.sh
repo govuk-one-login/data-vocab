@@ -21,6 +21,8 @@ npm install
 
 NEW_VERSION="$( npm pkg get version | sed 's/"//g' )"
 
+echo "version=${NEW_VERSION}" > code-generators/java-types/gradle.properties
+
 echo -e "New version: ${NEW_VERSION}\nCommit changes and create tag (y/N)?"
 read -r CONFIRM_COMMIT
 if [[ -z "$CONFIRM_COMMIT" || "y" != "$CONFIRM_COMMIT" ]]; then
@@ -31,6 +33,7 @@ fi
 git commit \
   package.json \
   package-lock.json \
+  code-generators/java-types/gradle.properties \
   -m"build: release ${NEW_VERSION}."
 
 git tag "v$NEW_VERSION"
