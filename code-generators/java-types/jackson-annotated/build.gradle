@@ -6,7 +6,7 @@ plugins {
 
 ext {
     schemaStagingDir = "${project.buildDir}/schemas"
-    modelOutputDir = "${project.buildDir}/generated-sources/di-data-model"
+    modelOutputDir = "${project.buildDir}/generated-sources/di-data-model-jackson"
 }
 
 repositories {

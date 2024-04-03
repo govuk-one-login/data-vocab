@@ -2,32 +2,47 @@
 
 This project generates data model classes as Java POJOs, based on the JSON schema files.
 
-The generated Java types are written to the `build/generated-sources/di-data-model` directory.
+There are two artifacts produced:
+
+- `di-data-model` - Java POJOs, without any annotations, produced by the `plain-pojo` module
+- `di-data-model-jackson` - Java POJOs, annotated using Jackson, produced by the `jackson-annotated` module
+
+The artifacts are published to a Maven repository for consumption within your projects. See [instructions in the README](../../README.md) for details.
 
 ## Usage
 
-Here is an example using the `IdentityCheckCredentialJWT` class. Here, we make use of the chaining builders
-(the `with...` methods), but the POJO setters and getters can also be used. 
+Here is an example using the `IdentityCheckCredentialJWT` class.
+
+> **Note**
+> In this example, we make use of the builder pattern (the static `builder()` method, and its
+> associated `with...` methods).
+> 
+> If preferred, the POJO's constructor, and its setters and getters can be used to construct
+> instances instead. 
 
 ```java
-var credentials = new IdentityCheckCredentialJWT()
-        .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
-        .withAud("https://passport.core.stubs.account.gov.uk")
-        .withNbf(1690816091)
-        .withIss("https://review-p.build.account.gov.uk");
+var credentials = IdentityCheckCredentialJWT.builder()
+    .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
+    .withAud("https://passport.core.stubs.account.gov.uk")
+    .withNbf(1690816091)
+    .withIss("https://review-p.build.account.gov.uk")
+    .build();
 
-var vc = new IdentityCheckCredentialClass().withType(List.of(
+var vc = IdentityCheckCredentialClass().builder()
+    .withType(List.of(
         VerifiableCredentialType.VERIFIABLE_CREDENTIAL,
         VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL
-));
+    )).build();
+
 credentials.setVc(vc);
 
-var evidence = new IdentityCheckClass()
-        .withValidityScore(0)
-        .withStrengthScore(4)
-        .withCi(List.of("D02"))
-        .withTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9")
-        .withType("IdentityCheck");
+var evidence = IdentityCheckClass.builder()
+    .withValidityScore(0)
+    .withStrengthScore(4)
+    .withCi(List.of("D02"))
+    .withTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9")
+    .withType("IdentityCheck")
+    .build();
 
 vc.setEvidence(List.of(evidence));
 ```
@@ -36,6 +51,8 @@ vc.setEvidence(List.of(evidence));
 
 See the unit test `uk.gov.di.model.ModelTest` (under `src/test/java`) for an example of using the
 model, then serialising it to JSON.
+
+---
 
 ## Build and run
 
@@ -52,7 +69,7 @@ Generate the Java types and run the unit tests:
 ./gradlew build
 ```
 
-The generated Java types are written to the `build/generated-sources/di-data-model` directory.
+The generated Java types are written to the `build/generated-sources` directory under their respective sub-modules.
 
 ## Publish Maven artifact
 
