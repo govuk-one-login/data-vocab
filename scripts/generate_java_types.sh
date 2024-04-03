@@ -3,5 +3,5 @@ set -e
 
 ROOT_DIR="$( git rev-parse --show-toplevel )"
 
-cd "${ROOT_DIR}/scripts/java-types"
+cd "${ROOT_DIR}/code-generators/java-types"
 ./gradlew clean build

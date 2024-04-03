@@ -96,7 +96,7 @@ jobs:
           echo "release_version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
       - name: Publish Maven artifact
-        working-directory: scripts/java-types
+        working-directory: code-generators/java-types
         run: |
           ./gradlew publish -Pversion="${{ steps.release-name.outputs.release_version }}"
         env:
