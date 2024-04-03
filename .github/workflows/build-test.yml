@@ -59,7 +59,7 @@ jobs:
         run: npm run generate
 
       - name: Generate Java types
-        working-directory: scripts/java-types
+        working-directory: code-generators/java-types
         run: ./gradlew clean build --stacktrace
 
       - name: Upload site
