@@ -48,6 +48,11 @@ jsonSchema2Pojo {
     // alongside the standard, void-return setters.
     generateBuilders = true
 
+    // If set to true, then the gang of four builder pattern will be used to generate builders on
+    // generated classes. Note: This property works in collaboration with generateBuilders.
+    // If generateBuilders is false then this property will not do anything.
+    useInnerClassBuilders = true
+
     // Whether to initialize Set and List fields as empty collections, or leave them as null.
     initializeCollections = false
 
