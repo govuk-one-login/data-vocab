@@ -5,10 +5,6 @@ plugins {
 }
 
 ext {
-    includeSchemas = [
-            "IdentityCheckCredentialJWT.json"
-    ]
-    schemaInputDir = "${project.projectDir}/../../../v1/json-schemas"
     schemaStagingDir = "${project.buildDir}/schemas"
     modelOutputDir = "${project.buildDir}/generated-sources/di-data-model"
 }
@@ -19,14 +15,14 @@ repositories {
 
 dependencies {
     // Required if generating JSR-303 annotations
-    implementation 'javax.validation:validation-api:1.1.0.CR2'
-    implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
+    implementation libs.javax.validation
+    implementation libs.jakarta.validation
     // Required if generating Jackson 2 annotations
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation libs.jackson.databind
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
-    testImplementation 'org.skyscreamer:jsonassert:1.5.1'
+    testImplementation libs.junit.api
+    testRuntimeOnly libs.junit.engine
+    testImplementation libs.jsonassert
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -85,7 +81,7 @@ assemble.dependsOn(generateJsonSchema2Pojo)
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'uk.gov.di.model'
+            groupId = mavenGroupId
             artifactId = 'di-data-model-jackson'
             version = project.version
 

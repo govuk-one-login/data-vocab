@@ -1,0 +1,7 @@
+ext {
+    schemaInputDir = "${project.projectDir}/../../v1/json-schemas"
+    includeSchemas = [
+            "IdentityCheckCredentialJWT.json"
+    ]
+    mavenGroupId = 'uk.gov.di.model'
+}
