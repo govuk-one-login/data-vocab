@@ -11,12 +11,14 @@ set -e
 
 # format: <linkml schema file>,<linkml class>,<json schema file>
 LINKML_ITEMS=(
+  "credentials.yaml,AddressCredentialJWTClass,AddressCredentialJWT.json"
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
   "credentials.yaml,CoreIdentityJWTClass,CoreIdentityJWT.json"
-  "lifeEvents.yaml,DeathRegisteredJWTClass,DeathRegisteredJWT.json",
+  "lifeEvents.yaml,DeathRegisteredJWTClass,DeathRegisteredJWT.json"
   "lifeEvents.yaml,DeathRegistrationUpdatedJWTClass,DeathRegistrationUpdatedJWT.json"
   "document.yaml,DrivingPermitDetailsClass,DrivingPermit.json"
   "document.yaml,IdCardDetailsClass,IdCard.json"
+  "credentials.yaml,IdentityAssertionCredentialJWTClass,IdentityAssertionCredentialJWT.json"
   "identityCheckCredential.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
   "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
   "credentials.yaml,InheritedIdentityJWTClass,InheritedIdentityJWT.json"
@@ -27,6 +29,7 @@ LINKML_ITEMS=(
   "address.yaml,PostalAddressClass,PostalAddress.json"
   "document.yaml,ResidencePermitDetailsClass,ResidencePermit.json"
   "riskAssessmentCredential.yaml,RiskAssessmentCredentialClass,RiskAssessmentCredential.json"
+  "credentials.yaml,RiskAssessmentCredentialJWTClass,RiskAssessmentCredentialJWT.json"
   "securityCheckCredential.yaml,SecurityCheckCredentialClass,SecurityCheckCredential.json"
   "credentials.yaml,SecurityCheckCredentialJWTClass,SecurityCheckCredentialJWT.json"
   "document.yaml,SocialSecurityRecordDetailsClass,SocialSecurityRecord.json"
