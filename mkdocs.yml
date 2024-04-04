@@ -22,6 +22,7 @@ nav:
       - Classes:
           - AddressAssertionClass: v1/classes/AddressAssertionClass.md
           - AddressCredentialClass: v1/classes/AddressCredentialClass.md
+          - AddressCredentialJWTClass: v1/classes/AddressCredentialJWTClass.md
           - AuthorizationRequestClass: v1/classes/AuthorizationRequestClass.md
           - BankAccountDetailsClass: v1/classes/BankAccountDetailsClass.md
           - BirthDateClass: v1/classes/BirthDateClass.md
@@ -90,6 +91,7 @@ nav:
           - addressCountry: v1/slots/addressCountry.md
           - addressCredentialClass__type: v1/slots/addressCredentialClass__type.md
           - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
+          - addressCredentialJWTClass__vc: v1/slots/addressCredentialJWTClass__vc.md
           - addressLocality: v1/slots/addressLocality.md
           - aud: v1/slots/aud.md
           - bankAccount: v1/slots/bankAccount.md
