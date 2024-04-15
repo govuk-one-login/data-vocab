@@ -155,10 +155,10 @@ enums:
       money_laundering_regulations:
       physical_or_biometric_official:
   IdentityCheckType:
+    description: IDENTITY_CHECK is no longer used, historic value for backward compatibility reasons only use IdentityCheck instead
     permissible_values:
       IDENTITY_CHECK:
       IdentityCheck:
-
 slots:
   txn:
     description: A unique transaction identifier for this check, or part of a check, if any.
