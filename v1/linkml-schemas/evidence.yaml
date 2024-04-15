@@ -16,7 +16,8 @@ classes:
   IdentityCheckClass:
     attributes:
       type:
-        equals_string: IdentityCheck
+        range: IdentityCheckType
+        description: Identity check type values allowed
     slots:
       - txn
       - strengthScore
@@ -153,6 +154,10 @@ enums:
       published: 
       money_laundering_regulations:
       physical_or_biometric_official:
+  IdentityCheckType:
+    permissible_values:
+      IDENTITY_CHECK:
+      IdentityCheck:
 
 slots:
   txn:
