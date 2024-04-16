@@ -174,6 +174,7 @@ nav:
           - kbvQuality: v1/slots/kbvQuality.md
           - kbvResponseMode: v1/slots/kbvResponseMode.md
           - mitigatingCredential: v1/slots/mitigatingCredential.md
+          - mitigatingCredentialClass__validFrom: v1/slots/mitigatingCredentialClass__validFrom.md
           - mitigation: v1/slots/mitigation.md
           - name: v1/slots/name.md
           - nameParts: v1/slots/nameParts.md
