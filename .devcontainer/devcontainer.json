@@ -5,7 +5,11 @@
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
+		"ghcr.io/devcontainers-contrib/features/poetry:2": {},
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "17",
+			"installGradle": "true"
+		}
 	},
 	"forwardPorts": [
 		"8000:8000"
