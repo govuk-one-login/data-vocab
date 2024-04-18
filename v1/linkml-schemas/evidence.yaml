@@ -155,9 +155,10 @@ enums:
       money_laundering_regulations:
       physical_or_biometric_official:
   IdentityCheckType:
-    description: IDENTITY_CHECK is no longer used, historic value for backward compatibility reasons only use IdentityCheck instead
     permissible_values:
       IDENTITY_CHECK:
+        deprecated: Historic value for backward compatibility reasons only use IdentityCheck instead.
+        deprecated_element_has_exact_replacement: IdentityCheck
       IdentityCheck:
 slots:
   txn:

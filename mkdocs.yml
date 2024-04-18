@@ -76,6 +76,7 @@ nav:
           - DataCheckType: v1/enums/DataCheckType.md
           - FraudCheckType: v1/enums/FraudCheckType.md
           - IdentityCheckPolicyType: v1/enums/IdentityCheckPolicyType.md
+          - IdentityCheckType: v1/enums/IdentityCheckType.md
           - IdentityVectorOfTrust: v1/enums/IdentityVectorOfTrust.md
           - KBVResponseModeType: v1/enums/KBVResponseModeType.md
           - NamePartType: v1/enums/NamePartType.md
