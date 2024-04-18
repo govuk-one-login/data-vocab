@@ -19,8 +19,6 @@ dependencies {
     // Required if generating Jackson 2 annotations
     implementation libs.jackson.databind
 
-    implementation project(":lib")
-
     testImplementation libs.junit.api
     testRuntimeOnly libs.junit.engine
     testImplementation libs.jsonassert

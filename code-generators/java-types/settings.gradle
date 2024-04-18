@@ -1,6 +1,5 @@
 rootProject.name = 'di-data-model'
 
-include ':lib'
 include ':jackson-annotated'
 include ':plain-pojo'
 
