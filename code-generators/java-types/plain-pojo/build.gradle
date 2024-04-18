@@ -65,6 +65,9 @@ jsonSchema2Pojo {
     // will cause jsonschema2pojo to <strong>indiscriminately delete the entire contents of the target
     // directory (all files and folders)</strong> before it begins generating sources.
     removeOldOutput = false
+
+    // Override the rule factory with our custom implementation
+    customRuleFactory = 'uk.gov.di.codegen.CustomRuleFactory'
 }
 
 test {
