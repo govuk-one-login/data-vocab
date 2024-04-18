@@ -17,6 +17,8 @@ dependencies {
     implementation libs.javax.validation
     implementation libs.jakarta.validation
 
+    implementation project(":lib")
+
     testImplementation libs.jackson.databind
     testImplementation libs.junit.api
     testRuntimeOnly libs.junit.engine
