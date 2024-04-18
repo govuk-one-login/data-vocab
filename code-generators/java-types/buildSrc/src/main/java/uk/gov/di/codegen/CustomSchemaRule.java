@@ -7,9 +7,10 @@ import org.jsonschema2pojo.Schema;
 import org.jsonschema2pojo.rules.RuleFactory;
 import org.jsonschema2pojo.rules.SchemaRule;
 
-import java.util.Iterator;
-import java.util.Map;
-
+/**
+ * Custom schema rule that generates all classes contained within the '$defs' section of the json-schema.
+ * This may be removed once https://github.com/joelittlejohn/jsonschema2pojo/pull/1523 (or equivalent) is available.
+ */
 public class CustomSchemaRule extends SchemaRule {
     private static final String DEFINITIONS_PATH = "/$defs";
 

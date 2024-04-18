@@ -4,87 +4,79 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 
-import java.io.File;
+import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.List;
 
 /**
- * Deserialises an example JSON file to an instance of the model.
+ * Builds an instance of the model, serialises it, then compares
+ * the serialised version to an exemplar JSON string.
  */
 class ModelTest {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper()
             .enable(SerializationFeature.INDENT_OUTPUT);
 
-    private static File serialisedModel;
+    private static String serialisedModel;
 
     @BeforeAll
     static void beforeAll() throws Exception {
-        serialisedModel = Path.of(ModelTest.class.getResource("/serialised_model.json").toURI()).toFile();
+        var serialisedExample = Path.of(ModelTest.class.getResource("/serialised_model.json").toURI());
+        serialisedModel = Files.readString(serialisedExample);
     }
 
     @Test
-    public void jsonShouldDeserialiseToModel() throws Exception {
-        var credentials = OBJECT_MAPPER.readValue(serialisedModel, IdentityCheckCredentialJWT.class);
+    public void useModel() throws Exception {
+        var credentials = new IdentityCheckCredentialJWTClass();
+        credentials.setSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce");
+        credentials.setAud("https://passport.core.stubs.account.gov.uk");
+        credentials.setNbf(1690816091);
+        credentials.setIss("https://review-p.build.account.gov.uk");
 
-        // root object
-        assertEquals("https://passport.core.stubs.account.gov.uk", credentials.getAud());
-        assertEquals("https://review-p.build.account.gov.uk", credentials.getIss());
-        assertEquals(1690816091, credentials.getNbf());
-        assertEquals("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce", credentials.getSub());
-
-        // vc
-        var vc = credentials.getVc();
-        assertNotNull(vc);
-        assertThat(vc.getType(), hasItems(
-                equalTo(VerifiableCredentialType.VERIFIABLE_CREDENTIAL),
-                equalTo(VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL)
+        var vc = new IdentityCheckCredentialClass();
+        vc.setType(List.of(
+                VerifiableCredentialType.VERIFIABLE_CREDENTIAL,
+                VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL
         ));
+        credentials.setVc(vc);
 
-        // evidence
-        var evidence = vc.getEvidence();
-        assertThat(evidence, hasSize(1));
-        assertThat(evidence, hasItem(allOf(
-                hasProperty("ci", hasItem(equalTo("D02"))),
-                hasProperty("strengthScore", equalTo(4)),
-                hasProperty("txn", equalTo("5f57a8f2-62b0-4958-9332-06d9f453e5b9")),
-                hasProperty("type", equalTo(IdentityCheckClass.IdentityCheckType.IDENTITY_CHECK_)),
-                hasProperty("validityScore", equalTo(0))
-        )));
+        var evidence = new IdentityCheckClass();
+        evidence.setValidityScore(0);
+        evidence.setStrengthScore(4);
+        evidence.setCi(List.of("D02"));
+        evidence.setTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9");
+        evidence.setType("IdentityCheck");
+        vc.setEvidence(List.of(evidence));
 
-        // subject
-        var credentialSubject = vc.getCredentialSubject();
-        assertNotNull(credentialSubject);
-        assertThat(credentialSubject.getBirthDate(), hasSize(1));
-        assertEquals("1990-01-23", credentialSubject.getBirthDate().get(0).getValue());
+        var credentialSubject = new IdentityCheckSubjectClass();
+        vc.setCredentialSubject(credentialSubject);
 
-        // name
-        var name = credentialSubject.getName();
-        assertThat(name, hasSize(1));
-        var nameParts = name.get(0).getNameParts();
-        assertThat(nameParts, hasItems(
-                allOf(
-                        hasProperty("type", equalTo(NamePartClass.NamePartType.GIVEN_NAME)),
-                        hasProperty("value", equalTo("Kenneth"))
-                ),
-                allOf(
-                        hasProperty("type", equalTo(NamePartClass.NamePartType.FAMILY_NAME)),
-                        hasProperty("value", equalTo("Decerqueira"))
-                ))
-        );
+        var passport = new PassportDetailsClass();
+        passport.setExpiryDate("2030-12-12");
+        passport.setIcaoIssuerCode("GBR");
+        passport.setDocumentNumber("123456789");
+        credentialSubject.setPassport(List.of(passport));
 
-        // passports
-        var passports = credentialSubject.getPassport();
-        assertNotNull(passports);
-        assertThat(passports, hasSize(1));
-        assertThat(passports, hasItem(allOf(
-                hasProperty("documentNumber", equalTo("123456789")),
-                hasProperty("expiryDate", equalTo("2030-12-12")),
-                hasProperty("icaoIssuerCode", equalTo("GBR"))
-        )));
+        var givenName = new NamePartClass();
+        givenName.setType(NamePartClass.NamePartType.GIVEN_NAME);
+        givenName.setValue("Kenneth");
+
+        var familyName = new NamePartClass();
+        familyName.setType(NamePartClass.NamePartType.FAMILY_NAME);
+        familyName.setValue("Decerqueira");
+
+        var name = new NameClass();
+        name.setNameParts(List.of(givenName, familyName));
+        credentialSubject.setName(List.of(name));
+
+        var birthDate = new BirthDateClass();
+        birthDate.setValue("1990-01-23");
+        credentialSubject.setBirthDate(List.of(birthDate));
+
+        var json = OBJECT_MAPPER.writeValueAsString(credentials);
+        System.out.println(json);
+
+        JSONAssert.assertEquals(serialisedModel, json, false);
     }
 }
