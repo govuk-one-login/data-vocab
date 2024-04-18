@@ -28,19 +28,19 @@ class ModelTest {
 
     @Test
     public void useModel() throws Exception {
-        var credentials = new IdentityCheckCredentialJWTClass()
+        var credentials = new IdentityCheckCredentialJWT()
                 .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
                 .withAud("https://passport.core.stubs.account.gov.uk")
                 .withNbf(1690816091)
                 .withIss("https://review-p.build.account.gov.uk");
 
-        var vc = new IdentityCheckCredentialClass().withType(List.of(
+        var vc = new IdentityCheckCredential().withType(List.of(
                 VerifiableCredentialType.VERIFIABLE_CREDENTIAL,
                 VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL
         ));
         credentials.setVc(vc);
 
-        var evidence = new IdentityCheckClass()
+        var evidence = new IdentityCheck()
                 .withValidityScore(0)
                 .withStrengthScore(4)
                 .withCi(List.of("D02"))
@@ -48,26 +48,26 @@ class ModelTest {
                 .withType("IdentityCheck");
         vc.setEvidence(List.of(evidence));
 
-        var credentialSubject = new IdentityCheckSubjectClass();
+        var credentialSubject = new IdentityCheckSubject();
         vc.setCredentialSubject(credentialSubject);
 
-        var passport = new PassportDetailsClass()
+        var passport = new PassportDetails()
                 .withExpiryDate("2030-12-12")
                 .withIcaoIssuerCode("GBR")
                 .withDocumentNumber("123456789");
         credentialSubject.setPassport(List.of(passport));
 
-        var name = new NameClass().withNameParts(List.of(
-                new NamePartClass()
-                        .withType(NamePartClass.NamePartType.GIVEN_NAME)
+        var name = new Name().withNameParts(List.of(
+                new NamePart()
+                        .withType(NamePart.NamePartType.GIVEN_NAME)
                         .withValue("Kenneth"),
-                new NamePartClass()
-                        .withType(NamePartClass.NamePartType.FAMILY_NAME)
+                new NamePart()
+                        .withType(NamePart.NamePartType.FAMILY_NAME)
                         .withValue("Decerqueira")
         ));
         credentialSubject.setName(List.of(name));
 
-        var birthDate = new BirthDateClass().withValue("1990-01-23");
+        var birthDate = new BirthDate().withValue("1990-01-23");
         credentialSubject.setBirthDate(List.of(birthDate));
 
         var json = OBJECT_MAPPER.writeValueAsString(credentials);
