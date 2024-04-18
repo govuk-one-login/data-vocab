@@ -5,8 +5,7 @@ plugins {
 }
 
 ext {
-    schemaStagingDir = "${project.buildDir}/schemas"
-    modelOutputDir = "${project.buildDir}/generated-sources/di-data-model-jackson"
+    modelOutputDir = "${project.buildDir}/generated-sources/di-data-model"
 }
 
 repositories {
@@ -23,7 +22,6 @@ dependencies {
     testImplementation libs.junit.api
     testRuntimeOnly libs.junit.engine
     testImplementation libs.jsonassert
-    testImplementation libs.hamcrest
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -36,7 +34,7 @@ java {
 // see https://github.com/joelittlejohn/jsonschema2pojo/tree/master/jsonschema2pojo-gradle-plugin#usage
 jsonSchema2Pojo {
     // Location of the JSON Schema file(s). This may refer to a single file or a directory of files.
-    source = files(schemaStagingDir)
+    source = files(schemaInputDir)
 
     // Target directory for generated Java source files. The plugin will add this directory to the
     // java source set so the compiler will find and compile the newly generated source files.
@@ -70,12 +68,6 @@ test {
     useJUnitPlatform()
 }
 
-generateJsonSchema2Pojo.doFirst {
-    copy {
-        from includeSchemas.collect { "${schemaInputDir}/${it}" }
-        into schemaStagingDir
-    }
-}
 generateJsonSchema2Pojo.doLast {
     logger.quiet("Wrote Java types to ${modelOutputDir}")
 }
