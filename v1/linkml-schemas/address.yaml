@@ -70,6 +70,7 @@ classes:
 slots:
   uprn:
     range: integer
+    minimum_value: 1
     maximum_value: 999999999999 # UPRNs can be up to 12 digits in length
     exact_mappings: adb:uprn
     description: The Unique Property Reference Number (UK and Northern Ireland Addresses Only)
