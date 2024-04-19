@@ -42,6 +42,14 @@ classes:
         range: string
         description: The date in the form CCYY[-MM[-DD]]
 
+  CredentialSubjectClass:
+    description: Verifiable credential subjects use multiple inheritance; this base class is intentionally blank.
+    see_also:
+      - /v1/IdentityCheckCredentialClass_credentialSubject
+      - /v1/AddressCredentialClass_credentialSubject
+      - /v1/IdentityAssertionCredentialClass_credentialSubject
+      - /v1/VerifiableIdentityCredentialClass_credentialSubject
+
 types:
   JWS:
     uri: "https://www.iana.org/assignments/media-types/application/jose"
