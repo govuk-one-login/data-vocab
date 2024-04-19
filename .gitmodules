@@ -1,4 +1,4 @@
 [submodule "linkml"]
 	path = linkml
-	url = ../../alphagov/linkml.git
+	url = ../../govuk-one-login/linkml.git
 	branch = generate-site-to-dirs
