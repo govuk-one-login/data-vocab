@@ -22,11 +22,6 @@ import static org.jsonschema2pojo.util.TypeUtil.resolveType;
 public class CustomObjectRule extends ObjectRule {
     private static final String CLASS_SUFFIX = "Class";
 
-    private static final Map<String, String> INTERFACE_MAPPING = Map.of(
-            "CredentialJWTClass", "uk.gov.di.model.CredentialJWT",
-            "CredentialClass", "uk.gov.di.model.Credential"
-    );
-
     protected CustomObjectRule(RuleFactory ruleFactory, ParcelableHelper parcelableHelper, ReflectionHelper reflectionHelper) {
         super(ruleFactory, parcelableHelper, reflectionHelper);
     }
@@ -38,12 +33,6 @@ public class CustomObjectRule extends ObjectRule {
             : nodeName;
 
         var jClass = super.apply(trimmedName, node, parent, _package, schema);
-
-        for (var suffix : INTERFACE_MAPPING.keySet()) {
-            if (nodeName.endsWith(suffix) && jClass instanceof JDefinedClass jDefinedClass) {
-                jDefinedClass._implements(resolveType(jDefinedClass._package(), INTERFACE_MAPPING.get(suffix)));
-            }
-        }
 
         return jClass;
     }
