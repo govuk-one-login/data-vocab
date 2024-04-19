@@ -15,6 +15,7 @@ default_range: string
 
 classes:
   PersonClass:
+    is_a: CredentialSubjectClass
     class_uri: schema:Person
 
   PersonWithIdentityClass:
