@@ -74,9 +74,11 @@ classes:
       - code
       - mitigatingCredential
   MitigatingCredentialClass:
+    attributes:
+      validFrom:
+        range: datetime
     slots:
       - issuer
-      - validFrom
       - txn
       - id 
   
