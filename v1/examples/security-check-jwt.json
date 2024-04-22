@@ -1,0 +1,43 @@
+{
+    "sub": "urn:uuid:01a0aaa6-5593-40d3-ac8e-eef1f0b8bf1a",
+    "iss": "did:web:identity.build.account.gov.uk:cimit",
+    "nbf": 1713792518,
+    "iat": 1713792518,
+    "exp": 1714656518,
+    "vc": {
+        "type": [
+            "VerifiableCredential",
+            "SecurityCheckCredential"
+        ],
+        "evidence": [
+            {
+                "type": "SecurityCheck",
+                "contraIndicator": [
+                    {
+                        "code": "A01",
+                        "issuers": [
+                            "https://build-di-ipv-cri-fraud-stub.london.cloudapps.digital"
+                        ],
+                        "issuanceDate": "2022-09-30T15:11:02.000Z",
+                        "txn": [
+                            "361704C6-F6CC-4D40-869A-ACDD64C03886"
+                        ],
+                        "mitigation": [
+                            {
+                                "code": "A01",
+                                "mitigatingCredential": [
+                                    {
+                                        "validFrom": "2022-09-30T15:11:10.000Z",
+                                        "txn": "361704C6-F6CC-4D40-869A-ACDD64C03886",
+                                        "id": "01FF95A9-89A9-4A0E-ACF8-4EFFF36AF990"
+                                    }
+                                ]
+                            }
+                        ],
+                        "incompleteMitigation": []
+                    }
+                ]
+            }
+        ]
+    }
+}
