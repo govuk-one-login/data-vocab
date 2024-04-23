@@ -1,0 +1,9 @@
+services:
+  docs:
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    command: "/app/scripts/generate_json_schemas.sh"
+    volumes:
+      - ./v1:/app/v1
