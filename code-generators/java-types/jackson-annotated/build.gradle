@@ -23,6 +23,7 @@ dependencies {
     testImplementation libs.junit.api
     testRuntimeOnly libs.junit.engine
     testImplementation libs.jsonassert
+    testImplementation libs.hamcrest
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
