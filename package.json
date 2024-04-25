@@ -28,8 +28,8 @@
     "json-schema-to-typescript": "^13.1.1"
   },
   "scripts": {
-    "copy-pkg-misc": "cp src/package-template.json v1/types/package.json && cp README.md v1/types",
+    "copy-pkg-misc": "cp code-generators/typescript-types/src/package-template.json code-generators/typescript-types/dist/package.json && cp README.md code-generators/typescript-types/dist",
     "generate": "npm run generate-types && npm run copy-pkg-misc",
-    "generate-types": "node src/index.mjs v1/json-schemas v1/types"
+    "generate-types": "node $PWD/code-generators/typescript-types/src/index.mjs $PWD/v1/json-schemas $PWD/code-generators/typescript-types/dist"
   }
 }
