@@ -59,8 +59,8 @@ jobs:
         run: npm run generate
 
       - name: Generate Java types
-        working-directory: code-generators/java-types
-        run: ./gradlew clean build --stacktrace
+        working-directory: scripts
+        run: ./generate_java_types.sh
 
       - name: Upload site
         uses: actions/upload-artifact@v3
