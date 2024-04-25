@@ -76,6 +76,13 @@ jobs:
           path: v1/json-schemas
           retention-days: 1
 
+      - name: Upload combined schema
+        uses: actions/upload-artifact@v3
+        with:
+          name: combined-schema
+          path: code-generators/java-types/schemas
+          retention-days: 1
+
       - name: Upload TypeScript types
         uses: actions/upload-artifact@v3
         with:

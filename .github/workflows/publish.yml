@@ -95,9 +95,11 @@ jobs:
         run: |
           echo "release_version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
-      - name: Generate Java types
-        working-directory: scripts
-        run: ./generate_java_types.sh
+      - name: Download combined schema
+        uses: actions/download-artifact@v3
+        with:
+          name: combined-schema
+          path: code-generators/java-types/schemas
 
       - name: Publish Maven artifact
         working-directory: code-generators/java-types
