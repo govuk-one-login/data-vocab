@@ -95,6 +95,10 @@ jobs:
         run: |
           echo "release_version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
+      - name: Generate Java types
+        working-directory: scripts
+        run: ./generate_java_types.sh
+
       - name: Publish Maven artifact
         working-directory: code-generators/java-types
         run: |
