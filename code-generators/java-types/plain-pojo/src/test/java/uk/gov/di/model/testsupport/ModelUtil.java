@@ -9,61 +9,63 @@ import java.util.List;
  */
 public class ModelUtil {
     public static IdentityCheckCredentialJWT buildCredential() {
-        return IdentityCheckCredentialJWT.builder()
+        var credentialBuilder = IdentityCheckCredentialJWT.builder();
+        credentialBuilder
+                .withVc(buildVc())
                 .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
                 .withAud("https://passport.core.stubs.account.gov.uk")
                 .withNbf(1690816091)
-                .withIss("https://review-p.build.account.gov.uk")
-                .withVc(buildVc())
-                .build();
+                .withIss("https://review-p.build.account.gov.uk");
+        return credentialBuilder.build();
     }
 
     @SuppressWarnings("unchecked")
-    private static IdentityCheckCredentialClass buildVc() {
-        var evidence = IdentityCheckClass.builder()
+    private static IdentityCheckCredential buildVc() {
+        var evidence = IdentityCheck.builder()
                 .withValidityScore(0)
                 .withStrengthScore(4)
                 .withCi(List.of("D02"))
                 .withTxn("5f57a8f2-62b0-4958-9332-06d9f453e5b9")
-                .withType(IdentityCheckClass.IdentityCheckType.IDENTITY_CHECK_)
+                .withType(IdentityCheck.IdentityCheckType.IDENTITY_CHECK_)
                 .build();
 
-        return IdentityCheckCredentialClass.builder()
+        return IdentityCheckCredential.builder().withEvidence(List.of(evidence))
                 .withCredentialSubject(buildCredentialSubject())
-                .withEvidence(List.of(evidence))
                 .withType(List.of(
                         VerifiableCredentialType.VERIFIABLE_CREDENTIAL,
                         VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL
-                )).build();
+                ))
+                .build();
     }
 
     @SuppressWarnings("unchecked")
-    private static IdentityCheckSubjectClass buildCredentialSubject() {
-        var birthDate = BirthDateClass.builder()
+    private static IdentityCheckSubject buildCredentialSubject() {
+        var birthDate = BirthDate.builder()
                 .withValue("1990-01-23")
                 .build();
 
-        var name = NameClass.builder().withNameParts(List.of(
-                NamePartClass.builder()
-                        .withType(NamePartClass.NamePartType.GIVEN_NAME)
+        var name = Name.builder().withNameParts(List.of(
+                NamePart.builder()
+                        .withType(NamePart.NamePartType.GIVEN_NAME)
                         .withValue("Kenneth")
                         .build(),
-                NamePartClass.builder()
-                        .withType(NamePartClass.NamePartType.FAMILY_NAME)
+                NamePart.builder()
+                        .withType(NamePart.NamePartType.FAMILY_NAME)
                         .withValue("Decerqueira")
                         .build()
         )).build();
 
-        var passport = PassportDetailsClass.builder()
+        var passport = PassportDetails.builder()
                 .withExpiryDate("2030-12-12")
                 .withIcaoIssuerCode("GBR")
                 .withDocumentNumber("123456789")
                 .build();
 
-        return IdentityCheckSubjectClass.builder()
-                .withBirthDate(List.of(birthDate))
-                .withName(List.of(name))
+        var subjectBuilder = IdentityCheckSubject.builder();
+        subjectBuilder
                 .withPassport(List.of(passport))
-                .build();
+                .withBirthDate(List.of(birthDate))
+                .withName(List.of(name));
+        return subjectBuilder.build();
     }
 }
