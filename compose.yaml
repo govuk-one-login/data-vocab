@@ -4,6 +4,7 @@ services:
       context: .
     ports:
       - 8000:8000
-    command: "/app/scripts/generate_json_schemas.sh"
+    command: "/app/scripts/generate_json_schemas.sh -j /app/code-generators/java-types/schemas -o combined"
     volumes:
-      - ./v1:/app/v1
+      - ./v1/linkml-schemas:/app/v1/linkml-schemas
+      - ./code-generators/java-types/schemas:/app/code-generators/java-types/schemas
