@@ -28,7 +28,7 @@ var credentials = IdentityCheckCredentialJWT.builder()
     .withIss(URI.create("https://review-p.build.account.gov.uk"))
     .build();
 
-var vc = IdentityCheckCredentialClass().builder()
+var vc = IdentityCheckCredential().builder()
     .withType(List.of(
         VerifiableCredentialType.VERIFIABLE_CREDENTIAL,
         VerifiableCredentialType.IDENTITY_CHECK_CREDENTIAL
@@ -36,7 +36,7 @@ var vc = IdentityCheckCredentialClass().builder()
 
 credentials.setVc(vc);
 
-var evidence = IdentityCheckClass.builder()
+var evidence = IdentityCheck.builder()
     .withValidityScore(0)
     .withStrengthScore(4)
     .withCi(List.of("D02"))
@@ -50,7 +50,7 @@ vc.setEvidence(List.of(evidence));
 ## Example
 
 See the unit test `uk.gov.di.model.ModelTest` (under `src/test/java`) for an example of using the
-model, then serialising it to JSON.
+model, and deserialising to it from JSON.
 
 ---
 
@@ -58,7 +58,7 @@ model, then serialising it to JSON.
 
 ### Prerequisites
 
-- Generate the schema files from this project (see `scripts/generate_json_schemas.sh`)
+- Generate the schema files from this project (run `./scripts/generate_json_schemas.sh -o combined -j ./code-generators/java-types/schemas`)
 - Ensure you have Java 17+ installed
 
 ## Generate
@@ -73,7 +73,7 @@ The generated Java types are written to the `build/generated-sources` directory 
 
 ## Publish Maven artifact
 
-You can publish the generated sources as a Maven artifact.
+You can publish the generated types as a Maven artifact.
 
 > **Note**
 > To set the version of the artifact, set the `version` Gradle property.
