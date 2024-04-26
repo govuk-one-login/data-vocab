@@ -56,7 +56,8 @@ jobs:
         run: scripts/test
 
       - name: Generate TypeScript types
-        run: npm run generate
+        working-directory: scripts
+        run: ./generate_ts_types.sh
 
       - name: Generate Java types
         working-directory: scripts

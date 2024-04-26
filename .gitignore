@@ -27,7 +27,3 @@ site
 .DS_Store
 
 Staticfile.auth
-
-# Generated TypeScript types
-gen/
-code-generators/typescript-types/dist/

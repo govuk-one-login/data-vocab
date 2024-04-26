@@ -1,0 +1,5 @@
+node_modules/
+dist/
+schemas/
+*.iml
+.idea/

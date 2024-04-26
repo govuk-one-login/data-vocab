@@ -22,7 +22,10 @@ async function generate(schemaDir, genDir) {
         const typesFilename = schemaFilename.substring(0, schemaFilename.length - 5) + ".d.ts";
         const typesFile = path.join(genDir, typesFilename);
 
-        const types = await compileFromFile(schemaFile);
+        const types = await compileFromFile(schemaFile, {
+            // includes all definitions in the $defs portion of the schema
+            unreachableDefinitions: true,
+        });
         await writeFile(typesFile, types);
     }
 
@@ -32,7 +35,7 @@ async function generate(schemaDir, genDir) {
 const schemaDir = args[0];
 console.log(`Generating from schema dir: ${schemaDir}`);
 
-const genDir = args.length >= 2 ? args[1] : path.join(process.cwd(), "gen");
+const genDir = args.length >= 2 ? args[1] : path.join(process.cwd(), "dist");
 if (!fs.existsSync(genDir)) {
     await mkdir(genDir);
 }

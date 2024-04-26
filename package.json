@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "description": "Builds the vocab site based on the identity vocab. Also generates JSON Schemas and TypeScript types from DI Vocab JSON Schema.",
+  "description": "Builds the vocab site based on the identity vocab. Also generates JSON Schemas from DI Vocab JSON Schema.",
   "private": true,
   "version": "1.6.1",
   "devDependencies": {
@@ -24,12 +24,6 @@
   "browser": {
     "assert": false
   },
-  "dependencies": {
-    "json-schema-to-typescript": "^13.1.1"
-  },
-  "scripts": {
-    "copy-pkg-misc": "cp code-generators/typescript-types/src/package-template.json code-generators/typescript-types/dist/package.json && cp README.md code-generators/typescript-types/dist",
-    "generate": "npm run generate-types && npm run copy-pkg-misc",
-    "generate-types": "node $PWD/code-generators/typescript-types/src/index.mjs $PWD/v1/json-schemas $PWD/code-generators/typescript-types/dist"
-  }
+  "dependencies": {},
+  "scripts": {}
 }
