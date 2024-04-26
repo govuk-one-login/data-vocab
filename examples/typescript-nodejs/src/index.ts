@@ -1,6 +1,6 @@
-import {Credentials} from "@govuk-one-login/data-vocab/IdentityCheckCredentialJWT";
+import {IdentityCheckCredentialJWTClass} from "@govuk-one-login/data-vocab/credentials";
 
-const credentials: Credentials = {
+const credentials: IdentityCheckCredentialJWTClass = {
     sub: "urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce",
     aud: "https://passport.core.stubs.account.gov.uk",
     nbf: 1690816091,

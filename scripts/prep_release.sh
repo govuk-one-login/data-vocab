@@ -12,16 +12,57 @@ else
   RELEASE_TYPE="$1"
 fi
 
-cd "${ROOT_DIR}"
+#
+# Update root schemas project.
+#
+function update_root_project(){
+  cd "${ROOT_DIR}"
 
-npm version "$RELEASE_TYPE" --git-tag-version=false
+  npm version "$RELEASE_TYPE" --git-tag-version=false
 
-# update lockfile etc.
-npm install
+  # update lockfile etc.
+  npm install
+}
 
+#
+# Update TypeScript type generator project.
+#
+function update_ts_generator() {
+  cd "${ROOT_DIR}/code-generators/typescript-types"
+
+  npm version "$1"
+
+  # update lockfile etc.
+  npm install
+}
+
+#
+# Update Java type generator project.
+#
+function update_java_generator() {
+  echo "version=$1" > code-generators/java-types/gradle.properties
+}
+
+#
+# Commits the changes to git and tags it.
+#
+function commit_and_tag() {
+  local NEW_VERSION="$1"
+
+  git commit \
+    package.json \
+    package-lock.json \
+    code-generators/java-types/gradle.properties \
+    -m"build: release ${NEW_VERSION}."
+
+  git tag "v$NEW_VERSION"
+}
+
+update_root_project
 NEW_VERSION="$( npm pkg get version | sed 's/"//g' )"
 
-echo "version=${NEW_VERSION}" > code-generators/java-types/gradle.properties
+update_ts_generator "${NEW_VERSION}"
+update_java_generator "${NEW_VERSION}"
 
 echo -e "New version: ${NEW_VERSION}\nCommit changes and create tag (y/N)?"
 read -r CONFIRM_COMMIT
@@ -30,10 +71,4 @@ if [[ -z "$CONFIRM_COMMIT" || "y" != "$CONFIRM_COMMIT" ]]; then
   exit 1
 fi
 
-git commit \
-  package.json \
-  package-lock.json \
-  code-generators/java-types/gradle.properties \
-  -m"build: release ${NEW_VERSION}."
-
-git tag "v$NEW_VERSION"
+commit_and_tag
