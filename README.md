@@ -9,7 +9,7 @@ This repository produces the following artifacts:
 * [Vocabulary documentation](https://govuk-one-login.github.io/data-vocab/)
 * [JSON Schemas](https://github.com/govuk-one-login/data-vocab/releases)
 * [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab)
-* [Java data model classes (Maven artifact)](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab)
+* [Java data model classes (Maven artifact)](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab&ecosystem=maven)
 
 Further development could include:
 
@@ -177,7 +177,7 @@ Here's an example of the step with the `NODE_AUTH_TOKEN` configured:
 
 Java data model classes are published with each tagged version of this repository. You can add these as a dependency in your Gradle/Maven project.
 
-These are published as [a Maven artifact](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab) to GitHub Packages.
+These are published as [a Maven artifact](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab&ecosystem=maven) to GitHub Packages.
 
 ## Add the dependency
 
