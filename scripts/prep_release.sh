@@ -40,7 +40,7 @@ function update_ts_generator() {
 # Update Java type generator project.
 #
 function update_java_generator() {
-  echo "version=$1" > code-generators/java-types/gradle.properties
+  echo "version=$1" > "${ROOT_DIR}/code-generators/java-types/gradle.properties"
 }
 
 #
@@ -48,17 +48,22 @@ function update_java_generator() {
 #
 function commit_and_tag() {
   local NEW_VERSION="$1"
+  cd "${ROOT_DIR}"
 
-  git commit \
+  git add \
     package.json \
     package-lock.json \
     code-generators/java-types/gradle.properties \
-    -m"build: release ${NEW_VERSION}."
+    code-generators/typescript-types/package.json \
+    code-generators/typescript-types/package-lock.json
 
+  git commit -m"build: release ${NEW_VERSION}."
   git tag "v$NEW_VERSION"
 }
 
 update_root_project
+
+cd "${ROOT_DIR}"
 NEW_VERSION="$( npm pkg get version | sed 's/"//g' )"
 
 update_ts_generator "${NEW_VERSION}"
@@ -71,4 +76,4 @@ if [[ -z "$CONFIRM_COMMIT" || "y" != "$CONFIRM_COMMIT" ]]; then
   exit 1
 fi
 
-commit_and_tag
+commit_and_tag "${NEW_VERSION}"
