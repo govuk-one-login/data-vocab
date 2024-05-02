@@ -34,7 +34,7 @@ java {
 // see https://github.com/joelittlejohn/jsonschema2pojo/tree/master/jsonschema2pojo-gradle-plugin#usage
 jsonSchema2Pojo {
     // Location of the JSON Schema file(s). This may refer to a single file or a directory of files.
-    source = files(schemaInputDir)
+    source = files("${schemaInputDir}/combined")
 
     // Target directory for generated Java source files. The plugin will add this directory to the
     // java source set so the compiler will find and compile the newly generated source files.

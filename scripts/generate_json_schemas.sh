@@ -52,7 +52,6 @@ JSON_SCHEMA_DIR="${ROOT_DIR}/v1/json-schemas"
 # to control whether multiple or combined JSON Schema
 # files are produced.
 OUTPUT_MODE="separate"
-
 while getopts "j:o:l:" opt; do
   case ${opt} in
     j )
@@ -86,7 +85,7 @@ function prep_output_dir() {
 # Writes separate JSON Schema files.
 #
 function generate_separate_files() {
-  cp $JSON_SCHEMA_DIR/index.md.template $JSON_SCHEMA_DIR/index.md
+  [[ -f $JSON_SCHEMA_DIR/index.md.template ]] && cp $JSON_SCHEMA_DIR/index.md.template $JSON_SCHEMA_DIR/index.md
 
   for LINKML_ITEM in "${LINKML_ITEMS[@]}"; do
     ITEM_DETAILS=(${LINKML_ITEM//,/ })
@@ -97,8 +96,8 @@ function generate_separate_files() {
 
     poetry run gen-json-schema --closed --no-metadata -t "${LINKML_CLASS}" \
       "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" > "${JSON_SCHEMA_DIR}/${JSON_SCHEMA}"
-    echo "| [$JSON_SCHEMA]($JSON_SCHEMA) | [$LINKML_CLASS](../classes/$LINKML_CLASS) |" >> $JSON_SCHEMA_DIR/index.md
-    poetry run python ./scripts/check_schema_see_also.py  "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" $LINKML_CLASS ../json-schemas/$JSON_SCHEMA
+    [[ -f $JSON_SCHEMA_DIR/index.md ]] && echo "| [$JSON_SCHEMA]($JSON_SCHEMA) | [$LINKML_CLASS](../classes/$LINKML_CLASS) |" >> $JSON_SCHEMA_DIR/index.md
+    poetry run python ${ROOT_DIR}/scripts/check_schema_see_also.py  "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" $LINKML_CLASS ../json-schemas/$JSON_SCHEMA
   done
 }
 

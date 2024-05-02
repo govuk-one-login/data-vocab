@@ -16,3 +16,5 @@ dependencyResolutionManagement {
         }
     }
 }
+include 'schema-artefacts'
+
