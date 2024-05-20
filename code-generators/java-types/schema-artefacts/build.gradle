@@ -1,0 +1,50 @@
+plugins {
+    id "java"
+    id "maven-publish"
+}
+
+repositories {
+    repositories {
+        maven {
+            url 'https://gds.jfrog.io/artifactory/di-allowed-repos'
+        }
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = mavenGroupId
+            artifactId = 'di-data-model-schema'
+            version = project.version
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/govuk-one-login/data-vocab"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+task copySchemaFiles(type: Copy) {
+    from "${schemaInputDir}/separate/"
+    into layout.buildDirectory.dir("resources/main/uk/gov/di/model/schema")
+}
+
+processResources.dependsOn(copySchemaFiles)
