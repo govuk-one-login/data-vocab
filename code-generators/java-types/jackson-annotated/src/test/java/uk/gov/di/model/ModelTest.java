@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.net.URI;
 import java.nio.file.Path;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -32,10 +33,10 @@ class ModelTest {
         var credentials = OBJECT_MAPPER.readValue(serialisedModel, IdentityCheckCredentialJWT.class);
 
         // root object
-        assertEquals("https://passport.core.stubs.account.gov.uk", credentials.getAud());
-        assertEquals("https://review-p.build.account.gov.uk", credentials.getIss());
+        assertEquals(URI.create("https://passport.core.stubs.account.gov.uk"), credentials.getAud());
+        assertEquals(URI.create("https://review-p.build.account.gov.uk"), credentials.getIss());
         assertEquals(1690816091, credentials.getNbf());
-        assertEquals("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce", credentials.getSub());
+        assertEquals(URI.create("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce"), credentials.getSub());
 
         // vc
         var vc = credentials.getVc();

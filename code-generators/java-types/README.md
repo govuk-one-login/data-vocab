@@ -22,10 +22,10 @@ Here is an example using the `IdentityCheckCredentialJWT` class.
 
 ```java
 var credentials = IdentityCheckCredentialJWT.builder()
-    .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
-    .withAud("https://passport.core.stubs.account.gov.uk")
+    .withSub(URI.create("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce"))
+    .withAud(URI.create("https://passport.core.stubs.account.gov.uk"))
     .withNbf(1690816091)
-    .withIss("https://review-p.build.account.gov.uk")
+    .withIss(URI.create("https://review-p.build.account.gov.uk"))
     .build();
 
 var vc = IdentityCheckCredentialClass().builder()
