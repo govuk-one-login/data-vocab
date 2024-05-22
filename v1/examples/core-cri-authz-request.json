@@ -1,6 +1,6 @@
 {
   "aud": "http:\/\/www.example.com\/audience",
-  "sub": "test-user-id",
+  "sub": "urn:uuid:5fd61512-6683-4a2b-8940-55c0cd1635e2",
   "nbf": 1659007190,
   "shared_claims": {
     "address": [
@@ -88,7 +88,7 @@
   },
   "iss": "http:\/\/www.example.com\/issuer",
   "response_type": "code",
-  "redirect_uri": "callbackUrl?id=PassportIssuer",
+  "redirect_uri": "http://localhost/callbackUrl?id=PassportIssuer",
   "state": "S-mX7O17YDxkCTGxxTg68nWW1Of6KhnkVrK1uZlG76s",
   "exp": 1659008090,
   "iat": 1659007190,

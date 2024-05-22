@@ -3,6 +3,8 @@ package uk.gov.di.model;
 import org.junit.jupiter.api.Test;
 import uk.gov.di.model.testsupport.ModelUtil;
 
+import java.net.URI;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,10 +19,10 @@ class ModelTest {
         var credentials = ModelUtil.buildCredential();
 
         // root object
-        assertEquals("https://passport.core.stubs.account.gov.uk", credentials.getAud());
-        assertEquals("https://review-p.build.account.gov.uk", credentials.getIss());
+        assertEquals(URI.create("https://passport.core.stubs.account.gov.uk"), credentials.getAud());
+        assertEquals(URI.create("https://review-p.build.account.gov.uk"), credentials.getIss());
         assertEquals(1690816091, credentials.getNbf());
-        assertEquals("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce", credentials.getSub());
+        assertEquals(URI.create("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce"), credentials.getSub());
 
         // vc
         var vc = credentials.getVc();

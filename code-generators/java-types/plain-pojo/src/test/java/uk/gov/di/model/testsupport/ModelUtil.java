@@ -2,6 +2,7 @@ package uk.gov.di.model.testsupport;
 
 import uk.gov.di.model.*;
 
+import java.net.URI;
 import java.util.List;
 
 /**
@@ -12,10 +13,10 @@ public class ModelUtil {
         var credentialBuilder = IdentityCheckCredentialJWT.builder();
         credentialBuilder
                 .withVc(buildVc())
-                .withSub("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce")
-                .withAud("https://passport.core.stubs.account.gov.uk")
+                .withSub(URI.create("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce"))
+                .withAud(URI.create("https://passport.core.stubs.account.gov.uk"))
                 .withNbf(1690816091)
-                .withIss("https://review-p.build.account.gov.uk");
+                .withIss(URI.create("https://review-p.build.account.gov.uk"));
         return credentialBuilder.build();
     }
 

@@ -29,7 +29,7 @@
                                     {
                                         "validFrom": "2022-09-30T15:11:10.000Z",
                                         "txn": "361704C6-F6CC-4D40-869A-ACDD64C03886",
-                                        "id": "01FF95A9-89A9-4A0E-ACF8-4EFFF36AF990"
+                                        "id": "urn:uuid:01FF95A9-89A9-4A0E-ACF8-4EFFF36AF990"
                                     }
                                 ]
                             }
