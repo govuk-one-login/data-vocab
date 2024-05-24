@@ -1,0 +1,18 @@
+{
+  "name": "@govuk-one-login/data-vocab-schemas",
+  "description": "GOV.UK One Login - Digital Identity Vocabulary - Schemas only",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/govuk-one-login/data-vocab"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
