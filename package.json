@@ -2,7 +2,7 @@
   "name": "root",
   "description": "Builds the vocab site based on the identity vocab. Also generates JSON Schemas from DI Vocab JSON Schema.",
   "private": true,
-  "version": "1.6.1",
+  "version": "1.6.2",
   "devDependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
