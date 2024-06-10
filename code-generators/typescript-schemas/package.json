@@ -1,0 +1,28 @@
+{
+  "name": "root",
+  "description": "Builds the vocab site based on the identity vocab. Also generates JSON Schemas from DI Vocab JSON Schema.",
+  "private": true,
+  "version": "1.7.1",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govuk-one-login/data-vocab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/govuk-one-login/data-vocab/issues"
+  },
+  "homepage": "https://github.com/govuk-one-login/data-vocab#readme",
+  "browser": {
+    "assert": false
+  },
+  "dependencies": {},
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "copy-pkg-misc": "cp ./src/package-template.json ./dist/package.json && cp ../../README.md ./src/tsconfig.json ./dist",
+    "generate": "npm run generate-schemas && npm run copy-pkg-misc",
+    "generate-schemas": "node ./src/index.mjs $PWD/schemas $PWD/dist"
+  }
+}
