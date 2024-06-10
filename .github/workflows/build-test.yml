@@ -59,6 +59,10 @@ jobs:
         working-directory: scripts
         run: ./generate_ts_types.sh
 
+      - name: Generate TypeScript schemas
+        working-directory: scripts
+        run: ./generate_ts_schemas.sh
+
       - name: Generate Java types
         working-directory: scripts
         run: ./generate_java_types.sh
@@ -89,4 +93,11 @@ jobs:
         with:
           name: ts-types
           path: code-generators/typescript-types/dist
+          retention-days: 1
+
+      - name: Upload TypeScript schemas
+        uses: actions/upload-artifact@v3
+        with:
+          name: ts-schemas
+          path: code-generators/typescript-schemas/dist
           retention-days: 1
