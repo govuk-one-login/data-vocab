@@ -1,7 +1,7 @@
 {
-  "name": "example-typescript",
+  "name": "schemas-typescript",
   "version": "0.1.0",
-  "description": "Example project that consumes DI Vocab TypeScript types.",
+  "description": "Example project that consumes DI Vocab schemas.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -11,7 +11,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@govuk-one-login/data-vocab": "^1.7.2"
+    "@govuk-one-login/data-vocab-schemas": "1.7.2",
+    "ajv": "^8.16.0",
+    "ajv-formats": "^3.0.1"
   },
   "devDependencies": {
     "typescript": "^5.2.2"
