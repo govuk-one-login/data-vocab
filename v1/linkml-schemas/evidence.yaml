@@ -24,6 +24,7 @@ classes:
       - validityScore
       - verificationScore
       - activityHistoryScore
+      - decisionScore
       - identityFraudScore
       - checkDetails
       - failedCheckDetails
@@ -186,6 +187,9 @@ slots:
     range: integer
     minimum_value: 0
     maximum_value: 4
+  decisionScore:
+    description: The decision score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#strength)
+    range: integer
   identityFraudScore:
     description: The identity fraud score based on the check that has taken place as defined in the [Good Practice Guide 45 documentation](https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity#identity-fraud) 
     range: integer
