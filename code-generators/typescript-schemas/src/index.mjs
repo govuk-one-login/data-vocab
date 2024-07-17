@@ -6,7 +6,14 @@ const args = process.argv.slice(2);
 if (args.length < 1) {
     throw new Error("Missing path to JSON schema")
 }
+const schemaDir = args[0];
+const genDir = args.length >= 2 ? args[1] : path.join(process.cwd(), "gen");
 
+/**
+ * Generate the schema files
+ * @param {string} schemaDir The folder containing the original schema files
+ * @param {string} genDir The folder to output the index.ts and the transformed schema files
+ */
 async function generate(schemaDir, genDir) {
     const files = (await readdir(schemaDir))
         .filter((f) => f.endsWith(".json"));
@@ -14,7 +21,7 @@ async function generate(schemaDir, genDir) {
     console.log(`${files.length} schema files`, files);
 
     let indexFile = path.join(genDir, 'src', 'index.ts');
-    let index = "";
+    let index = [];
 
     for (const file of files) {
         const schemaFile = path.join(schemaDir, file);
@@ -24,23 +31,27 @@ async function generate(schemaDir, genDir) {
         await copyFile(schemaFile, path.join(genDir, 'src', 'schemas', schemaName));
         const schemaExportName = path.basename(schemaName, '.json');
 
-        index += `import ${schemaExportName} from'./schemas/${schemaName}';\n`;
-        index += `export const ${schemaExportName}Schema = ${schemaExportName};\n`;
+        index.push(`import ${schemaExportName} from'./schemas/${schemaName}';`);
+        index.push(`export const ${schemaExportName}Schema = ${schemaExportName};`);
     }
-    await writeFile(indexFile, index);
+    await writeFile(indexFile, index.join('\n'));
 
     console.log(`Wrote schemas files to: ${genDir}`);
 }
 
-const schemaDir = args[0];
-console.log(`Generating from schema dir: ${schemaDir}`);
+/**
+ * Generate source tree
+ * @param {string} schemaDir The folder containing the original schema files
+ * @param {string} genDir The folder to output the index.ts and the transformed schema files
+ */
+async function generateSourceTree(schemaDir, genDir) {
+    console.log(`Generating from schema dir: ${schemaDir}`);
 
-const genDir = args.length >= 2 ? args[1] : path.join(process.cwd(), "gen");
-if (!fs.existsSync(genDir)) {
-    await mkdir(genDir);
-    await mkdir(path.join(genDir, 'src'));
-    await mkdir(path.join(genDir, 'src', 'schemas'));
+    if (!fs.existsSync(genDir)) {
+        await mkdir(path.join(genDir, 'src', 'schemas'), { recursive: true });
+    }
+
+    await generate(schemaDir, genDir);
 }
 
-generate(schemaDir, genDir)
-    .catch((cause) => console.error(cause));
+await generateSourceTree(schemaDir, genDir).catch((cause) => console.error(cause));
