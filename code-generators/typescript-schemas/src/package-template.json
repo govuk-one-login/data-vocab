@@ -14,5 +14,6 @@
   },
   "scripts": {
     "build": "tsc"
-  }
+  },
+  "main": "dist/index.js"
 }
