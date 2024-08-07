@@ -218,3 +218,40 @@ Add this to `pom.xml`:
 ```
 
 > [Learn more](https://docs.github.com/articles/configuring-apache-maven-for-use-with-github-package-registry/) about consuming the dependency from Maven.
+
+## Release process
+
+To cut a release, you need to:
+
+1. Update the version in the Gradle properties file
+2. Update the version in the Node.js package.json files
+3. Commit the changes
+4. Tag the commit with the version number
+
+To automate this process, you can use the `scripts/prep_release.sh` script:
+
+```shell
+./scripts/prep_release.sh <release type>
+```
+
+Where `<release type>` is one of `major`, `minor`, or `patch` in line with [Semantic Versioning](https://semver.org/).
+
+For example:
+
+```shell
+$ ./scripts/prep_release.sh patch
+
+New version: 1.7.2
+Commit changes and create tag (y/N)?
+```
+
+Once you have confirmed the version, the script will commit the changes and create a tag for the release.
+
+> **Note**
+> You must push the tag and update the `main` branch to trigger the release process.
+> 
+> ```shell
+> git push origin main --tags
+> ```
+
+On push, the GitHub Actions workflow will build and publish the artifacts to GitHub Packages and the vocab static site.
