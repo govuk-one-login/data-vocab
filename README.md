@@ -219,7 +219,9 @@ Add this to `pom.xml`:
 
 > [Learn more](https://docs.github.com/articles/configuring-apache-maven-for-use-with-github-package-registry/) about consuming the dependency from Maven.
 
-## Release process
+---
+
+# Release process
 
 To cut a release, you need to:
 
