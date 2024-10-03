@@ -38,6 +38,9 @@ classes:
       - address
 
   BirthDateClass:
+    description: >-
+      BirthDate object that represents a user's claimed date of birth.
+      <p>JSON schema&#58; [di_vocab:BirthDate](../json-schemas/BirthDate.json)</p>
     mixins:
       - ValidityClass
     attributes:
@@ -46,6 +49,8 @@ classes:
         required: true
     slots:
       - description
+    see_also:
+      - ../json-schemas/BirthDate.json
 
   SexClass:
     slots:

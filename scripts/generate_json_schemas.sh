@@ -11,6 +11,7 @@ set -e
 
 # format: <linkml schema file>,<linkml class>,<json schema file>
 LINKML_ITEMS=(
+  "person.yaml,BirthDateClass,BirthDate.json"
   "credentials.yaml,AddressCredentialJWTClass,AddressCredentialJWT.json"
   "credentials.yaml,AuthorizationRequestClass,AuthorizationRequest.json"
   "credentials.yaml,CoreIdentityJWTClass,CoreIdentityJWT.json"
