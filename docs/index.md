@@ -24,7 +24,8 @@ We provide [JSON Schemas](./v1/json-schemas/) for many of the important classes 
 ## Examples
 
 * [Name Examples](v1/classes/NameClass)
-* [Postal Address Examples](v1/classes/PostalAddressClass)
+* [Postal Address UK Examples](v1/classes/PostalAddressUKClass)
+* [Postal Address International Examples](v1/classes/PostalAddressInternationalClass)
 * [Passport Details Examples](v1/classes/PassportDetailsClass)
 * [Driving Permit Details Examples](v1/classes/DrivingPermitDetailsClass)
 * [Residence Permit Details Examples](v1/classes/ResidencePermitDetailsClass)
