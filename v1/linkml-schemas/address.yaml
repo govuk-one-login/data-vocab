@@ -49,25 +49,25 @@ classes:
       <p>Examples</p>
       <ul>
       <li>
-      [Building Number](../examples/PostalAddressClassUK/BuildingNumber.json)
+      [Building Number](../examples/PostalAddressUKClass/BuildingNumber.json)
       </li>
       <li>
-      [Building Name with UPRN](../examples/PostalAddressClassUK/BuildingNameUPRN.json)
+      [Building Name with UPRN](../examples/PostalAddressUKClass/BuildingNameUPRN.json)
       </li>
       <li>
-      [Building Name without UPRN](../examples/PostalAddressClassUK/BuildingNameNoUPRN.json)
+      [Building Name without UPRN](../examples/PostalAddressUKClass/BuildingNameNoUPRN.json)
       </li>
       <li>
-      [Building Number with Building Name](../examples/PostalAddressClassUK/BuildingNumberName.json)
+      [Building Number with Building Name](../examples/PostalAddressUKClass/BuildingNumberName.json)
       </li>
       <li>
-      [Building Number with Dependent Address Locality](../examples/PostalAddressClassUK/BuildingNumberWithDependentAddressLocality.json)
+      [Building Number with Dependent Address Locality](../examples/PostalAddressUKClass/BuildingNumberWithDependentAddressLocality.json)
       </li>
       <li>
-      [Sub Building Name with Building Name](../examples/PostalAddressClassUK/SubBuildingNameWithBuildingName.json)
+      [Sub Building Name with Building Name](../examples/PostalAddressUKClass/SubBuildingNameWithBuildingName.json)
       </li>
       <li>
-      [Sub Building Name with Building Number](../examples/PostalAddressClassUK/SubBuildingNameWithBuildingNumber.json)
+      [Sub Building Name with Building Number](../examples/PostalAddressUKClass/SubBuildingNameWithBuildingNumber.json)
       </li>
       </ul>
       <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
@@ -87,7 +87,22 @@ classes:
     is_a: PostalAddressClass
     description: >-
       An international postal address associated with a user, returned by an Address Lookup API or by manual data input. 
-      <p>JSON schema&#58; [di_vocab:PostalAddressInternational](../json-schemas/PostalAddressInternational.json)</p>  
+      <p>JSON schema&#58; [di_vocab:PostalAddressInternationalClass](../json-schemas/PostalAddressInternational.json)</p>
+      <p>Examples</p>
+      <ul>
+      <li>
+      [Building Number](../examples/PostalAddressInternationalClass/BuildingNumber.json)
+      </li>
+      <li>
+      [Building Number and Organisation Name](../examples/PostalAddressInternationalClass/BuildingNumberOrganisationName.json)
+      </li>
+      <li>
+      [Building Name and Number and Organisation Name](../examples/PostalAddressInternationalClass/BuildingNameBuildingNumberOrganisationName.json)
+      </li>
+      <li>
+      [PO Box Number](../examples/PostalAddressInternationalClass/POBoxNumberOrganisationName.json)
+      </li>
+      </ul>
       <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
       <p>Close mapping&#58; [schema:PostalAddress](https://schema.org/PostalAddress)</p>
     see_also:
