@@ -96,6 +96,7 @@ nav:
           - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
           - addressCredentialJWTClass__vc: v1/slots/addressCredentialJWTClass__vc.md
           - addressLocality: v1/slots/addressLocality.md
+          - addressRegion: v1/slots/addressRegion.md
           - aud: v1/slots/aud.md
           - bankAccount: v1/slots/bankAccount.md
           - biometricVerificationProcessLevel: v1/slots/biometricVerificationProcessLevel.md
@@ -188,6 +189,7 @@ nav:
           - PassportDetailsClass_expiryDate: v1/slots/PassportDetailsClass_expiryDate.md
           - personalNumber: v1/slots/personalNumber.md
           - photoVerificationProcessLevel: v1/slots/photoVerificationProcessLevel.md
+          - poBoxNumber: v1/slots/poBoxNumber.md
           - postalCode: v1/slots/postalCode.md
           - prompt: v1/slots/prompt.md
           - redirect_uri: v1/slots/redirect_uri.md
