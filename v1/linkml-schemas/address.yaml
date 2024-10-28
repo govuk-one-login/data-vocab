@@ -15,7 +15,7 @@ default_prefix: di_vocab
 default_range: string
 
 classes:
-  PostalAddressAbstractClass:
+  PostalAddressGeneralClass:
     abstract: true
     description: >-
       An abstract class containing common elements of a postal address.
@@ -42,7 +42,8 @@ classes:
       - adb:Address  
     
   PostalAddressUKClass:
-    is_a: PostalAddressClass
+    is_a: PostalAddressGeneralClass
+    mixin: true
     description: >-
       A UK postal address associated with a user, returned by an Address Lookup API or by manual data input. 
       <p>JSON schema&#58; [di_vocab:PostalAddressUK](../json-schemas/PostalAddressUK.json)</p>  
@@ -84,7 +85,8 @@ classes:
       - adb:Address
 
   PostalAddressInternationalClass:
-    is_a: PostalAddressClass
+    is_a: PostalAddressGeneralClass
+    mixin: true
     description: >-
       An international postal address associated with a user, returned by an Address Lookup API or by manual data input. 
       <p>JSON schema&#58; [di_vocab:PostalAddressInternationalClass](../json-schemas/PostalAddressInternational.json)</p>
@@ -113,8 +115,7 @@ classes:
       - schema:PostalAddress
       - adb:Address
 
-  PostalAddressAbstractClass:
-    abstract: true
+  PostalAddressClass:
     description: >-
       Any postal address associated with a user, returned by an Address Lookup API or by manual data input. 
       <p>JSON schema&#58; [di_vocab:PostalAddress](../json-schemas/PostalAddress.json)</p> 

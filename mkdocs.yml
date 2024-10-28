@@ -58,6 +58,7 @@ nav:
           - PersonWithDocumentsClass: v1/classes/PersonWithDocumentsClass.md
           - PersonWithIdentityClass: v1/classes/PersonWithIdentityClass.md
           - PostalAddressClass: v1/classes/PostalAddressClass.md
+          - PostalAddressGeneralClass: v1/classes/PostalAddressGeneralClass.md
           - PostalAddressInternationalClass: v1/classes/PostalAddressInternationalClass.md
           - PostalAddressUKClass: v1/classes/PostalAddressUKClass.md
           - ResidencePermitDetailsClass: v1/classes/ResidencePermitDetailsClass.md
