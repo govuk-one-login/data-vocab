@@ -16,53 +16,84 @@ default_range: string
 
 classes:
   PostalAddressClass:
+    abstract: true
     description: >-
-      A postal address associated with a user, returned by an Address Lookup API or by manual data input. 
-      <p>JSON schema&#58; [di_vocab:PostalAddress](../json-schemas/PostalAddress.json)</p>  
-      <p>Examples</p>
-      <ul>
-      <li>
-      [Building Number](../examples/PostalAddressClass/BuildingNumber.json)
-      </li>
-      <li>
-      [Building Name with UPRN](../examples/PostalAddressClass/BuildingNameUPRN.json)
-      </li>
-      <li>
-      [Building Name without UPRN](../examples/PostalAddressClass/BuildingNameNoUPRN.json)
-      </li>
-      <li>
-      [Building Number with Building Name](../examples/PostalAddressClass/BuildingNumberName.json)
-      </li>
-      <li>
-      [Building Number with Dependent Address Locality](../examples/PostalAddressClass/BuildingNumberWithDependentAddressLocality.json)
-      </li>
-      <li>
-      [Sub Building Name with Building Name](../examples/PostalAddressClass/SubBuildingNameWithBuildingName.json)
-      </li>
-      <li>
-      [Sub Building Name with Building Number](../examples/PostalAddressClass/SubBuildingNameWithBuildingNumber.json)
-      </li>
-      </ul>
-      <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
-      <p>Close mapping&#58; [schema:PostalAddress](https://schema.org/PostalAddress)</p>
+      An abstract class containing common elements of a postal address.
+      Attributes have a close mapping to either or both Ordnance Survey AddressBase and schema.org.
+      This class should not be used directly. Lower-level classes are used to generate schema for UK or international addresses.
+      <p>JSON schema&#58; [di_vocab:PostalAddress](../json-schemas/PostalAddress.json)</p>
     see_also:
       - ../json-schemas/PostalAddress.json
     mixins:
       - ValidityClass
     slots:
-      - uprn
+      - buildingNumber
+      - buildingName
+      - poBoxNumber
       - organisationName
       - departmentName
       - subBuildingName
-      - buildingNumber
-      - buildingName
-      - dependentStreetName
-      - streetName
-      - doubleDependentAddressLocality
-      - dependentAddressLocality
+      - streetName       
       - addressLocality
       - postalCode
       - addressCountry
+    close_mappings:
+      - schema:PostalAddress
+      - adb:Address  
+    
+  PostalAddressUKClass:
+    is_a: PostalAddressClass
+    description: >-
+      A UK postal address associated with a user, returned by an Address Lookup API or by manual data input. 
+      <p>JSON schema&#58; [di_vocab:PostalAddressUK](../json-schemas/PostalAddressUK.json)</p>  
+      <p>Examples</p>
+      <ul>
+      <li>
+      [Building Number](../examples/PostalAddressClassUK/BuildingNumber.json)
+      </li>
+      <li>
+      [Building Name with UPRN](../examples/PostalAddressClassUK/BuildingNameUPRN.json)
+      </li>
+      <li>
+      [Building Name without UPRN](../examples/PostalAddressClassUK/BuildingNameNoUPRN.json)
+      </li>
+      <li>
+      [Building Number with Building Name](../examples/PostalAddressClassUK/BuildingNumberName.json)
+      </li>
+      <li>
+      [Building Number with Dependent Address Locality](../examples/PostalAddressClassUK/BuildingNumberWithDependentAddressLocality.json)
+      </li>
+      <li>
+      [Sub Building Name with Building Name](../examples/PostalAddressClassUK/SubBuildingNameWithBuildingName.json)
+      </li>
+      <li>
+      [Sub Building Name with Building Number](../examples/PostalAddressClassUK/SubBuildingNameWithBuildingNumber.json)
+      </li>
+      </ul>
+      <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
+      <p>Close mapping&#58; [schema:PostalAddress](https://schema.org/PostalAddress)</p>
+    see_also:
+      - ../json-schemas/PostalAddressUK.json
+    slots:
+      - uprn
+      - dependentStreetName
+      - doubleDependentAddressLocality
+      - dependentAddressLocality
+    close_mappings:
+      - schema:PostalAddress
+      - adb:Address
+
+  PostalAddressInternationalClass:
+    is_a: PostalAddressClass
+    description: >-
+      An international postal address associated with a user, returned by an Address Lookup API or by manual data input. 
+      <p>JSON schema&#58; [di_vocab:PostalAddressInternational](../json-schemas/PostalAddressInternational.json)</p>  
+      <p>Close mapping&#58; [adb:Address](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
+      <p>Close mapping&#58; [schema:PostalAddress](https://schema.org/PostalAddress)</p>
+    see_also:
+      - ../json-schemas/PostalAddressInternational.json
+    slots:
+      - addressRegion
     close_mappings:
       - schema:PostalAddress
       - adb:Address
@@ -106,6 +137,10 @@ slots:
                  name will be a blend of distinctive and descriptive naming, for example, RAILWAY
                  TAVERN (PUBLIC HOUSE) or THE COURT ROYAL (HOTEL).
                  <p>Close mapping&#58; [adb:buildingName](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
+  poBoxNumber:
+    exact_mappings: adb:poBoxNumber
+    description: Post Office Box (PO Box) number.
+                 <p>Exact mapping&#58; [adb:poBoxNumber](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
   dependentStreetName:
     close_mappings: adb:dependentThoroughfare
     description: In certain places, for example, town centres, there are named
@@ -136,12 +171,17 @@ slots:
     close_mappings: adb:postTown
     description: The town or city in which the address resides.
                  <p>Close mapping&#58; [adb:postTown](http://www.geoplace.co.uk/addressbase/schema/2.1/addressbase.xsd)</p>
+                 <p>Exact mapping&#58; [schema:addressLocality](https://schema.org/addressLocality)</p>
   postalCode:
     exact_mappings: schema:postalCode
     description: A UK postcode is an abbreviated form of address made up of combinations of
                  between five and seven alphanumeric characters.  International postal codes have different formats.
                  <p>Exact mapping&#58; [schema:postalCode](https://schema.org/postalCode)</p>
+  addressRegion:
+    exact_mappings: schema:addressRegion
+    description: The region in which the locality is, and which is in the country, provided as text. For example, California, or another appropriate first-level Administrative division.
+                 <p>Exact mapping&#58; [schema:addressRegion](https://schema.org/addressRegion)</p>  
   addressCountry:
     close_mappings: schema:addressCountry
-    description: The country. Provided as the two-letter ISO 3166-1 alpha-2 country code.
+    description: The country. Provided as the two-letter ISO 3166-1 alpha-2 country code, hence this only closely maps rather than exactly maps to schema.org which permits any text.
                  <p>Close mapping&#58; [schema:addressCountry](https://schema.org/addressCountry)</p>
