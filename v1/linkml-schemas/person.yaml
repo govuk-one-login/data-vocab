@@ -67,7 +67,7 @@ slots:
     multivalued: true
     inlined_as_list: true
   address:
-    range: PostalAddressUKClass
+    range: PostalAddressClass
     multivalued: true
     inlined_as_list: true
   sex:
