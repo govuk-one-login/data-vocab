@@ -68,35 +68,35 @@ jobs:
         run: ./generate_java_types.sh
 
       - name: Upload site
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: site
           retention-days: 1
 
       - name: Upload JSON Schemas
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: json-schemas
           path: v1/json-schemas
           retention-days: 1
 
       - name: Upload combined schema
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: combined-schema
           path: code-generators/java-types/schemas
           retention-days: 1
 
       - name: Upload TypeScript types
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ts-types
           path: code-generators/typescript-types/dist
           retention-days: 1
 
       - name: Upload TypeScript schemas
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ts-schemas
           path: code-generators/typescript-schemas/dist
