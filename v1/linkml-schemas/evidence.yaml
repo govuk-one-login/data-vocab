@@ -141,10 +141,10 @@ enums:
       multiple_choice:
   FraudCheckType:
     permissible_values:
-      mortality_check:
       identity_theft_check:
-      synthetic_identity_check:
       impersonation_risk_check:
+      mortality_check:
+      synthetic_identity_check:
   DataCheckType:
     permissible_values:
       record_check:
