@@ -141,6 +141,7 @@ enums:
       multiple_choice:
   FraudCheckType:
     permissible_values:
+      country_data:
       identity_theft_check:
       impersonation_risk_check:
       mortality_check:
