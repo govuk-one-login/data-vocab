@@ -142,7 +142,7 @@ enums:
   FraudCheckType:
     permissible_values:
       country_data:
-        description: Denotes if a user has an international address
+        description: Denotes whether the third parties used for fraud checks are an authoritative source for data from that country. This means that if we fail, we cannot do an ID Fraud check and provide an identityFraudScore for that user.
       identity_theft_check:
       impersonation_risk_check:
       mortality_check:
