@@ -142,6 +142,7 @@ enums:
   FraudCheckType:
     permissible_values:
       country_data:
+        description: Denotes if a user has an international address
       identity_theft_check:
       impersonation_risk_check:
       mortality_check:
