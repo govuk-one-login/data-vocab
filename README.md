@@ -41,6 +41,8 @@ npm install -g ajv-cli@5.0.0 ajv-formats@2.1.1
 If the above dependencies/versions need to change, please update the [devcontainer configuration](.devcontainer/devcontainer.json) also.
 ```
 
+If you get an error like `No module named 'packaging'` then you may need to run `pip install packaging`
+
 ### Dev Container
 
 Open the repo in a development container in vscode, and the pre-requisites will be pre-installed
