@@ -44,9 +44,9 @@ function update_java_generator() {
 }
 
 #
-# Commits the changes to git and tags it.
+# Commits the changes to git
 #
-function commit_and_tag() {
+function commit() {
   local NEW_VERSION="$1"
   cd "${ROOT_DIR}"
 
@@ -57,8 +57,7 @@ function commit_and_tag() {
     code-generators/typescript-types/package.json \
     code-generators/typescript-types/package-lock.json
 
-  git commit -m"build: release ${NEW_VERSION}."
-  git tag "v$NEW_VERSION"
+  git commit -m "build: release ${NEW_VERSION}."
 }
 
 update_root_project
@@ -76,4 +75,4 @@ if [[ -z "$CONFIRM_COMMIT" || "y" != "$CONFIRM_COMMIT" ]]; then
   exit 1
 fi
 
-commit_and_tag "${NEW_VERSION}"
+commit "${NEW_VERSION}"

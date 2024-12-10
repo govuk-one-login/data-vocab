@@ -1,0 +1,65 @@
+name: Detect New Release and Tag
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  detect-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+
+      - name: Detect Release Numbers
+        id: detect-releases
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DETECTED="$(npm pkg get version | sed 's/"//g')"
+          CURRENT="$(gh release list -L 1 --json name --exclude-drafts --exclude-pre-releases -q '.[0].name')"
+
+          echo "detected-release=${DETECTED}"
+          echo "current-release=${CURRENT}"
+          
+          echo "detected-release=${DETECTED}" >> "${GITHUB_OUTPUT}"
+          echo "current-release=${CURRENT}" >> "${GITHUB_OUTPUT}"
+
+      - name: Sense Check Release
+        shell: bash
+        env:
+          NPM_RELEASE: ${{ steps.detect-releases.outputs.detected-release }}
+        run: |
+          GRADLE_RELEASE="$(cat code-generators/java-types/gradle.properties | grep '^version=' | sed 's/version=//g')"
+          
+          echo "Gradle Release is ${GRADLE_RELEASE}"
+          echo "NPM Release is ${NPM_RELEASE}"
+          
+          if [[ "${GRADLE_RELEASE}" != "${NPM_RELEASE}" ]]
+          then
+            echo "Releases are not in sync"
+            exit 1
+          fi
+
+      - name: Create tag
+        uses: actions/github-script@v5
+        if: "format('v{0}', steps.detect-releases.outputs.detected-release) != steps.detect-releases.outputs.current-release"
+        env:
+          RELEASE: ${{ steps.detect-releases.outputs.detected-release }}
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/tags/v${process.env.RELEASE}`,
+              sha: context.sha
+            })
