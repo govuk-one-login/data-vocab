@@ -6,7 +6,8 @@ if [[ -z "$ROOT_DIR" ]]; then
 fi
 
 EXAMPLES=(
-  "PostalAddressClass"
+  "PostalAddressInternationalClass"
+  "PostalAddressUKClass"
   "PassportDetailsClass"
   "DrivingPermitDetailsClass"
   "ResidencePermitDetailsClass"

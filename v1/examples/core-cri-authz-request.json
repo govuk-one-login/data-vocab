@@ -19,6 +19,7 @@
         "validUntil": "2023-01-01",
         "dependentAddressLocality": "Eastminster",
         "addressLocality": "Nodnol",
+        "addressRegion": "Wales",
         "doubleDependentAddressLocality": "someDoubleDependentAddressLocality"
       },
       {
@@ -36,6 +37,7 @@
         "validUntil": "2020-01-01",
         "dependentAddressLocality": "Westminster",
         "addressLocality": "London",
+        "addressRegion": "England",
         "doubleDependentAddressLocality": "otherDoubleDependentAddressLocality"
       }
     ],
