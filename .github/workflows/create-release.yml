@@ -1,0 +1,51 @@
+name: Create release tag
+
+on:
+  push:
+    branches:
+      - bau-auto-build-release
+
+permissions:
+  contents: read
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, 'build: release ')"
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+
+      - name: Extract Release Number
+        id: extract-release
+        shell: bash
+        run: |
+          echo "RELEASE=$( npm pkg get version | sed 's/"//g' )" >> "${GITHUB_OUTPUT}"
+
+      - name: Sense Check Release
+        shell: bash
+        env:
+          NPM_RELEASE: ${{ steps.extract-release.outputs.RELEASE}}
+        run:
+          GRADLE_RELEASE=$(cat code-generators/java-types/gradle.properties | awk -F = '{print $2}')
+          if [[ "${GRADLE_RELEASE}" != "${NPM_RELEASE}" ]]; then
+            echo "Releases are not in sync"
+            exit 1
+          fi
+
+      - name: Create tag
+        uses: actions/github-script@v5
+        env:
+          RELEASE: ${{ steps.extract-release.outputs.RELEASE}}
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/tags/v${process.env.RELEASE}`,
+              sha: context.sha
+            })
