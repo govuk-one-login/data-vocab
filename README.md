@@ -249,13 +249,10 @@ New version: 1.7.2
 Commit changes and create tag (y/N)?
 ```
 
-Once you have confirmed the version, the script will commit the changes and create a tag for the release.
+Once you have confirmed the version, the script will commit the changes.
 
-> **Note**
-> You must push the tag and update the `main` branch to trigger the release process.
-> 
-> ```shell
-> git push origin main --tags
-> ```
+Now raise a PR and seek a review. Once approved, merge the PR.
 
-On push, the GitHub Actions workflow will build and publish the artifacts to GitHub Packages and the vocab static site.
+On merge, the `detect-and-tag-release` workflow will detect the release number change and automatically tag the
+commit with the release number. This, in turn, will trigger the `publish` workflow to publish the artefacts to GitHub 
+Packages.
