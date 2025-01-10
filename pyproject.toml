@@ -4,6 +4,7 @@ version = "1.0.0"
 description = "GOV.UK identity vocabulary"
 authors = ["Your Name <you@example.com>"]
 license = "MIT Copyright (c) 2022 Crown Copyright (Government Digital Service)"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
