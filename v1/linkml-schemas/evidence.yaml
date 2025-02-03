@@ -143,6 +143,8 @@ enums:
     permissible_values:
       applicable_authoritative_source:
         description: Denotes whether the third parties used for fraud checks are an authoritative source for the current user. This means that if we fail, we cannot do an ID Fraud check and provide an identityFraudScore for that user.
+      available_authoritative_source:
+        description: Denotes whether the third parties used for fraud checks are available. This means that if we fail, we cannot do an ID Fraud check and provide an identityFraudScore for that user.
       identity_theft_check:
       impersonation_risk_check:
       mortality_check:
