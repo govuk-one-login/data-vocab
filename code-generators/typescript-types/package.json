@@ -2,7 +2,7 @@
   "name": "root",
   "description": "Generates TypeScript types from DI Vocab JSON Schema.",
   "private": true,
-  "version": "1.9.0",
+  "version": "1.9.1",
   "devDependencies": {
     "rimraf": "^5.0.5"
   },
