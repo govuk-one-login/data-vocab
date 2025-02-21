@@ -20,8 +20,6 @@ import static org.jsonschema2pojo.util.TypeUtil.resolveType;
  * - adds interfaces for classes with a given suffix
  */
 public class CustomObjectRule extends ObjectRule {
-    private static final String CLASS_SUFFIX = "Class";
-
     protected CustomObjectRule(RuleFactory ruleFactory, ParcelableHelper parcelableHelper, ReflectionHelper reflectionHelper) {
         super(ruleFactory, parcelableHelper, reflectionHelper);
     }
