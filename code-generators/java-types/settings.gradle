@@ -1,5 +1,6 @@
 rootProject.name = 'di-data-model'
 
+include ':gson-annotated'
 include ':jackson-annotated'
 include ':plain-pojo'
 include 'schema-artefacts'
@@ -8,6 +9,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         libs {
             library('hamcrest', 'org.hamcrest:hamcrest:2.2')
+            library('gson', 'com.google.code.gson:gson:2.11.0')
             library('jackson-databind', 'com.fasterxml.jackson.core:jackson-databind:[2.15.2,)')
             library('jakarta-validation', 'jakarta.validation:jakarta.validation-api:3.0.0')
             library('javax-validation', 'javax.validation:validation-api:1.1.0.CR2')

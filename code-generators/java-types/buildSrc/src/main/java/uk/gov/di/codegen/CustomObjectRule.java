@@ -28,11 +28,8 @@ public class CustomObjectRule extends ObjectRule {
 
     @Override
     public JType apply(String nodeName, JsonNode node, JsonNode parent, JPackage _package, Schema schema) {
-        var trimmedName = nodeName.endsWith(CLASS_SUFFIX)
-            ? nodeName.substring(0, nodeName.length() - CLASS_SUFFIX.length())
-            : nodeName;
-
-        var jClass = super.apply(trimmedName, node, parent, _package, schema);
+        var jClass = super.apply(nodeName, node, parent, _package, schema);
+        // TODO: Here we can add the annotations
 
         return jClass;
     }

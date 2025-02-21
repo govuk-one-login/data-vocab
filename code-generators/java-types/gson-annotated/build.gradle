@@ -1,0 +1,97 @@
+plugins {
+    id "java"
+    id "maven-publish"
+    id "org.jsonschema2pojo" version "1.2.1"
+}
+
+ext {
+    modelOutputDir = "${project.buildDir}/generated-sources/di-data-model"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Required if generating JSR-303 annotations
+    implementation libs.javax.validation
+    implementation libs.jakarta.validation
+    implementation libs.gson
+
+    testImplementation libs.junit.api
+    testRuntimeOnly libs.junit.engine
+    testImplementation libs.jsonassert
+    testImplementation libs.hamcrest
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// see https://github.com/joelittlejohn/jsonschema2pojo/tree/master/jsonschema2pojo-gradle-plugin#usage
+jsonSchema2Pojo {
+    // Location of the JSON Schema file(s). This may refer to a single file or a directory of files.
+    source = files("${schemaInputDir}/combined")
+
+    // Target directory for generated Java source files. The plugin will add this directory to the
+    // java source set so the compiler will find and compile the newly generated source files.
+    targetDirectory = file(modelOutputDir)
+
+    // Package name used for generated Java classes (for types where a fully qualified name has not
+    // been supplied in the schema using the 'javaType' property).
+    targetPackage = 'uk.gov.di.model'
+
+    // Whether to generate builder-style methods of the form withXxx(value) (that return this),
+    // alongside the standard, void-return setters.
+    generateBuilders = false
+
+    // Whether to initialize Set and List fields as empty collections, or leave them as null.
+    initializeCollections = false
+
+    // The style of annotations to use in the generated Java types.
+    annotationStyle = 'gson'
+
+    // Whether to empty the target directory before generation occurs, to clear out all source files
+    // that have been generated previously. <strong>Be warned</strong>, when activated this option
+    // will cause jsonschema2pojo to <strong>indiscriminately delete the entire contents of the target
+    // directory (all files and folders)</strong> before it begins generating sources.
+    removeOldOutput = false
+
+    // Override the rule factory with our custom implementation
+    customRuleFactory = 'uk.gov.di.codegen.CustomRuleFactory'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+generateJsonSchema2Pojo.doLast {
+    logger.quiet("Wrote Java types to ${modelOutputDir}")
+}
+
+assemble.dependsOn(generateJsonSchema2Pojo)
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = mavenGroupId
+            artifactId = 'di-data-model-gson'
+            version = project.version
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/govuk-one-login/data-vocab"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
