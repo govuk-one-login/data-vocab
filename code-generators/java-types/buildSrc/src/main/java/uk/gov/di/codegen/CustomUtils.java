@@ -7,6 +7,8 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public class CustomUtils {
+    private CustomUtils() {}
+
     public static <T> Stream<T> toStream(Iterator<T> iterator) {
         return StreamSupport.stream(Spliterators.spliteratorUnknownSize(iterator, Spliterator.ORDERED), false);
     }

@@ -8,6 +8,8 @@ import org.jsonschema2pojo.Schema;
 import org.jsonschema2pojo.rules.RuleFactory;
 import org.jsonschema2pojo.rules.SchemaRule;
 
+import java.util.Objects;
+
 import static uk.gov.di.codegen.CustomUtils.toStream;
 
 /**
@@ -24,13 +26,12 @@ public class CustomSchemaRule extends SchemaRule {
         this.ruleFactory = ruleFactory;
     }
 
-    // generatableType is a JPackage
     @Override
     public JType apply(String nodeName, JsonNode schemaNode, JsonNode parent, JClassContainer generatableType, Schema schema) {
         // Process schema as normal
         var type = super.apply(nodeName, schemaNode, parent, generatableType, schema);
 
-        if (isGenericField(nodeName, schemaNode, parent, generatableType, schema) && type instanceof JDefinedClass jDefinedClass && generatableType instanceof JDefinedClass jGeneratableType) {
+        if (type instanceof JDefinedClass jDefinedClass && generatableType instanceof JDefinedClass jGeneratableType && isGenericField(nodeName, schema)) {
             type = jGeneratableType.generify(jDefinedClass.name() + "T", jDefinedClass);
         }
 
@@ -48,7 +49,38 @@ public class CustomSchemaRule extends SchemaRule {
         return type;
     }
 
-    public boolean isGenericField(String nodeName, JsonNode schemaNode, JsonNode parent, JClassContainer generatableType, Schema schema) {
-        return nodeName.equals("credentialSubject"); // TODO: Make me work
+    private static boolean isGenericField(String nodeName, Schema schema) {
+        String propertyFragment = getClassFragmentFromPropertyFragment(schema);
+        JsonNode definitions = schema.getGrandParent().getContent().get("$defs");
+
+        return toStream(definitions.fields()).anyMatch(entry -> {
+            JsonNode classNode = entry.getValue();
+            JsonNode extendsNode = classNode.get("extends");
+            if (extendsNode == null) {
+                return false;
+            }
+
+            JsonNode reference = extendsNode.get("$ref");
+            if (reference == null || !reference.asText().equals("#" + propertyFragment)) {
+                return false;
+            }
+
+            JsonNode nodeProperty = classNode.get("properties").get(nodeName);
+            if (nodeProperty == null) {
+                return false;
+            }
+
+            JsonNode content = schema.getContent();
+            return !Objects.equals(content.get("$ref"), nodeProperty.get("$ref"));
+        });
+    }
+
+    private static String getClassFragmentFromPropertyFragment(Schema schema) {
+        String propertyFragment = schema.getId().getFragment();
+        int propertiesIndex = propertyFragment.indexOf("/properties");
+        if (propertiesIndex > 0) {
+            propertyFragment = propertyFragment.substring(0, propertiesIndex);
+        }
+        return propertyFragment;
     }
 }

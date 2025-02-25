@@ -3,11 +3,8 @@ package uk.gov.di.codegen;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.sun.codemodel.JClass;
 import com.sun.codemodel.JDefinedClass;
-import com.sun.codemodel.JFieldVar;
 import com.sun.codemodel.JPackage;
 import com.sun.codemodel.JType;
-import org.apache.commons.lang.StringUtils;
-import org.jsonschema2pojo.JsonPointerUtils;
 import org.jsonschema2pojo.Schema;
 import org.jsonschema2pojo.rules.ObjectRule;
 import org.jsonschema2pojo.rules.RuleFactory;
@@ -15,7 +12,6 @@ import org.jsonschema2pojo.util.ParcelableHelper;
 import org.jsonschema2pojo.util.ReflectionHelper;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import static uk.gov.di.codegen.CustomUtils.toStream;
 
@@ -25,7 +21,8 @@ import static uk.gov.di.codegen.CustomUtils.toStream;
  * - adds interfaces for classes with a given suffix
  */
 public class CustomObjectRule extends ObjectRule {
-    private RuleFactory ruleFactory;
+    private final RuleFactory ruleFactory;
+
     protected CustomObjectRule(RuleFactory ruleFactory, ParcelableHelper parcelableHelper, ReflectionHelper reflectionHelper) {
         super(ruleFactory, parcelableHelper, reflectionHelper);
         this.ruleFactory = ruleFactory;
@@ -35,13 +32,13 @@ public class CustomObjectRule extends ObjectRule {
     public JType apply(String nodeName, JsonNode node, JsonNode parent, JPackage _package, Schema schema) {
         JType jClass = super.apply(nodeName, node, parent, _package, schema);
         if (jClass instanceof JDefinedClass jDefinedClass) {
-            addDefaultGenericOverrides(jDefinedClass, nodeName, node, parent, _package, schema);
+            addDefaultGenericOverrides(jDefinedClass, node, parent, schema);
         }
 
         return jClass;
     }
 
-    private void addDefaultGenericOverrides(JDefinedClass jClass, String nodeName, JsonNode node, JsonNode parent, JPackage _package, Schema schema) {
+    private void addDefaultGenericOverrides(JDefinedClass jClass, JsonNode node, JsonNode parent, Schema schema) {
         JClass superType = jClass._extends();
         if (!(superType instanceof JDefinedClass superClass)) {
             return;

@@ -14,8 +14,8 @@ import org.jsonschema2pojo.util.ReflectionHelper;
 
 public class CustomRuleFactory extends RuleFactory {
   private final ReflectionHelper reflectionHelper;
+  private final PropertyRule propertyRule;
   private NameHelper nameHelper;
-  private PropertyRule propertyRule;
 
   public CustomRuleFactory() {
     super();

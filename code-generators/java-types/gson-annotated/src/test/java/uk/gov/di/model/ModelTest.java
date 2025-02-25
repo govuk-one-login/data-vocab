@@ -46,7 +46,7 @@ class ModelTest {
         assertEquals(URI.create("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce"), credential.getSub());
 
         // vc
-        IdentityCheckCredential<?> vc = credential.getVc();
+        IdentityCheckCredential vc = credential.getVc();
         assertNotNull(vc);
         assertThat(vc.getType(), hasItems(
                 equalTo(VerifiableCredentialType.VERIFIABLE_CREDENTIAL),
