@@ -2,10 +2,13 @@ package uk.gov.di.codegen;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.sun.codemodel.JClassContainer;
+import com.sun.codemodel.JDefinedClass;
 import com.sun.codemodel.JType;
 import org.jsonschema2pojo.Schema;
 import org.jsonschema2pojo.rules.RuleFactory;
 import org.jsonschema2pojo.rules.SchemaRule;
+
+import static uk.gov.di.codegen.CustomUtils.toStream;
 
 /**
  * Custom schema rule that generates all classes contained within the '$defs' section of the json-schema.
@@ -21,29 +24,31 @@ public class CustomSchemaRule extends SchemaRule {
         this.ruleFactory = ruleFactory;
     }
 
+    // generatableType is a JPackage
     @Override
     public JType apply(String nodeName, JsonNode schemaNode, JsonNode parent, JClassContainer generatableType, Schema schema) {
         // Process schema as normal
         var type = super.apply(nodeName, schemaNode, parent, generatableType, schema);
 
-        // Get definitions
-        final var definitions = schemaNode.at(DEFINITIONS_PATH).fields();
+        if (isGenericField(nodeName, schemaNode, parent, generatableType, schema) && type instanceof JDefinedClass jDefinedClass && generatableType instanceof JDefinedClass jGeneratableType) {
+            type = jGeneratableType.generify(jDefinedClass.name() + "T", jDefinedClass);
+        }
 
         // Process definitions
-        while (definitions.hasNext()) {
-            final var definition = definitions.next();
-
+        toStream(schemaNode.at(DEFINITIONS_PATH).fields()).forEach(definition -> {
             final var definitionSchema = ruleFactory.getSchemaStore().create(
                     schema,
                     "#" + DEFINITIONS_PATH + "/" + definition.getKey(),
                     ruleFactory.getGenerationConfig().getRefFragmentPathDelimiters());
-            if (definitionSchema.isGenerated()) {
-                continue;
+            if (!definitionSchema.isGenerated()) {
+                apply(definition.getKey(), definition.getValue(), schemaNode, generatableType, definitionSchema);
             }
-
-            apply(definition.getKey(), definition.getValue(), schemaNode, generatableType, definitionSchema);
-        }
+        });
 
         return type;
+    }
+
+    public boolean isGenericField(String nodeName, JsonNode schemaNode, JsonNode parent, JClassContainer generatableType, Schema schema) {
+        return nodeName.equals("credentialSubject"); // TODO: Make me work
     }
 }

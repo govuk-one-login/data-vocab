@@ -37,7 +37,7 @@ class ModelTest {
 
     @Test
     void myTest() {
-        var credential = gson.fromJson(serialisedModel, IdentityCheckCredentialJWT.class);
+        IdentityCheckCredentialJWT credential = gson.fromJson(serialisedModel, IdentityCheckCredentialJWT.class);
 
         // root object
         assertEquals(URI.create("https://passport.core.stubs.account.gov.uk"), credential.getAud());
@@ -46,7 +46,7 @@ class ModelTest {
         assertEquals(URI.create("urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce"), credential.getSub());
 
         // vc
-        var vc = credential.getVc();
+        IdentityCheckCredential<?> vc = credential.getVc();
         assertNotNull(vc);
         assertThat(vc.getType(), hasItems(
                 equalTo(VerifiableCredentialType.VERIFIABLE_CREDENTIAL),
