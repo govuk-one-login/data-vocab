@@ -1,10 +1,13 @@
 package uk.gov.di.codegen;
 
+import com.sun.codemodel.JClass;
 import com.sun.codemodel.JClassContainer;
 import com.sun.codemodel.JDefinedClass;
+import com.sun.codemodel.JFieldVar;
 import com.sun.codemodel.JPackage;
 import com.sun.codemodel.JType;
 import org.jsonschema2pojo.GenerationConfig;
+import org.jsonschema2pojo.rules.BuilderRule;
 import org.jsonschema2pojo.rules.PropertyRule;
 import org.jsonschema2pojo.rules.Rule;
 import org.jsonschema2pojo.rules.RuleFactory;
@@ -37,6 +40,11 @@ public class CustomRuleFactory extends RuleFactory {
   public void setGenerationConfig(GenerationConfig generationConfig) {
     super.setGenerationConfig(generationConfig);
     this.nameHelper = new CustomNameHelper(this.getGenerationConfig());
+  }
+
+  @Override
+  public Rule<JDefinedClass, JDefinedClass> getBuilderRule() {
+    return new CustomBuilderRule(this, this.reflectionHelper);
   }
 
   @Override

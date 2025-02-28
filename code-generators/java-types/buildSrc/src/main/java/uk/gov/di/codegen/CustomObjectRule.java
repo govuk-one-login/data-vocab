@@ -1,16 +1,23 @@
 package uk.gov.di.codegen;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.sun.codemodel.JBlock;
 import com.sun.codemodel.JClass;
 import com.sun.codemodel.JDefinedClass;
+import com.sun.codemodel.JExpr;
+import com.sun.codemodel.JFieldVar;
+import com.sun.codemodel.JMethod;
 import com.sun.codemodel.JPackage;
 import com.sun.codemodel.JType;
+import com.sun.codemodel.JTypeVar;
+import com.sun.codemodel.JVar;
 import org.jsonschema2pojo.Schema;
 import org.jsonschema2pojo.rules.ObjectRule;
 import org.jsonschema2pojo.rules.RuleFactory;
 import org.jsonschema2pojo.util.ParcelableHelper;
 import org.jsonschema2pojo.util.ReflectionHelper;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 import static uk.gov.di.codegen.CustomUtils.toStream;
@@ -33,6 +40,9 @@ public class CustomObjectRule extends ObjectRule {
         JType jClass = super.apply(nodeName, node, parent, _package, schema);
         if (jClass instanceof JDefinedClass jDefinedClass) {
             addDefaultGenericOverrides(jDefinedClass, node, parent, schema);
+            replaceJTypeVarWithConcreteType(jDefinedClass);
+            duplicateBaseBuilderMethods(jDefinedClass);
+            makePrivateMembersProtected(jDefinedClass);
         }
 
         return jClass;
@@ -69,5 +79,74 @@ public class CustomObjectRule extends ObjectRule {
 
             narrowedObject = narrowedObject._extends(superType.narrow(override));
         }
+    }
+
+    private void makePrivateMembersProtected(JDefinedClass jClass) {
+        for (var jField : jClass.fields().values()) {
+            if (jField.mods().getValue() == 4) {
+                jField.mods().setProtected();
+            }
+        }
+    }
+
+    private void duplicateBaseBuilderMethods(JDefinedClass jClass) {
+        JDefinedClass builderClass = this.ruleFactory.getReflectionHelper().getBaseBuilderClass(jClass);
+        JClass parent = builderClass._extends();
+        Collection<JClass> jClassTypeParameters = jClass._extends().getTypeParameters();
+        while (!parent.name().equals("Object")) {
+            if (parent.erasure() instanceof JDefinedClass jParent) {
+                for (JMethod method : jParent.methods()) {
+                    if (method.type().equals(jParent)) {
+                        JVar paramType = method.params().get(0);
+
+                        if (builderClass.getMethod(method.name(), new JType[]{ paramType.type() }) != null) {
+                            continue;
+                        }
+
+                        for(JClass currentParam : jClassTypeParameters) {
+                            if (paramType.type() instanceof JClass jClassParam && isDerivedFrom(currentParam, jClassParam)) {
+                                paramType = jClass.field(paramType.mods().getValue(), currentParam, paramType.name());
+                                jClass.removeField((JFieldVar)paramType);
+                            }
+                        }
+
+                        addInnerBuilderMethod(builderClass, jClass, paramType, method.name());
+                    }
+                }
+            }
+
+            parent = parent._extends();
+        }
+    }
+
+    private JMethod addInnerBuilderMethod(JDefinedClass builderClass, JDefinedClass c, JVar field, String propertyName) {
+        JMethod builderMethod = builderClass.method(1, builderClass, propertyName);
+        JVar param = builderMethod.param(field.type(), field.name());
+        JBlock body = builderMethod.body();
+        body.assign(JExpr.ref(JExpr.cast(c, JExpr._this().ref("instance")), field), param);
+        body._return(JExpr._this());
+        return builderMethod;
+    }
+
+    private void replaceJTypeVarWithConcreteType(JDefinedClass jDefinedClass) {
+        JDefinedClass builderClass = this.ruleFactory.getReflectionHelper().getBaseBuilderClass(jDefinedClass);
+        for(JMethod method : builderClass.methods()) {
+            for(JVar param : method.params()) {
+                if (param.type() instanceof JTypeVar jTypeVar) {
+                    param.type(jTypeVar._extends());
+                }
+            }
+        }
+    }
+
+    private static boolean isDerivedFrom(JClass jClass, JClass jParent) {
+        var currentParent = jClass;
+        while (!currentParent.name().equals("Object")) {
+            if (currentParent.equals(jParent)) {
+                return true;
+            }
+            currentParent = currentParent._extends();
+        }
+        return false;
     }
 }
