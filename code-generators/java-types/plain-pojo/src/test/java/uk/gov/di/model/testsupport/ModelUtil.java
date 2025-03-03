@@ -20,7 +20,6 @@ public class ModelUtil {
         return credentialBuilder.build();
     }
 
-    @SuppressWarnings("unchecked")
     private static IdentityCheckCredential buildVc() {
         var evidence = IdentityCheck.builder()
                 .withValidityScore(0)
@@ -39,7 +38,6 @@ public class ModelUtil {
                 .build();
     }
 
-    @SuppressWarnings("unchecked")
     private static IdentityCheckSubject buildCredentialSubject() {
         var birthDate = BirthDate.builder()
                 .withValue("1990-01-23")

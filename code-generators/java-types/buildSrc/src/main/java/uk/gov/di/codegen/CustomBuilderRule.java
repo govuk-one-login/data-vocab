@@ -19,9 +19,13 @@ import org.jsonschema2pojo.util.ReflectionHelper;
 
 import java.util.Objects;
 
+/**
+ * Custom implementation of the BuilderRule which generates a Builder without needing generics.
+ */
 public class CustomBuilderRule implements Rule<JDefinedClass, JDefinedClass> {
     private final RuleFactory ruleFactory;
     private final ReflectionHelper reflectionHelper;
+    private static final String OBJECT_CLASS_NAME = "java.lang.Object";
 
     public CustomBuilderRule(RuleFactory ruleFactory, ReflectionHelper reflectionHelper) {
         this.ruleFactory = ruleFactory;
@@ -43,7 +47,7 @@ public class CustomBuilderRule implements Rule<JDefinedClass, JDefinedClass> {
 
         JClass parentBuilderClass = null;
         JClass parentClass = instanceClass._extends();
-        if (!parentClass.isPrimitive() && !this.reflectionHelper.isFinal(parentClass) && !Objects.equals(parentClass.fullName(), "java.lang.Object")) {
+        if (!parentClass.isPrimitive() && !this.reflectionHelper.isFinal(parentClass) && !Objects.equals(parentClass.fullName(), OBJECT_CLASS_NAME)) {
             parentBuilderClass = this.reflectionHelper.getBaseBuilderClass(parentClass);
         }
 
@@ -72,16 +76,15 @@ public class CustomBuilderRule implements Rule<JDefinedClass, JDefinedClass> {
 
     private void generateNoArgsBuilderConstructors(JDefinedClass instanceClass, JDefinedClass baseBuilderClass, JDefinedClass builderClass) {
         this.generateNoArgsBaseBuilderConstructor(instanceClass, baseBuilderClass, builderClass);
-        this.generateNoArgsBuilderConstructor(instanceClass, baseBuilderClass, builderClass);
+        this.generateNoArgsBuilderConstructor(baseBuilderClass, builderClass);
     }
 
-    private void generateNoArgsBuilderConstructor(JDefinedClass instanceClass, JDefinedClass baseBuilderClass, JDefinedClass builderClass) {
+    private void generateNoArgsBuilderConstructor(JDefinedClass baseBuilderClass, JDefinedClass builderClass) {
         JMethod noArgsConstructor = builderClass.constructor(1);
         JBlock constructorBlock = noArgsConstructor.body();
-        if (!baseBuilderClass.isPrimitive() && !this.reflectionHelper.isFinal(baseBuilderClass) && !Objects.equals(baseBuilderClass.fullName(), "java.lang.Object")) {
+        if (!baseBuilderClass.isPrimitive() && !this.reflectionHelper.isFinal(baseBuilderClass) && !Objects.equals(baseBuilderClass.fullName(), OBJECT_CLASS_NAME)) {
             constructorBlock.invoke("super");
         }
-
     }
 
     private void generateNoArgsBaseBuilderConstructor(JDefinedClass instanceClass, JDefinedClass builderClass, JDefinedClass concreteBuilderClass) {
@@ -91,7 +94,7 @@ public class CustomBuilderRule implements Rule<JDefinedClass, JDefinedClass> {
         JBlock constructorBlock = noArgsConstructor.body();
         JFieldVar instanceField = this.reflectionHelper.searchClassAndSuperClassesForField("instance", builderClass);
         JClass parentClass = builderClass._extends();
-        if (!parentClass.isPrimitive() && !this.reflectionHelper.isFinal(parentClass) && !Objects.equals(parentClass.fullName(), "java.lang.Object")) {
+        if (!parentClass.isPrimitive() && !this.reflectionHelper.isFinal(parentClass) && !Objects.equals(parentClass.fullName(), OBJECT_CLASS_NAME)) {
             constructorBlock.invoke("super");
         }
 
