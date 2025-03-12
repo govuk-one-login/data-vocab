@@ -15,6 +15,22 @@ import static uk.gov.di.codegen.CustomUtils.toStream;
 /**
  * Custom schema rule that generates all classes contained within the '$defs' section of the json-schema.
  * This may be removed once https://github.com/joelittlejohn/jsonschema2pojo/pull/1523 (or equivalent) is available.
+ *
+ * Assuming that a type such as <code>AddressCredential</code> extends from
+ * the type <code>VerifiableCredential</code> each of these classes define
+ * the field <code>credentialSubject</code>. By default, jsonschema2pojo
+ * will create the field <code>credentialSubject</code> in both
+ * <code>AddressCredential</code> and <code>VerifiableCredential</code> of
+ * the types <code>AddressAssertion</code> and
+ * <code>CredentialSubject</code> respectively. The
+ * <code>AddressAssertion</code> class extends from
+ * <code>CredentialSubject</code>. In practice this means that serialisers
+ * such as GSON will fail to serialise or deserialise the POJO due to
+ * duplicate fields being detected.
+ * <p />
+ * To resolve this issue the <code>CustomSchemaRule</code> inspects the class
+ * hierarchy and when it finds a duplicate field of a different but inherited
+ * type it will make the property into a generic type.
  */
 public class CustomSchemaRule extends SchemaRule {
     private static final String DEFINITIONS_PATH = "/$defs";
