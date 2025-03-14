@@ -1,0 +1,35 @@
+{
+  "aud" : "https://passport.core.stubs.account.gov.uk",
+  "iss" : "https://review-p.build.account.gov.uk",
+  "nbf" : 1690816091,
+  "sub" : "urn:fdc:gov.uk:2022:954bc117-731b-41cd-86cf-dfb4e7940fce",
+  "vc" : {
+    "credentialSubject" : {
+      "birthDate" : [ {
+        "value" : "1990-01-23"
+      } ],
+      "name" : [ {
+        "nameParts" : [ {
+          "type" : "GivenName",
+          "value" : "Kenneth"
+        }, {
+          "type" : "FamilyName",
+          "value" : "Decerqueira"
+        } ]
+      } ],
+      "passport" : [ {
+        "documentNumber" : "123456789",
+        "expiryDate" : "2030-12-12",
+        "icaoIssuerCode" : "GBR"
+      } ]
+    },
+    "evidence" : [ {
+      "ci" : [ "D02" ],
+      "strengthScore" : 4,
+      "txn" : "5f57a8f2-62b0-4958-9332-06d9f453e5b9",
+      "type" : "IdentityCheck",
+      "validityScore" : 0
+    } ],
+    "type" : [ "VerifiableCredential", "IdentityCheckCredential" ]
+  }
+}
