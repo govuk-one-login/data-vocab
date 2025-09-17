@@ -4,7 +4,7 @@
   "private": true,
   "version": "1.9.3",
   "devDependencies": {
-    "rimraf": "^5.0.5"
+    "rimraf": "5.0.5"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "assert": false
   },
   "dependencies": {
-    "json-schema-to-typescript": "^13.1.1"
+    "json-schema-to-typescript": "13.1.1"
   },
   "scripts": {
     "clean": "rimraf ./dist",
