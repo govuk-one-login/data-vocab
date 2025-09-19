@@ -20,8 +20,8 @@ function update_root_project(){
 
   npm version "$RELEASE_TYPE" --git-tag-version=false
 
-  # update lockfile etc.
-  npm install
+  # install dependencies
+  npm ci
 }
 
 #
@@ -32,8 +32,8 @@ function update_ts_generator() {
 
   npm version "$1"
 
-  # update lockfile etc.
-  npm install
+  # install dependencies
+  npm ci
 }
 
 #
