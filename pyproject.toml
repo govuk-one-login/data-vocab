@@ -1,22 +1,27 @@
+[project]
+name = "data-vocab"
+
 [tool.poetry]
 name = "di-identity-vocab"
 version = "1.0.0"
 description = "GOV.UK identity vocabulary"
 authors = ["Your Name <you@example.com>"]
 license = "MIT Copyright (c) 2022 Crown Copyright (Government Digital Service)"
-package-mode = false
+packages = [
+  { include = "linkml_wrapper" }
+]
+
+[tool.poetry.scripts]
+gen-json-schema-wrapper = "linkml_wrapper.jsonschemagen_wrapper:cli"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-linkml = "^v1.2"
+linkml = "^v1.9.5"
 mkdocs = "^1.6.1"
 mkdocs-tech-docs-template = "^0.1.2"
 mkdocs-mermaid2-plugin = "^1.1.1"
 mkdocs-material = "^9.5.50"
 ruamel-yaml = "^0.18.10"
-
-[tool.poetry.dev-dependencies]
-
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
