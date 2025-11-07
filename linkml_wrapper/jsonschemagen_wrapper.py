@@ -1,7 +1,7 @@
 import click
 
 from linkml.generators.jsonschemagen import JsonSchemaGenerator, json_schema_types
-from linkml.generators.common.lifecycle import TClass
+from linkml.generators.common.lifecycle import TClass, TSchema
 from linkml.utils.generator import shared_arguments
 
 from linkml_runtime import SchemaView
@@ -25,6 +25,12 @@ class JsonSchemaGeneratorWrapper(JsonSchemaGenerator):
                 '$ref': f'#/$defs/{cls.source.is_a}'
             }
         return cls
+
+    def after_generate_schema(self, schema: TSchema, sv: SchemaView) -> TSchema:
+        # jsonschemagen includes metadata which don't match the json-schema spec
+        del schema.schema_['metamodel_version']
+        del schema.schema_['version']
+        return schema
 
 @shared_arguments(JsonSchemaGenerator)
 @click.command(name="json-schema")
