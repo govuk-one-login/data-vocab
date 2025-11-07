@@ -13,17 +13,18 @@ DOCS_DIR = "./docs"
 
 CUSTOM_NAMES = {
     "index.md": "GOV.UK One Login Vocabulary",
-    "v1/_Home/index.md": "credentials",
+    "v1/index.md": "GOV.UK One Login Credentials",
     "v1/json-schemas/index.md": "JSON Schema files"
 }
 
 CUSTOM_CATEGORY_NAMES = {
     "slots": "Slots",
-    "_Home": "Home",
+    "index": "Home",
     "types": "Types",
     "classes": "Classes",
     "enums": "Enums",
-    "json-schemas": "JSON Schemas"
+    "json-schemas": "JSON Schemas",
+    "schemas": "Schemas"
 }
 
 def is_redirect(file_path):

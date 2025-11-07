@@ -17,8 +17,7 @@ repo_url: https://github.com/govuk-one-login/data-vocab
 nav:
   - GOV.UK One Login Vocabulary: index.md
   - v1:
-      - Home:
-          - credentials: v1/_Home/index.md
+      - Home: v1/index.md
       - Classes:
           - AddressAssertionClass: v1/classes/AddressAssertionClass.md
           - AddressCredentialClass: v1/classes/AddressCredentialClass.md
@@ -36,44 +35,59 @@ nav:
           - FamilyNameClass: v1/classes/FamilyNameClass.md
           - GivenNameClass: v1/classes/GivenNameClass.md
           - IdCardDetailsClass: v1/classes/IdCardDetailsClass.md
-          - IdentityAssertionCredentialClass: v1/classes/IdentityAssertionCredentialClass.md
-          - IdentityAssertionCredentialJWTClass: v1/classes/IdentityAssertionCredentialJWTClass.md
+          - IdentityAssertionCredentialClass: 
+              v1/classes/IdentityAssertionCredentialClass.md
+          - IdentityAssertionCredentialJWTClass: 
+              v1/classes/IdentityAssertionCredentialJWTClass.md
           - IdentityCheckClass: v1/classes/IdentityCheckClass.md
-          - IdentityCheckCredentialClass: v1/classes/IdentityCheckCredentialClass.md
-          - IdentityCheckCredentialJWTClass: v1/classes/IdentityCheckCredentialJWTClass.md
+          - IdentityCheckCredentialClass: 
+              v1/classes/IdentityCheckCredentialClass.md
+          - IdentityCheckCredentialJWTClass: 
+              v1/classes/IdentityCheckCredentialJWTClass.md
           - IdentityCheckSubjectClass: v1/classes/IdentityCheckSubjectClass.md
           - InheritedIdentityJWTClass: v1/classes/InheritedIdentityJWTClass.md
           - InterventionClass: v1/classes/InterventionClass.md
           - ISODateClass: v1/classes/ISODateClass.md
-          - IssuerAuthorizationRequestClass: v1/classes/IssuerAuthorizationRequestClass.md
+          - IssuerAuthorizationRequestClass: 
+              v1/classes/IssuerAuthorizationRequestClass.md
           - JWTClass: v1/classes/JWTClass.md
           - MitigatingCredentialClass: v1/classes/MitigatingCredentialClass.md
           - MitigationClass: v1/classes/MitigationClass.md
           - NameClass: v1/classes/NameClass.md
           - NamePartClass: v1/classes/NamePartClass.md
-          - OpenIDConnectAuthenticationRequestClass: v1/classes/OpenIDConnectAuthenticationRequestClass.md
+          - OpenIDConnectAuthenticationRequestClass: 
+              v1/classes/OpenIDConnectAuthenticationRequestClass.md
           - PassportDetailsClass: v1/classes/PassportDetailsClass.md
           - PersonClass: v1/classes/PersonClass.md
-          - PersonExtendedMatchingClass: v1/classes/PersonExtendedMatchingClass.md
+          - PersonExtendedMatchingClass: 
+              v1/classes/PersonExtendedMatchingClass.md
           - PersonWithDocumentsClass: v1/classes/PersonWithDocumentsClass.md
           - PersonWithIdentityClass: v1/classes/PersonWithIdentityClass.md
           - PostalAddressClass: v1/classes/PostalAddressClass.md
           - PostalAddressGeneralClass: v1/classes/PostalAddressGeneralClass.md
-          - PostalAddressInternationalClass: v1/classes/PostalAddressInternationalClass.md
+          - PostalAddressInternationalClass: 
+              v1/classes/PostalAddressInternationalClass.md
           - PostalAddressUKClass: v1/classes/PostalAddressUKClass.md
-          - ResidencePermitDetailsClass: v1/classes/ResidencePermitDetailsClass.md
+          - ResidencePermitDetailsClass: 
+              v1/classes/ResidencePermitDetailsClass.md
           - RiskAssessmentClass: v1/classes/RiskAssessmentClass.md
-          - RiskAssessmentCredentialClass: v1/classes/RiskAssessmentCredentialClass.md
-          - RiskAssessmentCredentialJWTClass: v1/classes/RiskAssessmentCredentialJWTClass.md
+          - RiskAssessmentCredentialClass: 
+              v1/classes/RiskAssessmentCredentialClass.md
+          - RiskAssessmentCredentialJWTClass: 
+              v1/classes/RiskAssessmentCredentialJWTClass.md
           - SecurityCheckClass: v1/classes/SecurityCheckClass.md
-          - SecurityCheckCredentialClass: v1/classes/SecurityCheckCredentialClass.md
-          - SecurityCheckCredentialJWTClass: v1/classes/SecurityCheckCredentialJWTClass.md
+          - SecurityCheckCredentialClass: 
+              v1/classes/SecurityCheckCredentialClass.md
+          - SecurityCheckCredentialJWTClass: 
+              v1/classes/SecurityCheckCredentialJWTClass.md
           - SexClass: v1/classes/SexClass.md
-          - SocialSecurityRecordDetailsClass: v1/classes/SocialSecurityRecordDetailsClass.md
+          - SocialSecurityRecordDetailsClass: 
+              v1/classes/SocialSecurityRecordDetailsClass.md
           - StructuredAttributeClass: v1/classes/StructuredAttributeClass.md
           - ValidityClass: v1/classes/ValidityClass.md
           - VerifiableCredentialClass: v1/classes/VerifiableCredentialClass.md
-          - VerifiableIdentityCredentialClass: v1/classes/VerifiableIdentityCredentialClass.md
+          - VerifiableIdentityCredentialClass: 
+              v1/classes/VerifiableIdentityCredentialClass.md
       - Enums:
           - CheckMethodType: v1/enums/CheckMethodType.md
           - DataCheckType: v1/enums/DataCheckType.md
@@ -86,6 +100,8 @@ nav:
           - VerifiableCredentialType: v1/enums/VerifiableCredentialType.md
       - JSON Schemas:
           - JSON Schema files: v1/json-schemas/index.md
+      - Schemas:
+          - credentials: v1/schemas/credentials.md
       - Slots:
           - '@context': v1/slots/@context.md
           - accountNumber: v1/slots/accountNumber.md
@@ -93,16 +109,13 @@ nav:
           - activityHistoryScore: v1/slots/activityHistoryScore.md
           - address: v1/slots/address.md
           - addressCountry: v1/slots/addressCountry.md
-          - addressCredentialClass__type: v1/slots/addressCredentialClass__type.md
-          - AddressCredentialClass_credentialSubject: v1/slots/AddressCredentialClass_credentialSubject.md
-          - addressCredentialJWTClass__vc: v1/slots/addressCredentialJWTClass__vc.md
           - addressLocality: v1/slots/addressLocality.md
           - addressRegion: v1/slots/addressRegion.md
           - aud: v1/slots/aud.md
           - bankAccount: v1/slots/bankAccount.md
-          - biometricVerificationProcessLevel: v1/slots/biometricVerificationProcessLevel.md
+          - biometricVerificationProcessLevel: 
+              v1/slots/biometricVerificationProcessLevel.md
           - birthDate: v1/slots/birthDate.md
-          - birthDateClass__value: v1/slots/birthDateClass__value.md
           - buildingName: v1/slots/buildingName.md
           - buildingNumber: v1/slots/buildingNumber.md
           - checkDetails: v1/slots/checkDetails.md
@@ -112,8 +125,6 @@ nav:
           - client_id: v1/slots/client_id.md
           - code: v1/slots/code.md
           - contraIndicator: v1/slots/contraIndicator.md
-          - ContraIndicatorClass_txn: v1/slots/ContraIndicatorClass_txn.md
-          - coreIdentityJWTClass__vc: v1/slots/coreIdentityJWTClass__vc.md
           - credentialJWT: v1/slots/credentialJWT.md
           - credentialSubject: v1/slots/credentialSubject.md
           - dataCheck: v1/slots/dataCheck.md
@@ -124,49 +135,28 @@ nav:
           - document: v1/slots/document.md
           - documentNumber: v1/slots/documentNumber.md
           - documentType: v1/slots/documentType.md
-          - doubleDependentAddressLocality: v1/slots/doubleDependentAddressLocality.md
+          - doubleDependentAddressLocality: 
+              v1/slots/doubleDependentAddressLocality.md
           - drivingPermit: v1/slots/drivingPermit.md
-          - DrivingPermitDetailsClass_expiryDate: v1/slots/DrivingPermitDetailsClass_expiryDate.md
           - evidence: v1/slots/evidence.md
           - evidence_requested: v1/slots/evidence_requested.md
-          - EvidenceRequestedClass_activityHistoryScore: v1/slots/EvidenceRequestedClass_activityHistoryScore.md
-          - EvidenceRequestedClass_identityFraudScore: v1/slots/EvidenceRequestedClass_identityFraudScore.md
-          - EvidenceRequestedClass_scoringPolicy: v1/slots/EvidenceRequestedClass_scoringPolicy.md
-          - EvidenceRequestedClass_strengthScore: v1/slots/EvidenceRequestedClass_strengthScore.md
-          - EvidenceRequestedClass_validityScore: v1/slots/EvidenceRequestedClass_validityScore.md
-          - EvidenceRequestedClass_verificationScore: v1/slots/EvidenceRequestedClass_verificationScore.md
           - exp: v1/slots/exp.md
           - expiryDate: v1/slots/expiryDate.md
           - failedCheckDetails: v1/slots/failedCheckDetails.md
-          - FamilyNameClass_value: v1/slots/FamilyNameClass_value.md
           - fraudCheck: v1/slots/fraudCheck.md
           - fullAddress: v1/slots/fullAddress.md
-          - GivenNameClass_value: v1/slots/GivenNameClass_value.md
           - govuk_signin_journey_id: v1/slots/govuk_signin_journey_id.md
           - iat: v1/slots/iat.md
           - icaoIssuerCode: v1/slots/icaoIssuerCode.md
           - id: v1/slots/id.md
           - idCard: v1/slots/idCard.md
-          - identityAssertionCredentialClass__type: v1/slots/identityAssertionCredentialClass__type.md
-          - IdentityAssertionCredentialClass_credentialSubject: v1/slots/IdentityAssertionCredentialClass_credentialSubject.md
-          - identityAssertionCredentialJWTClass__vc: v1/slots/identityAssertionCredentialJWTClass__vc.md
-          - identityCheckClass__type: v1/slots/identityCheckClass__type.md
-          - identityCheckCredentialClass__type: v1/slots/identityCheckCredentialClass__type.md
-          - IdentityCheckCredentialClass_credentialSubject: v1/slots/IdentityCheckCredentialClass_credentialSubject.md
-          - IdentityCheckCredentialJWTClass_iss: v1/slots/IdentityCheckCredentialJWTClass_iss.md
-          - IdentityCheckCredentialJWTClass_jti: v1/slots/IdentityCheckCredentialJWTClass_jti.md
-          - IdentityCheckCredentialJWTClass_nbf: v1/slots/IdentityCheckCredentialJWTClass_nbf.md
-          - IdentityCheckCredentialJWTClass_sub: v1/slots/IdentityCheckCredentialJWTClass_sub.md
-          - IdentityCheckCredentialJWTClass_vc: v1/slots/IdentityCheckCredentialJWTClass_vc.md
           - identityCheckLevel: v1/slots/identityCheckLevel.md
           - identityCheckPolicy: v1/slots/identityCheckPolicy.md
           - identityFraudScore: v1/slots/identityFraudScore.md
           - incompleteMitigation: v1/slots/incompleteMitigation.md
-          - inheritedIdentityJWTClass__vc: v1/slots/inheritedIdentityJWTClass__vc.md
           - intervention: v1/slots/intervention.md
           - interventionCode: v1/slots/interventionCode.md
           - interventionReason: v1/slots/interventionReason.md
-          - iSODateClass__value: v1/slots/iSODateClass__value.md
           - iss: v1/slots/iss.md
           - issuanceDate: v1/slots/issuanceDate.md
           - issueDate: v1/slots/issueDate.md
@@ -179,7 +169,6 @@ nav:
           - kbvQuality: v1/slots/kbvQuality.md
           - kbvResponseMode: v1/slots/kbvResponseMode.md
           - mitigatingCredential: v1/slots/mitigatingCredential.md
-          - mitigatingCredentialClass__validFrom: v1/slots/mitigatingCredentialClass__validFrom.md
           - mitigation: v1/slots/mitigation.md
           - name: v1/slots/name.md
           - nameParts: v1/slots/nameParts.md
@@ -187,26 +176,17 @@ nav:
           - nonce: v1/slots/nonce.md
           - organisationName: v1/slots/organisationName.md
           - passport: v1/slots/passport.md
-          - PassportDetailsClass_expiryDate: v1/slots/PassportDetailsClass_expiryDate.md
           - personalNumber: v1/slots/personalNumber.md
-          - photoVerificationProcessLevel: v1/slots/photoVerificationProcessLevel.md
+          - photoVerificationProcessLevel: 
+              v1/slots/photoVerificationProcessLevel.md
           - poBoxNumber: v1/slots/poBoxNumber.md
           - postalCode: v1/slots/postalCode.md
           - prompt: v1/slots/prompt.md
           - redirect_uri: v1/slots/redirect_uri.md
           - residencePermit: v1/slots/residencePermit.md
-          - ResidencePermitDetailsClass_expiryDate: v1/slots/ResidencePermitDetailsClass_expiryDate.md
           - response_type: v1/slots/response_type.md
-          - riskAssessmentClass__type: v1/slots/riskAssessmentClass__type.md
-          - riskAssessmentCredentialClass__evidence: v1/slots/riskAssessmentCredentialClass__evidence.md
-          - riskAssessmentCredentialClass__type: v1/slots/riskAssessmentCredentialClass__type.md
-          - riskAssessmentCredentialJWTClass__vc: v1/slots/riskAssessmentCredentialJWTClass__vc.md
           - scope: v1/slots/scope.md
           - scoringPolicy: v1/slots/scoringPolicy.md
-          - securityCheckClass__type: v1/slots/securityCheckClass__type.md
-          - securityCheckCredentialClass__evidence: v1/slots/securityCheckCredentialClass__evidence.md
-          - securityCheckCredentialClass__type: v1/slots/securityCheckCredentialClass__type.md
-          - securityCheckCredentialJWTClass__vc: v1/slots/securityCheckCredentialJWTClass__vc.md
           - sex: v1/slots/sex.md
           - shared_claims: v1/slots/shared_claims.md
           - socialSecurityRecord: v1/slots/socialSecurityRecord.md
@@ -224,8 +204,6 @@ nav:
           - validUntil: v1/slots/validUntil.md
           - value: v1/slots/value.md
           - vc: v1/slots/vc.md
-          - verifiableIdentityCredentialClass__type: v1/slots/verifiableIdentityCredentialClass__type.md
-          - VerifiableIdentityCredentialClass_credentialSubject: v1/slots/VerifiableIdentityCredentialClass_credentialSubject.md
           - verificationScore: v1/slots/verificationScore.md
           - vot: v1/slots/vot.md
           - vtm: v1/slots/vtm.md
