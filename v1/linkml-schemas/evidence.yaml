@@ -67,6 +67,7 @@ classes:
       - document
       - mitigation
       - incompleteMitigation
+      - txn
     slot_usage:
       txn:
         multivalued: true
@@ -85,7 +86,7 @@ classes:
   
   EvidenceRequestedClass:
     description: The levels of evidence_requested which are minimum GPG45 criteria that are requested.
-    slot_usage:
+    slots:
       - scoringPolicy
       - strengthScore
       - validityScore

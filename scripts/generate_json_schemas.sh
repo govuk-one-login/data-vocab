@@ -95,7 +95,7 @@ function generate_separate_files() {
     JSON_SCHEMA="${ITEM_DETAILS[2]}"
     echo -e "\nWriting JSON schema for ${LINKML_CLASS} to ${JSON_SCHEMA_DIR}/${JSON_SCHEMA}"
 
-    poetry run gen-json-schema --closed --no-metadata -t "${LINKML_CLASS}" \
+    poetry run gen-json-schema-wrapper --closed --no-metadata -t "${LINKML_CLASS}" \
       "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" > "${JSON_SCHEMA_DIR}/${JSON_SCHEMA}"
     [[ -f $JSON_SCHEMA_DIR/index.md ]] && echo "| [$JSON_SCHEMA]($JSON_SCHEMA) | [$LINKML_CLASS](../classes/$LINKML_CLASS) |" >> $JSON_SCHEMA_DIR/index.md
     poetry run python ${ROOT_DIR}/scripts/check_schema_see_also.py  "${LINKML_SCHEMA_DIR}/${LINKML_SCHEMA}" $LINKML_CLASS ../json-schemas/$JSON_SCHEMA
@@ -106,7 +106,7 @@ function generate_separate_files() {
 # Writes a combined JSON Schema file.
 #
 function generate_combined_file() {
-    poetry run gen-json-schema \
+    poetry run gen-json-schema-wrapper \
            --closed \
            --no-metadata \
            --nonstandard-extends \

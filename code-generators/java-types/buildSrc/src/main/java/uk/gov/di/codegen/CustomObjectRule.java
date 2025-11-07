@@ -108,19 +108,22 @@ public class CustomObjectRule extends ObjectRule {
 
         HashMap<String, JType> foundOverrides = new HashMap<>();
 
-        toStream(node.get("properties").fieldNames()).forEach(fieldName -> {
-            var field = superClass.fields().get(fieldName);
-            if (field == null) {
-                return;
-            }
+        var properties = node.get("properties");
+        if (properties != null) {
+            toStream(properties.fieldNames()).forEach(fieldName -> {
+                var field = superClass.fields().get(fieldName);
+                if (field == null) {
+                    return;
+                }
 
-            String pathToProperty = "#" + schema.getId().getFragment() + "/properties/" + fieldName;
+                String pathToProperty = "#" + schema.getId().getFragment() + "/properties/" + fieldName;
 
-            Schema propertySchema = this.ruleFactory.getSchemaStore().create(schema.getParent().getParent(), pathToProperty, this.ruleFactory.getGenerationConfig().getRefFragmentPathDelimiters());
-            JType propertyType = this.ruleFactory.getSchemaRule().apply(fieldName, propertySchema.getContent(), parent, jClass, propertySchema);
+                Schema propertySchema = this.ruleFactory.getSchemaStore().create(schema.getParent().getParent(), pathToProperty, this.ruleFactory.getGenerationConfig().getRefFragmentPathDelimiters());
+                JType propertyType = this.ruleFactory.getSchemaRule().apply(fieldName, propertySchema.getContent(), parent, jClass, propertySchema);
 
-            foundOverrides.put(field.type().name(), propertyType);
-        });
+                foundOverrides.put(field.type().name(), propertyType);
+            });
+        }
 
         JDefinedClass narrowedObject = jClass;
         for(var typeParam : superType.typeParams()) {

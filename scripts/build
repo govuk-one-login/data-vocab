@@ -20,7 +20,7 @@ EXAMPLES=(
 bash "${ROOT_DIR}/scripts/generate_json_schemas.sh"
 
 rm -rf "${ROOT_DIR}/docs/v1"
-poetry run gen-markdown "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${ROOT_DIR}/docs/v1/" --index-file index.md
+poetry run gen-doc "${ROOT_DIR}/v1/linkml-schemas/credentials.yaml" -d "${ROOT_DIR}/docs/v1/" --subfolder-type-separation
 ln -s "${ROOT_DIR}/v1/linkml-schemas" "${ROOT_DIR}/docs/v1/linkml-schemas"
 ln -s "${ROOT_DIR}/v1/json-schemas" "${ROOT_DIR}/docs/v1/json-schemas"
 
