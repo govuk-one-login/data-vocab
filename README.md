@@ -20,11 +20,6 @@ Further development could include:
 
 ## Getting started
 
-When checking out, ensure you update/initialise submodules recursively, these are used for certain dependencies, e.g.
-```bash
-git submodule update --init --recursive
-```
-
 ### Manually
 
 * Install Python for example by [installing pyenv](https://briansunter.com/blog/python-setup-pyenv-poetry/#initial-setup);
@@ -53,7 +48,7 @@ Edit the files in [/v1/linkml-schemas/](./v1/linkml-schemas/)
 
 >:exclamation: Class names are all post-fixed with `Class`.
 This is because otherwise, when generating documentation on MacOS, classes whose names clash with slot names (eg `Name` and `name`) will be lost, see
-[https://github.com/linkml/linkml/issues/632](LinkML Issue 632).
+[LinkML Issue 632](https://github.com/linkml/linkml/issues/632).
 
 ## Generating JSON Schemas and compile the documentation site
 
