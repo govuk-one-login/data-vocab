@@ -19,7 +19,7 @@ python = "^3.10"
 linkml = "^v1.9.5"
 mkdocs = "^1.6.1"
 mkdocs-tech-docs-template = "^0.1.2"
-mkdocs-mermaid2-plugin = "^1.1.1"
+mkdocs-mermaid2-plugin = "^1.2.3"
 mkdocs-material = "^9.5.50"
 ruamel-yaml = "^0.18.10"
 
