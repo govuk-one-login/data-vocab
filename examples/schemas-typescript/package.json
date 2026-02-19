@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@govuk-one-login/data-vocab-schemas": "1.7.2",
-    "ajv": "8.16.0",
+    "ajv": "8.18.0",
     "ajv-formats": "3.0.1"
   },
   "devDependencies": {
