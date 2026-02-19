@@ -16,7 +16,7 @@ gen-json-schema-wrapper = "linkml_wrapper.jsonschemagen_wrapper:cli"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-linkml = "^v1.9.5"
+linkml = "^v1.9.6"
 mkdocs = "^1.6.1"
 mkdocs-tech-docs-template = "^0.1.2"
 mkdocs-mermaid2-plugin = "^1.1.1"
