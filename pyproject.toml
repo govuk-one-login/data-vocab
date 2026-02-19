@@ -20,7 +20,7 @@ linkml = "^v1.9.5"
 mkdocs = "^1.6.1"
 mkdocs-tech-docs-template = "^0.1.2"
 mkdocs-mermaid2-plugin = "^1.1.1"
-mkdocs-material = "^9.5.50"
+mkdocs-material = "^9.7.2"
 ruamel-yaml = "^0.18.10"
 
 [build-system]
