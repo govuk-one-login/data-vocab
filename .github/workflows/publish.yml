@@ -20,7 +20,7 @@ jobs:
     needs: build
     steps:
       - name: Download JSON Schemas
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: json-schemas
           path: v1/json-schemas
@@ -57,7 +57,7 @@ jobs:
           scope: '@govuk-one-login'
 
       - name: Download TypeScript types
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ts-types
           path: code-generators/typescript-types/dist
@@ -97,7 +97,7 @@ jobs:
           echo "release_version=${TAG#v}" >> $GITHUB_OUTPUT
 
       - name: Download combined schema
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: combined-schema
           path: code-generators/java-types/schemas
@@ -120,7 +120,7 @@ jobs:
           scope: '@govuk-one-login'
 
       - name: Download TypeScript types
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ts-schemas
           path: code-generators/typescript-schemas/dist
