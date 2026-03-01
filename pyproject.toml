@@ -21,7 +21,7 @@ mkdocs = "^1.6.1"
 mkdocs-tech-docs-template = "^0.1.2"
 mkdocs-mermaid2-plugin = "^1.1.1"
 mkdocs-material = "^9.5.50"
-ruamel-yaml = "^0.18.10"
+ruamel-yaml = "^0.19.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
