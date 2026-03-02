@@ -731,14 +731,14 @@ referencing = ">=0.31.0"
 
 [[package]]
 name = "linkml"
-version = "1.9.5"
+version = "1.10.0"
 description = "Linked Open Data Modeling Language"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "linkml-1.9.5-py3-none-any.whl", hash = "sha256:7544c8221a083029ee37ec12eeaa3978237c8181f08d6f2abf9789561375a58f"},
-    {file = "linkml-1.9.5.tar.gz", hash = "sha256:736765dfdf35054497452771f8fd5653f7a2b6aec735b4e9e8171730ddf93582"},
+    {file = "linkml-1.10.0-py3-none-any.whl", hash = "sha256:2d4934f000977489352307336267a8a4270de3156187c3394d542a0a4b8130e5"},
+    {file = "linkml-1.10.0.tar.gz", hash = "sha256:ca70bba1474bc7de37edd33005a8a556d4718190584ab2c88f7c46d090477d55"},
 ]
 
 [package.dependencies]
@@ -755,7 +755,7 @@ openpyxl = "*"
 parse = "*"
 prefixcommons = ">=0.1.7"
 prefixmaps = ">=0.2.2"
-pydantic = ">=1.0.0,<3.0.0"
+pydantic = ">=2.0.0,<3.0.0"
 pyjsg = ">=0.11.6"
 pyshex = ">=0.7.20"
 pyshexc = ">=0.8.3"
@@ -2518,4 +2518,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "d7fb842858aae6cfc49da19e4d68ed867839a33211a163c5385db4aa41aad658"
+content-hash = "1ae0590ffea25e1fe2d2aca7f3ba08c318bba77193a724b95c018a498e38ff96"
