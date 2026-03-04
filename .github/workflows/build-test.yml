@@ -21,22 +21,22 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.13.x
+          node-version: 22
           cache: npm
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
 
       - run: pipx install poetry
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           cache: 'poetry'
 
@@ -63,7 +63,7 @@ jobs:
         working-directory: scripts
         run: ./generate_ts_schemas.sh
 
-      - name: Generate Java types
+      - name: Generate, build, and test Java types
         working-directory: scripts
         run: ./generate_java_types.sh
 
