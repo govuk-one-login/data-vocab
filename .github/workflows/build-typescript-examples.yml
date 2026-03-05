@@ -1,0 +1,41 @@
+name: Build TypeScript examples
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: read
+  packages: read
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  build-typescript-examples:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        example:
+          - examples/typescript-nodejs
+          - examples/schemas-typescript
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@govuk-one-login'
+          always-auth: true
+
+      - name: Install dependencies
+        working-directory: ${{ matrix.example }}
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build
+        working-directory: ${{ matrix.example }}
+        run: npm run build

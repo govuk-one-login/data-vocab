@@ -1,7 +1,7 @@
 Example Node.js project consuming JSON schemas
 ==================================================
 
-This Node.js project consumes the [Digital Identity Vocab](https://github.com/govuk-one-login/data-vocab) TypeScript types.
+This Node.js project consumes the [Digital Identity Vocab](https://github.com/govuk-one-login/data-vocab) JSON schemas.
 
 In the `package.json`, note the `@govuk-one-login/data-vocab-schemas` dependency:
 

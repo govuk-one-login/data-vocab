@@ -6,35 +6,33 @@ This specification intends to describe a Linked Data vocabulary for asserting Ve
 
 This repository produces the following artifacts:
 
-* [Vocabulary documentation](https://govuk-one-login.github.io/data-vocab/)
-* [JSON Schemas](https://github.com/govuk-one-login/data-vocab/releases)
-* [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab)
-* [Java data model classes (Maven artifact)](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab&ecosystem=maven)
+- [Vocabulary documentation](https://govuk-one-login.github.io/data-vocab/)
+- [JSON Schemas](https://github.com/govuk-one-login/data-vocab/releases)
+- [TypeScript types (npm module)](https://github.com/govuk-one-login/data-vocab/pkgs/npm/data-vocab)
+- [Java data model classes (Maven artifact)](https://github.com/orgs/govuk-one-login/packages?repo_name=data-vocab&ecosystem=maven)
 
 Further development could include:
 
-* Automated tests
-* Documentation
-* JSON-LD
-* OpenAPI description for our various OAuth providers
+- JSON-LD
+- OpenAPI description for our various OAuth providers
 
 ## Getting started
 
 ### Manually
 
-* Install Python for example by [installing pyenv](https://briansunter.com/blog/python-setup-pyenv-poetry/#initial-setup);
-* Install [poetry](https://python-poetry.org/docs/) so that you can install and run this project's Python depdenencies;
-* Install Node (and NPM) for example by [installing NVM](https://github.com/nvm-sh/nvm#installing-and-updating);
-* Install some build and test command line tools we require globally (or into your environment, somehow)
+- Install Python for example by [installing pyenv](https://briansunter.com/blog/python-setup-pyenv-poetry/#initial-setup);
+- Install [poetry](https://python-poetry.org/docs/) so that you can install and run this project's Python dependencies;
+- Install Node (and NPM) for example by [installing NVM](https://github.com/nvm-sh/nvm#installing-and-updating);
+- Install some build and test command line tools we require globally (or into your environment, somehow)
 
 ```bash
 poetry install
 
 npm install
 npm install -g ajv-cli@5.0.0 ajv-formats@2.1.1
-
-If the above dependencies/versions need to change, please update the [devcontainer configuration](.devcontainer/devcontainer.json) also.
 ```
+
+> If the above dependencies/versions need to change, please update the [devcontainer configuration](.devcontainer/devcontainer.json) also.
 
 If you get an error like `No module named 'packaging'` then you may need to run `pip install packaging`
 
@@ -42,15 +40,15 @@ If you get an error like `No module named 'packaging'` then you may need to run 
 
 Open the repo in a development container in vscode, and the pre-requisites will be pre-installed
 
-# Modifying the source LinkML
+## Modifying the source LinkML
 
 Edit the files in [/v1/linkml-schemas/](./v1/linkml-schemas/)
 
->:exclamation: Class names are all post-fixed with `Class`.
-This is because otherwise, when generating documentation on MacOS, classes whose names clash with slot names (eg `Name` and `name`) will be lost, see
-[LinkML Issue 632](https://github.com/linkml/linkml/issues/632).
+> :exclamation: Class names are all post-fixed with `Class`.
+> This is because otherwise, when generating documentation on MacOS, classes whose names clash with slot names (eg `Name` and `name`) will be lost, see
+> [LinkML Issue 632](https://github.com/linkml/linkml/issues/632).
 
-## Generating JSON Schemas and compile the documentation site
+## Generating JSON Schemas and compiling the documentation site
 
 ```
 ./scripts/build
@@ -118,7 +116,7 @@ npm login --scope=@govuk-one-login --auth-type=legacy --registry=https://npm.pkg
 
 > See [Authenticating to GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) documentation.
 
-### Using the package in GitHub Actions 
+### Using the package in GitHub Actions
 
 If you are building your project in a GitHub Actions workflow, grant access to your repository from the [package settings](https://github.com/orgs/govuk-one-login/packages/npm/data-vocab/settings) page.
 
@@ -132,22 +130,24 @@ permissions:
 In your `setup-node` step, set the registry URL:
 
 ```yaml
-registry-url: "https://npm.pkg.github.com"
+registry-url: 'https://npm.pkg.github.com'
 ```
 
 <details>
 <summary>Full setup-node step example</summary>
 
 Here's an example of the step with the registry configured:
+
 ```yaml
-steps: 
-- name: Setup node and npm
-  uses: actions/setup-node@v3
-  with:
-    node-version: 18
-    cache: npm
-    registry-url: "https://npm.pkg.github.com"
+steps:
+  - name: Setup node and npm
+    uses: actions/setup-node@v4
+    with:
+      node-version: 22
+      cache: npm
+      registry-url: 'https://npm.pkg.github.com'
 ```
+
 </details>
 
 In the step where you run `npm install`, set the `NODE_AUTH_TOKEN` environment variable:
@@ -160,12 +160,14 @@ NODE_AUTH_TOKEN: ${{ github.token }}
 <summary>Full npm install example</summary>
 
 Here's an example of the step with the `NODE_AUTH_TOKEN` configured:
+
 ```yaml
 - name: Install npm dependencies
-  run: "npm ci --ignore-scripts"
+  run: 'npm ci --ignore-scripts'
   env:
     NODE_AUTH_TOKEN: ${{ github.token }}
 ```
+
 </details>
 
 ---
@@ -248,7 +250,7 @@ Once you have confirmed the version, the script will commit the changes and crea
 
 > **Note**
 > You must push the tag and update the `main` branch to trigger the release process.
-> 
+>
 > ```shell
 > git push origin main --tags
 > ```
