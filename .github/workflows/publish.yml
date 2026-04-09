@@ -49,32 +49,34 @@ jobs:
   publish-ts-types:
     runs-on: ubuntu-latest
     needs: build
+    environment: npmjs-publishing
+    permissions:
+      id-token: write
+      contents: read
     steps:
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v6
+      - name: Publish Node ts-types package
+        uses: ./.github/actions/npm-publish
         with:
-          node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@govuk-one-login'
+          github-packages-token: ${{ secrets.GITHUB_TOKEN }}
+          artifact-name: ts-types
+          artifact-path: code-generators/typescript-types/dist
 
-      - name: Download TypeScript types
-        uses: actions/download-artifact@v8
+  publish-ts-schemas:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      id-token: write
+      contents: read
+    environment: npmjs-publishing
+    steps:
+      - uses: actions/checkout@v6
+      - name: Publish Node ts-types package
+        uses: ./.github/actions/npm-publish
         with:
-          name: ts-types
-          path: code-generators/typescript-types/dist
-
-      # Use the git tag as the release name
-      - name: Calculate release name
-        id: release-name
-        run: |
-          echo "release_version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
-
-      - name: Publish npm package
-        working-directory: code-generators/typescript-types/dist
-        run: |
-          npm version "${{ steps.release-name.outputs.release_version }}"
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-packages-token: ${{ secrets.GITHUB_TOKEN }}
+          artifact-name: ts-schemas
+          artifact-path: code-generators/typescript-schemas/dist
 
   publish-java-types:
     runs-on: ubuntu-latest
@@ -108,34 +110,3 @@ jobs:
           ./gradlew publish -Pversion="${{ steps.release-name.outputs.release_version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  publish-ts-schemas:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/setup-node@v6
-        with:
-          node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@govuk-one-login'
-
-      - name: Download TypeScript types
-        uses: actions/download-artifact@v8
-        with:
-          name: ts-schemas
-          path: code-generators/typescript-schemas/dist
-
-      # Use the git tag as the release name
-      - name: Calculate release name
-        id: release-name
-        run: |
-          TAG="${GITHUB_REF/refs\/tags\//}"
-          echo "release_version=${TAG#v}" >> $GITHUB_OUTPUT
-
-      - name: Publish npm package
-        working-directory: code-generators/typescript-schemas/dist
-        run: |
-          npm version "${{ steps.release-name.outputs.release_version }}"
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,63 @@
+name: npm-publish
+description: NPM Publishing to GitHub Packages and NPMjs
+inputs:
+  artifact-name:
+    description: The name of the artifact to download and publish
+    required: true
+  artifact-path:
+    description: The path to the artifact(s)
+  auth-scope:
+    description: The auth scope passed to the setup-node action
+    default: '@govuk-one-login'
+  github-packages-token:
+    description: The token to use to publish to GitHub Packages
+
+runs:
+  using: composite
+  steps:
+    - name: Calculate release name
+      id: release-name
+      shell: bash
+      run: |
+        TAG="${GITHUB_REF/refs\/tags\//}"
+        echo "release_version=${TAG#v}" >> $GITHUB_OUTPUT
+
+    - name: Download TypeScript types
+      uses: actions/download-artifact@v8
+      with:
+        name: ${{ inputs.artifact-name }}
+        path: ${{ inputs.artifact-path }}
+
+    - uses: actions/setup-node@v6
+      with:
+        node-version: '24'
+        registry-url: 'https://registry.npmjs.org'
+        scope: ${{ inputs.auth-scope }}
+
+    - name: Set package version
+      working-directory: ${{ inputs.artifact-path }}
+      shell: bash
+      run: |
+        npm version "${{ steps.release-name.outputs.release_version }}"
+
+    - name: Publish npm package to NPMJS
+      working-directory: ${{ inputs.artifact-path }}
+      shell: bash
+      run: |
+        npm publish --provenance
+
+    - uses: actions/setup-node@v6
+      if: inputs.github-packages-token != ''
+      with:
+        node-version: '24'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: ${{ inputs.auth-scope }}
+
+    - name: Publish npm package to GitHub Packages
+      if: inputs.github-packages-token != ''
+      working-directory: ${{ inputs.artifact-path }}
+      shell: bash
+      run: |
+        npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ inputs.github-packages-token }}
