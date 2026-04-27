@@ -9,7 +9,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         libs {
             library('hamcrest', 'org.hamcrest:hamcrest:3.0')
-            library('gson', 'com.google.code.gson:gson:2.13.2')
+            library('gson', 'com.google.code.gson:gson:2.14.0')
             library('jackson-databind', 'com.fasterxml.jackson.core:jackson-databind:[2.15.2,)')
             library('jakarta-validation', 'jakarta.validation:jakarta.validation-api:3.1.1')
             library('javax-validation', 'javax.validation:validation-api:2.0.1.Final')
