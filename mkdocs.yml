@@ -39,6 +39,8 @@ nav:
               v1/classes/IdentityAssertionCredentialClass.md
           - IdentityAssertionCredentialJWTClass: 
               v1/classes/IdentityAssertionCredentialJWTClass.md
+          - IdentityAuthorisationRequestClass:
+              v1/classes/IdentityAuthorisationRequestClass.md
           - IdentityCheckClass: v1/classes/IdentityCheckClass.md
           - IdentityCheckCredentialClass: 
               v1/classes/IdentityCheckCredentialClass.md
