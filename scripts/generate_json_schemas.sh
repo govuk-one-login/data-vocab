@@ -23,6 +23,7 @@ LINKML_ITEMS=(
   "identityCheckCredential.yaml,IdentityCheckCredentialClass,IdentityCheckCredential.json"
   "credentials.yaml,IdentityCheckCredentialJWTClass,IdentityCheckCredentialJWT.json"
   "credentials.yaml,InheritedIdentityJWTClass,InheritedIdentityJWT.json"
+  "credentials.yaml,IdentityAuthorisationRequestClass,IdentityAuthorisationRequest.json"
   "credentials.yaml,IssuerAuthorizationRequestClass,IssuerAuthorizationRequest.json"
   "name.yaml,NameClass,Name.json"
   "credentials.yaml,OpenIDConnectAuthenticationRequestClass,OpenIDConnectAuthenticationRequest.json"
