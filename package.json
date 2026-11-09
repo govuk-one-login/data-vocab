@@ -9,7 +9,7 @@
     "eslint-plugin-jest": "29.17.0",
     "typescript": "7.0.2",
     "webpack": "5.111.1",
-    "webpack-cli": "7.2.3"
+    "webpack-cli": "7.3.1"
   },
   "repository": {
     "type": "git",
