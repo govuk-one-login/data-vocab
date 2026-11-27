@@ -17,7 +17,6 @@ repo_url: https://github.com/govuk-one-login/data-vocab
 nav:
   - GOV.UK One Login Vocabulary: index.md
   - v1:
-      - Home: v1/index.md
       - Classes:
           - AddressAssertionClass: v1/classes/AddressAssertionClass.md
           - AddressCredentialClass: v1/classes/AddressCredentialClass.md
@@ -39,7 +38,7 @@ nav:
               v1/classes/IdentityAssertionCredentialClass.md
           - IdentityAssertionCredentialJWTClass: 
               v1/classes/IdentityAssertionCredentialJWTClass.md
-          - IdentityAuthorisationRequestClass:
+          - IdentityAuthorisationRequestClass: 
               v1/classes/IdentityAuthorisationRequestClass.md
           - IdentityCheckClass: v1/classes/IdentityCheckClass.md
           - IdentityCheckCredentialClass: 
@@ -100,6 +99,7 @@ nav:
           - KBVResponseModeType: v1/enums/KBVResponseModeType.md
           - NamePartType: v1/enums/NamePartType.md
           - VerifiableCredentialType: v1/enums/VerifiableCredentialType.md
+      - GOV.UK One Login Credentials: v1/index.md
       - JSON Schemas:
           - JSON Schema files: v1/json-schemas/index.md
       - Schemas:

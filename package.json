@@ -4,9 +4,11 @@
   "private": true,
   "version": "2.0.0",
   "devDependencies": {
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.32.0",
+    "@eslint/js": "10.0.1",
+    "eslint": "10.15.0",
+    "eslint-plugin-import-x": "4.18.1",
     "eslint-plugin-jest": "29.17.0",
+    "globals": "17.14.0",
     "typescript": "7.0.2",
     "webpack": "5.112.2",
     "webpack-cli": "7.3.1"
@@ -24,6 +26,9 @@
   "homepage": "https://github.com/govuk-one-login/data-vocab#readme",
   "browser": {
     "assert": false
+  },
+  "overrides": {
+    "glob": "^14.0.6"
   },
   "scripts": {}
 }
